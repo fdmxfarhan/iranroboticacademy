@@ -1,5 +1,120 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+block content 
+  .topimg
+    img.slide(id="slide1", src="/images/topslide-01.jpg")
+    img.slide(id="slide2", src="/images/topslide-02.jpg")
+    img.slide(id="slide3", src="/images/topslide-03.jpg")
+    
+    a.prev(id="prev") &#10094
+    a.next(id="next") &#10095
+    .dots
+      span(class = "dot", id="dot1" , onclick="currentSlides(1)")
+      span(class = "dot", id="dot2" , onclick="currentSlides(2)")
+      span(class = "dot", id="dot3" , onclick="currentSlides(3)")
+  
+    -if(!uname){
+      .login
+        form(action="/users/login", id="login",method="post")
+          p نام کاربری:
+          input(type="text" name="uname")
+          p رمز عبور: 
+          input(type="password" name="psw")
+          button.bt(type="submit" name="action" value="login") ورود
+          a.bt(href="/users/register") ثبت نام
+          a.forgot(href="/") رمز عبور را فراموش کردم
+    -}
+    .wellcome(id="wellcome")
+      h1 Welcome to 
+      h1 Iran Robotic Academy
+      img(src="/images/logo1.jpg", alt="img")
+    .topimg-logo(id="toplogo")
+      img(src="/images/logo.jpg", alt="img")
+       
+  .cont
+    img(src="/images/gallery/img-20.png", alt="cont1")
+    .text
+      h2 مسابقات ربوکاپ آسیایی ۲۰۱۹
+      p
+        | مسابقات ربوکاپ آسیایی ۲۰۱۹ در شهر مسکو در کشور روسیه برگزار خواهد شد. 
+        | این مسابقات در تاریخ ۱۵ آبان ماه ۱۳۹۸ آغاز خواهد شد و در دو رشته دانش آموزی و دانشجویی, دانشجویان و دانش آموزان در لیگ های مختلف شرکت خواهند کرد.
+    a(href="/") ادامه مطلب...
+  .cont
+    img(src="/images/gallery/img-05.png", alt="cont1")
+    .text
+      h2 شروع ترم دوم کلاس های رباتیک و برنامه نویسی
+      p
+        | در این کلاس ها دانش آموزان با دانشی که در ترم اول در زمینه رباتیک کسب کرده اند شروع به ساخت ربات های خود خواهند کرد.
+        | دانش آموزان پس از اتمام مراحل ساخت و آموزش آمادگی لازم برای ورود به مسابقات بین المللی و جهانی را کسب می کنند.
+    a(href="/") ادامه مطلب...
+  .cont
+    img(src="/images/computer_workshop/img-01.jpg", alt="cont1")
+    .text
+      h2 کارسوق کامپیوتر دبیرستان فرزانگان ۴
+      p
+        | اولین کارسوق کامپیوتر در دبیرستان دخترانه فرزانگان چهار تهران توسط اساتید آکادمی رباتیک ایران برگزار گردید.
+        | هدف از این کارسوق آشنایی دانش آموزان با مفاهیم مختلف در زمینه برنامه نویسی همچون الگوریتم ها, گراف ها, مدارات منطقی و ... بوده
+        | که در قالب بازی های ساده و جذاب برای آن ها توضیح داده شد.
+    a(href="/") ادامه مطلب...
+  .videocont 
+    video(src="/videos/video-01.mp4" controls) 
+    .videotext
+      h1 همین حالا در آکادمی عضو شوید
+      br
+      a(href="/users/register") ثبت نام در آکادمی
+  .slider(id="slider")
+    a(href="/gallery")
+      ul(class="slides")
+        li(class="slide")
+          img(src="/images/slider-01.png", alt="img")
+        li(class="slide")
+          img(src="/images/slider-02.png", alt="img")
+        li(class="slide")
+          img(src="/images/slider-03.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-01.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-02.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-03.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-04.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-05.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-06.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-07.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-08.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-09.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-10.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-11.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-12.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-13.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-14.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-15.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-16.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-17.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-18.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-19.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-20.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-21.png", alt="img")
+        li(class="slide")
+          img(src="/images/gallery/img-22.png", alt="img")
+      
+      
+      

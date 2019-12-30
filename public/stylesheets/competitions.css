@@ -1,0 +1,17 @@
+@font-face {
+    font-family:'bnazanin';
+    src:url('b_nazanin.ttf');
+}
+
+.competitions {
+    float: right;
+    width: 350px;
+    height: 400px;
+    margin: 10px 20px;
+    background-color: rgb(218, 247, 215);
+    text-align: center;
+}
+
+.competitions h1{
+    color: purple;
+}

@@ -1,0 +1,112 @@
+extends ../layout
+block styles
+    link(rel='stylesheet', href='/stylesheets/tutorial.css')
+block content
+    .tutorial
+        h1 دوره آموزشی طراحی وب HTML
+        p
+            | نخستین گام در حرفه طراحی وب یادگیری زبان HTML می باشد. در این زبان ساختار صفحات وب را میتوان طراحی و استفاده کرد. 
+            | پس از فراگیری این دوره به وسیله زبان CSS می توان صفحه ساخته شده توسط زبان HTML را زیبا تر و مرتب تر کنیم.
+            | پس از پایان این دوره به داوطلبین مدرک معتبر اعطا می گردد.
+        img(src="/images/tutorials/html.jpg", alt="img")
+        h2 هزینه ثبت نام: ۲۰۰.۰۰۰ تومان
+           
+        -if(!uname){           
+            a(href="/users/login") برای ثبت نام ابتدا عضو شوید
+        -}
+
+        h2 مدرس:‌ مهندس محسن نصرتی. کارشناس ارشد کامپیوتر
+        table
+            tr
+                th ساعت
+                th شنبه
+                th یک شنبه
+                th دو شنبه
+                th سه شنبه
+                th چهار شنبه
+                th پنج شنبه
+                th جمعه
+            tr 
+                th ۱۰ تا ۱۲
+                td *
+                td
+                td
+                td
+                td *
+                td
+                td
+            tr 
+                th ۱۳ تا ۱۵
+                td *
+                td
+                td
+                td *
+                td
+                td
+                td
+            tr 
+                th ۱۶ تا ۱۸
+                td *
+                td
+                td
+                td
+                td *
+                td *
+                td
+            tr 
+                th ۱۸ تا ۲۰
+                td *
+                td *
+                td *
+                td 
+                td *
+                td *
+                td
+        
+        -if(uname){
+            -if(!html){
+                include ../partials/messages.jade
+                form(action="/tutorials/html" id="register" method="POST")
+                    label(for="uname")
+                        b نام کاربری:
+                    br
+                    input(type="text" placeholder="Username" name="uname" value= "#{ typeof uname != 'undefined' ? uname: '' }")
+                    br
+                    label(for="email")
+                        b پست الکترونیکی:
+                    br
+                    input(type="email" placeholder="E-mail" name="email" value= "#{ typeof email != 'undefined' ? email: '' }")
+                    br
+                    label(for="day")
+                        b روز کلاس:
+                    br
+                    select(name="day" value= "#{ typeof day != 'undefined' ? day: '' }")
+                        option(value="day1") شنبه
+                        option(value="day2") یک شنبه
+                        option(value="day3") دو شنبه
+                        option(value="day4") سه شنبه
+                        option(value="day5") چهار شنبه
+                        option(value="day6") پنج شنبه
+                        option(value="day7") جمعه
+                        
+                    br
+                    label(for="hour")
+                        b ساعت کلاس:
+                    br
+                    select(name="hour" value= "#{ typeof hour != 'undefined' ? hour: '' }")
+                        option(value="hour1") ۱۰ تا ۱۲
+                        option(value="hour2") ۱۳ تا ۱۵
+                        option(value="hour3") ۱۶ تا ۱۸
+                        option(value="hour4") ۱۸ تا ۲۰
+                        
+                    br
+                    button(type="submit") ثبت نام
+                    br
+            -} else {
+                include ../partials/messages.jade
+                form(action="/tutorials/html/remove" id="register" method="POST")
+                    br
+                    button.remove(type="submit") حذف این کلاس
+            -}
+
+        -}
