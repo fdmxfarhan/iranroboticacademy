@@ -33,6 +33,7 @@ var mongoose = require('mongoose');
 var app = express();
 const port = 3000
 
+app.listen(port,()=> console.log("listenning on port 3000..."));
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 
@@ -42,38 +43,33 @@ require('./config/passports')(passport);
 
 ///connect to Database
 
-// mongoose.connect('mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test');
+// mongoose.connect('mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test',{ useNewUrlParser: true });
 // mongoose.connection.once('open', function(){
 //   console.log('DataBase is connected.   ');
 // }).on('error', function(error){
 //   console.log('Connection error:', error);
 // });
-var MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test"
-const DATABASE_NAME = "example";
+const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
+const options = {
+  user: "fdmxfarhan",
+  pass: "22402240",
+  dbName: "test",
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+};
+mongoose.connect(uri, options).then(
+  _ => {
+    console.info('Database connection stablished');
+    
+  },
+  error => {
+    console.error('Database connection failed:', error);
+    throw new Error('Could not connect to the database');
+  }
+);
 
-var database,collection;
-app.listen(port,()=>{
-  MongoClient.connect(uri, { useNewUrlParser: true }, (error, client) => {
-    if(error) {
-        throw error;
-    }
-    database = client.db(DATABASE_NAME);
-    collection = database.collection("people");
-    console.log("Connected to `" + DATABASE_NAME + "`!");
-});
-});
-
-
-
-// var MongoClient = require('mongodb').MongoClient;
-// var url =  "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test?retryWrites=true&w=majority";
-
-// MongoClient.connect(url, function(err, db) {
-//   if (err) throw err;
-//   console.log("Database created!");
-//   db.close();
-// });
 // express session middleware
 const{
   SESS_NAME = 'sid',
