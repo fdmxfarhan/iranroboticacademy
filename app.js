@@ -44,7 +44,7 @@ require('./config/passports')(passport);
 ///connect to Database
 
 const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
-mongoose.connect(uri,{ useNewUrlParser: true , useUnifiedTopology: true });
+mongoose.connect(uri,{ useNewUrlParser: true , useUnifiedTopology: false });
 mongoose.connection.once('open', function(){
   console.log('DataBase is connected.   ');
 }).on('error', function(error){
