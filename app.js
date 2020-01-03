@@ -32,7 +32,6 @@ var mongoose = require('mongoose');
 
 var app = express();
 const port = 3000
-app.listen(port, () => console.log(`listening on port ${port}!`))
 
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
@@ -49,10 +48,22 @@ require('./config/passports')(passport);
 // }).on('error', function(error){
 //   console.log('Connection error:', error);
 // });
+var MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test"
-mongoose.connect(uri, {useNewUrlParser: true})
-.then(() => console.log("Database connected :)))"))
-.catch(err => console.log(err));
+const DATABASE_NAME = "example";
+
+var database,collection;
+app.listen(port,()=>{
+  MongoClient.connect(uri, { useNewUrlParser: true }, (error, client) => {
+    if(error) {
+        throw error;
+    }
+    database = client.db(DATABASE_NAME);
+    collection = database.collection("people");
+    console.log("Connected to `" + DATABASE_NAME + "`!");
+});
+});
+
 
 
 // var MongoClient = require('mongodb').MongoClient;
