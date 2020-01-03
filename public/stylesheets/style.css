@@ -838,12 +838,12 @@
     float: right;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 9px;
+    padding: 7px 4px;
     text-decoration: none;
     font-family: 'bnazanin';
     height: 100%;
     margin: 0;
-    font-size: 16px;
+    font-size: 12px;
   }
   .navigation a:hover {
     background-color: var(--bgcolor);
@@ -862,7 +862,7 @@
   }
   .navigation button {
     font-family: 'bnazanin';
-    font-size: 15px;
+    font-size: 7px;
     color: white;
     background-color: var(--bgcolor);
     margin: 12px 0;
@@ -873,13 +873,13 @@
   }
   .navigation button.log {
     font-family: 'bnazanin';
-    font-size: 15px;
+    font-size: 10px;
     color: white;
     background-color: var(--bgcolor);
-    margin: 12px 0;
-    padding: 3px;
+    margin: 4px 0;
+    padding: 1px;
     /* width: 100px; */
-    height: 25px;
+    height: 20px;
     font-weight: bold;
     border: 1px outset var(--bgcolor);
     border-radius: 5px;
@@ -901,6 +901,7 @@
 
   .navigation .search {
     float: left;
+    display: none;
   }
 
   .navigation input[type=text] {
