@@ -2,14 +2,13 @@
   font-family:'bnazanin';
   src:url('b_nazanin.ttf');
 }
-
 :root {
   --bgcolor: #29b329;
   --bghover: #86c488;
   /*--bgcolor: #00b800;
   --bghover: #86c488;*/
 }
-
+@media only screen and (min-width: 600px) {
 body {
   margin: 0;
   padding: 0;
@@ -757,9 +756,14 @@ footer .address p{
 .contacts a:hover{
   color: rgb(134, 134, 134);
 }
+}
 
-@media only screen and (max-width: 768px) {
-  .header{
+@media only screen and (max-width: 600px) {
+
+  header{
     background-color: #000000;
+  }
+  footer{
+    background-color: #ff0000;
   }
 }
