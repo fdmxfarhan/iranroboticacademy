@@ -45,7 +45,7 @@ require('./config/passports')(passport);
 //const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
 const uri = 'mongodb://fdmxfarhan:22402240@iranroboticacademy-shard-00-00-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-01-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-02-bdziw.mongodb.net:27017/test?ssl=true&replicaSet=ClusterMasjeed1-shard-0&authSource=admin&retryWrites=true';
 
-mongoose.connect(uri,{ useUnifiedTopology:true , useNewUrlParser: true });
+mongoose.connect(uri,{ useNewUrlParser: true });
 mongoose.connection.once('open', function(){
   console.log('DataBase is connected.   ');
   app.listen(port,()=> console.log("listenning on port 3000..."));
