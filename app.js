@@ -33,7 +33,6 @@ var mongoose = require('mongoose');
 var app = express();
 const port = 3000
 
-app.listen(port,()=> console.log("listenning on port 3000..."));
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 
@@ -49,6 +48,8 @@ const uri = 'mongodb://fdmxfarhan:22402240@iranroboticacademy-shard-00-00-bdziw.
 mongoose.connect(uri,{ useUnifiedTopology:true , useNewUrlParser: true });
 mongoose.connection.once('open', function(){
   console.log('DataBase is connected.   ');
+  app.listen(port,()=> console.log("listenning on port 3000..."));
+
 }).on('error', function(error){
   console.log('Connection error:', error);
 });
