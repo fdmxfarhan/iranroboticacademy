@@ -55,7 +55,7 @@ const options = {
   pass: "22402240",
   dbName: "test",
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: false,
   useFindAndModify: false,
   useCreateIndex: true
 };
