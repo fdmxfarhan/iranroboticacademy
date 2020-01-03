@@ -32,7 +32,7 @@ var mongoose = require('mongoose');
 
 var app = express();
 const port = 3000
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`listening on port ${port}!`))
 
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
@@ -42,13 +42,23 @@ require('./config/passports')(passport);
 
 
 ///connect to Database
-mongoose.connect('mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test');
-mongoose.connection.once('open', function(){
-  console.log('DataBase is connected.   ');
-}).on('error', function(error){
-  console.log('Connection error:', error);
-});
 
+// mongoose.connect('mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test');
+// mongoose.connection.once('open', function(){
+//   console.log('DataBase is connected.   ');
+// }).on('error', function(error){
+//   console.log('Connection error:', error);
+// });
+
+
+var MongoClient = require('mongodb').MongoClient;
+var url =  "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test?retryWrites=true&w=majority";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  console.log("Database created!");
+  db.close();
+});
 // express session middleware
 const{
   SESS_NAME = 'sid',
