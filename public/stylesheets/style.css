@@ -795,16 +795,16 @@
     position: relative;
   }
   header h1.en{
-    font-size: 20px;
+    font-size: 15px;
     font-family:'tahoma';
   }
   header h1.ps{
-    font-size: 15px;
+    font-size: 10px;
     font-family:'bnazanin';
   }
   .logo{
     position: absolute;
-    top: 20px;
+    top: 13px;
     left: 10px;
   }
   .logo img {
@@ -1263,6 +1263,8 @@
     float: right;
     margin-top: 10px;
     padding-right: 70px;
+    padding-left: 0;
+    margin-left: 0;
     text-align: right;
   }
   .cont .text h2 {
@@ -1277,31 +1279,30 @@
     color: #1f1f1f;
     text-indent: 10px;
     text-align: justify;
-    width: 400px;
+    width: 100%;
     line-height: 25px;
+    margin-left: 0;
+    padding-left: 0;
   }
   .videocont{
     text-align: right;
     background-color: rgb(223, 223, 223);
     height: auto;
-    padding: 50px 100px;
+    padding: 20px 20px;
   }
   .videocont video{
     border: none;
     border-radius: 7px;
     position: relative;
-    width: 700px;
+    width: 100%;
   } 
   .videocont .videotext{
-    float: left;
-    left: 10px;
-    top: 10px;
     width: 300px;
     font-family: 'bnazanin';
     font-size: 18px;
     direction: rtl;
     text-align: center;
-    padding: 100px 0;
+    padding: 15px 30px;
   }
   .videocont .videotext h1{
     font-family: 'bnazanin';
@@ -1325,9 +1326,10 @@
   }
 
   .slider{
-    width: 100%;  
+    width: 100%; 
+    height: 250px; 
     overflow: hidden;
-    padding: 150px 300px;
+    padding: 30px 300px;
     background-image: url("/images/slider-background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1336,16 +1338,16 @@
   .slider .slides{
     display: block;
     width: 1000000000px;
-    height: 400px;
+    height: 200px;
     margin: 0;
     padding: 0;
   }
   .slider .slide{
     float: left;
     list-style-type: none;
-    width: 600px;
-    height: 400px;
-    padding: 0 100px;
+    width: 300px;
+    height: 250px;
+    padding: 0 20px;
   }
   .slider img{
     width: 100%;
@@ -1353,4 +1355,95 @@
     border-radius: 10px;
   }
 
+
+  footer {
+    overflow: hidden;
+    direction: rtl;
+    text-align: right;
+    height: 220px;
+    margin: 0;
+    background-color: #1b1818;
+    border-top: 1px dotted #ccc;
+    padding-top: 20px;
+    padding-right: 50px;
+    font-size: 20px;
+    color: #f2f2f2;
+    border: 0;
+    position: relative;
+    font-family: 'bnazanin', Tahoma;
+  }
+  footer h4.tutorials{
+    position: absolute;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  footer h4.classes{
+    position: absolute;
+    right: 450px;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  footer ul{
+    float: right;
+    width: 300px; 
+    font-size: 10px;
+    margin: 20px;
+    line-height: 10px;
+    direction: rtl;
+  }
+
+  footer ul a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  footer ul a:hover{
+    text-decoration: underline;
+  }
+
+  footer p.down{
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    font-size: 14px;
+  }
+  footer .address{
+    font-size: 16px;
+    margin: 20px;
+    line-height: 25px;
+    direction: rtl;
+  }
+  footer .address p{
+    position: absolute;
+    top: 20px;
+    right: 750px;
+    font-size: 18px;
+    margin: 20px;
+    line-height: 25px;
+    direction: rtl;
+  }
+  .contacts {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+  }
+
+  .contacts img {
+    width: 70px;
+    bottom: 50px;
+    margin: 0 5px;
+
+  }
+  .contacts a{
+    color: white;
+    font-size: 50px;
+    margin-right: 20px;
+  }
+  .contacts a:hover{
+    color: rgb(134, 134, 134);
+  }
 }
