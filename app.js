@@ -49,16 +49,20 @@ require('./config/passports')(passport);
 // }).on('error', function(error){
 //   console.log('Connection error:', error);
 // });
+const uri = "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test"
+mongoose.connect(uri, {useNewUrlParser: true})
+.then(() => console.log("Database connected :)))"))
+.catch(err => console.log(err));
 
 
-var MongoClient = require('mongodb').MongoClient;
-var url =  "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test?retryWrites=true&w=majority";
+// var MongoClient = require('mongodb').MongoClient;
+// var url =  "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test?retryWrites=true&w=majority";
 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  console.log("Database created!");
-  db.close();
-});
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   console.log("Database created!");
+//   db.close();
+// });
 // express session middleware
 const{
   SESS_NAME = 'sid',
