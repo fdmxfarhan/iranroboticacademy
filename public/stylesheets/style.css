@@ -1045,10 +1045,10 @@
 
   .login{
     position: absolute;
-    top: 40%;
-    right: 50px;
-    width: 170px;
-    height: 85px;
+    top: 50%;
+    right: 30px;
+    width: 150px;
+    height: 70px;
     padding: 5px;
     font-family: 'bnazanin', Tahoma, Verdana, sans-serif;
     line-height: 5px;
@@ -1062,6 +1062,7 @@
   }
 
   .login p {
+    margin: 4px;
     text-align: right;
     direction: rtl;
     font-size: 8px;
@@ -1071,7 +1072,7 @@
   .login a{
     text-decoration: none;
     color: white;
-    font-size: 8px;
+    font-size: 7px;
     margin-top: 2px;
     padding: 0;
   }
@@ -1132,8 +1133,7 @@
   .topimg-logo{
     position: absolute;
     top: 40%;
-    left: 10%;
-    opacity: 0.9;
+    left: 12%;
   }
   .topimg-logo img{
     width: 150px;
@@ -1142,7 +1142,7 @@
   .wellcome{
     position: absolute;
     top: 23%;
-    left: 8%;
+    left: 12%;
   }
   .wellcome h1{
     color: white;
@@ -1150,7 +1150,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .wellcome img{
-    width: 70px;
+    width: 100px;
   }
 
 
@@ -1176,7 +1176,7 @@
     margin-top: -22px;
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 10px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -1202,8 +1202,8 @@
   }
   .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 5px;
+    width: 5px;
     margin: 0 4px;
     background-color: rgb(233, 233, 233);
     border-radius: 50%;
@@ -1216,22 +1216,26 @@
 
   .cont{
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin: 0;
     padding: 0px 50px;
     border-bottom: 1px solid rgb(190, 190, 190);
+    position: relative;
   }
   .cont a{
+    position: absolute;
+    right: 20%;
+    top: 44%;
     float: left;
     margin: 50px;
     background-color: var(--bgcolor);
-    padding: 10px 25px;
+    padding: 5px 10px;
     color: white;
     direction: rtl;
     text-decoration: none;
     font-family: 'bnazanin';
-    font-size: 20px;
-    border-radius: 7px;
+    font-size: 15px;
+    border-radius: 3px;
   }
   .cont a:hover{
     background-color: var(--bghover);
@@ -1241,12 +1245,14 @@
   } 
 
   .cont img{
-    float: right;
-    margin-top: 50px;
+    position: absolute;
+    top: 46%;
+    left: 5%;
+    margin-top: 10px;
     margin-right: 100px;
     margin-bottom: 50px;
-    width: 300px;
-    height: 250px;
+    width: 200px;
+    height: 160px;
     
     /*border: 5px outset rgb(182, 182, 182);*/
     border: none;
@@ -1255,7 +1261,7 @@
 
   .cont .text {
     float: right;
-    margin-top: 60px;
+    margin-top: 10px;
     padding-right: 70px;
     text-align: right;
   }
@@ -1271,7 +1277,7 @@
     color: #1f1f1f;
     text-indent: 10px;
     text-align: justify;
-    width: 800px;
+    width: 400px;
     line-height: 25px;
   }
   .videocont{
