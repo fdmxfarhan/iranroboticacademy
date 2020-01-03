@@ -446,14 +446,17 @@
   }
 
   .cont{
+    position: relative;
     width: 100%;
     height: 400px;
     margin: 0;
-    padding: 0px 50px;
+    padding: 0px 70px;
     border-bottom: 1px solid rgb(190, 190, 190);
   }
   .cont a{
-    float: left;
+    position: absolute;
+    right: 200px;
+    top: 180px;
     margin: 50px;
     background-color: var(--bgcolor);
     padding: 10px 25px;
@@ -472,6 +475,8 @@
   } 
 
   .cont img{
+    position: absolute;
+    left: 100px;
     float: right;
     margin-top: 50px;
     margin-right: 100px;
@@ -487,22 +492,23 @@
   .cont .text {
     float: right;
     margin-top: 60px;
-    padding-right: 70px;
+    padding-right: 150px;
     text-align: right;
   }
   .cont .text h2 {
     font-family: 'bnazanin';
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bold;
     color: purple;
   }
   .cont .text p{
     direction: rtl;
     font-family: 'bnazanin';
-    font-size: 17px;
+    font-size: 20px;
     color: #1f1f1f;
     text-indent: 10px;
     text-align: justify;
-    width: 800px;
+    width: 700px;
     line-height: 25px;
   }
   .videocont{
