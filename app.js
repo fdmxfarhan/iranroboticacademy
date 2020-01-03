@@ -43,7 +43,7 @@ require('./config/passports')(passport);
 ///connect to Database
 
 //const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
-const uri = 'mongodb://fdmxfarhan:22402240@iranroboticacademy-shard-00-00-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-01-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-02-bdziw.mongodb.net:27017/test?ssl=true&replicaSet=ClusterMasjeed1-shard-0&authSource=admin&retryWrites=true';
+const uri = 'mongodb://fdmxfarhan:22402240@iranroboticacademy-shard-00-00-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-01-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-02-bdziw.mongodb.net:27017/test';
 
 mongoose.connect(uri,{ useNewUrlParser: true });
 mongoose.connection.once('open', function(){
