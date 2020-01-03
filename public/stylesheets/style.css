@@ -1216,7 +1216,7 @@
 
   .cont{
     width: 100%;
-    height: 350px;
+    height: 370px;
     margin: 0;
     padding: 0px 50px;
     border-bottom: 1px solid rgb(190, 190, 190);
@@ -1224,8 +1224,8 @@
   }
   .cont a{
     position: absolute;
-    right: 20%;
-    top: 44%;
+    right: 15%;
+    top: 50%;
     float: left;
     margin: 50px;
     background-color: var(--bgcolor);
@@ -1246,7 +1246,7 @@
 
   .cont img{
     position: absolute;
-    top: 49%;
+    top: 50%;
     left: 5%;
     margin-top: 10px;
     margin-right: 100px;
@@ -1269,13 +1269,13 @@
   }
   .cont .text h2 {
     font-family: 'bnazanin';
-    font-size: 20px;
+    font-size: 18px;
     color: purple;
   }
   .cont .text p{
     direction: rtl;
     font-family: 'bnazanin';
-    font-size: 17px;
+    font-size: 15px;
     color: #1f1f1f;
     text-indent: 10px;
     text-align: justify;
