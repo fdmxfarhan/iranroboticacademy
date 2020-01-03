@@ -32,7 +32,7 @@ var mongoose = require('mongoose');
 
 var app = express();
 const port = 3000
-
+app.listen(port,()=> console.log("listenning on port 3000..."));
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 
@@ -42,13 +42,13 @@ require('./config/passports')(passport);
 
 ///connect to Database
 
-//const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
-const uri = 'mongodb://fdmxfarhan:22402240@iranroboticacademy-shard-00-00-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-01-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-02-bdziw.mongodb.net:27017/test';
+const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
+//const uri = 'mongodb://fdmxfarhan:22402240@iranroboticacademy-shard-00-00-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-01-bdziw.mongodb.net:27017,iranroboticacademy-shard-00-02-bdziw.mongodb.net:27017/test';
 
 mongoose.connect(uri,{ useNewUrlParser: true });
 mongoose.connection.once('open', function(){
   console.log('DataBase is connected.   ');
-  app.listen(port,()=> console.log("listenning on port 3000..."));
+  
 
 }).on('error', function(error){
   console.log('Connection error:', error);
