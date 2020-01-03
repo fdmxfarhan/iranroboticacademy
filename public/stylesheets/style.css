@@ -1429,7 +1429,7 @@
   .contacts {
     position: absolute;
     bottom: 50px;
-    left: 100px;
+    left: 10px;
   }
 
   .contacts img {
@@ -1441,7 +1441,7 @@
   .contacts a{
     color: white;
     font-size: 50px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .contacts a:hover{
     color: rgb(134, 134, 134);
