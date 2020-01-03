@@ -1,0 +1,103 @@
+doctype html
+
+html
+  head
+    title IRA
+    link(rel='stylesheet', href='/stylesheets/en/style.css')
+    
+    script(src="https://kit.fontawesome.com/93e9e402da.js")
+    link(rel = "icon" type = "image/png" href = "/images/logot.png")
+    script(src="/javascripts/jquery-1.6.4.min.js")
+    script(src="/javascripts/scripts.js")
+    
+  body
+    .modal(id="id01")
+      form.login(action="en/users/login" id="login" method="POST")
+        .imgcontainer
+          span.close(onclick="document.getElementById('id01').style.display='none'" title="Close") &times;
+          img.avatar(src="/images/person.jpg", alt="person")
+        .logincontainer
+          label(for="uname")
+            b Username:
+          input(type="text" placeholder="Username" name="uname" required)
+          label(for="uname")
+            b Password:
+          input(type="password" placeholder="Password" name="psw" required)
+          button(type="submit" name="action" value="login") Login
+          button(onclick="window.location.href = '/users/register';") Register
+          
+
+    header
+      h1(style="font-size: 20px;font-famili='bnazanin'") IRA
+      h1 Iran Robotic Academy 
+      .logo
+        img(src="/images/logo.jpg", alt="logo")
+      .language
+        a(href="/")
+          img(src="/images/languages/persian.png")
+
+    .navigation 
+      a.active(href="/") Home
+        i(class="fas fa-home")
+      a(href="/classes") Classes
+      a(href="/tutorials") Tutorials
+      a(href="/gallery") Gallery
+      a(href="/") Prouds
+      a(href="/") Competitions
+      a(href="/about") About
+      a(href="/contact") Contact
+      -if(!uname){
+        button.log(onclick="document.getElementById('id01').style.display='block'") Login / Register
+      -}else {
+        button.log(onclick="window.location.href = '/dashboard';") #{uname} Dashboard
+        a.logout(href="/users/logout") Logout
+      -}
+
+
+      .search
+        form(action="/")
+          input(type="text", name="search", placeholder="Search..")
+          button(type="submit")
+            i(class="fa fa-search")
+
+    .container
+      block content
+
+    footer
+      h4.tutorials Tutorials
+      ul
+        li
+          a(href="/tutorials/avr") AVR microcontrollers tutorials
+        li
+          a(href="/tutorials/arm") ARM microcontrollers tutorials
+        li
+          a(href="/tutorials/arduino") Arduino boards tutorials
+        li
+          a(href="/tutorials/cpp") C++ programming language tutorials
+        li
+          a(href="/tutorials/python") Python programming language tutorials
+      h4.classes Classes
+      ul
+        li
+          a(href="/classes/robotic") Robotic 
+        li
+          a(href="/classes/computer") Computer programming
+        li
+          a(href="/classes/electronic") Electronic
+      
+      .address
+        p
+          i(class="fas fa-map-marker-alt")
+          |  Address: Tehran, Satarkhan, Shadmehr st, Nick Ravesh Fard st, 15th block
+          br
+          i(class="fas fa-phone-volume")
+          |  phone: 09223028958
+      .contacts
+        a(href="http://t.me/iranroboticacademy", target="_blank")
+          i(class="fab fa-telegram-plane")
+          //img(src="/images/telegram.png", alt="telegram")
+        a(href="http://instagram.com/iranroboticacademy", target="_blank")
+          i(class="fab fa-instagram")
+          //img(src="/images/instagram.png", alt="instagram")
+      
+      p.down Iran Robotic Academy

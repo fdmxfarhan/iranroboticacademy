@@ -1,0 +1,64 @@
+extends layout
+
+block content 
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    .register
+        .info
+            h1 ثبت نام در آکادمی
+            br
+            p
+                | با ثبت نام در وب سایت آکادمی رباتیک ایران می توانید در کلاس ها و دوره های آموزشی نیز ثبت نام و شرکت نمایید. 
+                | همچنین از امکانات مجازی نظیر دوره های آموزش مجازی نیز میتوانید استفاده نمایید.
+            
+            p لطفا فرم ثبت نام را به دقت تکمیل نمایید.
+            img(src="/images/logo1.jpg")
+        include ./partials/messages.jade
+        form(action="/users/register" id="register" method="POST")
+            label(for="uname")
+                b نام کاربری:
+            br
+            input(type="text" placeholder="Username" name="uname" value= "#{ typeof uname != 'undefined' ? uname: '' }")
+            br
+            label(for="email")
+                b پست الکترونیکی:
+            br
+            input(type="email" placeholder="E-mail" name="email" value= "#{ typeof email != 'undefined' ? email: '' }")
+            br
+            label(for="phone")
+                b تلفن:
+            br
+            input(type="tel" placeholder="phone" name="phone" value= "#{ typeof phone != 'undefined' ? phone: '' }")
+            br
+            label(for="education")
+                b تحصیلات:
+            br
+            select(name="education" value= "#{ typeof education != 'undefined' ? education: '' }")
+                option(value="basic") ابتدایی
+                option(value="junior1") دبیرستان دوره اول
+                option(value="junior2") دبیرستان دوره دوم
+                option(value="major1") دانشجو کارشناسی
+                option(value="major2") دانشجو کارشناسی ارشد
+            br
+            label(for="city")
+                b استان:
+            br
+            input(type="text" placeholder="city" name="city" value= "#{ typeof city != 'undefined' ? city: '' }")
+            br
+            
+            
+            label(for="psw")
+                b رمز عبور:
+            br
+            input(type="password" placeholder="Password" name="psw" value= "#{ typeof psw != 'undefined' ? psw: '' }")
+            br
+            label(for="configpsw")
+                b تایید رمز عبور:
+            br
+            input(type="password" placeholder="Password" name="configpsw" value= "#{ typeof configpsw != 'undefined' ? configpsw: '' }")
+            br
+            button(type="submit") ثبت نام
+            br
+            a(href="/users/login") قبلا عضو شده اید؟
+        
+
+        

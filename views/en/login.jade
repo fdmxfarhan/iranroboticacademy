@@ -1,0 +1,32 @@
+extends layout
+
+block content 
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    .register
+        .info
+            h1 ثبت نام در آکادمی
+            br
+            p
+                | با ثبت نام در وب سایت آکادمی رباتیک ایران می توانید در کلاس ها و دوره های آموزشی نیز ثبت نام و شرکت نمایید. 
+                | همچنین از امکانات مجازی نظیر دوره های آموزش مجازی نیز میتوانید استفاده نمایید.
+            
+            p لطفا فرم ثبت نام را به دقت تکمیل نمایید.
+            img(src="/images/logo1.jpg")
+        include ./partials/messages.jade
+        form(action="/users/login" id="register" method="POST")
+            label(for="uname")
+                b نام کاربری:
+            br
+            input(type="text" placeholder="Username" name="uname")
+            br
+            label(for="psw")
+                b رمز عبور:
+            br
+            input(type="password" placeholder="Password" name="psw")
+            br
+            button(type="submit") ورود
+            br
+            a(href="/users/register") هنوز ثبت نام نکرده اید؟
+        
+
+        

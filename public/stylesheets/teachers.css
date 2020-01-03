@@ -1,0 +1,42 @@
+@font-face {
+    font-family:'bnazanin';
+    src:url('b_nazanin.ttf');
+}
+
+.teacher{
+    padding: 50px 200px;
+    direction: rtl;
+    padding-bottom: 250px;
+}
+.teacher:hover{
+    background-color: rgb(238, 238, 238);
+}
+.teacher .text{
+    float: right;
+}
+.teacher .text h1{
+    color: purple;
+    font-family: 'bnazanin';
+
+}
+.teacher .text p{
+    padding-right: 10px;
+    color: black;
+    font-family: 'bnazanin';
+    font-size: 17px;
+    line-height: 25px;
+    text-indent: 20px;
+    width: 600px;
+    text-align: justify;
+}
+.teacher img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    float: right;
+    margin-right: 80px;
+}
+.teacher .text .contact{
+    direction: rtl;
+    font-family: 'bnazanin';
+}
