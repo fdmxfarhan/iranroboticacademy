@@ -43,14 +43,21 @@ require('./config/passports')(passport);
 
 ///connect to Database
 
-const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
-mongoose.connect(uri,{ useNewUrlParser: true , useNewUrlParser: true });
-mongoose.connection.once('open', function(){
-  console.log('DataBase is connected.   ');
-}).on('error', function(error){
-  console.log('Connection error:', error);
+// const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
+// mongoose.connect(uri,{ useNewUrlParser: true , useNewUrlParser: true });
+// mongoose.connection.once('open', function(){
+//   console.log('DataBase is connected.   ');
+// }).on('error', function(error){
+//   console.log('Connection error:', error);
+// });
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test?w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("iranroboticacademy").collection("test");
+ // perform actions on the collection object
+  client.close();
 });
-
 
 // express session middleware
 const{
