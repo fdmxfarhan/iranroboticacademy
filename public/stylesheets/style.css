@@ -949,13 +949,14 @@
     background-color: rgba(0,0,0,0.4);
     padding-top: 0;
     margin-top: 0;
+    padding-bottom: 0;
   }
   .modal form.login {
     background-color: #fefefe;
     position: absolute;
-    margin-right: 200px; 
+    margin-right: 10px; 
     border: 1px solid #888;
-    width: 60%;
+    width: 70%;
     height: auto;
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s;
@@ -1044,17 +1045,17 @@
 
   .login{
     position: absolute;
-    top: 300px;
+    top: 40%;
     right: 50px;
-    width: 350px;
-    height: 150px;
-    padding: 20px;
+    width: 170px;
+    height: 85px;
+    padding: 5px;
     font-family: 'bnazanin', Tahoma, Verdana, sans-serif;
     line-height: 5px;
     color: white;
     text-align: left;
     background-color: #4CAF50c9;
-    border-radius: 20px;
+    border-radius: 5px;
   }
   .login:hover {
     background-color: #4CAF50ee; 
@@ -1063,13 +1064,16 @@
   .login p {
     text-align: right;
     direction: rtl;
-    font-size: 15px;
+    font-size: 8px;
     color: white;
   }
 
   .login a{
     text-decoration: none;
     color: white;
+    font-size: 8px;
+    margin-top: 2px;
+    padding: 0;
   }
 
   .login a:hover{
@@ -1077,42 +1081,44 @@
   }
 
   .login input{
-    padding: 4px;
+    padding: 2px;
     width: 100%;
-    font-size: 15px;
+    font-size: 8px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: rgba(255, 255, 255, 0.8);
   }
 
   .login a.bt {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
     float: right;
     background-color: #00406b;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 3px;
+    font-size: 8px;
+    border-radius: 2px;
     text-decoration: none;
     text-align: center;
-    width: 60px;
+    width: 40px;
   }
 
   .login a.bt:hover {
     background-color: #09273b;
   }
   .login button.bt {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
     float: right;
     background-color: #00406b;
     color: white;
-    padding: 6px 10px;
+    padding: 1px 15px;
+    font-size: 8px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     text-decoration: none;
     text-align: center;
-    width: 80px;
+    width: 40px;
     font-family: 'bnazanin';
   }
 
@@ -1125,26 +1131,26 @@
   }
   .topimg-logo{
     position: absolute;
-    top: 170px;
-    left: 150px;
+    top: 40%;
+    left: 10%;
     opacity: 0.9;
   }
   .topimg-logo img{
-    width: 500px;
+    width: 150px;
   }
 
   .wellcome{
     position: absolute;
-    top: 100px;
-    left: 150px;
+    top: 23%;
+    left: 8%;
   }
   .wellcome h1{
     color: white;
-    font-size: 50px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .wellcome img{
-    width: 300px;
+    width: 70px;
   }
 
 
