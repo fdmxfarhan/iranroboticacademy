@@ -42,33 +42,16 @@ require('./config/passports')(passport);
 
 
 ///connect to Database
+const uri1 = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
+const uri2 = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
 
-// mongoose.connect('mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test',{ useNewUrlParser: true });
-// mongoose.connection.once('open', function(){
-//   console.log('DataBase is connected.   ');
-// }).on('error', function(error){
-//   console.log('Connection error:', error);
-// });
-const uri = 'mongodb+srv://fdmxfarhan:22402240@iranroboticacademy-bdziw.mongodb.net/test';
-const options = {
-  user: "fdmxfarhan",
-  pass: "22402240",
-  dbName: "test",
-  useNewUrlParser: true,
-  useUnifiedTopology: false,
-  useFindAndModify: false,
-  useCreateIndex: true
-};
-mongoose.connect(uri, options).then(
-  _ => {
-    console.info('Database connection stablished');
-    
-  },
-  error => {
-    console.error('Database connection failed:', error);
-    throw new Error('Could not connect to the database');
-  }
-);
+mongoose.connect(uri1||uri2,{ useNewUrlParser: true });
+mongoose.connection.once('open', function(){
+  console.log('DataBase is connected.   ');
+}).on('error', function(error){
+  console.log('Connection error:', error);
+});
+
 
 // express session middleware
 const{
