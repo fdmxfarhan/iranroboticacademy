@@ -73,6 +73,7 @@
         background-color: #e4e4e4;
         padding: 5px 10px;
         height: 450px;
+        border-bottom: 1px solid rgba(190, 190, 190, 0.527);
     }
     .class h1 {
         font-size: 25px;

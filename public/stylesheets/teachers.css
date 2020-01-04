@@ -9,6 +9,18 @@
         direction: rtl;
         padding-bottom: 250px;
     }
+    .teacher i{
+        float: right;
+    }
+    .teacher h2{
+        float: right;
+        font-family: 'bnazanin';
+        font-size: 15px;
+        margin-right: 13px;
+        margin-top: 0;
+        padding: 0;
+        font-weight: normal;
+    }
     .teacher:hover{
         background-color: rgb(238, 238, 238);
     }
@@ -48,6 +60,18 @@
         direction: rtl;
         padding-bottom: 250px;
         height: 150px;
+    }
+    .teacher i{
+        float: right;
+    }
+    .teacher h2{
+        float: right;
+        font-family: 'bnazanin';
+        font-size: 12px;
+        margin-right: 13px;
+        margin-top: 0;
+        padding: 0;
+        font-weight: normal;
     }
     .teacher:hover{
         background-color: rgb(238, 238, 238);
