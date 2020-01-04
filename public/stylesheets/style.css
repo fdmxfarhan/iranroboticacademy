@@ -3,10 +3,10 @@
   src:url('b_nazanin.ttf');
 }
 :root {
-  --bgcolor: #29b329;
-  --bghover: #86c488;
-  /*--bgcolor: #00b800;
+  /*--bgcolor: #29b329;
   --bghover: #86c488;*/
+  --bgcolor: #4f1a7a;
+  --bghover: #9e86c4;
 }
 @media only screen and (min-width: 600px) {
   body {
@@ -123,7 +123,7 @@
     border-radius: 5px;
   }
   .navigation a.logout{
-    background-color: rgba(0, 4, 255, 0.575);
+    background-color: var(--bgcolor);
     float: left;
     padding: 4px;
     margin-top: 11px;
@@ -290,11 +290,11 @@
     line-height: 5px;
     color: white;
     text-align: left;
-    background-color: #4CAF50c9;
+    background-color: rgba(130, 76, 175, 0.788);
     border-radius: 20px;
   }
   .login:hover {
-    background-color: #4CAF50ee; 
+    background-color: rgba(114, 76, 175, 0.933); 
   }
 
   .login p {
@@ -499,7 +499,7 @@
     font-family: 'bnazanin';
     font-size: 23px;
     font-weight: bold;
-    color: purple;
+    color: var(--bgcolor);
   }
   .cont .text p{
     direction: rtl;
@@ -1294,7 +1294,7 @@
   .cont .text h2 {
     font-family: 'bnazanin';
     font-size: 18px;
-    color: purple;
+    color: var(--bgcolor);
   }
   .cont .text p{
     direction: rtl;
