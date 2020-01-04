@@ -31,8 +31,8 @@ var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
 
 var app = express();
-const port = 3000
-app.listen(port,()=> console.log("listenning on port 3000..."));
+//const port = 3000
+//app.listen(port,()=> console.log("listenning on port 3000..."));
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 
