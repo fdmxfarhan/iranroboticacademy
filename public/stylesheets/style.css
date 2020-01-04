@@ -1078,11 +1078,11 @@
     line-height: 5px;
     color: white;
     text-align: left;
-    background-color: #4CAF50c9;
+    background-color: rgba(130, 76, 175, 0.788);
     border-radius: 5px;
   }
   .login:hover {
-    background-color: #4CAF50ee; 
+    background-color: rgba(114, 76, 175, 0.933); 
   }
 
   .login p {
@@ -1270,7 +1270,7 @@
 
   .cont img{
     position: absolute;
-    top: 48%;
+    top: 47%;
     left: 5%;
     margin-top: 10px;
     margin-right: 100px;
