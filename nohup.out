@@ -1,0 +1,279 @@
+
+> test-01@0.0.0 start /root/iranroboticacademy
+> node ./bin/www
+
+DataBase is connected.   
+[0mGET / [36m304 [0m546.089 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m4.195 ms - -[0m
+[0mGET /javascripts/jquery-1.6.4.min.js [36m304 [0m0.619 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.432 ms - -[0m
+[0mGET /images/person.jpg [36m304 [0m0.618 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.437 ms - -[0m
+[0mGET /images/languages/english.png [36m304 [0m0.655 ms - -[0m
+[0mGET /stylesheets/b_nazanin.ttf [36m304 [0m1.036 ms - -[0m
+[0mGET /images/gallery/img-20.png [36m304 [0m0.510 ms - -[0m
+[0mGET /images/logo1.jpg [36m304 [0m0.524 ms - -[0m
+[0mGET /images/gallery/img-05.png [36m304 [0m0.531 ms - -[0m
+[0mGET /images/topslide-01.jpg [36m304 [0m0.418 ms - -[0m
+[0mGET /images/topslide-02.jpg [36m304 [0m0.640 ms - -[0m
+[0mGET /images/topslide-03.jpg [36m304 [0m0.555 ms - -[0m
+[0mGET /images/computer_workshop/img-01.jpg [36m304 [0m0.990 ms - -[0m
+[0mGET /images/slider-01.png [36m304 [0m0.570 ms - -[0m
+[0mGET /images/slider-03.png [36m304 [0m0.433 ms - -[0m
+[0mGET /images/slider-02.png [36m304 [0m0.432 ms - -[0m
+[0mGET /images/gallery/img-01.png [36m304 [0m0.427 ms - -[0m
+[0mGET /images/gallery/img-02.png [36m304 [0m0.612 ms - -[0m
+[0mGET /images/gallery/img-03.png [36m304 [0m2.378 ms - -[0m
+[0mGET /images/gallery/img-06.png [36m304 [0m2.152 ms - -[0m
+[0mGET /images/gallery/img-04.png [36m304 [0m1.225 ms - -[0m
+[0mGET /images/gallery/img-07.png [36m304 [0m1.046 ms - -[0m
+[0mGET /images/gallery/img-08.png [36m304 [0m0.388 ms - -[0m
+[0mGET /images/gallery/img-09.png [36m304 [0m0.480 ms - -[0m
+[0mGET /images/gallery/img-11.png [36m304 [0m1.198 ms - -[0m
+[0mGET /images/gallery/img-10.png [36m304 [0m0.931 ms - -[0m
+[0mGET /images/gallery/img-13.png [36m304 [0m0.443 ms - -[0m
+[0mGET /images/gallery/img-12.png [36m304 [0m0.391 ms - -[0m
+[0mGET /images/gallery/img-14.png [36m304 [0m0.372 ms - -[0m
+[0mGET /images/gallery/img-15.png [36m304 [0m0.410 ms - -[0m
+[0mGET /images/gallery/img-16.png [36m304 [0m1.220 ms - -[0m
+[0mGET /images/gallery/img-17.png [36m304 [0m0.904 ms - -[0m
+[0mGET /images/gallery/img-18.png [36m304 [0m0.490 ms - -[0m
+[0mGET /images/gallery/img-19.png [36m304 [0m0.444 ms - -[0m
+[0mGET /images/gallery/img-22.png [36m304 [0m0.443 ms - -[0m
+[0mGET /images/gallery/img-21.png [36m304 [0m1.727 ms - -[0m
+[0mGET /images/slider-background.png [36m304 [0m0.530 ms - -[0m
+[0mGET /videos/video-01.mp4 [36m304 [0m0.458 ms - -[0m
+[0mGET /images/logot.png [32m200 [0m1.031 ms - 57906[0m
+[0mGET /videos/video-01.mp4 [32m206 [0m4.544 ms - 1661910[0m
+[0mGET / [36m304 [0m256.287 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.530 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.483 ms - -[0m
+[0mGET /javascripts/jquery-1.6.4.min.js [36m304 [0m0.434 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.436 ms - -[0m
+[0mGET /images/person.jpg [36m304 [0m0.417 ms - -[0m
+[0mGET /images/languages/english.png [36m304 [0m0.845 ms - -[0m
+[0mGET /images/topslide-01.jpg [36m304 [0m0.651 ms - -[0m
+[0mGET /images/topslide-03.jpg [36m304 [0m1.343 ms - -[0m
+[0mGET /images/topslide-02.jpg [36m304 [0m1.007 ms - -[0m
+[0mGET /images/logo1.jpg [36m304 [0m0.610 ms - -[0m
+[0mGET /images/gallery/img-05.png [36m304 [0m1.125 ms - -[0m
+[0mGET /images/gallery/img-20.png [36m304 [0m0.899 ms - -[0m
+[0mGET /stylesheets/b_nazanin.ttf [36m304 [0m0.606 ms - -[0m
+[0mGET /images/computer_workshop/img-01.jpg [36m304 [0m0.526 ms - -[0m
+[0mGET /images/slider-01.png [36m304 [0m0.464 ms - -[0m
+[0mGET /images/slider-02.png [36m304 [0m0.560 ms - -[0m
+[0mGET /images/slider-03.png [36m304 [0m0.416 ms - -[0m
+[0mGET /images/gallery/img-01.png [36m304 [0m0.438 ms - -[0m
+[0mGET /images/gallery/img-02.png [36m304 [0m0.420 ms - -[0m
+[0mGET /images/gallery/img-03.png [36m304 [0m0.398 ms - -[0m
+[0mGET /images/gallery/img-04.png [36m304 [0m0.299 ms - -[0m
+[0mGET /images/gallery/img-06.png [36m304 [0m0.598 ms - -[0m
+[0mGET /images/gallery/img-08.png [36m304 [0m0.585 ms - -[0m
+[0mGET /images/gallery/img-07.png [36m304 [0m0.491 ms - -[0m
+[0mGET /images/gallery/img-09.png [36m304 [0m0.498 ms - -[0m
+[0mGET /images/gallery/img-10.png [36m304 [0m0.625 ms - -[0m
+[0mGET /images/gallery/img-11.png [36m304 [0m0.533 ms - -[0m
+[0mGET /images/gallery/img-12.png [36m304 [0m0.655 ms - -[0m
+[0mGET /images/gallery/img-13.png [36m304 [0m0.641 ms - -[0m
+[0mGET /images/gallery/img-14.png [36m304 [0m0.619 ms - -[0m
+[0mGET /images/gallery/img-15.png [36m304 [0m0.706 ms - -[0m
+[0mGET /images/gallery/img-16.png [36m304 [0m0.710 ms - -[0m
+[0mGET /images/gallery/img-17.png [36m304 [0m0.520 ms - -[0m
+[0mGET /images/gallery/img-18.png [36m304 [0m0.564 ms - -[0m
+[0mGET /images/gallery/img-19.png [36m304 [0m0.520 ms - -[0m
+[0mGET /images/gallery/img-21.png [36m304 [0m0.433 ms - -[0m
+[0mGET /images/gallery/img-22.png [36m304 [0m0.412 ms - -[0m
+[0mGET /images/slider-background.png [36m304 [0m0.574 ms - -[0m
+[0mGET /videos/video-01.mp4 [36m304 [0m0.429 ms - -[0m
+[0mGET /images/logot.png [32m200 [0m0.698 ms - 57906[0m
+[0mGET /videos/video-01.mp4 [32m206 [0m0.983 ms - 1740614[0m
+[0mGET / [36m304 [0m153.932 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.069 ms - -[0m
+[0mGET /javascripts/jquery-1.6.4.min.js [36m304 [0m0.900 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.648 ms - -[0m
+[0mGET /images/person.jpg [36m304 [0m0.361 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.409 ms - -[0m
+[0mGET /images/languages/english.png [36m304 [0m0.979 ms - -[0m
+[0mGET /images/topslide-02.jpg [36m304 [0m1.031 ms - -[0m
+[0mGET /images/topslide-01.jpg [36m304 [0m1.196 ms - -[0m
+[0mGET /stylesheets/b_nazanin.ttf [36m304 [0m0.667 ms - -[0m
+[0mGET /images/topslide-03.jpg [36m304 [0m0.880 ms - -[0m
+[0mGET /images/logo1.jpg [36m304 [0m0.662 ms - -[0m
+[0mGET /images/gallery/img-20.png [36m304 [0m0.653 ms - -[0m
+[0mGET /images/gallery/img-05.png [36m304 [0m0.653 ms - -[0m
+[0mGET /images/computer_workshop/img-01.jpg [36m304 [0m0.598 ms - -[0m
+[0mGET /images/slider-01.png [36m304 [0m0.429 ms - -[0m
+[0mGET /images/slider-02.png [36m304 [0m0.440 ms - -[0m
+[0mGET /images/slider-03.png [36m304 [0m0.406 ms - -[0m
+[0mGET /images/gallery/img-01.png [36m304 [0m0.870 ms - -[0m
+[0mGET /images/gallery/img-02.png [36m304 [0m0.488 ms - -[0m
+[0mGET /images/gallery/img-03.png [36m304 [0m0.578 ms - -[0m
+[0mGET /images/gallery/img-04.png [36m304 [0m0.454 ms - -[0m
+[0mGET /images/gallery/img-06.png [36m304 [0m0.520 ms - -[0m
+[0mGET /images/gallery/img-07.png [36m304 [0m0.453 ms - -[0m
+[0mGET /images/gallery/img-08.png [36m304 [0m0.392 ms - -[0m
+[0mGET /images/gallery/img-09.png [36m304 [0m0.466 ms - -[0m
+[0mGET /images/gallery/img-10.png [36m304 [0m0.425 ms - -[0m
+[0mGET /images/gallery/img-11.png [36m304 [0m0.390 ms - -[0m
+[0mGET /images/gallery/img-12.png [36m304 [0m0.375 ms - -[0m
+[0mGET /images/gallery/img-13.png [36m304 [0m0.395 ms - -[0m
+[0mGET /images/gallery/img-14.png [36m304 [0m0.309 ms - -[0m
+[0mGET /images/gallery/img-15.png [36m304 [0m0.457 ms - -[0m
+[0mGET /images/gallery/img-16.png [36m304 [0m0.403 ms - -[0m
+[0mGET /images/gallery/img-17.png [36m304 [0m0.413 ms - -[0m
+[0mGET /images/gallery/img-18.png [36m304 [0m0.345 ms - -[0m
+[0mGET /images/gallery/img-19.png [36m304 [0m0.329 ms - -[0m
+[0mGET /images/gallery/img-21.png [36m304 [0m0.416 ms - -[0m
+[0mGET /images/gallery/img-22.png [36m304 [0m0.583 ms - -[0m
+[0mGET /images/slider-background.png [36m304 [0m0.442 ms - -[0m
+[0mGET /images/logot.png [32m200 [0m1.022 ms - 57906[0m
+[0mGET / [36m304 [0m123.680 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.671 ms - -[0m
+[0mGET /javascripts/jquery-1.6.4.min.js [36m304 [0m0.484 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.837 ms - -[0m
+[0mGET /images/person.jpg [36m304 [0m0.763 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.583 ms - -[0m
+[0mGET /images/languages/english.png [36m304 [0m1.118 ms - -[0m
+[0mGET /images/topslide-01.jpg [36m304 [0m0.711 ms - -[0m
+[0mGET /images/topslide-02.jpg [36m304 [0m0.767 ms - -[0m
+[0mGET /stylesheets/b_nazanin.ttf [36m304 [0m0.708 ms - -[0m
+[0mGET /images/gallery/img-05.png [36m304 [0m0.454 ms - -[0m
+[0mGET /images/topslide-03.jpg [36m304 [0m0.412 ms - -[0m
+[0mGET /images/logo1.jpg [36m304 [0m0.445 ms - -[0m
+[0mGET /images/gallery/img-20.png [36m304 [0m0.463 ms - -[0m
+[0mGET /images/computer_workshop/img-01.jpg [36m304 [0m0.735 ms - -[0m
+[0mGET /images/slider-01.png [36m304 [0m0.565 ms - -[0m
+[0mGET /images/slider-02.png [36m304 [0m0.558 ms - -[0m
+[0mGET /images/slider-03.png [36m304 [0m0.548 ms - -[0m
+[0mGET /images/gallery/img-01.png [36m304 [0m0.433 ms - -[0m
+[0mGET /images/gallery/img-02.png [36m304 [0m0.471 ms - -[0m
+[0mGET /images/gallery/img-03.png [36m304 [0m0.684 ms - -[0m
+[0mGET /images/gallery/img-04.png [36m304 [0m0.723 ms - -[0m
+[0mGET /images/gallery/img-06.png [36m304 [0m0.561 ms - -[0m
+[0mGET /images/gallery/img-07.png [36m304 [0m0.573 ms - -[0m
+[0mGET /images/gallery/img-08.png [36m304 [0m0.452 ms - -[0m
+[0mGET /images/gallery/img-09.png [36m304 [0m0.655 ms - -[0m
+[0mGET /images/gallery/img-10.png [36m304 [0m0.622 ms - -[0m
+[0mGET /images/gallery/img-11.png [36m304 [0m0.479 ms - -[0m
+[0mGET /images/gallery/img-12.png [36m304 [0m0.491 ms - -[0m
+[0mGET /images/gallery/img-14.png [36m304 [0m0.667 ms - -[0m
+[0mGET /images/gallery/img-13.png [36m304 [0m1.020 ms - -[0m
+[0mGET /images/gallery/img-15.png [36m304 [0m0.502 ms - -[0m
+[0mGET /images/gallery/img-16.png [36m304 [0m0.786 ms - -[0m
+[0mGET /images/gallery/img-17.png [36m304 [0m1.116 ms - -[0m
+[0mGET /images/gallery/img-18.png [36m304 [0m0.637 ms - -[0m
+[0mGET /images/gallery/img-19.png [36m304 [0m0.450 ms - -[0m
+[0mGET /images/gallery/img-21.png [36m304 [0m0.594 ms - -[0m
+[0mGET /images/gallery/img-22.png [36m304 [0m0.570 ms - -[0m
+[0mGET /images/slider-background.png [36m304 [0m0.612 ms - -[0m
+[0mGET /videos/video-01.mp4 [36m304 [0m0.448 ms - -[0m
+[0mGET /images/logot.png [32m200 [0m0.725 ms - 57906[0m
+[0mGET /videos/video-01.mp4 [32m206 [0m1.221 ms - 1648373[0m
+[0mGET / [36m304 [0m151.889 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.751 ms - -[0m
+[0mGET /javascripts/jquery-1.6.4.min.js [36m304 [0m0.659 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.543 ms - -[0m
+[0mGET /images/person.jpg [36m304 [0m0.443 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.405 ms - -[0m
+[0mGET /images/languages/english.png [36m304 [0m0.545 ms - -[0m
+[0mGET /images/topslide-01.jpg [36m304 [0m0.927 ms - -[0m
+[0mGET /images/topslide-02.jpg [36m304 [0m0.751 ms - -[0m
+[0mGET /images/gallery/img-05.png [36m304 [0m0.583 ms - -[0m
+[0mGET /images/topslide-03.jpg [36m304 [0m0.522 ms - -[0m
+[0mGET /images/logo1.jpg [36m304 [0m0.502 ms - -[0m
+[0mGET /stylesheets/b_nazanin.ttf [36m304 [0m0.439 ms - -[0m
+[0mGET /images/gallery/img-20.png [36m304 [0m0.554 ms - -[0m
+[0mGET /images/computer_workshop/img-01.jpg [36m304 [0m0.628 ms - -[0m
+[0mGET /images/slider-01.png [36m304 [0m0.473 ms - -[0m
+[0mGET /images/slider-03.png [36m304 [0m0.745 ms - -[0m
+[0mGET /images/gallery/img-01.png [36m304 [0m1.135 ms - -[0m
+[0mGET /images/slider-02.png [36m304 [0m1.210 ms - -[0m
+[0mGET /images/gallery/img-02.png [36m304 [0m34.588 ms - -[0m
+[0mGET /images/gallery/img-03.png [36m304 [0m2.582 ms - -[0m
+[0mGET /images/gallery/img-04.png [36m304 [0m1.722 ms - -[0m
+[0mGET /images/gallery/img-06.png [36m304 [0m1.175 ms - -[0m
+[0mGET /images/gallery/img-07.png [36m304 [0m0.979 ms - -[0m
+[0mGET /images/gallery/img-08.png [36m304 [0m0.745 ms - -[0m
+[0mGET /images/gallery/img-09.png [36m304 [0m0.523 ms - -[0m
+[0mGET /images/gallery/img-10.png [36m304 [0m0.564 ms - -[0m
+[0mGET /images/gallery/img-12.png [36m304 [0m0.369 ms - -[0m
+[0mGET /images/gallery/img-13.png [36m304 [0m0.613 ms - -[0m
+[0mGET /images/gallery/img-11.png [36m304 [0m0.827 ms - -[0m
+[0mGET /images/gallery/img-14.png [36m304 [0m0.469 ms - -[0m
+[0mGET /images/gallery/img-15.png [36m304 [0m0.550 ms - -[0m
+[0mGET /images/gallery/img-16.png [36m304 [0m0.485 ms - -[0m
+[0mGET /images/gallery/img-17.png [36m304 [0m0.577 ms - -[0m
+[0mGET /images/gallery/img-18.png [36m304 [0m0.398 ms - -[0m
+[0mGET /images/gallery/img-19.png [36m304 [0m0.588 ms - -[0m
+[0mGET /images/gallery/img-21.png [36m304 [0m0.454 ms - -[0m
+[0mGET /images/gallery/img-22.png [36m304 [0m0.392 ms - -[0m
+[0mGET /images/slider-background.png [36m304 [0m0.715 ms - -[0m
+[0mGET /videos/video-01.mp4 [36m304 [0m1.070 ms - -[0m
+[0mGET /images/logot.png [32m200 [0m0.996 ms - 57906[0m
+[0mGET /videos/video-01.mp4 [32m206 [0m1.081 ms - 1635191[0m
+[0mGET / [36m304 [0m135.758 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.453 ms - -[0m
+[0mGET /javascripts/jquery-1.6.4.min.js [36m304 [0m0.704 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.622 ms - -[0m
+[0mGET /images/person.jpg [36m304 [0m0.649 ms - -[0m
+[0mGET /images/logo.jpg [36m304 [0m0.519 ms - -[0m
+[0mGET /images/languages/english.png [36m304 [0m0.926 ms - -[0m
+[0mGET /stylesheets/b_nazanin.ttf [36m304 [0m0.734 ms - -[0m
+[0mGET /images/gallery/img-20.png [36m304 [0m0.493 ms - -[0m
+[0mGET /images/logo1.jpg [36m304 [0m0.490 ms - -[0m
+[0mGET /images/gallery/img-05.png [36m304 [0m1.326 ms - -[0m
+[0mGET /images/topslide-01.jpg [36m304 [0m1.760 ms - -[0m
+[0mGET /images/topslide-02.jpg [36m304 [0m0.540 ms - -[0m
+[0mGET /images/topslide-03.jpg [36m304 [0m2.696 ms - -[0m
+[0mGET /images/computer_workshop/img-01.jpg [36m304 [0m0.998 ms - -[0m
+[0mGET /images/slider-01.png [36m304 [0m0.680 ms - -[0m
+[0mGET /images/slider-03.png [36m304 [0m0.573 ms - -[0m
+[0mGET /images/slider-02.png [36m304 [0m0.571 ms - -[0m
+[0mGET /images/gallery/img-01.png [36m304 [0m0.561 ms - -[0m
+[0mGET /images/gallery/img-02.png [36m304 [0m0.693 ms - -[0m
+[0mGET /images/gallery/img-03.png [36m304 [0m0.927 ms - -[0m
+[0mGET /images/gallery/img-04.png [36m304 [0m0.579 ms - -[0m
+[0mGET /images/gallery/img-06.png [36m304 [0m0.890 ms - -[0m
+[0mGET /images/gallery/img-07.png [36m304 [0m0.703 ms - -[0m
+[0mGET /images/gallery/img-08.png [36m304 [0m0.516 ms - -[0m
+[0mGET /images/gallery/img-10.png [36m304 [0m0.557 ms - -[0m
+[0mGET /images/gallery/img-13.png [36m304 [0m0.960 ms - -[0m
+[0mGET /images/gallery/img-09.png [36m304 [0m1.299 ms - -[0m
+[0mGET /images/gallery/img-11.png [36m304 [0m0.986 ms - -[0m
+[0mGET /images/gallery/img-12.png [36m304 [0m0.935 ms - -[0m
+[0mGET /images/gallery/img-14.png [36m304 [0m0.868 ms - -[0m
+[0mGET /images/gallery/img-15.png [36m304 [0m0.836 ms - -[0m
+[0mGET /images/gallery/img-17.png [36m304 [0m1.016 ms - -[0m
+[0mGET /images/gallery/img-16.png [36m304 [0m0.572 ms - -[0m
+[0mGET /images/gallery/img-18.png [36m304 [0m3.431 ms - -[0m
+[0mGET /images/gallery/img-19.png [36m304 [0m0.403 ms - -[0m
+[0mGET /images/gallery/img-22.png [36m304 [0m0.496 ms - -[0m
+[0mGET /images/gallery/img-21.png [36m304 [0m1.133 ms - -[0m
+[0mGET /images/slider-background.png [36m304 [0m0.646 ms - -[0m
+[0mGET /videos/video-01.mp4 [36m304 [0m0.320 ms - -[0m
+[0mGET /images/logot.png [32m200 [0m0.921 ms - 57906[0m
+[0mGET /videos/video-01.mp4 [32m206 [0m1.125 ms - 1622009[0m
+Terminated
+
+npm ERR! Linux 4.15.0-22-generic
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v8.10.0
+npm ERR! npm  v3.5.2
+npm ERR! code ELIFECYCLE
+npm ERR! test-01@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 143
+npm ERR! 
+npm ERR! Failed at the test-01@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the test-01 package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs test-01
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls test-01
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/iranroboticacademy/npm-debug.log
