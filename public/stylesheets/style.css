@@ -5,8 +5,10 @@
 :root {
   /*--bgcolor: #29b329;
   --bghover: #86c488;*/
-  --bgcolor: #4f1a7a;
-  --bghover: #9e86c4;
+  --bgcolor: #341a7a;
+  --bghover: #987cc5;
+  --loginbg: #473ab88e;
+  --loginhv: #473ab8;
 }
 @media only screen and (min-width: 600px) {
   body {
@@ -290,11 +292,11 @@
     line-height: 5px;
     color: white;
     text-align: left;
-    background-color: rgba(130, 76, 175, 0.788);
+    background-color: var(--loginbg);
     border-radius: 20px;
   }
   .login:hover {
-    background-color: rgba(114, 76, 175, 0.933); 
+    background-color: var(--loginhv); 
   }
 
   .login p {
@@ -1078,11 +1080,11 @@
     line-height: 5px;
     color: white;
     text-align: left;
-    background-color: rgba(130, 76, 175, 0.788);
+    background-color: var(--loginbg);
     border-radius: 5px;
   }
   .login:hover {
-    background-color: rgba(114, 76, 175, 0.933); 
+    background-color: var(--loginhv);
   }
 
   .login p {
