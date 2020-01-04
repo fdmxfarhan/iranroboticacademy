@@ -2,155 +2,324 @@
     font-family:'bnazanin';
     src:url('b_nazanin.ttf');
 }
-
-.tutorial {
-    color: rgb(14, 14, 14);
-    padding: 10px 100px;
-    text-align: right;
-    /* height: 500px; */
-}
-.tutorial h1 {
-    position: relative;
-    font-size: 30px;
-    font-family: 'bnazanin';
-    text-align: right;
-    padding: 0;
-    margin: 0;
-    margin-top: 50px;
-    direction: rtl;
-    color: var(--bgcolor);
-}
-.tutorial p{
-    font-family: 'bnazanin';
-    font-size: 20px;
-    direction: rtl;
-    text-align: justify;    
-    width: 700px;
-    line-height: 1.2;
-    float: right;
-    left: 100px;
-    margin-right: 30px;
-}
-.tutorial img{
-    width: 290px;
-    border-radius: 10px;
-    float: left;
-    margin-right: 70px;
-    margin-left: 0;
-    margin-top: 0;
-    padding: 0;
-    top:0;
-}
-.tutorial a{
-    background-color: var(--bgcolor);
-    /* position: relative; */
-    /* left: 480px; */
-    /* bottom: -100px; */
-    margin: 50px;
-    padding: 10px 50px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 20px;
-    /* border-radius: 7px; */
-}
-.tutorial a:hover{
-    background-color: var(--bghover)
-}
-.tutorial h2{
-    font-size: 20px;
-    font-family: 'bnazanin';
-    text-align: right;
-    padding: 0;
-    margin: 20px 20px;
-    margin-top: 50px;
-    direction: rtl;
-    color: var(--bgcolor);
-}
-table {
-    font-family: 'bnazanin';
-    border-collapse: collapse;
-    width: 900px;
-    direction: rtl;
-    margin-left: 100px;
-    margin-top: 100px;
-}
-  
-td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
+@media only screen and (min-width: 600px) {
+    .tutorial {
+        color: rgb(14, 14, 14);
+        padding: 10px 100px;
+        text-align: right;
+        /* height: 500px; */
+    }
+    .tutorial h1 {
+        position: relative;
+        font-size: 30px;
+        font-family: 'bnazanin';
+        text-align: right;
+        padding: 0;
+        margin: 0;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .tutorial p{
+        font-family: 'bnazanin';
+        font-size: 20px;
+        direction: rtl;
+        text-align: justify;    
+        width: 700px;
+        line-height: 1.2;
+        float: right;
+        left: 100px;
+        margin-right: 30px;
+    }
+    .tutorial img{
+        width: 290px;
+        border-radius: 10px;
+        float: left;
+        margin-right: 70px;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0;
+        top:0;
+    }
+    .tutorial a{
+        background-color: var(--bgcolor);
+        /* position: relative; */
+        /* left: 480px; */
+        /* bottom: -100px; */
+        margin: 50px;
+        padding: 10px 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        /* border-radius: 7px; */
+    }
+    .tutorial a:hover{
+        background-color: var(--bghover)
+    }
+    .tutorial h2{
+        font-size: 20px;
+        font-family: 'bnazanin';
+        text-align: right;
+        padding: 0;
+        margin: 20px 20px;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    table {
+        font-family: 'bnazanin';
+        border-collapse: collapse;
+        width: 900px;
+        direction: rtl;
+        margin-left: 100px;
+        margin-top: 100px;
+    }
     
-}
-tr:nth-child(even) {
-    background-color: #d9ffd0;
-}
-.tutorial form{
-    margin: 50px;
-    direction: rtl;
-    text-align: right;
-    font-size: 18px;
-    font-family: 'bnazanin';
-}
-.tutorial input{
-    width: 50%;
-    padding: 12px 20px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-family: 'bnazanin';
-}
-.tutorial button{
-    background-color: var(--bgcolor);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0px;
-    margin-left: 20px;
-    border: none;
-    cursor: pointer;
-    width: 24%;
-}
-.tutorial button.remove{
-    background-color: rgb(243, 132, 132);
-}
-.tutorial select{
-    width: 50%;
-    padding: 8px 20px;
-    margin: 10px 0;
-    display: inline-block;
-    box-sizing: border-box;
-    font-family: 'bnazanin';
-    font-size: 18px;
-}
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+        
+    }
+    tr:nth-child(even) {
+        background-color: #d9ffd0;
+    }
+    .tutorial form{
+        margin: 50px;
+        direction: rtl;
+        text-align: right;
+        font-size: 18px;
+        font-family: 'bnazanin';
+    }
+    .tutorial input{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+    }
+    .tutorial button{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+        width: 24%;
+    }
+    .tutorial button.remove{
+        background-color: rgb(243, 132, 132);
+    }
+    .tutorial select{
+        width: 50%;
+        padding: 8px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+        font-size: 18px;
+    }
 
-.dismiss{
-    position: relative;
-    left: 540px;
-    top: 20px;
-    margin: 0 0px;
-    width: 530px;
+    .dismiss{
+        position: relative;
+        left: 540px;
+        top: 20px;
+        margin: 0 0px;
+        width: 530px;
+    }
+    .dismiss h1.error{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        background-color: rgb(255, 237, 137);
+        padding: 10px;
+        margin: 5px;
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
+    .dismiss h1.success{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        color: rgba(53, 53, 53, 0.651);
+        background-color: rgb(164, 255, 137);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
+
 }
-.dismiss h1.error{
-    text-align: right;
-    direction: rtl;
-    border-radius: 5px;
-    background-color: rgb(255, 237, 137);
-    padding: 10px;
-    margin: 5px;
-    color: rgb(53, 53, 53);
-    font-family: 'bnazanin';
-    font-size: 16px;
-}
-.dismiss h1.success{
-    text-align: right;
-    direction: rtl;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    color: rgba(53, 53, 53, 0.651);
-    background-color: rgb(164, 255, 137);
-    font-family: 'bnazanin';
-    font-size: 16px;
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+
+@media only screen and (max-width: 600px) {
+    .tutorial {
+        position: relative;
+        color: rgb(14, 14, 14);
+        padding: 10px 20px;
+        text-align: right;
+        /* height: 500px; */
+    }
+    .tutorial h1 {
+        position: relative;
+        font-size: 25px;
+        font-family: 'bnazanin';
+        text-align: right;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .tutorial p{
+        font-family: 'bnazanin';
+        font-size: 20px;
+        direction: rtl;
+        text-align: justify;    
+        width: 95%;
+        line-height: 1.2;
+        float: right;
+        left: 100px;
+        margin-right: 10px;
+        height: 550px;
+    }
+    .tutorial img{
+        position: absolute;
+        top: 300px;
+        width: 90%;
+        height: 32%;
+        border-radius: 10px;
+        float: left;
+        margin-right: 70px;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0;
+    }
+    .tutorial a{
+        background-color: var(--bgcolor);
+        /* position: relative; */
+        /* left: 480px; */
+        /* bottom: -100px; */
+        margin: 50px;
+        padding: 10px 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        /* border-radius: 7px; */
+    }
+    .tutorial a:hover{
+        background-color: var(--bghover)
+    }
+    .tutorial h2{
+        font-size: 20px;
+        font-family: 'bnazanin';
+        text-align: right;
+        padding: 0;
+        margin: 20px 20px;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    table {
+        font-family: 'bnazanin';
+        border-collapse: collapse;
+        width: 95%;
+        direction: rtl;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 50px;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+        
+    }
+    tr:nth-child(even) {
+        background-color: #d9ffd0;
+    }
+    .tutorial form{
+        margin: 50px;
+        direction: rtl;
+        text-align: right;
+        font-size: 18px;
+        font-family: 'bnazanin';
+    }
+    .tutorial input{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+    }
+    .tutorial button{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+        width: 24%;
+    }
+    .tutorial button.remove{
+        background-color: rgb(243, 132, 132);
+    }
+    .tutorial select{
+        width: 50%;
+        padding: 8px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+        font-size: 18px;
+    }
+
+    .dismiss{
+        position: relative;
+        left: 540px;
+        top: 20px;
+        margin: 0 0px;
+        width: 530px;
+    }
+    .dismiss h1.error{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        background-color: rgb(255, 237, 137);
+        padding: 10px;
+        margin: 5px;
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
+    .dismiss h1.success{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        color: rgba(53, 53, 53, 0.651);
+        background-color: rgb(164, 255, 137);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
 }
