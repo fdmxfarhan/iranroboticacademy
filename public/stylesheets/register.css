@@ -4,125 +4,249 @@
     src:url('b_nazanin.ttf');
 }
 
-.register {
-    margin: 50px 150px;
-    direction: rtl;
-    text-align: right;
-    font-size: 18px;
-    height: 800px;
-    font-family: 'bnazanin';
-}
+@media only screen and (min-width: 600px) {
+  .register {
+      margin: 50px 150px;
+      direction: rtl;
+      text-align: right;
+      font-size: 18px;
+      height: 800px;
+      font-family: 'bnazanin';
+  }
 
-.register input{
-    width: 50%;
+  .register input{
+      width: 50%;
+      padding: 12px 20px;
+      margin: 10px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: 'bnazanin';
+    }
+
+  .register button{
+      background-color: var(--bgcolor);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0px;
+      margin-left: 20px;
+      border: none;
+      cursor: pointer;
+      width: 24%;
+  }
+  .register select{
+      width: 50%;
+      padding: 8px 20px;
+      margin: 10px 0;
+      display: inline-block;
+      box-sizing: border-box;
+      font-family: 'bnazanin';
+      font-size: 18px;
+  }
+  .register .info{
+    background-color: rgb(0, 177, 74);
+    height: 500px;
+    width: 490px;
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    color: white;
+    padding: 50px 30px;
+    border-radius: 5px;
+  }
+  .register .info:hover {
+    background-color: #38a83c;
+  }
+  .register .info p{
+    font-family: 'bnazanin';
+    font-size: 24px;
+    direction: rtl;
+    text-align: justify;
+    line-height: 1.2;
+    text-indent: 20px;
+  }
+  .register .info h1{
+    font-family: 'bnazanin';
+    font-size: 32px;
+    direction: rtl;
+    text-align: center;
+  }
+  .register .info img{
+    width: 300px;
+    position: absolute;
+    bottom: 70px;
+    left: 120px;
+  }
+  .register p{
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .register textarea{
+    height: 300px;
+    width: 900px;
+    box-sizing: border-box;
+    resize: vertical;
     padding: 12px 20px;
     margin: 10px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-family: 'bnazanin';
+    font-size: 20px;
   }
-
-.register button{
-    background-color: var(--bgcolor);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0px;
-    margin-left: 20px;
-    border: none;
-    cursor: pointer;
-    width: 24%;
-}
-.register select{
-    width: 50%;
-    padding: 8px 20px;
-    margin: 10px 0;
-    display: inline-block;
-    box-sizing: border-box;
+  .register a{
     font-family: 'bnazanin';
     font-size: 18px;
+    text-decoration: none;
+    
+  }
+  .dismiss{
+    margin: 0 0px;
+    width: 530px;
+  }
+  .dismiss h1.error{
+    text-align: right;
+    direction: rtl;
+    border-radius: 5px;
+    background-color: rgb(255, 237, 137);
+    padding: 10px;
+    margin: 5px;
+    color: rgb(53, 53, 53);
+    font-family: 'bnazanin';
+    font-size: 16px;
+  }
+  .dismiss h1.success{
+    text-align: right;
+    direction: rtl;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    color: rgba(53, 53, 53, 0.651);
+    background-color: rgb(164, 255, 137);
+    font-family: 'bnazanin';
+    font-size: 16px;
+  }
 }
-.register .info{
-  background-color: rgb(0, 177, 74);
-  height: 500px;
-  width: 490px;
-  position: absolute;
-  top: 200px;
-  left: 40px;
-  color: white;
-  padding: 50px 30px;
-  border-radius: 5px;
-}
-.register .info:hover {
-  background-color: #38a83c;
-}
-.register .info p{
-  font-family: 'bnazanin';
-  font-size: 24px;
-  direction: rtl;
-  text-align: justify;
-  line-height: 1.2;
-  text-indent: 20px;
-}
-.register .info h1{
-  font-family: 'bnazanin';
-  font-size: 32px;
-  direction: rtl;
-  text-align: center;
-}
-.register .info img{
-  width: 300px;
-  position: absolute;
-  bottom: 70px;
-  left: 120px;
-}
-.register p{
-  padding: 20px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-.register textarea{
-  height: 300px;
-  width: 900px;
-  box-sizing: border-box;
-  resize: vertical;
-  padding: 12px 20px;
-  margin: 10px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-family: 'bnazanin';
-  font-size: 20px;
-}
-.register a{
-  font-family: 'bnazanin';
-  font-size: 18px;
-  text-decoration: none;
+@media only screen and (max-width: 600px) {
+  .register {
+    position: relative;
+    padding: 50px 7%;
+    direction: rtl;
+    text-align: right;
+    font-size: 18px;
+    height: auto;
+    font-family: 'bnazanin';
+  }
+
+  .register input{
+      width: 95%;
+      padding: 12px 20px;
+      margin: 10px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: 'bnazanin';
+    }
   
-}
-.dismiss{
-  margin: 0 0px;
-  width: 530px;
-}
-.dismiss h1.error{
-  text-align: right;
-  direction: rtl;
-  border-radius: 5px;
-  background-color: rgb(255, 237, 137);
-  padding: 10px;
-  margin: 5px;
-  color: rgb(53, 53, 53);
-  font-family: 'bnazanin';
-  font-size: 16px;
-}
-.dismiss h1.success{
-  text-align: right;
-  direction: rtl;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-  color: rgba(53, 53, 53, 0.651);
-  background-color: rgb(164, 255, 137);
-  font-family: 'bnazanin';
-  font-size: 16px;
+  .register button{
+      background-color: var(--bgcolor);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0px;
+      margin-left: 20px;
+      border: none;
+      cursor: pointer;
+      width: 24%;
+  }
+  .register select{
+      width: 95%;
+      padding: 8px 20px;
+      margin: 10px 0;
+      display: inline-block;
+      box-sizing: border-box;
+      font-family: 'bnazanin';
+      font-size: 18px;
+  }
+  .register .info{
+    background-color: rgb(0, 177, 74);
+    height: 500px;
+    width: 85%;
+    color: white;
+    padding: 50px 30px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .register .info:hover {
+    background-color: #38a83c;
+  }
+  .register .info p{
+    font-family: 'bnazanin';
+    font-size: 24px;
+    direction: rtl;
+    text-align: justify;
+    line-height: 1.2;
+    text-indent: 0px;
+  }
+  .register .info h1{
+    font-family: 'bnazanin';
+    font-size: 32px;
+    direction: rtl;
+    text-align: center;
+  }
+  .register .info img{
+    width: 50%;
+  }
+  .register p{
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .register textarea{
+    height: 300px;
+    width: 900px;
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'bnazanin';
+    font-size: 20px;
+  }
+  .register a{
+    font-family: 'bnazanin';
+    font-size: 18px;
+    text-decoration: none;
+    
+  }
+  .dismiss{
+    margin: 0 0px;
+    width: 530px;
+  }
+  .dismiss h1.error{
+    text-align: right;
+    direction: rtl;
+    border-radius: 5px;
+    background-color: rgb(255, 237, 137);
+    padding: 10px;
+    margin: 5px;
+    color: rgb(53, 53, 53);
+    font-family: 'bnazanin';
+    font-size: 16px;
+  }
+  .dismiss h1.success{
+    text-align: right;
+    direction: rtl;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    color: rgba(53, 53, 53, 0.651);
+    background-color: rgb(164, 255, 137);
+    font-family: 'bnazanin';
+    font-size: 16px;
+  }
 }
