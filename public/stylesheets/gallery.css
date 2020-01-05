@@ -6,6 +6,8 @@
 @media only screen and (min-width: 600px) {
 
     .imgpad h1 {
+        float: left;
+        width: 100%;
         font-size: 20;
         font-family: 'bnazanin';
         text-align: center;
