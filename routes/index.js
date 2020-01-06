@@ -75,31 +75,29 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
   var python = false;
   var pythonDay = 0;
   var pythonHour = 0;
-  
-  
-  // Class.deleteOne({ uname: req.user.uname }, err => console.log(err));
+
   if(!req.user) res.render('dashboard', {
     uname: false
   });
-  else {
+  else if(req.user.role === 'student'){
     Class.find({uname: req.user.uname}, function(err, docs){
       for(var i = 0; i < docs.length; i++){
-          if(docs[i].cls == 'robotic') {
-            robotic = true;
-            roboticDay = docs[i].day;
-            roboticHour = docs[i].hour;
-          }
-          if(docs[i].cls == 'computer') {
-            computer = true;
-            computerDay = docs[i].day;
-            computerHour = docs[i].hour;
-          }
-          if(docs[i].cls == 'electronic') {
-            electronic = true;
-            electronicDay = docs[i].day;
-            electronicHour = docs[i].hour;
-          }
+        if(docs[i].cls == 'robotic') {
+          robotic = true;
+          roboticDay = docs[i].day;
+          roboticHour = docs[i].hour;
         }
+        if(docs[i].cls == 'computer') {
+          computer = true;
+          computerDay = docs[i].day;
+          computerHour = docs[i].hour;
+        }
+        if(docs[i].cls == 'electronic') {
+          electronic = true;
+          electronicDay = docs[i].day;
+          electronicHour = docs[i].hour;
+        }
+      }
       Tutorial.find({uname: req.user.uname}, function(err, docs){
         for(var i = 0; i < docs.length; i++){
           if(docs[i].cls == 'android') {
@@ -159,7 +157,7 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
           }
           
         }
-        res.render('dashboard', {
+        res.render('student_dashboard', {
           uname: req.user.uname,
           robotic: robotic,
           computer: computer,
@@ -207,7 +205,11 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
         });
       });
     });
-    
+  }
+  else if(req.user.role === 'admin'){
+    res.render('admin_dashboard',{
+      uname: req.user.uname
+    });
   }
 });
 

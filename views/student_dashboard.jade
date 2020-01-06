@@ -1,0 +1,1593 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/dashboard.css')
+    script(src="/javascripts/dashboard.js")
+    .dashboard 
+        .tab
+            button.tablink(id="btn1") کلاس ها
+            button.tablink(id="btn2") دوره های آموزشی
+            button.tablink(id="btn4") جزوه ها و فیلم های آموزشی
+            button.tablink(id="btn3") تنظیمات حساب کاربری
+            
+        .tabcontent(id="classes-tab")
+            -if(robotic){
+                .registered-class
+                    a(href="/classes/robotic")
+                        img(src="/images/gallery/img-20.png", alt="img" width="600" height="400")
+                    .desc کلاس رباتیک
+            -}
+            -if(computer){
+                .registered-class
+                    a(href="/classes/computer")
+                        img(src="/images/gallery/img-03.png", alt="img" width="600" height="400")
+                    .desc کلاس کامپیوتر
+            -}
+            -if(electronic){
+                .registered-class
+                    a(href="/classes/electronic")
+                        img(src="/images/gallery/img-19.png", alt="img" width="600" height="400")
+                    .desc کلاس الکترونیک
+            -}
+            -if(!robotic && !computer && !electronic){
+                .no-class
+                    h1 شما هنوز کلاسی ثبت نام نکرده اید
+                    a(href="/classes")
+                        h2 آشنایی با کلاس های آکادمی
+            -}else{
+                table 
+                    tr
+                        caption برنامه زمان بندی
+                        th ساعت
+                        th شنبه
+                        th یک شنبه
+                        th دو شنبه
+                        th سه شنبه
+                        th چهار شنبه
+                        th پنج شنبه
+                        th جمعه
+                    ////////////////////////////////hour1
+                    tr
+                        th ۱۰ تا ۱۲
+                        ////////////////////////////////////day1
+                        -if(roboticDay == 'day1' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day1' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day1' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(roboticDay == 'day2' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day2' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day2' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(roboticDay == 'day3' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day3' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day3' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(roboticDay == 'day4' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day4' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day4' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(roboticDay == 'day5' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day5' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day5' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(roboticDay == 'day6' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day6' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day6' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(roboticDay == 'day7' && roboticHour == 'hour1'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day7' && computerHour == 'hour1'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day7' && electronicHour == 'hour1'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        
+                    /////////////////////////////////////hour2
+                    tr 
+                        th ۱۳ تا ۱۵
+                        ////////////////////////////////////day1
+                        -if(roboticDay == 'day1' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day1' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day1' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(roboticDay == 'day2' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day2' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day2' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(roboticDay == 'day3' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day3' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day3' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(roboticDay == 'day4' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day4' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day4' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(roboticDay == 'day5' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day5' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day5' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(roboticDay == 'day6' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day6' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day6' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(roboticDay == 'day7' && roboticHour == 'hour2'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day7' && computerHour == 'hour2'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day7' && electronicHour == 'hour2'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                    //////////////////////////////////hour3
+                    tr 
+                        th ۱۶ تا ۱۸
+                        ////////////////////////////////////day1
+                        -if(roboticDay == 'day1' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day1' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day1' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(roboticDay == 'day2' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day2' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day2' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(roboticDay == 'day3' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day3' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day3' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(roboticDay == 'day4' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day4' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day4' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(roboticDay == 'day5' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day5' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day5' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(roboticDay == 'day6' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day6' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day6' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(roboticDay == 'day7' && roboticHour == 'hour3'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day7' && computerHour == 'hour3'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day7' && electronicHour == 'hour3'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                    ////////////////////////////////hour4
+                    tr 
+                        th ۱۸ تا ۲۰
+                        ////////////////////////////////////day1
+                        -if(roboticDay == 'day1' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day1' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day1' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(roboticDay == 'day2' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day2' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day2' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(roboticDay == 'day3' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day3' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day3' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(roboticDay == 'day4' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day4' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day4' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(roboticDay == 'day5' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day5' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day5' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(roboticDay == 'day6' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day6' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day6' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(roboticDay == 'day7' && roboticHour == 'hour4'){
+                            td رباتیک
+                        -}
+                        -else if(computerDay == 'day7' && computerHour == 'hour4'){
+                            td کامپیوتر
+                        -}
+                        -else if(electronicDay == 'day7' && electronicHour == 'hour4'){
+                            td الکترونیک
+                        -}
+                        -else{
+                            td
+                        -}
+                a.reg(href="/classes") ثبت نام کلاس جدید
+            -}
+            
+            
+        .tabcontent(id="tutorials-tab")
+            -if(android){
+                .registered-class
+                    a(href="/tutorials/android")
+                        img(src="/images/tutorials/android.png", alt="img" width="600" height="400")
+                    .desc برنامه نویسی اندروید
+            -}
+            -if(arduino){
+                .registered-class
+                    a(href="/tutorials/arduino")
+                        img(src="/images/tutorials/arduino.png", alt="img" width="600" height="400")
+                    .desc بوردهای آردوینو
+            -}
+            -if(arm){
+                .registered-class
+                    a(href="/tutorials/arm")
+                        img(src="/images/tutorials/arm.jpg", alt="img" width="600" height="400")
+                    .desc میکروکنترلر های arm
+            -}
+            -if(avr){
+                .registered-class
+                    a(href="/tutorials/avr")
+                        img(src="/images/tutorials/avr.jpg", alt="img" width="600" height="400")
+                    .desc میکروکنترلر های avr
+            -}
+            -if(circuit){
+                .registered-class
+                    a(href="/tutorials/circuit")
+                        img(src="/images/tutorials/electronic.png", alt="img" width="600" height="400")
+                    .desc الکترونیک و مدارات منطقی
+            -}
+            -if(cpp){
+                .registered-class
+                    a(href="/tutorials/cpp")
+                        img(src="/images/tutorials/cpp.png", alt="img" width="600" height="400")
+                    .desc برنامه نویسی C++
+            -}
+            -if(css){
+                .registered-class
+                    a(href="/tutorials/css")
+                        img(src="/images/tutorials/css.jpg", alt="img" width="600" height="400")
+                    .desc طراحی وب CSS
+            -}
+            -if(html){
+                .registered-class
+                    a(href="/tutorials/html")
+                        img(src="/images/tutorials/html.jpg", alt="img" width="600" height="400")
+                    .desc طراحی وب HTML
+            -}
+            -if(nodejs){
+                .registered-class
+                    a(href="/tutorials/nodejs")
+                        img(src="/images/tutorials/nodejs.png", alt="img" width="600" height="400")
+                    .desc طراحی وب Node.JS
+            -}
+            -if(php){
+                .registered-class
+                    a(href="/tutorials/php")
+                        img(src="/images/tutorials/php.jpg", alt="img" width="600" height="400")
+                    .desc طراحی وب PHP
+            -}
+            -if(python){
+                .registered-class
+                    a(href="/tutorials/python")
+                        img(src="/images/tutorials/python.png", alt="img" width="600" height="400")
+                    .desc برنامه نویسی Python
+            -}
+            
+            -if(!android && !arduino && !arm && !avr && !circuit && !cpp && !css && !html && !nodejs && !php && !python){
+                .no-class
+                    h1 شما هنوز دوره ای ثبت نام نکرده اید
+                    a(href="/tutorials")
+                        h2 آشنایی با دوره های آکادمی
+            -}else{
+                table 
+                    tr
+                        caption برنامه زمان بندی
+                        th ساعت
+                        th شنبه
+                        th یک شنبه
+                        th دو شنبه
+                        th سه شنبه
+                        th چهار شنبه
+                        th پنج شنبه
+                        th جمعه
+                    ////////////////////////////////hour1
+                    tr
+                        th ۱۰ تا ۱۲
+                        ////////////////////////////////////day1
+                        -if(androidDay == 'day1' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day1' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day1' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day1' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day1' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day1' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day1' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day1' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day1' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day1' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day1' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(androidDay == 'day2' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day2' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day2' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day2' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day2' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day2' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day2' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day2' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day2' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day2' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day2' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(androidDay == 'day3' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day3' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day3' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day3' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day3' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day3' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day3' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day3' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day3' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day3' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day3' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(androidDay == 'day4' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day4' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day4' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day4' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day4' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day4' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day4' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day4' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day4' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day4' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day4' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(androidDay == 'day5' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day5' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day5' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day5' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day5' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day5' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day5' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day5' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day5' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day5' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day5' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(androidDay == 'day6' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day6' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day6' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day6' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day6' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day6' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day6' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day6' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day6' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day6' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day6' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(androidDay == 'day7' && androidHour == 'hour1'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day7' && arduinoHour == 'hour1'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day7' && armHour == 'hour1'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day7' && avrHour == 'hour1'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day7' && circuitHour == 'hour1'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day7' && cppHour == 'hour1'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day7' && cssHour == 'hour1'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day7' && htmlHour == 'hour1'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day7' && nodejsHour == 'hour1'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day7' && phpHour == 'hour1'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day7' && pythonHour == 'hour1'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                    /////////////////////////////////////hour2
+                    tr 
+                        th ۱۳ تا ۱۵
+                        ////////////////////////////////////day1
+                        -if(androidDay == 'day1' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day1' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day1' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day1' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day1' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day1' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day1' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day1' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day1' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day1' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day1' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(androidDay == 'day2' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day2' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day2' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day2' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day2' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day2' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day2' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day2' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day2' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day2' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day2' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(androidDay == 'day3' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day3' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day3' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day3' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day3' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day3' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day3' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day3' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day3' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day3' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day3' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(androidDay == 'day4' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day4' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day4' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day4' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day4' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day4' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day4' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day4' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day4' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day4' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day4' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(androidDay == 'day5' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day5' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day5' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day5' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day5' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day5' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day5' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day5' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day5' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day5' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day5' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(androidDay == 'day6' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day6' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day6' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day6' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day6' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day6' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day6' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day6' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day6' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day6' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day6' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(androidDay == 'day7' && androidHour == 'hour2'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day7' && arduinoHour == 'hour2'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day7' && armHour == 'hour2'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day7' && avrHour == 'hour2'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day7' && circuitHour == 'hour2'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day7' && cppHour == 'hour2'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day7' && cssHour == 'hour2'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day7' && htmlHour == 'hour2'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day7' && nodejsHour == 'hour2'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day7' && phpHour == 'hour2'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day7' && pythonHour == 'hour2'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                    //////////////////////////////////hour3
+                    tr 
+                        th ۱۶ تا ۱۸
+                        ////////////////////////////////////day1
+                        -if(androidDay == 'day1' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day1' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day1' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day1' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day1' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day1' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day1' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day1' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day1' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day1' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day1' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(androidDay == 'day2' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day2' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day2' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day2' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day2' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day2' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day2' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day2' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day2' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day2' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day2' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(androidDay == 'day3' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day3' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day3' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day3' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day3' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day3' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day3' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day3' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day3' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day3' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day3' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(androidDay == 'day4' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day4' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day4' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day4' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day4' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day4' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day4' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day4' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day4' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day4' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day4' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(androidDay == 'day5' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day5' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day5' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day5' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day5' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day5' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day5' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day5' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day5' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day5' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day5' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(androidDay == 'day6' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day6' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day6' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day6' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day6' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day6' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day6' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day6' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day6' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day6' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day6' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(androidDay == 'day7' && androidHour == 'hour3'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day7' && arduinoHour == 'hour3'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day7' && armHour == 'hour3'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day7' && avrHour == 'hour3'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day7' && circuitHour == 'hour3'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day7' && cppHour == 'hour3'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day7' && cssHour == 'hour3'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day7' && htmlHour == 'hour3'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day7' && nodejsHour == 'hour3'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day7' && phpHour == 'hour3'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day7' && pythonHour == 'hour3'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                    ////////////////////////////////hour4
+                    tr 
+                        th ۱۸ تا ۲۰
+                        ////////////////////////////////////day1
+                        -if(androidDay == 'day1' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day1' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day1' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day1' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day1' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day1' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day1' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day1' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day1' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day1' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day1' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day2
+                        -if(androidDay == 'day2' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day2' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day2' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day2' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day2' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day2' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day2' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day2' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day2' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day2' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day2' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day3
+                        -if(androidDay == 'day3' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day3' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day3' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day3' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day3' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day3' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day3' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day3' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day3' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day3' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day3' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day4
+                        -if(androidDay == 'day4' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day4' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day4' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day4' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day4' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day4' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day4' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day4' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day4' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day4' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day4' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day5
+                        -if(androidDay == 'day5' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day5' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day5' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day5' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day5' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day5' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day5' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day5' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day5' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day5' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day5' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day6
+                        -if(androidDay == 'day6' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day6' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day6' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day6' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day6' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day6' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day6' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day6' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day6' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day6' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day6' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                        ////////////////////////////////////day7
+                        -if(androidDay == 'day7' && androidHour == 'hour4'){
+                            td اندروید
+                        -}
+                        -else if(arduinoDay == 'day7' && arduinoHour == 'hour4'){
+                            td Arduino
+                        -}
+                        -else if(armDay == 'day7' && armHour == 'hour4'){
+                            td ARM
+                        -}
+                        -else if(avrDay == 'day7' && avrHour == 'hour4'){
+                            td AVR
+                        -}
+                        -else if(circuitDay == 'day7' && circuitHour == 'hour4'){
+                            td الکترونیک و مدار
+                        -}
+                        -else if(cppDay == 'day7' && cppHour == 'hour4'){
+                            td C++
+                        -}
+                        -else if(cssDay == 'day7' && cssHour == 'hour4'){
+                            td CSS
+                        -}
+                        -else if(htmlDay == 'day7' && htmlHour == 'hour4'){
+                            td HTML
+                        -}
+                        -else if(nodejsDay == 'day7' && nodejsHour == 'hour4'){
+                            td Node.JS
+                        -}
+                        -else if(phpDay == 'day7' && phpHour == 'hour4'){
+                            td PHP
+                        -}
+                        -else if(pythonDay == 'day7' && pythonHour == 'hour4'){
+                            td Python
+                        -}
+                        -else{
+                            td
+                        -}
+                a.reg(href="/tutorials") ثبت نام دوره جدید
+            -}
+            
+        .tabcontent(id="setting-tab")
+            form(action="/users/change_username")
+                label(for="uname")
+                    b تغییر نام کاربری:
+                br
+                input(type="text" placeholder="نام کاربری جدید" name="uname")
+                button(type="submit") تغییر
+                br
+            form(action="/users/change_email")
+                label(for="uname")
+                    b تغییر پست الکترونیکی:
+                br
+                input(type="email" placeholder="پست الکترونیکی جدید" name="email")
+                button(type="submit") تغییر
+                br
+            
+            form(action="/users/change_password")
+                label(for="uname")
+                    b تغییر رمز عبور:
+                br
+                input(type="text" placeholder="رمز عبور قبلی" name="oldpass")
+                br
+                input(type="text" placeholder="رمز عبور جدید" name="pass")
+                br
+                input(type="text" placeholder="تکرار رمز عبور جدید" name="pass1")                    
+                button(type="submit") تغییر
+                br
+    

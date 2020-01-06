@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/dashboard.css')
+    script(src="/javascripts/dashboard.js")
+    .dashboard 
+        .tab
+            button.tablink(id="btn1") دانش آموزان
+            button.tablink(id="btn2") اساتید
+            button.tablink(id="btn2") کلاس ها
+            button.tablink(id="btn2") دوره ها
+            button.tablink(id="btn4") مالی
+            button.tablink(id="btn3") تنظیمات حساب کاربری
+        
+        .tabcontent(id="classes-tab")
+            h1 1
+        .tabcontent(id="tutorials-tab")
+            h1 2
+        .tabcontent(id="setting-tab")
+            h1 3
