@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/dashboard-teachers.css')
+    script(src="/javascripts/dashboard-admin.js")
+    .dash
+        img(src="/images/img-03.jpg", alt="img")
+        h1 به پنل کاربری خود خوش آمدید
+    .dashboard 
+        .tab
+            button.tablink(id="btn1") کلاس های من
+            button.tablink(id="btn2") جزوه ها و فیلم های آموزشی
+            button.tablink(id="btn3") مالی
+            button.tablink(id="btn4") ارزیابی دانش آموزان
+            button.tablink(id="btn5") تنظیمات حساب کاربری
+        
+        .tabcontent(id="tab1")
+            h1 1
+        .tabcontent(id="tab2")
+            h1 2
+        .tabcontent(id="tab3")
+            h1 3
+        .tabcontent(id="tab4")
+            h1 4
+        .tabcontent(id="tab5")
+            form(action="/users/change_username")
+                label(for="uname")
+                    b تغییر نام کاربری:
+                br
+                input(type="text" placeholder="نام کاربری جدید" name="uname")
+                button(type="submit") تغییر
+                br
+            form(action="/users/change_email")
+                label(for="uname")
+                    b تغییر پست الکترونیکی:
+                br
+                input(type="email" placeholder="پست الکترونیکی جدید" name="email")
+                button(type="submit") تغییر
+                br
+            
+            form(action="/users/change_password")
+                label(for="uname")
+                    b تغییر رمز عبور:
+                br
+                input(type="text" placeholder="رمز عبور قبلی" name="oldpass")
+                br
+                input(type="text" placeholder="رمز عبور جدید" name="pass")
+                br
+                input(type="text" placeholder="تکرار رمز عبور جدید" name="pass1")                    
+                button(type="submit") تغییر
+                br
+    
+        

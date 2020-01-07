@@ -207,10 +207,77 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
     });
   }
   else if(req.user.role === 'admin'){
-    res.render('admin_dashboard',{
-      uname: req.user.uname
+    User.find({},function(err,docs){
+      res.render('admin_dashboard',{
+        uname: req.user.uname,
+        users: docs
+      });
     });
+    
+  }
+  else if(req.user.role === 'teacher'){
+    User.find({},function(err,docs){
+      res.render('teachers_dashboard',{
+        uname: req.user.uname
+      });
+    });
+    
   }
 });
+
+router.get('/upgrade', ensureAuthenticated, function(req, res, next){
+  if(req.user.role === 'admin'){
+    // console.log(req.query);
+    res.render('upgrade', {
+      uname: req.user.uname,
+      upgradeUname: req.query.uname
+    });
+  }
+  else{
+    res.redirect('/register/login');
+  }
+});
+
+router.get('/upgradetoadmin', ensureAuthenticated, function(req, res, next){
+  if(req.user.role === 'admin'){
+    User.findOne({uname: req.query.uname}, function(err, doc){
+      User.updateMany({_id: doc._id}, { $set: { role: 'admin' } }, function(err){
+        if(err) console.log(err);
+        else res.redirect('/dashboard');
+      });
+    });
+  }
+  else{
+    res.redirect('/register/login');
+  }
+});
+router.get('/upgradetoteacher', ensureAuthenticated, function(req, res, next){
+  if(req.user.role === 'admin'){
+    User.findOne({uname: req.query.uname}, function(err, doc){
+      User.updateMany({_id: doc._id}, { $set: { role: 'teacher' } }, function(err){
+        if(err) console.log(err);
+        else res.redirect('/dashboard');
+      });
+    });
+  }
+  else{
+    res.redirect('/register/login');
+  }
+});
+router.get('/upgradetostudent', ensureAuthenticated, function(req, res, next){
+  if(req.user.role === 'admin'){
+    User.findOne({uname: req.query.uname}, function(err, doc){
+      User.updateMany({_id: doc._id}, { $set: { role: 'student' } }, function(err){
+        if(err) console.log(err);
+        else res.redirect('/dashboard');
+      });
+    });
+  }
+  else{
+    res.redirect('/register/login');
+  }
+});
+
+
 
 module.exports = router;

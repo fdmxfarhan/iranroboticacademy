@@ -1,20 +1,39 @@
 extends layout
 
 block content
-    link(rel='stylesheet', href='/stylesheets/dashboard.css')
-    script(src="/javascripts/dashboard.js")
+    link(rel='stylesheet', href='/stylesheets/dashboard-admin.css')
+    script(src="/javascripts/dashboard-admin.js")
     .dashboard 
         .tab
-            button.tablink(id="btn1") دانش آموزان
-            button.tablink(id="btn2") اساتید
+            button.tablink(id="btn1") کاربرها
             button.tablink(id="btn2") کلاس ها
-            button.tablink(id="btn2") دوره ها
+            button.tablink(id="btn3") دوره ها
             button.tablink(id="btn4") مالی
-            button.tablink(id="btn3") تنظیمات حساب کاربری
+            button.tablink(id="btn5") تنظیمات حساب کاربری
         
-        .tabcontent(id="classes-tab")
-            h1 1
-        .tabcontent(id="tutorials-tab")
+        .tabcontent(id="tab1")
+            table.users
+                tr
+                    th نام کاربری
+                    th ایمیل
+                    th تلفن
+                    th نوع حساب
+                -for(var i = 0; i<users.length; i++){
+                tr
+                    td #{users[i].uname}
+                    td #{users[i].email}
+                    td #{users[i].phone}
+                    td 
+                        | #{users[i].role}
+                        a.admin(href='/upgrade?uname=#{users[i].uname}') ارتقا
+                -}
+
+        .tabcontent(id="tab2")
             h1 2
-        .tabcontent(id="setting-tab")
+        .tabcontent(id="tab3")
             h1 3
+        .tabcontent(id="tab4")
+            h1 4
+        .tabcontent(id="tab5")
+            h1 5
+        

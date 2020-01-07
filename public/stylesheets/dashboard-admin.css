@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'bnazanin';
+    src:url('b_nazanin.ttf');
+}
+@media only screen and (min-width: 600px) {
+
+    .dashboard{
+        position: relative;
+        margin: 100px;
+        height: 500px;
+        font-family: 'bnazanin';
+    }
+
+    .dashboard .tab {
+        font-family: 'bnazanin';
+        float: right;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 20%;
+        height: 300px;
+    }
+
+    .dashboard .tab button {
+        font-family: 'bnazanin';
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: right;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    .dashboard .tab button:hover {
+        background-color: #ddd;
+    }
+    
+    .dashboard .tab button.active {
+        background-color: #ccc;
+    }
+
+    .dashboard .tabcontent {
+        font-family: 'bnazanin';
+        float: right;
+        padding: 0px 12px;
+        border: 1px solid #ccc;
+        border-left: none;
+        padding: 10px 30px;
+        text-align: right;
+        width: 70%;
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    .dashboard form{
+        margin-top: 30px;
+        font-size: 18px;
+        direction: rtl;
+        font-family: 'bnazanin';
+    }
+    .dashboard form label{
+        margin-right: 10px;
+    }
+    .dashboard form input{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+        height: 33px;
+    }
+    .dashboard form button{
+        background-color: var(--bgcolor);
+        color: white;
+        margin-right: 20px;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+        height: 30px;
+    }
+    .dashboard .registered-class{
+        float: right;
+        margin: 10px;
+        border: 1px solid white;
+        width: 225px;
+        background-color: #e7e7e7;
+        border-radius: 5px;
+    }
+    .dashboard .registered-class:hover{
+        border: 1px solid rgb(116, 116, 116);
+    }
+    .dashboard .registered-class .desc{
+        padding: 8px 15px;
+        text-align: center;
+        font-family: 'bnazanin';
+        font-size: 18px;
+    }
+    .dashboard .registered-class img{
+        width: 225px;
+        height: 200px;
+        border-radius: 5px 5px 0 0;
+    }
+    .dashboard .no-class h1{
+        font-size: 30px;
+        font-family: 'bnazanin';
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .dashboard .no-class h2{
+        font-size: 30px;
+        font-family: 'bnazanin';
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .dashboard .no-class a{
+        text-decoration: var(--bgcolor);
+    }
+    .dashboard table.users {
+        font-family: 'bnazanin';
+        border-collapse: collapse;
+        width: 750px;
+        direction: rtl;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .dashboard td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+        height: 25px;
+    }
+    .dashboard tr:nth-child(even) {
+        background-color: #d9ffd0;
+    }
+    .dashboard caption{
+        color: var(--bgcolor);
+        padding: 5px;
+        font-family: 'bnazanin';
+        font-size: 17px;
+    }
+    .dashboard a.reg{
+        background-color: var(--bgcolor);
+        margin: 30px;
+        padding: 10px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 17px;
+    }
+    .dashboard a.admin{
+        background-color: var(--bgcolor);
+        margin: 3px 10px;
+        padding: 5px 10px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 17px;
+    }
+    .dashboard a.admin:hover{
+        background-color: var(--bghover);
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .dashboard{
+        position: relative;
+        margin: 10px;
+        height: auto;
+        font-family: 'bnazanin';
+        text-align: center;
+    }
+
+    .dashboard .tab {
+        font-family: 'bnazanin';
+        float: right;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 100%;
+        height: auto;
+    }
+
+    .dashboard .tab button {
+        font-family: 'bnazanin';
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 10px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: right;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    .dashboard .tab button:hover {
+        background-color: #ddd;
+    }
+    
+    .dashboard .tab button.active {
+        background-color: #ccc;
+    }
+
+    .dashboard .tabcontent {
+        font-family: 'bnazanin';
+        float: right;
+        border: 1px solid #ccc;
+        border-left: none;
+        padding: 10px 20px;
+        text-align: right;
+        width: 100%;
+        height: auto;
+    }
+
+    .dashboard form{
+        margin-top: 30px;
+        font-size: 18px;
+        direction: rtl;
+        font-family: 'bnazanin';
+    }
+    .dashboard form label{
+        margin-right: 10px;
+    }
+    .dashboard form input{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+        height: 33px;
+    }
+    .dashboard form button{
+        background-color: var(--bgcolor);
+        color: white;
+        margin-right: 20px;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+        height: 30px;
+    }
+    .dashboard .registered-class{
+        float: right;
+        margin: 10px;
+        border: 1px solid white;
+        width: 88%;
+        background-color: #e7e7e7;
+        border-radius: 5px;
+    }
+    .dashboard .registered-class:hover{
+        border: 1px solid rgb(116, 116, 116);
+    }
+    .dashboard .registered-class .desc{
+        padding: 8px 15px;
+        text-align: center;
+        font-family: 'bnazanin';
+        font-size: 18px;
+    }
+    .dashboard .registered-class img{
+        width: 100%;
+        height: 30%;
+        border-radius: 5px 5px 0 0;
+    }
+    .dashboard .no-class h1{
+        font-size: 30px;
+        font-family: 'bnazanin';
+        text-align: center;
+        padding: 0px;
+        margin: 0;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .dashboard .no-class h2{
+        font-size: 30px;
+        font-family: 'bnazanin';
+        text-align: center;
+        padding: 10px;
+        margin-top: 50px;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .dashboard .no-class a{
+        text-decoration: var(--bgcolor);
+    }
+    .dashboard table {
+        float: right;
+        font-family: 'bnazanin';
+        font-size: 10px;
+        border-collapse: collapse;
+        width: 85%;
+        direction: rtl;
+        margin-right: 3%;
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .dashboard td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 2px;
+        height: 20px;
+    }
+    .dashboard tr:nth-child(even) {
+        background-color: #d9ffd0;
+    }
+    .dashboard caption{
+        color: var(--bgcolor);
+        padding: 2px;
+        font-family: 'bnazanin';
+        font-size: 13px;
+    }
+    .dashboard a.reg{
+        float: right;
+        background-color: var(--bgcolor);
+        margin: 30px;
+        padding: 10px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 17px;
+    }
+}

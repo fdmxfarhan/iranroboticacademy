@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/upgrade.css')
+    h1 تغییر نقش کاربر #{upgradeUname}
+    .links
+        a.upgrade(href="/upgradetoadmin?uname=#{upgradeUname}") Admin 
+        a.upgrade(href="/upgradetoteacher?uname=#{upgradeUname}") teacher
+        a.upgrade(href="/upgradetostudent?uname=#{upgradeUname}") student
