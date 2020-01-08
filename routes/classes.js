@@ -75,12 +75,13 @@ router.get('/electronic', function(req, res, next) {
 
 router.post('/robotic', function(req, res){
   const {uname, email, day, hour} = req.body;
+  const fullname = req.user.fullname;
   const cls = 'robotic';
   let errors = [];
   User.findOne({ uname: uname})
       .then(user =>{
-        if(user){
-          const newClass = new Class({uname, email, day, hour, cls});
+        if(user && user.uname === req.user.uname){
+          const newClass = new Class({fullname, uname, email, day, hour, cls});
           newClass.save()
               .then(user => {
                 req.flash('success_msg', 'ثبت نام با موفقیت انجام شد.');
@@ -102,12 +103,13 @@ router.post('/robotic/remove', function(req,res){
 
 router.post('/computer', function(req, res){
   const {uname, email, day, hour} = req.body;
+  const fullname = req.user.fullname;
   const cls = 'computer';
   let errors = [];
   User.findOne({ uname: uname})
       .then(user =>{
-        if(user){
-          const newClass = new Class({uname, email, day, hour, cls});
+        if(user && user.uname === req.user.uname){
+          const newClass = new Class({fullname, uname, email, day, hour, cls});
           newClass.save()
               .then(user => {
                 req.flash('success_msg', 'ثبت نام با موفقیت انجام شد.');
@@ -129,12 +131,13 @@ router.post('/computer/remove', function(req,res){
 
 router.post('/electronic', function(req, res){
   const {uname, email, day, hour} = req.body;
+  const fullname = req.user.fullname;
   const cls = 'electronic';
   let errors = [];
   User.findOne({ uname: uname})
       .then(user =>{
-        if(user){
-          const newClass = new Class({uname, email, day, hour, cls});
+        if(user && user.uname === req.user.uname){
+          const newClass = new Class({fullname, uname, email, day, hour, cls});
           newClass.save()
               .then(user => {
                 req.flash('success_msg', 'ثبت نام با موفقیت انجام شد.');

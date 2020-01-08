@@ -216,12 +216,20 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
     
   }
   else if(req.user.role === 'teacher'){
-    User.find({},function(err,docs){
+    Class.find({}, function(err,docs){
+      var roboticClass = [], computerClass = [], electronicClass = [];
+      for(var i = 0; i<docs.length;i++){
+        if(docs[i].cls === 'robotic') roboticClass.push(docs[i]);
+        if(docs[i].cls === 'computer') computerClass.push(docs[i]);
+        if(docs[i].cls === 'electronic') electronicClass.push(docs[i]);        
+      }
       res.render('teachers_dashboard',{
-        uname: req.user.uname
-      });
+        uname: req.user.uname,
+        roboticClass: roboticClass,
+        computerClass: computerClass,
+        electronicClass: electronicClass
+      });    
     });
-    
   }
 });
 

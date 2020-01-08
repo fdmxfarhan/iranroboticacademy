@@ -20,11 +20,11 @@ router.get('/register', function(req, res, next) {
 
 // Register handle
 router.post('/register',function(req, res){
-  const { uname, email , phone, education, city, psw, configpsw} = req.body;
+  const { uname, email , phone, education, fullname, psw, configpsw} = req.body;
   const role = 'student';
   let errors = [];
   /// check required
-  if(!uname || !email || !phone || !education || !city || !psw || !configpsw){
+  if(!uname || !email || !phone || !education || !fullname || !psw || !configpsw){
     errors.push({msg: 'لطفا موارد خواسته شده را کامل کنید!'});
   }
   
@@ -38,7 +38,7 @@ router.post('/register',function(req, res){
   }
   ///////////send evreything 
   if(errors.length > 0 ){
-    res.render('register', { errors, uname, email, phone, education, city, psw, configpsw});
+    res.render('register', { errors, uname, email, phone, education, fullname, psw, configpsw});
   }
   else{
     // validation passed
@@ -47,10 +47,10 @@ router.post('/register',function(req, res){
         if(user){
           // user exist
           errors.push({msg: 'از این آدرس ایمیل یان نام کاربری قبلا استفاده شده!'});
-          res.render('register', { errors, uname, email, phone, education, city, psw, configpsw});
+          res.render('register', { errors, uname, email, phone, education, fullname, psw, configpsw});
         }
         else {
-          const newUser = new User({uname, email, phone, education, city, psw, role});
+          const newUser = new User({uname, email, phone, education, fullname, psw, role});
           console.log(newUser);
           // Hash password
           bcrypt.genSalt(10, (err, salt) => bcrypt.hash(newUser.psw, salt, (err, hash) => {
@@ -72,7 +72,7 @@ router.post('/register',function(req, res){
 
 // Login handle
 router.post('/login', function(req, res, next){
-  const { uname, email , phone, education, city, psw, configpsw} = req.body;
+  const { uname, email , phone, education, fullname, psw, configpsw} = req.body;
   let errors = [];
   /// check required
   if(!uname || !psw){

@@ -8,14 +8,58 @@ block content
         h1 به پنل کاربری خود خوش آمدید
     .dashboard 
         .tab
-            button.tablink(id="btn1") کلاس های من
+            button.tablink(id="btn1") کلاس ها
             button.tablink(id="btn2") جزوه ها و فیلم های آموزشی
             button.tablink(id="btn3") مالی
             button.tablink(id="btn4") ارزیابی دانش آموزان
             button.tablink(id="btn5") تنظیمات حساب کاربری
         
         .tabcontent(id="tab1")
-            h1 1
+            h1.className کلاس رباتیک
+            table.users
+                tr
+                    th ردیف
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                -for(var i = 0; i<roboticClass.length; i++){
+                tr
+                    td #{i}
+                    td #{roboticClass[i].fullname}
+                    td #{roboticClass[i].uname}
+                    td #{roboticClass[i].email}
+                -}
+            
+            h1.className کلاس برنامه نویسی کامپیوتر
+            table.users
+                tr
+                    th ردیف
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                -for(var i = 0; i<computerClass.length; i++){
+                tr
+                    td #{i}
+                    td #{computerClass[i].fullname}
+                    td #{computerClass[i].uname}
+                    td #{computerClass[i].email}
+                -}
+            
+            h1.className کلاس الکترونیک و مدار
+            table.users
+                tr
+                    th ردیف
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                -for(var i = 0; i<electronicClass.length; i++){
+                tr
+                    td #{i}
+                    td #{electronicClass[i].fullname}
+                    td #{electronicClass[i].uname}
+                    td #{electronicClass[i].email}
+                -}
+            
         .tabcontent(id="tab2")
             h1 2
         .tabcontent(id="tab3")
