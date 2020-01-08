@@ -143,6 +143,7 @@
     .dashboard td, th {
         border: 1px solid #dddddd;
         text-align: center;
+        font-family: 'bnazanin';
         padding: 8px;
         height: 25px;
     }
@@ -215,7 +216,7 @@
         float: right;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
-        width: 97%;
+        width: 97x%;
         height: auto;
     }
 
