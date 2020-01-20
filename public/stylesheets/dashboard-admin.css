@@ -149,6 +149,9 @@
     .dashboard tr:nth-child(even) {
         background-color: #d9ffd0;
     }
+    .dashboard tr:hover{
+        background-color: #eefdeb;
+    }
     .dashboard caption{
         color: var(--bgcolor);
         padding: 5px;
@@ -196,6 +199,7 @@
     }
     .dashboard h1.className{
         font-family: 'bnazanin';
+        direction: rtl;
         font-size: 20px;
         color: var(--bgcolor);
     }

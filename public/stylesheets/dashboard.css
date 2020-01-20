@@ -163,7 +163,6 @@
     }
 }
 @media only screen and (max-width: 600px) {
-
     .dashboard{
         position: relative;
         margin: 10px;
@@ -177,14 +176,14 @@
         float: right;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
-        width: 100%;
+        width: 97%;
         height: auto;
     }
 
     .dashboard .tab button {
         font-family: 'bnazanin';
         display: block;
-        background-color: inherit;
+        background-color: #a192e2;
         color: black;
         padding: 10px 16px;
         width: 100%;
@@ -194,16 +193,19 @@
         cursor: pointer;
         transition: 0.3s;
         font-size: 17px;
+        border-bottom: 1px solid blanchedalmond ;
     }
 
     .dashboard .tab button:hover {
-        background-color: #ddd;
+        background-color: #705dc7;
     }
     
     .dashboard .tab button.active {
-        background-color: #ccc;
+        background-color: var(--bgcolor);
+        color: white;
     }
 
+    
     .dashboard .tabcontent {
         font-family: 'bnazanin';
         float: right;

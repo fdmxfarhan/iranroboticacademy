@@ -25,8 +25,7 @@ var juniorcup2020 = require('./routes/juniorcup2020');
 
 
 const passport = require('passport'); 
-
-
+var fileUpload = require('express-fileupload');
 
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
@@ -87,7 +86,8 @@ app.use(function(req, res, next){
   next();
 });
 
-
+// upload 
+app.use(fileUpload());
 
 
 // view engine setup

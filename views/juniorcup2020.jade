@@ -13,39 +13,41 @@ block content
         .videopad
             video(src="/images/video-01.mp4" controls autoplay)
         button(id="btn1") همکاری در juniorcup2020
+        include ./partials/messages.jade
     .cooprate(id="coopration")
         h1 همکاری در juniorcup2020
-        form(action="/juniorcup2020/cooprate" method="POST")
+        form(action="/juniorcup2020/cooprate" method="POST")            
             .label نام و نام خانوادگی:
-            input.text(type="text" placeholder="Username" name="uname" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
+            input.text(type="text" placeholder="Fullname" name="fullname" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
             .label تلفن:
-            input.text(type="text" placeholder="Phone" name="phone" value= "#{ typeof user.phone != 'undefined' ? user.phone: '' }")
+            input.text(type="number" placeholder="Phone" name="phone" value= "#{ typeof user.phone != 'undefined' ? user.phone: '' }")
             .label ایمیل:
             input.text(type="text" placeholder="Email" name="email" value= "#{ typeof user.email != 'undefined' ? user.email: '' }")
             .label سابقه کار در رباتیک (سال):
             input.text(type="number" placeholder="10" name="reputation" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
             .label موارد همکاری:
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") تبلیغات
+            input.check(type="checkbox" name="advertise")
+            label(for="advertise") تبلیغات
             br
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") مستند سازی
+            input.check(type="checkbox" name="documentation")
+            label(for="documentation") مستند سازی
             br
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") آماده سازی محل مسابقات
+            input.check(type="checkbox" name="place")
+            label(for="place") آماده سازی محل مسابقات
             br
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") داوری لیگ ها
+            input.check(type="checkbox" name="referee")
+            label(for="referee") داوری لیگ ها
             br
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") انتظامات
+            input.check(type="checkbox" name="staff")
+            label(for="staff") کادر اجرایی
             br
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") طراحی سایت
+            input.check(type="checkbox" name="web")
+            label(for="web") طراحی سایت
             br
-            input.check(type="checkbox" name="cooprate")
-            label(for="cooprate") طراحی گرافیکی (پوستر - کارت - گواهی و ...)
+            input.check(type="checkbox" name="design")
+            label(for="design") طراحی گرافیکی (پوستر - کارت - گواهی و ...)
             br
-            
+            .label آپلود رزومه:
+            input.file(type="file" name="cv")
             button(type="submit") ثبت
 

@@ -11,6 +11,7 @@ var num = 0;
 var User = require('../models/User');
 var Class = require('../models/Class');
 var Tutorial = require('../models/Tutorial');
+var Juniorcup = require('../models/juniorcup');
 
 
 router.get('/', function(req, res, next) {
@@ -215,13 +216,15 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
         if(docs[i].cls === 'electronic') electronicClass.push(docs[i]);        
       }
       User.find({},function(err,docs1){
-        console.log(docs1);
-        res.render('admin_dashboard',{
-          uname: req.user.uname,
-          roboticClass: roboticClass,
-          computerClass: computerClass,
-          electronicClass: electronicClass,
-          users: docs1
+        Juniorcup.find({}, function(err,docs2){
+          res.render('admin_dashboard',{
+            uname: req.user.uname,
+            roboticClass: roboticClass,
+            computerClass: computerClass,
+            electronicClass: electronicClass,
+            users: docs1,
+            juniorcup: docs2
+          });
         });
       });    
     });

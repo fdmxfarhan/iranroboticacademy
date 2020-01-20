@@ -7,7 +7,7 @@ block content
         .tab
             button.tablink(id="btn1") کاربرها
             button.tablink(id="btn2") کلاس ها
-            button.tablink(id="btn3") دوره ها
+            button.tablink(id="btn3") Juniorcup2020
             button.tablink(id="btn4") مالی
             button.tablink(id="btn5") تنظیمات حساب کاربری
             
@@ -76,7 +76,53 @@ block content
                     td #{electronicClass[i].email}
                 -}
         .tabcontent(id="tab3")
-            h1 3
+            h1.className درخواست های همکاری:
+            table.users
+                tr
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                    th تلفن
+                    th سابقه
+                    th موارد همکاری
+                -for(var i = 0; i<juniorcup.length; i++){
+                tr
+                    td #{juniorcup[i].fullname}
+                    td #{juniorcup[i].uname}
+                    td #{juniorcup[i].email}
+                    td #{juniorcup[i].phone}
+                    td #{juniorcup[i].reputation}
+                    td 
+                        -if(juniorcup[i].advertise){
+                        | تبلیغات
+                        br
+                        -}
+                        -if(juniorcup[i].documentation){
+                        | مستند سازی
+                        br
+                        -}
+                        -if(juniorcup[i].place){
+                        | آماده سازی محل مسابقات
+                        br
+                        -}
+                        -if(juniorcup[i].referee){
+                        | داوری لیگ ها
+                        br
+                        -}
+                        -if(juniorcup[i].staff){
+                        | کادر اجرایی
+                        br
+                        -}
+                        -if(juniorcup[i].web){
+                        | طراحی وب
+                        br
+                        -}
+                        -if(juniorcup[i].design){
+                        | طراحی گرافیکی
+                        br
+                        -}
+                        
+                -}
         .tabcontent(id="tab4")
             h1 4
         .tabcontent(id="tab5")

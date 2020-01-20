@@ -62,7 +62,7 @@
         font-size: 30px;
     }
     .cooprate form{
-        background-color: rgb(233, 233, 233);
+        background-color: rgb(213, 217, 255);
         margin: 10px 30px;
         padding: 20px;
         direction: rtl;
@@ -87,6 +87,14 @@
         box-sizing: border-box;
         font-family: 'bnazanin';
     }
+    .cooprate form input.file{
+        padding: 12px 20px;
+        margin: 13px 30px 10px 10px;
+        display: inline-block;
+        font-family: 'bnazanin';
+        width: 100%;
+    }
+    
     .cooprate form .label{
         margin-top: 10px;
         font-family: 'bnazanin';
@@ -112,6 +120,35 @@
         text-align: right;
         font-size: 22px;
     }
+    .dismiss{
+        margin: 0 20px;
+        padding: 0;
+        width: 95%;
+      }
+      .dismiss h1.error{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        background-color: rgb(255, 237, 137);
+        padding: 10px;
+        margin: 0;
+        margin-top: 10px;
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 16px;
+      }
+      .dismiss h1.success{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 0;
+        margin-top: 10px;
+        color: rgba(53, 53, 53, 0.651);
+        background-color: rgb(164, 255, 137);
+        font-family: 'bnazanin';
+        font-size: 16px;
+      }
 }
 @media only screen and (max-width: 600px) {
     .juniorcup2020{
@@ -172,7 +209,7 @@
         font-size: 30px;
     }
     .cooprate form{
-        background-color: rgb(233, 233, 233);
+        background-color: rgb(213, 217, 255);
         margin: 10px 10px;
         padding: 20px;
         direction: rtl;
@@ -222,4 +259,33 @@
         text-align: right;
         font-size: 17px;
     }
+    .dismiss{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .dismiss h1.error{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        background-color: rgb(255, 237, 137);
+        padding: 10px;
+        margin: 0;
+        margin-top: 5px;
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 16px;
+      }
+      .dismiss h1.success{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 0;
+        margin-top: 5px;
+        color: rgba(53, 53, 53, 0.651);
+        background-color: rgb(164, 255, 137);
+        font-family: 'bnazanin';
+        font-size: 16px;
+      }
 }
