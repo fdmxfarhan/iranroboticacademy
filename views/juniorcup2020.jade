@@ -1,0 +1,51 @@
+extends layout
+
+block content 
+    link(rel='stylesheet', href='/stylesheets/juniorcup2020.css')
+    script(src="/javascripts/cooprate.js")
+    .juniorcup2020
+        h1 سیزدهمین دوره مسابقات ربوکاپ دانش آموزی جونیورکاپ ۲۰۲۰
+        p
+            | سیزدهمین دوره مسابقات ربوکاپ دانش آموزی، جونیورکاپ ۲۰۲۰ در اسفند ماه سال ۱۳۹۸ توسط آکادمی رباتیک ایران در شهر تهران برگزار خواهد شد. 
+            | این مسابقه که برگرفته از بخش دانش آموزی مسابقات ربوکاپ جهانی می باشد با هدف یادگیری هرچه تمام تر دانش آموزان و به رقابت پرداختن آن ها برگزار می شود.
+        //- video(src="/images/juniorcup2018/M04.mp4" controls)
+        //- video(src="/images/juniorcup2018/M05.mp4" controls)
+        .videopad
+            video(src="/images/video-01.mp4" controls autoplay)
+        button(id="btn1") همکاری در juniorcup2020
+    .cooprate(id="coopration")
+        h1 همکاری در juniorcup2020
+        form(action="/juniorcup2020/cooprate" method="POST")
+            .label نام و نام خانوادگی:
+            input.text(type="text" placeholder="Username" name="uname" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
+            .label تلفن:
+            input.text(type="text" placeholder="Phone" name="phone" value= "#{ typeof user.phone != 'undefined' ? user.phone: '' }")
+            .label ایمیل:
+            input.text(type="text" placeholder="Email" name="email" value= "#{ typeof user.email != 'undefined' ? user.email: '' }")
+            .label سابقه کار در رباتیک (سال):
+            input.text(type="number" placeholder="10" name="reputation" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
+            .label موارد همکاری:
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") تبلیغات
+            br
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") مستند سازی
+            br
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") آماده سازی محل مسابقات
+            br
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") داوری لیگ ها
+            br
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") انتظامات
+            br
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") طراحی سایت
+            br
+            input.check(type="checkbox" name="cooprate")
+            label(for="cooprate") طراحی گرافیکی (پوستر - کارت - گواهی و ...)
+            br
+            
+            button(type="submit") ثبت
+

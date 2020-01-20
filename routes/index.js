@@ -207,12 +207,30 @@ router.get('/dashboard', ensureAuthenticated, function(req, res, next){
     });
   }
   else if(req.user.role === 'admin'){
-    User.find({},function(err,docs){
-      res.render('admin_dashboard',{
-        uname: req.user.uname,
-        users: docs
-      });
+    Class.find({}, function(err,docs){
+      var roboticClass = [], computerClass = [], electronicClass = [];
+      for(var i = 0; i<docs.length;i++){
+        if(docs[i].cls === 'robotic') roboticClass.push(docs[i]);
+        if(docs[i].cls === 'computer') computerClass.push(docs[i]);
+        if(docs[i].cls === 'electronic') electronicClass.push(docs[i]);        
+      }
+      User.find({},function(err,docs1){
+        console.log(docs1);
+        res.render('admin_dashboard',{
+          uname: req.user.uname,
+          roboticClass: roboticClass,
+          computerClass: computerClass,
+          electronicClass: electronicClass,
+          users: docs1
+        });
+      });    
     });
+    // User.find({},function(err,docs){
+    //   res.render('admin_dashboard',{
+    //     uname: req.user.uname,
+    //     users: docs
+    //   });
+    // });
     
   }
   else if(req.user.role === 'teacher'){

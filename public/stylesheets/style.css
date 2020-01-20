@@ -62,7 +62,9 @@
 
   .navigation {
     margin: 0;
-    padding-right: 1px  0px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-right: 1px;
     padding-left: 20px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.85);
@@ -78,7 +80,7 @@
     float: right;
     color: #f2f2f2;
     text-align: center;
-    padding: 15px 16px;
+    padding: 1% 16px;
     text-decoration: none;
     font-family: 'bnazanin';
     height: 100%;
@@ -105,35 +107,37 @@
     font-size: 15px;
     color: white;
     background-color: var(--bgcolor);
-    margin: 12px 0;
+    margin: 2% 0;
     padding: 3px;
     font-weight: bold;
     border: 1px outset var(--bgcolor);
     border-radius: 5px;
   }
   .navigation button.log {
+    float: left;
     font-family: 'bnazanin';
     font-size: 15px;
     color: white;
     background-color: var(--bgcolor);
-    margin: 12px 0;
+    margin: 0;
+    margin-top: 10px;
     padding: 3px 10px;
     /* width: 100px; */
     height: 25px;
     font-weight: bold;
-    border: 1px outset var(--bgcolor);
+    border: none;
     border-radius: 5px;
   }
   .navigation a.logout{
     background-color: var(--bgcolor);
     float: left;
     padding: 4px;
-    margin-top: 11px;
-    margin-right: 10px;
+    margin-top: 9px;
+    margin-left: 10px;
     height: 18px;
     width: 40px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .navigation button:hover {
     background-color: var(--bghover);
@@ -141,13 +145,22 @@
 
   .navigation .search {
     float: left;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+  .navigation .search form{
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .navigation input[type=text] {
-    padding: 5px;
+    /* padding: 1.5% 5px; */
     margin-top: 12px;
     width: 200px;
-    font-size: 14px;
+    height: 45%;
+    /* font-size: 14px; */
     border: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -158,6 +171,7 @@
   .navigation .search button {
     float: right;
     padding: 4px 10px;
+    height: 50%;
     margin-top: 12px;
     margin-right: 16px;
     margin-bottom: auto;

@@ -1,0 +1,225 @@
+@font-face {
+    font-family:'bnazanin';
+    src:url('b_nazanin.ttf');
+}
+
+@media only screen and (min-width: 600px) {
+    .juniorcup2020{
+        margin: 1% 6%;
+        padding: 40px;
+        text-align: right;
+        direction: rtl;
+        font-family: 'bnazanin';
+    }
+    .juniorcup2020 h1{
+        color: var(--bgcolor);
+        font-family: 'bnazanin';
+        text-align: right;
+        direction: rtl;
+        font-size: 30px;
+    }
+    .juniorcup2020 p{
+        font-family: 'bnazanin';
+        text-align: justify;
+        direction: rtl;
+        font-size: 24px;
+        padding: 0 30px;
+        line-height: 35px;
+    }
+    .videopad{
+        text-align: center;
+    }
+    .juniorcup2020 video{
+        margin: 10px;
+        width: 80%;
+    }
+    .juniorcup2020 button{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 15px 30px;
+        margin: 20px 20px 0px 20px;
+        border: none;
+        font-family: 'bnazanin';
+        text-align: center;
+        direction: rtl;
+        font-size: 17px;
+    }
+    .juniorcup2020 button:hover{
+        background-color: var(--bghover);
+    }
+    .cooprate{
+        margin: 1% 6%;
+        padding: 0 40px;
+        text-align: right;
+        direction: rtl;
+        font-family: 'bnazanin';
+    }
+    .cooprate h1{
+        color: var(--bgcolor);
+        font-family: 'bnazanin';
+        text-align: right;
+        direction: rtl;
+        font-size: 30px;
+    }
+    .cooprate form{
+        background-color: rgb(233, 233, 233);
+        margin: 10px 30px;
+        padding: 20px;
+        direction: rtl;
+        text-align: right;
+        font-size: 18px;
+        font-family: 'bnazanin';
+    }
+    .cooprate form input.text{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+      }
+    .cooprate form input.check{
+        padding: 12px 20px;
+        margin: 13px 30px 10px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+    }
+    .cooprate form .label{
+        margin-top: 10px;
+        font-family: 'bnazanin';
+        text-align: right;
+        direction: rtl;
+        font-size: 20px;
+    }
+    .cooprate form button{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 12px 20px;
+        margin: 30px 10px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        width: 24%;
+    }
+    .cooprate form label{
+        font-family: 'bnazanin';
+        direction: rtl;
+        text-align: right;
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .juniorcup2020{
+        margin: 1% 6%;
+        padding: 6px;
+        text-align: right;
+        direction: rtl;
+        font-family: 'bnazanin';
+    }
+    .juniorcup2020 h1{
+        color: var(--bgcolor);
+        font-family: 'bnazanin';
+        text-align: right;
+        direction: rtl;
+        font-size: 17px;
+    }
+    .juniorcup2020 p{
+        font-family: 'bnazanin';
+        text-align: justify;
+        direction: rtl;
+        font-size: 14px;
+        padding: 0 10px;
+        line-height: 18px;
+    }
+    .videopad{
+        text-align: center;
+    }
+    .juniorcup2020 video{
+        margin: 10px;
+        width: 90%;
+    }
+    .juniorcup2020 button{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 15px 30px;
+        margin: 20px 20px 0px 20px;
+        border: none;
+        font-family: 'bnazanin';
+        text-align: center;
+        direction: rtl;
+        font-size: 17px;
+    }
+    .juniorcup2020 button:hover{
+        background-color: var(--bghover);
+    }
+    .cooprate{
+        margin: 1% 6%;
+        padding: 6px;
+        text-align: right;
+        direction: rtl;
+        font-family: 'bnazanin';
+    }
+    .cooprate h1{
+        color: var(--bgcolor);
+        font-family: 'bnazanin';
+        text-align: right;
+        direction: rtl;
+        font-size: 30px;
+    }
+    .cooprate form{
+        background-color: rgb(233, 233, 233);
+        margin: 10px 10px;
+        padding: 20px;
+        direction: rtl;
+        text-align: right;
+        font-size: 18px;
+        font-family: 'bnazanin';
+    }
+    .cooprate form input.text{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+      }
+    .cooprate form input.check{
+        padding: 12px 20px;
+        margin: 13px 30px 10px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: 'bnazanin';
+    }
+    .cooprate form .label{
+        margin-top: 10px;
+        font-family: 'bnazanin';
+        text-align: right;
+        direction: rtl;
+        font-size: 20px;
+    }
+    .cooprate form button{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 12px 20px;
+        margin: 30px 10px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        width: 34%;
+    }
+    .cooprate form label{
+        font-family: 'bnazanin';
+        direction: rtl;
+        text-align: right;
+        font-size: 17px;
+    }
+}

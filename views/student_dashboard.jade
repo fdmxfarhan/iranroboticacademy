@@ -7,10 +7,10 @@ block content
         .tab
             button.tablink(id="btn1") کلاس ها
             button.tablink(id="btn2") دوره های آموزشی
-            button.tablink(id="btn4") جزوه ها و فیلم های آموزشی
-            button.tablink(id="btn3") تنظیمات حساب کاربری
+            button.tablink(id="btn3") جزوه ها و فیلم های آموزشی
+            button.tablink(id="btn4") تنظیمات حساب کاربری
             
-        .tabcontent(id="classes-tab")
+        .tabcontent(id="tab1")
             -if(robotic){
                 .registered-class
                     a(href="/classes/robotic")
@@ -427,7 +427,7 @@ block content
             -}
             
             
-        .tabcontent(id="tutorials-tab")
+        .tabcontent(id="tab2")
             -if(android){
                 .registered-class
                     a(href="/tutorials/android")
@@ -1563,7 +1563,9 @@ block content
                 a.reg(href="/tutorials") ثبت نام دوره جدید
             -}
             
-        .tabcontent(id="setting-tab")
+        .tabcontent(id="tab3")
+            p جزوه ها و فیلم های آموزشی
+        .tabcontent(id="tab4")
             form(action="/users/change_username")
                 label(for="uname")
                     b تغییر نام کاربری:

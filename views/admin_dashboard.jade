@@ -14,12 +14,14 @@ block content
         .tabcontent(id="tab1")
             table.users
                 tr
+                    th نام و نام خانوادگی
                     th نام کاربری
                     th ایمیل
                     th تلفن
                     th نوع حساب
                 -for(var i = 0; i<users.length; i++){
                 tr
+                    td #{users[i].fullname}
                     td #{users[i].uname}
                     td #{users[i].email}
                     td #{users[i].phone}
@@ -29,7 +31,50 @@ block content
                 -}
 
         .tabcontent(id="tab2")
-            h1 2
+            h1.className کلاس رباتیک
+            table.users
+                tr
+                    th ردیف
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                -for(var i = 0; i<roboticClass.length; i++){
+                tr
+                    td #{i+1}
+                    td #{roboticClass[i].fullname}
+                    td #{roboticClass[i].uname}
+                    td #{roboticClass[i].email}
+                -}
+            
+            h1.className کلاس برنامه نویسی کامپیوتر
+            table.users
+                tr
+                    th ردیف
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                -for(var i = 0; i<computerClass.length; i++){
+                tr
+                    td #{i+1}
+                    td #{computerClass[i].fullname}
+                    td #{computerClass[i].uname}
+                    td #{computerClass[i].email}
+                -}
+            
+            h1.className کلاس الکترونیک و مدار
+            table.users
+                tr
+                    th ردیف
+                    th نام و نام خانوادگی
+                    th نام کاربری
+                    th ایمیل
+                -for(var i = 0; i<electronicClass.length; i++){
+                tr
+                    td #{i+1}
+                    td #{electronicClass[i].fullname}
+                    td #{electronicClass[i].uname}
+                    td #{electronicClass[i].email}
+                -}
         .tabcontent(id="tab3")
             h1 3
         .tabcontent(id="tab4")

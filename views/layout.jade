@@ -36,7 +36,7 @@ html
         img(src="/images/logo.jpg", alt="logo")
       .language
         a(href="/en")
-          img(src="/images/languages/english.png")
+          //- img(src="/images/languages/english.png")
     
     .navigation 
       a.active(href="/") صفحه اصلی 
@@ -48,19 +48,18 @@ html
       //a(href="/competitions") مسابقات
       a(href="/about") درباره ما
       a(href="/contact") تماس با ما
+      
+      .search
+        form(action="/")
+          input(type="text", name="search", placeholder="Search...")
+          button(type="submit")
+            i(class="fa fa-search")
       -if(!uname){
         button.log(onclick="document.getElementById('id01').style.display='block'") ورود / ثبت نام
       -}else {
         button.log(onclick="window.location.href = '/dashboard';") #{uname} پنل کاربری 
         a.logout(href="/users/logout") خروج  
       -}
-
-
-      .search
-        form(action="/")
-          input(type="text", name="search", placeholder="Search..")
-          button(type="submit")
-            i(class="fa fa-search")
 
     .container
       block content
