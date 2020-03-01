@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/booklets.css')
+    .booklet
+        a.link.margin(href="/GY25.zip" download) دانلود فایل ها
+        object.document(data="/GY25/document-GY25.pdf" type="application/pdf")
+        h1 فیلتر کالمن
+        .video-cont
+            video(src="/GY25/Kalman Filter.mp4" controls)
+        

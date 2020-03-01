@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/booklets.css')
+    .booklet
+        a.link.margin(href="/ARM.zip" download) دانلود فایل ها
+        object.document(data="/ARM/document-STM32.pdf" type="application/pdf")
+    

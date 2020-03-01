@@ -35,7 +35,7 @@ block content
                     a(href="/classes")
                         h2 آشنایی با کلاس های آکادمی
             -}else{
-                table 
+                table.plan
                     tr
                         caption برنامه زمان بندی
                         th ساعت
@@ -425,8 +425,7 @@ block content
                         -}
                 a.reg(href="/classes") ثبت نام کلاس جدید
             -}
-            
-            
+    
         .tabcontent(id="tab2")
             -if(android){
                 .registered-class
@@ -501,7 +500,7 @@ block content
                     a(href="/tutorials")
                         h2 آشنایی با دوره های آکادمی
             -}else{
-                table 
+                table.plan
                     tr
                         caption برنامه زمان بندی
                         th ساعت
@@ -1564,7 +1563,91 @@ block content
             -}
             
         .tabcontent(id="tab3")
-            p جزوه ها و فیلم های آموزشی
+            a.no-decoration(href="/booklets/arm")
+                .content-tutorial
+                    img.tutorial-img(src="/images/arm.jpeg")
+                    h1.title میکروکنترلر های ARM
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۹ اسفند ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 198
+            a.no-decoration(href="/booklets/gy25")
+                .content-tutorial
+                    img.tutorial-img(src="/images/gy25.jpeg")
+                    h1.title ماژول GY-25
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۷ اسفند ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 103
+            a.no-decoration(href="/booklets/pixy")
+                .content-tutorial
+                    img.tutorial-img(src="/images/pixy.jpg")
+                    h1.title دوربین پردازش تصویر pixy
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۷ اسفند ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 103
+            a.no-decoration(href="/booklets/php")
+                .content-tutorial
+                    img.tutorial-img(src="/images/tutorials/php.jpg")
+                    h1.title طراحی وب PHP
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۲۵ بهمن ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 103
+            a.no-decoration(href="/booklets/bootstrap")
+                .content-tutorial
+                    img.tutorial-img(src="/images/bootstrap.jpg")
+                    h1.title طراحی وب Bootstrap
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۲۰ بهمن ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 103
+            a.no-decoration(href="/booklets/htmlcss")
+                .content-tutorial
+                    img.tutorial-img(src="/images/htmlcss.jpg")
+                    h1.title طراحی وب HTML و CSS
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۲۰ بهمن ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 103
+            a.no-decoration(href="/booklets/nodejs")
+                .content-tutorial
+                    img.tutorial-img(src="/images/tutorials/nodejs.png")
+                    h1.title طراحی وب Node JS
+                    p.tutorial-text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                    table
+                        td
+                            .tutorial-date ۲۰ بهمن ماه ۱۳۹۸
+                        td
+                            .tutorial-seen 
+                                i(class="far fa-eye")  
+                                | 103
+            
         .tabcontent(id="tab4")
             form(action="/users/change_username")
                 label(for="uname")

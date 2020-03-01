@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/booklets.css')
+    .booklet
+        a.link.margin(href="/Pixy.zip" download) دانلود فایل ها
+        object.document(data="/Pixy/Document-Pixy.pdf" type="application/pdf")
+        h1 دوربین پردازش تصویرPixy CMU-CAM5
+        .video-cont
+            video(src="/Pixy/01 Pixy CMU-CAM5.mp4" controls)
+        h1 ست کردن اشیاء برای پیکسی
+        .video-cont
+            video(src="/Pixy/02 Teaching Pixy an Object.mp4" controls)
+        h1 پارامتر Threshold در تنظیمات پیکسی
+        .video-cont
+            video(src="/Pixy/03 Teach Threshold.mp4" controls)
+        
+        
