@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'bnazanin';
+    src:url('b_nazanin.ttf');
+}
+@media only screen and (min-width: 600px) {
+    .booklet{
+        margin: 0;
+        padding: 0;
+        padding-top: 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        text-align: right;
+    }
+    object.document{
+        width: 90%;
+        margin: 5%;
+        height: 700px;
+    }
+    a.link{
+        background-color: var(--bgcolor);
+        padding: 15px 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 20px;
+    }
+    .margin{
+        margin-top: 20px;
+        margin-right: 100px;
+    }
+    .booklet .video-cont{
+        width: 100%;
+        text-align: center;
+    }
+    .booklet video{
+        width: 60%;
+    }
+    .booklet h1{
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 25px;
+        color: var(--bgcolor);
+        margin: 50px 100px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .booklet{
+        margin: 0;
+        padding: 0;
+        padding-top: 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        text-align: right;
+    }
+    object.document{
+        width: 90%;
+        margin: 5%;
+        height: 500px;
+    }
+    a.link{
+        background-color: var(--bgcolor);
+        padding: 15px 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 20px;
+    }
+    .margin{
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+    .booklet .video-cont{
+        width: 100%;
+        text-align: center;
+    }
+    .booklet video{
+        width: 80%;
+    }
+    .booklet h1{
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 16px;
+        color: var(--bgcolor);
+        margin: 20px 30px;
+    }
+}
