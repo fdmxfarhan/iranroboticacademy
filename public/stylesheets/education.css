@@ -1,0 +1,127 @@
+@font-face {
+    font-family:'bnazanin';
+    src:url('b_nazanin.ttf');
+}
+@font-face {
+    font-family:'btitr';
+    src:url('b_titr.ttf');
+}
+
+@media only screen and (min-width: 600px) {
+    .mainbody{
+        width: 100%;
+        font-family: 'bnazanin';
+        direction: rtl;
+        text-align: right;
+        padding: 50px 0;
+    }
+    .mainbody .sidebar{
+        float: right;
+        background-color: rgb(238, 238, 238);
+        width: 25%;
+        border-top-left-radius: 5px;
+    }
+    .mainbody .contentbar{
+        position: relative;
+        float: right;
+        background-color: rgb(238, 238, 238);
+        width: 60%;
+        margin: 0 50px 100px 30px;
+        border-top-right-radius: 20px;
+        padding-bottom: 50px;
+    }
+    h1.sideheader{
+        border-top-left-radius: 20px;
+        background-color: var(--bgcolor);
+        font-family: 'btitr';
+        font-size: 16px;
+        color: white;
+        padding: 15px 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    a.sidelink{
+        width: 90%;
+        display: inline-block;
+        padding: 15px;
+        border-bottom: rgb(219, 219, 219) 1px solid;
+        text-decoration: none;
+        font-size: 17px;
+        color: black;
+    }
+    a.sidelink:hover{
+        background-color: var(--bghover);
+        color: white;
+    }
+    a.active{
+        border-right: gray 4px solid;
+    }
+    .information{
+        display: block;
+    }
+    .information h1.contentheader{
+        color: var(--bgcolor);
+        padding: 15px 30px;
+        margin: 0 0 200px 0;
+        border-bottom: var(--bgcolor) 3px solid;
+    }
+    .information .infotext{
+        color: black;
+        font-family: 'bnazanin';
+        font-size: 19px;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 60px;
+    }
+    .information .infotext p{
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 19px;
+        text-align: justify;
+        direction: rtl;
+        padding: 5px 20px;
+        margin-top: 0;
+        width: 95%;
+    }
+    .photo{
+        position: absolute;
+        top: 90px;
+        left: 60px;
+        width: 50%;
+    }
+    .photo img{
+        width: 100%;
+    }
+    .video{
+        text-align: center;
+    }
+    .links{
+        padding: 10%;
+    }
+    .links h2{
+        padding: 0;
+        color: var(--bgcolor);
+        font-family: 'bnazanin';
+        font-size: 25px;
+        text-align: right;
+        direction: rtl;
+    }
+    .links a{
+        color: white;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 25px;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 30px;
+        display: block;
+        background-color: var(--bgcolor);
+        border-bottom: white 1px solid;
+    }
+    .links a:hover{
+        background-color: var(--bghover);
+    }
+}  
+@media only screen and (max-width: 600px) {
+    
+}  

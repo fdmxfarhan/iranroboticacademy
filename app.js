@@ -23,6 +23,7 @@ var english = require('./routes/en');
 var teachers = require('./routes/teachers');
 var juniorcup2020 = require('./routes/juniorcup2020');
 var booklets = require('./routes/booklets');
+var education = require('./routes/education');
 
 
 const passport = require('passport'); 
@@ -113,6 +114,7 @@ app.use('/en', english);
 app.use('/teachers', teachers);
 app.use('/juniorcup2020', juniorcup2020);
 app.use('/booklets', booklets);
+app.use('/education', education);
 
 
 // catch 404 and forward to error handler
