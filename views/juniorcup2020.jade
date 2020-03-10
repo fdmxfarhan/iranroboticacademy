@@ -51,10 +51,11 @@ block content
             .label آپلود رزومه:
             input.file(type="file" name="cv")
             button(type="submit") ثبت
-        - } else{
-            p لطفا ابتدا وارد حساب کاربری خود شوید
-            form(action="/juniorcup2020/upload" method="POST")
-                input.file(type="file" name="cv")
-                button(type="submit") upload
-        -}
-
+        - } else {
+            p لطفا ابتدا وارد شوید
+        - }
+        //- - else {
+        //-     form(action="/upload/cv" enctype="multipart/form-data" method="POST")
+        //-         input(type="file" name="myFile")
+        //-         input(type="submit" value="Upload a file")
+        //- - }

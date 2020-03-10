@@ -3,12 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var fileUpload = require('express-fileupload');
+var multer = require('multer');
 const flash = require('connect-flash');
 const session = require('express-session');
-//const LocalStrategy = require('passport-local').Strategy;
-//const mongoose = require('mongoose');
-//const bcrypt = require('bcryptjs');
 
 
 var indexRouter = require('./routes/index');
@@ -24,6 +22,7 @@ var teachers = require('./routes/teachers');
 var juniorcup2020 = require('./routes/juniorcup2020');
 var booklets = require('./routes/booklets');
 var education = require('./routes/education');
+var uploadHandler = require('./routes/upload');
 
 
 const passport = require('passport'); 
@@ -35,6 +34,9 @@ var mongoose = require('mongoose');
 var app = express();
 //const port = 3000
 //app.listen(port,()=> console.log("listenning on port 3000..."));
+
+
+
 
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 
@@ -89,7 +91,7 @@ app.use(function(req, res, next){
 });
 
 // upload 
-app.use(fileUpload());
+app.use('/upload', uploadHandler);
 
 
 // view engine setup
@@ -112,9 +114,9 @@ app.use('/contact', contact);
 app.use('/competitions', competitions);
 app.use('/en', english);
 app.use('/teachers', teachers);
-app.use('/juniorcup2020', juniorcup2020);
 app.use('/booklets', booklets);
 app.use('/education', education);
+app.use('/juniorcup2020', juniorcup2020);
 
 
 // catch 404 and forward to error handler

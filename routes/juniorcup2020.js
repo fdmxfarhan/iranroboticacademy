@@ -1,7 +1,10 @@
 var express = require('express');
+var path = require('path');
 var router = express.Router();
 var mongoose = require('mongoose');
 var bodyparser = require('body-parser');
+const multer = require('multer');
+
 const passport = require('passport');
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 const islogin = false;
@@ -12,8 +15,6 @@ var User = require('../models/User');
 var Class = require('../models/Class');
 var Tutorial = require('../models/Tutorial');
 var Juniorcup = require('../models/juniorcup');
-var fileUpload = require('express-fileupload');
-var fs = require('fs');
 
 router.get('/',  function(req, res, next) {
     if(!req.user) res.render('juniorcup2020', {
@@ -82,9 +83,4 @@ router.post('/cooprate', function(req, res, next){
     }
 });
 
-router.post('/upload', function(req, res, next){
-    console.log(req.body);
-    fs.appendFile(req.body.cv);
-    res.redirect('/juniorcup2020');
-});
 module.exports = router;
