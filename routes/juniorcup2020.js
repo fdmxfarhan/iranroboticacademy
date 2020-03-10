@@ -13,9 +13,9 @@ var Class = require('../models/Class');
 var Tutorial = require('../models/Tutorial');
 var Juniorcup = require('../models/juniorcup');
 var fileUpload = require('express-fileupload');
+var fs = require('fs');
 
-
-router.get('/', ensureAuthenticated, function(req, res, next) {
+router.get('/',  function(req, res, next) {
     if(!req.user) res.render('juniorcup2020', {
     uname: false
     });
@@ -82,5 +82,9 @@ router.post('/cooprate', function(req, res, next){
     }
 });
 
-
+router.post('/upload', function(req, res, next){
+    console.log(req.body);
+    fs.appendFile(req.body.cv);
+    res.redirect('/juniorcup2020');
+});
 module.exports = router;

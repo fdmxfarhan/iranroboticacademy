@@ -5,7 +5,9 @@ html
     title IRA
     link(rel='stylesheet', href='/stylesheets/style.css')
     block styles
-    script(src="https://kit.fontawesome.com/93e9e402da.js")
+    //- script(src="https://kit.fontawesome.com/93e9e402da.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
     link(rel = "icon" type = "image/png" href = "/images/logot.png")
     script(src="/javascripts/jquery-1.6.4.min.js")
     script(src="/javascripts/scripts.js")
@@ -40,7 +42,7 @@ html
     
     .navigation 
       a.active(href="/") صفحه اصلی 
-        i(class="fas fa-home")
+        i(class="fa fa-home")
       a(href="/classes") کلاس ها
       a(href="/tutorials") دوره های آموزشی
       a(href="/gallery") گالری
@@ -88,17 +90,17 @@ html
       
       .address
         p
-          i(class="fas fa-map-marker-alt")
+          i(class="fa fa-map-marker-alt")
           |  نشانی: تهران, ستارخان, خیابان شادمهر, خیابان نیک روش فرد, کلبه آفرینش فکر, پلاک ۱۵
           br
-          i(class="fas fa-phone-volume")
+          i(class="fa fa-phone-volume")
           |  تلفن: 09223028958
       .contacts
         a(href="http://t.me/iranroboticacademy", target="_blank")
-          i(class="fab fa-telegram-plane")
+          i(class="fa fa-telegram-plane")
           //img(src="/images/telegram.png", alt="telegram")
         a(href="http://instagram.com/iranroboticacademy", target="_blank")
-          i(class="fab fa-instagram")
+          i(class="fa fa-instagram")
           //img(src="/images/instagram.png", alt="instagram")
       
       p.down Iran Robotic Academy

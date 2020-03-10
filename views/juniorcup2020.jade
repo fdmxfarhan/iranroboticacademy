@@ -16,6 +16,7 @@ block content
         include ./partials/messages.jade
     .cooprate(id="coopration")
         h1 همکاری در juniorcup2020
+        - if(user){
         form(action="/juniorcup2020/cooprate" method="POST")            
             .label نام و نام خانوادگی:
             input.text(type="text" placeholder="Fullname" name="fullname" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
@@ -50,4 +51,10 @@ block content
             .label آپلود رزومه:
             input.file(type="file" name="cv")
             button(type="submit") ثبت
+        - } else{
+            p لطفا ابتدا وارد حساب کاربری خود شوید
+            form(action="/juniorcup2020/upload" method="POST")
+                input.file(type="file" name="cv")
+                button(type="submit") upload
+        -}
 
