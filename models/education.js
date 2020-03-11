@@ -7,6 +7,7 @@ var educationSchema = new mongoose.Schema({
   date: String,
   sesion: String,
   time: String,
+  files: Number,
   description: String
 });
 

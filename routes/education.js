@@ -9,23 +9,22 @@ var Education = require('../models/education');
 
 var names = [];
 Education.find({}, function(err, docs){
-  for(var i = 0; i<docs.length ; i++)
+  for(var i = 0; i<docs.length ; i++){
     names.push(docs[i].name);
-  console.log(names);
-}).then(function(){
-  for(var i = 0; i < names.length ; i++){
-      router.get(`/${i}`, function(req, res, next) {
+    router.get(`/${i}`, function(req, res, next) {
       var number = req.url[1]-'0';
       if(!req.user) res.render('./education/educations', {
         uname: false,
         names: names,
-        number: number
+        number: number,
+        education: docs[number]
       });
       else res.render('./education/educations', {
         uname: req.user.uname,
         user: req.user,
         names: names,
-        number: number
+        number: number,
+        education: docs[number]
       });
     });
   }
@@ -46,10 +45,10 @@ router.get('/add', ensureAuthenticated, function(req, res, next) {
 });
 
 router.post('/add', ensureAuthenticated, function(req, res, next){
-  const { name, producer, date, sesion, time, description} = req.body;
+  const { name, producer, date, sesion, time, files, description} = req.body;
   var number;
   let errors = [];
-  if(!name || !producer || !date || !sesion || !time || !description){
+  if(!name || !producer || !date || !sesion || !time || !files || !description){
     errors.push({msg: 'لطفا موارد خواسته شده را تکمیل نمایید!'});
     res.render('./education/add_education', {
       errors: errors,
@@ -63,7 +62,7 @@ router.post('/add', ensureAuthenticated, function(req, res, next){
     Education.find({}, (err, docs) => {
       console.log(docs);
       number = docs.length;
-      const newEducation = new Education({ number ,name, producer, date, sesion, time, description});
+      const newEducation = new Education({ number ,name, producer, date, sesion, time, files, description});
       console.log(newEducation);
       newEducation.save().then(function(){
         req.flash('success_msg', 'آموزش جدید با موفقیت ثبت شد.با سپاس از زحمات شما.');
