@@ -1,0 +1,35 @@
+extends education_layout
+
+block add
+    h1.contentheader افزودن آموزش جدید
+    include ../partials/messages.jade
+    br
+    form(action="/education/add" method="POST")
+        .label
+            label(for="name") عنوان:
+        input(type="text" placeholder="عنوان" name="name")
+        br
+        .label
+            label(for="producer") مدرس:
+        input(type="text" placeholder="مدرس" name="producer" value= "#{ typeof user.fullname != 'undefined' ? user.fullname: '' }")
+        br
+        .label
+            label(for="date") تاریخ انتشار:
+        input(type="text" placeholder="تاریخ" name="date")
+        br
+        .label
+            label(for="sesion") تعداد جلسات:
+        input(type="number" placeholder="تعداد جلسات" name="sesion")
+        br
+        .label
+            label(for="time") زمان (ساعت):
+        input(type="number" placeholder="زمان" name="time")
+        br
+        .label
+            label(for="description") توضیحات:
+        br
+        textarea(type="text" cols="30" rows="10" placeholder="توضیحات" name="description")
+        br
+        
+        button.btn(type="submit") ثبت
+        br

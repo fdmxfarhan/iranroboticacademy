@@ -49,8 +49,20 @@
         font-size: 17px;
         color: black;
     }
+    a.sideaddlink{
+        width: 90%;
+        display: inline-block;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 17px;
+        color: black;
+    }
     a.sidelink:hover{
         background-color: var(--bghover);
+        color: white;
+    }
+    a.sideaddlink:hover{
+        background-color: rgb(211, 147, 63);
         color: white;
     }
     a.active{
@@ -95,6 +107,9 @@
     .video{
         text-align: center;
     }
+    .video video{
+        width: 85%;
+    }
     .links{
         padding: 10%;
     }
@@ -120,6 +135,92 @@
     }
     .links a:hover{
         background-color: var(--bghover);
+    }
+    .centeralign{
+        text-align: center;
+        background-color: burlywood;
+    }
+    .add form{
+        width: 100%;
+    }
+    .add h1.contentheader{
+        color: var(--bgcolor);
+        padding: 15px 30px;
+        margin: 0 0 50px 0;
+        border-bottom: var(--bgcolor) 3px solid;
+    }
+    .add form .label{
+        width: 100px;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 30px;
+        margin-bottom: 10px;
+    }
+    .add form input{
+        width: 50%;
+        color: black;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 15px;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+    }
+    .add form textarea{
+        width: 87%;
+        height: 200px;
+        color: black;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 15px;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 10px;
+        margin: 0 30px;
+    }
+    .add form button.btn{
+        background-color: var(--bgcolor);
+        padding: 10px 50px;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        border: none;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+    .dismiss{
+        margin: 0 0px;
+        width: 530px;
+    }
+    .dismiss h1.error{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        background-color: rgb(255, 237, 137);
+        padding: 10px;
+        margin: 5px;
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
+    .dismiss h1.success{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        color: rgba(53, 53, 53, 0.651);
+        background-color: rgb(164, 255, 137);
+        font-family: 'bnazanin';
+        font-size: 16px;
     }
 }  
 @media only screen and (max-width: 600px) {

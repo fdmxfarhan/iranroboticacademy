@@ -1,9 +1,11 @@
-extends layout
+extends ../layout
 
 block content
     link(rel='stylesheet', href='/stylesheets/education.css')
     .mainbody
         .contentbar
+            .add
+                block add
             .information
                 block info
             .photo
@@ -11,15 +13,15 @@ block content
             .video
                 block video
             .links
-                h2 دانلود فایل جلسات:
                 block links
         .sidebar
             h1.sideheader آموزش های مجازی
-            a.sidelink.active(id="link1" href="/education/arduino") بورد های آردوینو
-            a.sidelink(id="link2" href="#") لینک
-            a.sidelink(id="link3" href="#") لینک
-            a.sidelink(id="link4" href="#") لینک
-            
+            - for(var i = 0; i < names.length ; i++){
+                a.sidelink(id="link2" href=`/education/${i}`) #{names[i]}
+            - }
+            - if(user && user.role != 'student'){
+                a.sideaddlink.centeralign(id="link2" href=`/education/add`) افزودن آموزش +
+            - }
             
             
         
