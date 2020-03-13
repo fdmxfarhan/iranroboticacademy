@@ -121,7 +121,7 @@
         text-align: right;
         direction: rtl;
     }
-    .links a{
+    .links a.filelink{
         color: white;
         text-decoration: none;
         font-family: 'bnazanin';
@@ -133,7 +133,7 @@
         background-color: var(--bgcolor);
         border-bottom: white 1px solid;
     }
-    .links a:hover{
+    .links a.filelink:hover{
         background-color: var(--bghover);
     }
     .centeralign{
@@ -221,6 +221,69 @@
         background-color: rgb(164, 255, 137);
         font-family: 'bnazanin';
         font-size: 16px;
+    }
+    img.imgupload:hover{
+        filter: brightness(0.6);
+    }
+    img.imguploadtext{
+        position: relative;
+    }
+    .imguploadtext{
+        padding: 15px 25px;
+        background-color: rgba(0, 0, 0, 0.616);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .linkpad{
+        position: relative;
+    }
+    a.uploadfilelink{
+        padding: 7px 25px;
+        background-color: rgb(238, 102, 49);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 17px;
+        text-decoration: none;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    a.uploadfilelink:hover{
+        background-color: rgb(199, 73, 23);
+
+    }
+    .add form input.custom-file-input{
+        margin-right: 30%;
+    }
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+        
+    }
+    .custom-file-input::before {
+        margin: 0;
+        content: 'انتخاب فایل';
+        display: inline-block;
+        background: var(--bgcolor);
+        color: white;
+        font-family: 'bnazanin';
+        font-size: 20px;
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 30px 100px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+    }
+    .custom-file-input:hover::before {
+        background-color: var(--bghover);
+    }
+    .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
 }  
 @media only screen and (max-width: 600px) {

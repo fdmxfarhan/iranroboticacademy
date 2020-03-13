@@ -13,6 +13,7 @@ Education.find({}, function(err, docs){
     names.push(docs[i].name);
     router.get(`/${i}`, function(req, res, next) {
       var number = req.url[1]-'0';
+      if(req.url[2] != undefined) number = number * 10 + req.url[2] - '0';
       if(!req.user) res.render('./education/educations', {
         uname: false,
         names: names,
@@ -27,6 +28,35 @@ Education.find({}, function(err, docs){
         education: docs[number]
       });
     });
+    router.get(`/upload/${i}-pic`, function(req, res, next){
+      var number = req.url[8]-'0';
+      if(req.url[9] != '-') number = number * 10 + req.url[9] - '0';
+      if(!req.user) redirect('/user/login');
+      else if(req.user != 'student') res.render('./education/upload-photo', {
+        uname: req.user.uname,
+        user: req.user,
+        number: number,
+        names: names
+      });
+    });
+    for(var j = 0; j < docs[i].files; j++){
+      router.get(`/upload/${i}_${j+1}`, function(req, res, next){
+        var number = req.url[8]-'0';
+        var video_num, url_num=10;
+        if(req.url[9] != '_') {number = number * 10 + req.url[9] - '0';url_num++;}
+        video_num = req.url[url_num] - '0';
+        if(req.url[url_num + 1]) video_num = video_num * 10 + req.url[url_num] - '0';
+
+        if(!req.user) redirect('/user/login');
+        else if(req.user != 'student') res.render('./education/upload-file', {
+          uname: req.user.uname,
+          user: req.user,
+          number: number,
+          file_num: video_num,
+          names: names
+        });
+      });
+    }
   }
 });
 
@@ -66,6 +96,23 @@ router.post('/add', ensureAuthenticated, function(req, res, next){
       console.log(newEducation);
       newEducation.save().then(function(){
         req.flash('success_msg', 'آموزش جدید با موفقیت ثبت شد.با سپاس از زحمات شما.');
+        names.push(name);
+        router.get(`/${number}`, function(req, res, next) {
+          var number = req.url[1]-'0';
+          if(!req.user) res.render('./education/educations', {
+            uname: false,
+            names: names,
+            number: number,
+            education: docs[number]
+          });
+          else res.render('./education/educations', {
+            uname: req.user.uname,
+            user: req.user,
+            names: names,
+            number: number,
+            education: docs[number]
+          });
+        });
         res.redirect('/education/add');
       }).catch(err => console.log(err));
     });
@@ -73,6 +120,8 @@ router.post('/add', ensureAuthenticated, function(req, res, next){
   // req.flash('success_msg', 'آموزش جدید با موفقیت ثبت شد.');
   // errors.push({msg: 'از این آدرس ایمیل یان نام کاربری قبلا استفاده شده!'});
 });
+
+
 
 
 module.exports = router;

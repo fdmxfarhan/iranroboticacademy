@@ -11,7 +11,16 @@ block info
         p #{education.description}
 
 block photo
-    img(src=`/education/${number}.jpg`)
+    - if(user && user.role != 'student'){
+        a#imguploadlink.imguploadlink(href=`/education/upload/${number}-pic`)
+            img.imgupload(src=`/education/${number}.jpg`)
+            #imguploadtext.imguploadtext 
+                | Upload  
+                i(class="fa fa-upload")
+                    
+    - }
+    - else 
+        img(src=`/education/${number}.jpg`)
 
 block video
     video(src=`/education/${number}.mp4` controls)
@@ -20,6 +29,15 @@ block links
     - var alphaNum = ['اول','دوم','سوم' ,'چهارم','پنجم','ششم','هفتم','هشتم','نهم','دهم'];
     h2 دانلود فایل جلسات:
     - for(var i = 0; i < education.files ; i++){
-        a(href=`/education/${number}_${i+1}.rar` download) جلسه #{alphaNum[i]}
+        - if(user && user.role != 'student'){
+            .linkpad
+                a.filelink(href=`/education/${number}_${i+1}.rar` download) جلسه #{alphaNum[i]}
+                    a#uploadfile.uploadfilelink(href=`/education/upload/${number}_${i+1}`)
+                        #fileuploadtext.fileuploadtext 
+                            | Upload  
+                            i(class="fa fa-upload") 
+        - } else {
+            a.filelink(href=`/education/${number}_${i+1}.rar` download) جلسه #{alphaNum[i]}
+        - }
     - }
     

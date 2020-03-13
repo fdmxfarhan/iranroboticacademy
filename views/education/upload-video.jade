@@ -1,0 +1,10 @@
+extends education_layout
+
+block add
+    h1.contentheader بارگذاری فایل
+    form.upload(action="/upload/pic" enctype="multipart/form-data" method="POST")
+        h2(for="") لطفا فایل هایی با پسوند mp4 آپلود نمایید
+        input(type="text" name="fileName" value=`${number}.mp4` style="display: none")
+        input.custom-file-input(type="file" name="myFile" required) 
+        br
+        button.btn(type="submit") ثبت
