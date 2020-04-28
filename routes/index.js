@@ -25,7 +25,7 @@ var options = {
   body: {
     'order_id': '101',
     'amount': 10000,
-    'name': 'قاسم رادمان',
+    'name': 'فرحان داپمی',
     'phone': '09382198592',
     'mail': 'my@site.com',
     'desc': 'توضیحات پرداخت کننده',
@@ -40,7 +40,7 @@ var options2 = {
   url: 'https://api.idpay.ir/v1.1/payment/verify',
   headers: {
     'Content-Type': 'application/json',
-    'X-API-KEY': '6a7f99eb-7c20-4412-a972-6dfb7cd253a4',
+    'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
   },
   body: {
     'id': 'd2e353189823079e1e4181772cff5292',
