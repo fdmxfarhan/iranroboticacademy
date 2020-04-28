@@ -35,6 +35,26 @@ var options = {
   json: true,
 };
 
+var options2 = {
+  method: 'POST',
+  url: 'https://api.idpay.ir/v1.1/payment/verify',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-API-KEY': '6a7f99eb-7c20-4412-a972-6dfb7cd253a4',
+    'X-SANDBOX': 1,
+  },
+  body: {
+    'id': 'd2e353189823079e1e4181772cff5292',
+    'order_id': '101',
+  },
+  json: true,
+};
+
+router.post('/pay', function(req,res, next){
+  console.log(req.body);
+  res.send("Done !!");
+});
+
 router.get('/pay', function(req, res, next){
   request(options, function (error, response, body) {
     if (error) console.log(error);
@@ -42,6 +62,7 @@ router.get('/pay', function(req, res, next){
     res.redirect(body.link);
   });  
 });
+
 
 router.get('/', function(req, res, next) {
   if(!req.user) res.render('index', {
