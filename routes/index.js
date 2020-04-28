@@ -52,13 +52,13 @@ var options2 = {
 
 router.post('/pay', function(req,res, next){
   console.log(req.body);
-  res.send("Done !!");
+  res.send(req.body);
 });
 
 router.get('/pay', function(req, res, next){
   request(options, function (error, response, body) {
     if (error) console.log(error);
-    console.log(body);
+    // console.log(body);
     res.redirect(body.link);
   });  
 });
