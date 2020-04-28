@@ -21,7 +21,6 @@ var options = {
   headers: {
     'Content-Type': 'application/json',
     'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
-    'X-SANDBOX': 1,
   },
   body: {
     'order_id': '101',
