@@ -13,6 +13,35 @@ var Class = require('../models/Class');
 var Tutorial = require('../models/Tutorial');
 var Juniorcup = require('../models/juniorcup');
 
+var request = require('request');
+
+var options = {
+  method: 'POST',
+  url: 'https://api.idpay.ir/v1.1/payment',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
+    'X-SANDBOX': 1,
+  },
+  body: {
+    'order_id': '101',
+    'amount': 10000,
+    'name': 'قاسم رادمان',
+    'phone': '09382198592',
+    'mail': 'my@site.com',
+    'desc': 'توضیحات پرداخت کننده',
+    'callback': 'http://localhost:3000',
+    'reseller': null,
+  },
+  json: true,
+};
+
+router.get('/pay', function(req, res, next){
+  request(options, function (error, response, body) {
+    if (error) console.log(error);
+    res.redirect(body.link);
+  });  
+});
 
 router.get('/', function(req, res, next) {
   if(!req.user) res.render('index', {
@@ -22,6 +51,7 @@ router.get('/', function(req, res, next) {
     uname: req.user.uname
   });
 });
+
 router.get('/notfound', function(req, res, next) {
   if(!req.user) res.render('error', {
     uname: false

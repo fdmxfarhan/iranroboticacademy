@@ -36,8 +36,6 @@ var app = express();
 //app.listen(port,()=> console.log("listenning on port 3000..."));
 
 
-
-
 var urlencodedparser = bodyparser.urlencoded({ extended: false});
 
 // passport config
@@ -132,6 +130,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  console.log(err);
   if(!req.user) res.render('error',{
     uname: false
   });
