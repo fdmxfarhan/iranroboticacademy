@@ -38,6 +38,7 @@ var options = {
 router.get('/pay', function(req, res, next){
   request(options, function (error, response, body) {
     if (error) console.log(error);
+    console.log(body);
     res.redirect(body.link);
   });  
 });
