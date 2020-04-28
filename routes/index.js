@@ -41,7 +41,6 @@ var options2 = {
   headers: {
     'Content-Type': 'application/json',
     'X-API-KEY': '6a7f99eb-7c20-4412-a972-6dfb7cd253a4',
-    'X-SANDBOX': 1,
   },
   body: {
     'id': 'd2e353189823079e1e4181772cff5292',
@@ -51,14 +50,19 @@ var options2 = {
 };
 
 router.post('/pay', function(req,res, next){
-  console.log(req.body);
-  res.send(req.body);
+  options2.body.id = req.body.id;
+  options2.body.order_id = req.body.order_id;
+  request(options2, function (error, response, body) {
+    if (error) throw new Error(error);
+    console.log(body);
+  });
+  // console.log(req.body);
+  res.send("Done !!");
 });
 
 router.get('/pay', function(req, res, next){
   request(options, function (error, response, body) {
     if (error) console.log(error);
-    // console.log(body);
     res.redirect(body.link);
   });  
 });
