@@ -29,7 +29,7 @@ var options = {
     'phone': '09382198592',
     'mail': 'my@site.com',
     'desc': 'توضیحات پرداخت کننده',
-    'callback': 'http://iranroboticacademy.com',
+    'callback': 'http://iranroboticacademy.com/pay',
     'reseller': null,
   },
   json: true,
