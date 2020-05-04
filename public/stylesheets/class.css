@@ -1,0 +1,235 @@
+@media only screen and (min-width: 600px) {
+    .class-container{
+        background-color: white;
+        width: 100%;
+        /* padding: 1vw 5%; */
+        margin-bottom: 0;
+    }
+    .class-container .paragraph{
+        /* background-color: aquamarine; */
+        text-align: center;
+        margin: 0 10%;
+        padding: 3vw 2vw;
+        font-family: 'iransans';
+        direction: rtl;
+    }
+    .class-container .paragraph h1.title{
+        margin: 0.1vw 0;
+        font-size: 2vw;
+        color: var(--textcolor);
+    }
+    .class-container .paragraph h1.under-title{
+        margin: 0.1vw 0;
+        font-size: 1vw;
+        color: gray;
+    }
+    .class-container .paragraph .icon{
+        color: var(--bgcolor);
+        font-size: 3vw;
+    }
+    .class-container .paragraph p.text{
+        font-size: 1.1vw;
+        text-align: center;
+
+    }
+    .break-dot{
+        /* background-color: blue; */
+        border-bottom: var(--bgcolor) 2px dashed;
+        height: 1vw;
+        width: 50%;
+        margin: auto;
+    }
+    .image-container{
+        /* background-color: lightblue; */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .image-container .imgpad{
+        display: inline-flex;
+        margin: 0 10px;
+        width: 240px;
+        height: 170px;
+    }
+    .image-container .imgpad img{
+        width: 100%;
+        height: 100%;
+    }
+    .class-container .paragraph-right{
+        /* background-color: aquamarine; */
+        text-align: center;
+        margin: 0 8vw;
+        padding: 1vw 2vw;
+        font-family: 'iransans';
+        direction: rtl;
+    }
+    .class-container .paragraph-right .paragraph-text{
+        display: inline-block;
+        /* background-color: lightblue; */
+        width: 45vw;
+        text-align: right;
+        margin: 0;
+    }
+    .class-container .paragraph-right h1.title{
+        display: block;
+        margin: 0.1vw 0;
+        font-size: 2vw;
+        color: var(--textcolor);
+    }
+    .class-container .paragraph-right h1.under-title{
+        display: block;
+        margin: 0.1vw 0;
+        font-size: 1vw;
+        color: gray;
+    }
+    .class-container .paragraph-right .imgpad{
+        display: inline-block;
+        width: 350px;
+        margin: 3vw 3vw 0 0;
+    }   
+    .class-container .paragraph-right .imgpad img, .class-container .paragraph-right .imgpad video{
+        width: 100%;
+    }   
+    .class-container .paragraph-right p.text{
+        font-size: 15px;
+        margin: 0;
+        padding: 10px 0 50px 0;
+        text-align: justify;
+        direction: rtl;
+    }
+    .class-container .paragraph-right p.text a{
+        text-decoration: none;
+    }
+    .class-container .paragraph-right p.text a:hover{
+        text-decoration: underline;
+    }
+    img.back{
+        position: fixed;
+        top: 100px;
+        width: 100%;
+        z-index: -100;
+    }
+    .on-image-container{
+        background-color: rgba(0, 0, 0, 0.37);
+        margin: 0;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+    .on-image-container .paragraph{
+        width: 50%;
+        margin: auto;
+        font-family: 'iransans';
+    }
+    .on-image-container .paragraph h1.title{
+        font-size: 2vw;
+        border-bottom: white 2px solid;
+    }
+    .on-image-container .paragraph h1.item{
+        font-size: 1.5vw;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    .class-container .plan-img{
+        width: 80%;
+        margin: auto;
+    }
+    .class-container .plan-img img{
+        width: 100%;
+    }
+    .class-container a.sign-in{
+        background-color: var(--bgcolor);
+        color: white;
+        padding: 0.6vw 5vw;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .class-container a.sign-in:hover{
+        background-color: var(--bghover);
+    }
+    .sign-in-modal{
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.719);
+        width: 100%;
+        height: 100%;
+    }
+    .sign-in-modal .sign-in{
+        background-color: white;
+        width: 60%;
+        margin: 5% auto;
+        padding: 1vw;
+        position: relative;
+        text-align: right;
+        direction: rtl;
+    }
+    .sign-in-modal .sign-in span.close{
+        font-size: 2.5vw;
+        position: absolute;
+        top: 0.5vw;
+        left: 2vw;
+        cursor: pointer;
+    }
+    .sign-in-modal .sign-in span.close:hover{
+        color: red;
+    }
+    .sign-in-modal .sign-in form{
+        display: inline-block;
+        /* background-color: lightblue; */
+        width: 50%;
+    }
+    .sign-in-modal .sign-in form label{
+        font-family: 'iransans';
+        font-size: 1.2vw;
+    }
+    .sign-in-modal .sign-in form input, .sign-in-modal .sign-in form select{
+        font-family: 'iransans';
+        font-size: 1vw;
+        width: 90%;
+        padding: 0.6vw 5%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-color: rgb(213, 221, 247);
+        border: lightblue 1px solid;
+        border-radius: 3px;
+    }
+    .sign-in-modal .sign-in form input[type=text]{
+        width: 80%;
+    }
+    .sign-in-modal .sign-in form input.submit{
+        background-color: var(--bgcolor);
+        cursor: pointer;
+        color: white;
+        margin-top: 2vw;
+    }
+    .sign-in-modal .sign-in form input.submit:hover{
+        background-color: var(--bghover);
+    }
+    .sign-in-modal .sign-in h1.modal-title{
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        border-bottom: lightgray 1px solid;
+        margin-bottom: 2vw;
+    }
+    .sign-in-modal .sign-in .imgpad{
+        display: inline-block;
+        width: 25%;
+        margin: 0 10% 10% 0;
+    }
+    .sign-in-modal .sign-in .imgpad img{
+        width: 100%;
+    }
+    a.login-first{
+        text-decoration: none;
+        color: var(--bgcolor);
+    }
+    a.login-first:hover{
+        color: blue;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .class-container .paragraph-right .paragraph-text{
+        width: 400px;
+    }
+}

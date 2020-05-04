@@ -1,0 +1,43 @@
+.sidebar
+    .card
+        a(href="/dashboard")
+            .acount-link
+                .picture-pad
+                    i.fa.fa-user.acount-icon
+                h1.card-uname= user.uname
+                h1.card-phone= user.phone
+        .link-border
+        a.card-link(href="/user/logout")
+            i.fa.fa-book.card-icon
+            | کلاس های من
+        .link-border
+        a.card-link.logoutbtn(href="/user/logout")
+            i.fa.fa-sign-out.card-icon
+            | خروج از حساب کاربری
+    .acount
+        h1.acount-header حساب کاربری
+        a.acount-link(href="/dashboard/acount")
+            i.fa.fa-user.link-icon
+            | پروفایل من
+        .link-border
+        a.acount-link(href="/")
+            i.fa.fa-plus.link-icon
+            | ثبت نام
+        .link-border
+        a.acount-link(href="/")
+            i.fa.fa-shopping-cart.link-icon
+            | برنامه هفتگی
+        .link-border
+        a.acount-link(href="/")
+            i.fa.fa-bell.link-icon
+            | گزارش ها
+        .link-border
+        a.acount-link(href="/")
+            i.fa.fa-comments.link-icon
+            | نظرات و پیشنهادات
+        .link-border
+        a.acount-link(href="/")
+            i.fa.fa-credit-card.link-icon
+            | صورت حساب ها
+        .link-border
+        

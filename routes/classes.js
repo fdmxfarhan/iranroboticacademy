@@ -16,7 +16,8 @@ router.get('/', function(req, res, next) {
 router.get('/robotic', function(req, res, next) {
   var robotic = false;
   if(!req.user) res.render('./classes/robotic', {
-    uname: false
+    uname: false,
+    user: false
   });
   else{ 
     Class.findOne({uname: req.user.uname, cls: 'robotic'})
@@ -26,7 +27,8 @@ router.get('/robotic', function(req, res, next) {
         res.render('./classes/robotic', {
           uname: req.user.uname,
           email: req.user.email,
-          robotic: robotic
+          robotic: robotic,
+          user: req.user
         });
       })
       .catch(err => console.log(err));
@@ -36,7 +38,8 @@ router.get('/robotic', function(req, res, next) {
 router.get('/computer', function(req, res, next) {
   var computer = false;
   if(!req.user) res.render('./classes/computer', {
-    uname: false
+    uname: false,
+    user: false
   });
   else{ 
     Class.findOne({uname: req.user.uname, cls: 'computer'})
@@ -46,7 +49,8 @@ router.get('/computer', function(req, res, next) {
         res.render('./classes/computer', {
           uname: req.user.uname,
           email: req.user.email,
-          computer: computer
+          computer: computer,
+          user: req.user
         });
       })
       .catch(err => console.log(err));
@@ -56,7 +60,8 @@ router.get('/computer', function(req, res, next) {
 router.get('/electronic', function(req, res, next) {
   var electronic = false;
   if(!req.user) res.render('./classes/electronic', {
-    uname: false
+    uname: false,
+    user: false
   });
   else{ 
     Class.findOne({uname: req.user.uname, cls: 'electronic'})
@@ -66,7 +71,8 @@ router.get('/electronic', function(req, res, next) {
         res.render('./classes/electronic', {
           uname: req.user.uname,
           email: req.user.email,
-          electronic: electronic
+          electronic: electronic,
+          user: req.user
         });
       })
       .catch(err => console.log(err));

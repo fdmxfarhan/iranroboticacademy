@@ -2,9 +2,9 @@ extends layout
 
 block content 
   .topimg
-    img.slide(id="slide1", src="/images/topslide-01.jpg")
-    img.slide(id="slide2", src="/images/topslide-02.jpg")
-    img.slide(id="slide3", src="/images/topslide-03.jpg")
+    img.slide(id="slide1", src="/images/slideshow-02.jpg")
+    img.slide(id="slide2", src="/images/slideshow-01.jpg")
+    img.slide(id="slide3", src="/images/slideshow-03.jpg")
     
     a.prev(id="prev") &#10094
     a.next(id="next") &#10095
@@ -13,23 +13,23 @@ block content
       span(class = "dot", id="dot2" , onclick="currentSlides(2)")
       span(class = "dot", id="dot3" , onclick="currentSlides(3)")
   
-    -if(!uname){
-      .login
-        form(action="/users/login", id="login",method="post")
-          p نام کاربری:
-          input(type="text" name="uname")
-          p رمز عبور: 
-          input(type="password" name="psw")
-          button.bt(type="submit" name="action" value="login") ورود
-          a.bt(href="/users/register") ثبت نام
-          //a.forgot(href="/") رمز عبور را فراموش کردم
-    -}
-    .wellcome(id="wellcome")
-      h1 Welcome to 
-      h1 Iran Robotic Academy
-      img(src="/images/logo1.jpg", alt="img")
-    .topimg-logo(id="toplogo")
-      img(src="/images/logo.jpg", alt="img")
+    //- -if(!uname){
+    //-   .login
+    //-     form(action="/users/login", id="login",method="post")
+    //-       p نام کاربری:
+    //-       input(type="text" name="uname")
+    //-       p رمز عبور: 
+    //-       input(type="password" name="psw")
+    //-       button.bt(type="submit" name="action" value="login") ورود
+    //-       a.bt(href="/users/register") ثبت نام
+    //-       //a.forgot(href="/") رمز عبور را فراموش کردم
+    //- -}
+    //- .wellcome(id="wellcome")
+    //-   h1 Welcome to 
+    //-   h1 Iran Robotic Academy
+    //-   img(src="/images/logo1.jpg", alt="img")
+    //- .topimg-logo(id="toplogo")
+    //-   img(src="/images/logo.jpg", alt="img")
   
   .cont
     img(src="/images/juniorcup2018/09.jpg", alt="cont1")

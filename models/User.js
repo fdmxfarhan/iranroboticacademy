@@ -7,7 +7,8 @@ var UserSchema = new mongoose.Schema({
     education: String,
     fullname: String,
     psw: String,
-    role: String
+    role: String,
+    card: Number
   });
 
 var User = mongoose.model('User', UserSchema);

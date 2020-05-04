@@ -87,7 +87,7 @@ $(document).ready(function(){
     setInterval(() => {
         if(slide === 1)
             {
-                $('#slide1').show();
+                $('#slide1').fadeIn(500);
                 $('#slide2').hide();
                 $('#slide3').hide();
                 slide = 2;
@@ -95,7 +95,7 @@ $(document).ready(function(){
         else if(slide === 2)
             {
                 $('#slide1').hide();
-                $('#slide2').show();
+                $('#slide2').fadeIn(500);
                 $('#slide3').hide();
                 slide = 3
             }
@@ -103,9 +103,9 @@ $(document).ready(function(){
             {
                 $('#slide1').hide();
                 $('#slide2').hide();
-                $('#slide3').show();
+                $('#slide3').fadeIn(500);
                 slide = 1;
             }
-    }, 10000);
+    }, 5000);
 
 });

@@ -11,57 +11,186 @@ html
     link(rel = "icon" type = "image/png" href = "/images/logot.png")
     script(src="/javascripts/jquery-1.6.4.min.js")
     script(src="/javascripts/scripts.js")
+    script(src="/javascripts/layout.js")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     
     
   body
-    .modal(id="id01")
-      form.login(action="/users/login" id="login" method="POST")
-        .imgcontainer
-          span.close(onclick="document.getElementById('id01').style.display='none'" title="Close") &times;
-          img.avatar(src="/images/person.jpg", alt="person")
-        .logincontainer
-          label(for="uname")
-            b نام کاربری:
-          input(type="text" placeholder="Username" name="uname" required)
-          label(for="uname")
-            b رمز عبور:
-          input(type="password" placeholder="Password" name="psw" required)
-          button(type="submit" name="action" value="login") ورود
-          button(onclick="window.location.href = '/users/register';") ثبت نام
-          
+    .modal#login-register
+      .login-register-panel#loginpanel
+        span.close#closebtn &times;
+        .login-pad
+          form(action="/users/login" id="login" method="POST")
+            h1.modal-title 
+              i.fa.fa-sign-in.icon  
+              | ورود  
+            label(for="uname")
+              b نام کاربری:
+            br
+            i.fa.fa-user.input-icon
+            input.input-text(type="text" placeholder="Username" name="uname" required)
+            br
+            label(for="uname")
+              b رمز عبور:
+            br
+            i.fa.fa-key.input-icon
+            input.input-text(type="password" placeholder="Password" name="psw" required)
+            br
+            input.submit(type="submit" value="ورود")
+        .register-pad
+          form(action="/users/register" id="register" method="POST")
+            h1.modal-title 
+              i.fa.fa-user-plus.icon  
+              | ثبت نام
+            label(for="uname")
+                b نام کاربری:
+            br
+            i.fa.fa-user.input-icon
+            input.input-text(type="text" placeholder="Username" name="uname")
+            br
+            label(for="email")
+                b پست الکترونیکی:
+            br
+            i.fa.fa-envelope.input-icon
+            input.input-text(type="email" placeholder="E-mail" name="email")
+            br
+            label(for="phone")
+                b تلفن:
+            br
+            i.fa.fa-phone.input-icon
+            input.input-text(type="tel" placeholder="phone" name="phone")
+            br
+            label(for="education")
+                b تحصیلات:
+            br
+            i.fa.fa-book.input-icon
+            select.input-text(name="education")
+                option(value="basic") ابتدایی
+                option(value="junior1") دبیرستان دوره اول
+                option(value="junior2") دبیرستان دوره دوم
+                option(value="major1") دانشجو کارشناسی
+                option(value="major2") دانشجو کارشناسی ارشد
+            br
+            label(for="fullname")
+                b نام و نام خانوادگی(فارسی):
+            br
+            i.fa.fa-user.input-icon
+            input.input-text(type="text" placeholder="fullname" name="fullname")
+            br
+            label(for="psw")
+                b رمز عبور:
+            br
+            i.fa.fa-key.input-icon
+            input.input-text(type="password" placeholder="Password" name="psw")
+            br
+            label(for="configpsw")
+                b تایید رمز عبور:
+            br
+            i.fa.fa-check.input-icon
+            input.input-text(type="password" placeholder="Password" name="configpsw")
+            br
+            input.submit(type="submit" value="ثبت نام")
+        
 
     header
-      h1.ps آکادمی رباتیک ایران
-      h1.en Iran Robotic Academy 
-      .logo
-        img(src="/images/logo.jpg", alt="logo")
-      .language
-        a(href="/en")
-          //- img(src="/images/languages/english.png")
-    
-    .navigation 
-      a.active(href="/") صفحه اصلی 
-        i(class="fa fa-home")
-      a(href="/classes") کلاس ها
-      a(href="/tutorials") دوره های آموزشی
-      a(href="/gallery") گالری
-      a(href="/teachers") اساتید
-      //a(href="/competitions") مسابقات
-      a(href="/about") درباره ما
-      a(href="/contact") تماس با ما
-      
-      .search
-        form(action="/")
-          input(type="text", name="search", placeholder="Search...")
-          button(type="submit")
-            i(class="fa fa-search")
+      .top-contact
+        .contact-us تماس با ما:
+        i.fa.fa-phone.icon
+        .phone 09197228658
+        i.fa.fa-envelope.icon
+        .email fdmxfarhan@yahoo.com
+      .social-medias
+        a(href="#")
+          i.fa.fa-telegram
+        a(href="#")
+          i.fa.fa-instagram
+      .top-title IRAN ROBOTIC ACADEMY
+    nav
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        i.fa.fa-list-ul
+      #navbarSupportedContent.collapse
+        a.nav-link#nav-link1.active(href='/') صفحه اصلی  
+          i.fa.fa-home.icon
+        a.nav-link#nav-link2.navbar-dropdown-link  آموزش  
+          i.fa.fa-book.icon
+        a.nav-link#nav-link3(href='/') آموزش مجازی  
+          i.fa.fa-tv.icon
+        a.nav-link#nav-link4(href='/') مسابقات  
+          //- i.fa.fa-android  
+        a.nav-link#nav-link5(href='/about') درباره ما  
+          //- i.fa.fa-info  
+        a.nav-link#nav-link6(href='/contact') تماس با ما   
+          //- i.fa.fa-phone  
+      a(href="/")
+        .logo
+          img(src="/images/logo.jpg")
       -if(!uname){
-        button.log(onclick="document.getElementById('id01').style.display='block'") ورود / ثبت نام
+        button.log#loginbtn() ورود / ثبت نام
       -}else {
-        button.log(onclick="window.location.href = '/dashboard';") #{uname} پنل کاربری 
-        a.logout(href="/users/logout") خروج  
+        button.userbtn#userbtn 
+          .uname-btn= uname  
+          i.fa.fa-user.user-icon
+          i.fa.fa-chevron-down.down-icon
       -}
+    .navbar-dropdown#dropdown1
+      .dropdown-part
+        h1.navbar-dropdown-title
+          i.fa.fa-book.icon
+          | کلاس های آموزشی
+        a.nav-dropdown-link(href="/classes/robotic")
+          i.fa.fa-chevron-left.icon  
+          | کلاس رباتیک   
+        a.nav-dropdown-link(href="/classes/computer")
+          i.fa.fa-chevron-left.icon  
+          | کلاس برنامه نویسی
+        a.nav-dropdown-link(href="/classes/computer")
+          i.fa.fa-chevron-left.icon  
+          | کلاس کدنویسی کودکان
+        a.nav-dropdown-link(href="/classes/electronic")
+          i.fa.fa-chevron-left.icon  
+          | کلاس الکترونیک
+      .dropdown-part
+        h1.navbar-dropdown-title
+          i.fa.fa-book.icon
+          | دوره های آموزشی
+        a.nav-dropdown-link(href="")
+          i.fa.fa-chevron-left.icon  
+          | دوره آموزشی AVR
+        a.nav-dropdown-link(href="")
+          i.fa.fa-chevron-left.icon  
+          | دوره آموزشی ARM
+        a.nav-dropdown-link(href="")
+          i.fa.fa-chevron-left.icon  
+          | دوره آموزشی Arduino
+
+    -if(uname){
+    .dropdown#dropdownuser
+      a(href="/dashboard")
+        .acount-link
+          .picture-pad
+            i.fa.fa-user.acound-icon
+          h1.uname= user.fullname
+          h1.enter-panel ورود به پنل کاربری
+            i.fa.fa-angle-left.enter-icon
+      .link-border
+      a.dropdown-link(href="#")
+        i.fa.fa-book.icon
+        | کلاس های من
+      .link-border
+      a.dropdown-link(href="#")
+        i.fa.fa-cog.icon
+        | تنظیمات حساب
+      .link-border
+      a.dropdown-link.logoutbtn(href="/users/logout")
+        i.fa.fa-sign-out.icon
+        | خروج
+    -}
+      //- .search
+      //-   form(action="/")
+      //-     input(type="text", name="search", placeholder="Search...")
+      //-     button(type="submit")
+      //-       i(class="fa fa-search")
+      
 
     .container
       block content
@@ -90,17 +219,18 @@ html
       
       .address
         p
-          i(class="fa fa-map-marker-alt")
-          |  نشانی: تهران, ستارخان, خیابان شادمهر, خیابان نیک روش فرد, کلبه آفرینش فکر, پلاک ۱۵
+          i(class="fa fa-map-marker")  
+          |  نشانی: تهران, ستارخان, خیابان شادمهر, خیابان نیک روش فرد, کلبه آفرینش فکر, پلاک ۱۵  
           br
-          i(class="fa fa-phone-volume")
-          |  تلفن: 09223028958
+          i(class="fa fa-phone")  
+          |  تلفن: 09223028958  
       .contacts
         a(href="http://t.me/iranroboticacademy", target="_blank")
-          i(class="fa fa-telegram-plane")
+          i(class="fa fa-telegram")
           //img(src="/images/telegram.png", alt="telegram")
         a(href="http://instagram.com/iranroboticacademy", target="_blank")
           i(class="fa fa-instagram")
           //img(src="/images/instagram.png", alt="instagram")
       
       p.down Iran Robotic Academy
+    

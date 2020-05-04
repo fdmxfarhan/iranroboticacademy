@@ -1,0 +1,40 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+
+block content
+    .dashboard
+        include user-layout                
+        .dashboard-cont
+            .top-cont
+                .personal-info
+                    h1.acount-header اطلاعات شخصی
+                    table
+                        tr
+                            th 
+                                .title نام و نام خانوادگی:
+                                .text= user.fullname
+                            th 
+                                .title پست الکترونیکی:
+                                .text= user.email
+                        tr
+                            td 
+                                .title شماره تماس:
+                                .text= user.phone
+                            td 
+                                .title نام کاربری:
+                                .text= user.uname
+                    a.edit-link(href="#")
+                        .edit-link-pad
+                            i.fa.fa-edit.link-icon
+                            | ویرایش اطلاعات شخصی
+                .last-translations
+                    h1.acount-header کلاس های من
+                    .translations-pad
+                        h1.no-translation هنوز کلاسی ثبت نشده
+                    a.edit-link(href="#")
+                        .edit-link-pad
+                            i.fa.fa-edit.link-icon
+                            | مشاهده آخرین سفارش ها
+            .bottom-cont
+                h1.acount-header آخرین اخبار

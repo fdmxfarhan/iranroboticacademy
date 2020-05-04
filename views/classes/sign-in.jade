@@ -1,0 +1,51 @@
+.class-container
+    .paragraph-right
+        .paragraph-text
+            h1.title ثبت نام در آکادمی
+            h1.under-title ثبت نام در کلاس های آکادمی
+            p.text
+                | برای ثبت نام در کلاس های آکادمی میتوانید هم به صورت حضوری و هم به صورت غیر حضوری اقدام نمایید. 
+                | در صورت تمایل برای شرکت در کلاس ها کافیست وارد حساب کاربری خود شده و در بخش کلاس مورد نطر بر روی گزینه ثبت نام کلیک کنید.
+            - if(user){
+            a.sign-in#sign-in ثبت نام
+            - } else{
+            a.login-first(href="/users/login") لطفا ابتدا وارد حساب کاربری خود شوید.
+            - }
+        .imgpad
+            img(src="/images/caricator-04.png")
+.class-container
+    .paragraph
+        .break-dot
+    .plan-img
+        img(src="/images/plan.jpg")
+.sign-in-modal#sign-in-modal
+    .sign-in
+        span.close#signinclose &times;
+        form(action="/classes/robotic" method="POST")
+            h1.modal-title ثبت نام کلاس
+            label(for="fullname")
+                b نام و نام خانوادگی:
+            br
+            input.input-text(type="text" placeholder="Full name" name="fullname" value="#{user.fullname}" required )
+            br
+            label(for="term")
+                b ترم:
+            br
+            select.input-text(name="term")
+                option(value="بهار") بهار
+                option(value="تابستان") تابستان
+                option(value="پاییز") پاییز
+                option(value="زمستان") زمستان
+            br
+            label(for="className")
+                b نام کلاس:
+            br
+            select.input-text(name="className")
+                option(value="robotic") رباتیک
+                option(value="programming") برنامه نویسی
+                option(value="programming2") کدنویسی کودکان
+                option(value="electronic") الکترونیک
+            br
+            input.submit(type="submit" value="ثبت نام")
+        .imgpad
+            img(src="/images/walle.png")

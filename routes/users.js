@@ -21,7 +21,7 @@ router.get('/register', function(req, res, next) {
 // Register handle
 router.post('/register',function(req, res){
   const { uname, email , phone, education, fullname, psw, configpsw} = req.body;
-  const role = 'student';
+  const role = 'student', card = 0;
   let errors = [];
   /// check required
   if(!uname || !email || !phone || !education || !fullname || !psw || !configpsw){
@@ -50,7 +50,7 @@ router.post('/register',function(req, res){
           res.render('register', { errors, uname, email, phone, education, fullname, psw, configpsw});
         }
         else {
-          const newUser = new User({uname, email, phone, education, fullname, psw, role});
+          const newUser = new User({uname, email, phone, education, fullname, psw, role, card});
           console.log(newUser);
           // Hash password
           bcrypt.genSalt(10, (err, salt) => bcrypt.hash(newUser.psw, salt, (err, hash) => {

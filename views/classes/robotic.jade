@@ -1,115 +1,51 @@
 extends ../layout
 block styles
-    link(rel='stylesheet', href='/stylesheets/robotic.css')
+    link(rel='stylesheet', href='/stylesheets/class.css')
 block content
-    .robotic
-        h1 کلاس های رباتیک
-        p
-            | در این کلاس دانش آموزان ابتدا با انواع ربات ها آشنا می شوند و اجزای مختلف ربات ها را می آموزند. پس از 
-            | فراگیری مفاهیم مکانیک, سخت افزار و نرم افزار شروع به ساخت ربات های خود می کنند. در صورت تمایل پس از مرحله ساخت
-            | ربات می توانند در مسابقات کشوری, بین المللی و جهانی شرکت کنند و تجربه های بسیاری کسب کنند. ثمره این کلاس ها
-            | تنها ساخت ربات نیست بلکه دانش آموزان تا حدی مفاهیم الکترونیک, مکانیک و سخت افزار را فرا می گیرند که میتوانند
-            | آینده درخشانی داشته باشند و از دانش خود در صنعت امروزی استفاده نمایند.
-        img(src="/images/gallery/img-58.jpg", alt="img")
-        h2 مدرس:‌ سودابه ماحسنی. کارشناس ارشد برق
-        h2 هزینه ثبت نام: ۲۰۰.۰۰۰ تومان
-        
-        -if(!uname){           
-            a(href="/users/login") برای ثبت نام ابتدا عضو شوید
-        -}
-
-        
-        table
-            tr
-                th ساعت
-                th شنبه
-                th یک شنبه
-                th دو شنبه
-                th سه شنبه
-                th چهار شنبه
-                th پنج شنبه
-                th جمعه
-            tr 
-                th ۱۰ تا ۱۲
-                td 
-                td
-                td
-                td
-                td 
-                td
-                td
-            tr 
-                th ۱۳ تا ۱۵
-                td 
-                td *
-                td 
-                td *
-                td 
-                td *
-                td 
-            tr 
-                th ۱۶ تا ۱۸
-                td 
-                td *
-                td
-                td *
-                td 
-                td *
-                td 
-            tr 
-                th ۱۸ تا ۲۰
-                td 
-                td *
-                td 
-                td *
-                td 
-                td *
-                td 
-        
-        -if(uname){
-            -if(!robotic){
-                include ../partials/messages.jade
-                form(action="/classes/robotic" id="register" method="POST")
-                    label(for="uname")
-                        b نام کاربری:
-                    br
-                    input(type="text" placeholder="Username" name="uname" value= "#{ typeof uname != 'undefined' ? uname: '' }")
-                    br
-                    label(for="email")
-                        b پست الکترونیکی:
-                    br
-                    input(type="email" placeholder="E-mail" name="email" value= "#{ typeof email != 'undefined' ? email: '' }")
-                    br
-                    label(for="day")
-                        b روز کلاس:
-                    br
-                    select(name="day" value= "#{ typeof day != 'undefined' ? day: '' }")
-                        option(value="day1") شنبه
-                        option(value="day2") یک شنبه
-                        option(value="day3") دو شنبه
-                        option(value="day4") سه شنبه
-                        option(value="day5") چهار شنبه
-                        option(value="day6") پنج شنبه
-                        option(value="day7") جمعه
-                        
-                    br
-                    label(for="hour")
-                        b ساعت کلاس:
-                    br
-                    select(name="hour" value= "#{ typeof hour != 'undefined' ? hour: '' }")
-                        option(value="hour1") ۱۰ تا ۱۲
-                        option(value="hour2") ۱۳ تا ۱۵
-                        option(value="hour3") ۱۶ تا ۱۸
-                        option(value="hour4") ۱۸ تا ۲۰
-                        
-                    br
-                    button(type="submit") ثبت نام
-                    br
-            -} else {
-                include ../partials/messages.jade
-                form(action="/classes/robotic/remove" id="register" method="POST")
-                    br
-                    button.remove(type="submit") حذف این کلاس
-            -}
-
-        -}
+    .class-container
+        .paragraph
+            i.fa.fa-graduation-cap.icon
+            h1.title آموزش رباتیک با هدف شرکت در مسابقات
+            h1.under-title افزایش مهارت یادگیری و خلاقیت
+            p.text
+                | در این کلاس دانش آموزان ابتدا با انواع ربات ها آشنا می شوند و اجزای مختلف ربات ها را می آموزند. پس از 
+                | فراگیری مفاهیم مکانیک, سخت افزار و نرم افزار شروع به ساخت ربات های خود می کنند. در صورت تمایل پس از مرحله ساخت
+                | ربات می توانند در مسابقات کشوری, بین المللی و جهانی شرکت کنند و تجربه های بسیاری کسب کنند. ثمره این کلاس ها
+                | تنها ساخت ربات نیست بلکه دانش آموزان تا حدی مفاهیم الکترونیک, مکانیک و سخت افزار را فرا می گیرند که میتوانند
+                | آینده درخشانی داشته باشند و از دانش خود در صنعت امروزی استفاده نمایند.
+            .break-dot
+        .image-container
+            .imgpad
+                img(src="/images/gallery/img-51.jpg")
+            .imgpad
+                img(src="/images/gallery/img-58.jpg")
+            .imgpad
+                img(src="/images/gallery/img-60.jpg")
+            .imgpad
+                img(src="/images/gallery/img-20.png")
+        .paragraph
+            .break-dot
+        .paragraph-right
+            .paragraph-text
+                h1.title شرکت در مسابقات
+                h1.under-title مسابقات کشوری و جهانی
+                p.text
+                    | مسابقات رباتیک برای نخستین بار در سال ۱۹۹۳ در کشور ژاپن با نام J-league توسط گروهی از محققان (Minoru Asada, Yasuo Kuniyoshi, and Hiroaki Kitano) آغاز گردید.
+                    | هدف از این رقابت ساخت ربات هایی بود که بتوانند همانند انسان فوتبال بازی کنند.
+                    | از سال ۱۹۹۶ این چالش با عنوان Robot World Cup یا 
+                    a(href="http:/robocup.org") ربوکاپ 
+                    | هر سال به میزبانی یکی از کشور های جهان برگزار می شود.
+                    | با گسترش علم رباتیک و پیشرفت تکنولوژی مسابقات رباتیک تقریبا در تمام کشور ها برگزار می شود و دانش آموزان و دانشجویان می توانند با شرکت در این مسابقات مهارت های بسیاری کسب کنند.
+            .imgpad
+                img(src="/images/img-06.jpg")
+    img.back(src="/images/img-07.jpg")
+    .on-image-container
+        .paragraph
+            h1.title فعالیت های آموزشی آکادمی رباتیک ایران
+            h1.item برنامه ریزی و هدایت دانش آموزان در زمینه پژوهشی
+            h1.item برگزاری کارسوق های پژوهشی در مدارس تیزهوشان
+            h1.item برگزاری مسابقات پژوهشی رباتیک و برنامه نویسی
+            h1.item تشکیل و اعزام تیم های رباتیک به مسابقات جهانی
+    
+    include sign-in
+    script(src="/javascripts/lesson.js")

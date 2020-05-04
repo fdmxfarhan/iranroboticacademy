@@ -2,6 +2,11 @@
   font-family:'bnazanin';
   src:url('b_nazanin.ttf');
 }
+@font-face {
+  font-family:'iransans';
+  src:url('IRANSans.ttf');
+}
+
 :root {
   /*--bgcolor: #29b329;
   --bghover: #86c488;*/
@@ -9,6 +14,7 @@
   --bghover: #987cc5;
   --loginbg: #473ab88e;
   --loginhv: #473ab8;
+  --textcolor: rgb(29, 29, 29);
 }
 @media only screen and (min-width: 800px){
   body {
@@ -19,37 +25,71 @@
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: white;
   }
-
   header {
-    font-family: 'bnazanin', 'tahoma';
-    line-height: 15px;
+    position: relative;
+    font-family: 'iransans';
     margin: 0;
     padding: 1px;
-    color: #1f1f1f;
-    font-size: 20px;
-    text-align: center;
-    background-color: #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
-    text-shadow: 0px -1px 0px #f3f3f3;
+    color: #2e2e2e;
+    font-size: 1.3vw;
+    background-color: hsl(0, 0%, 13%);
     position: relative;
+    direction: rtl;
   }
-  header h1.en{
-    font-size: 30px;
-    font-family:'tahoma';
-  }
-  header h1.ps{
-    font-size: 20px;
-    font-family:'bnazanin';
-  }
-  .logo{
+  header .top-title{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: lightgray;
+    padding-top: 0.3vw;
+    font-size: 1.3vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  .logo img {
-    width: 190px;
+  header .top-contact{
+    /* background-color: lightblue; */
+    padding: 0;
+    color: rgb(199, 199, 199);
+    display: inline-flex;
+    width: 50%;
+    margin: 0 1%;
+    font-size: 1vw;
   }
-
+  .social-medias{
+    /* background-color: lightcoral; */
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    display: inline-flex;
+    width: 45%;
+    text-align: left;
+    direction: ltr;
+    font-size: 1.1vw;
+  }
+  header .top-contact .contact-us{
+    padding: 0 5px;
+  }
+  header .icon{
+    font-size: 1vw;
+    padding: 0 10px;
+    padding-top: 3px;
+  }
+  .icon{
+    font-size: 1vw;
+    padding: 0 5px;
+  }
+  header .top-contact .phone, header .top-contact .email{
+    color: orange;
+    font-size: 0.9vw;
+  }
+  .social-medias a{
+    display: inline-flex;
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    margin-right: 2vw;
+  }
   .language{
     position: absolute;
     top: 20px;
@@ -58,135 +98,168 @@
   .language img {
     width: 30px;
   }
-
-
-  .navigation {
+  button.navbar-toggler{
+    display: none;
+  }
+  nav {
+    border-bottom: lightgray 2px solid;
+    color: black;
     margin: 0;
     padding-bottom: 0;
     padding-top: 0;
-    padding-right: 1px;
+    padding-right: 8%;
     padding-left: 20px;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     top: 0;
     z-index: 1;
     position: sticky;
   }
-  .navigation:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+  nav:hover {
+    background-color: rgba(255, 255, 255, 0.99);
   }
-
-  .navigation a {
+  nav a.nav-link {
     float: right;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
-    padding: 1% 16px;
+    padding: 0.7vw 1.5%;
     text-decoration: none;
-    font-family: 'bnazanin';
+    font-family: 'iransans';
     height: 100%;
     margin: 0;
-    font-size: 20px;
+    font-size: 1.1vw;
   }
-  .navigation a:hover {
-    background-color: var(--bgcolor);
+  nav a.nav-link:hover {
+    border-bottom: var(--bgcolor) 3px solid;
   }
-  .navigation a.active {
-    background-color: var(--bgcolor);
-    color: white;
+  nav a.active {
+    border-bottom: var(--bgcolor) 3px solid;
   }
-  .navigation a.active i{
+  nav a.active i{
     font-size: 15px;
   }
-
-  .navigation a.active:hover {
-    background-color: var(--bghover);
-    color: white;
-  }
-  .navigation button {
-    font-family: 'bnazanin';
-    font-size: 15px;
-    color: white;
-    background-color: var(--bgcolor);
-    margin: 2% 0;
-    padding: 3px;
-    font-weight: bold;
-    border: 1px outset var(--bgcolor);
-    border-radius: 5px;
-  }
-  .navigation button.log {
+  .logo{
     float: left;
-    font-family: 'bnazanin';
-    font-size: 15px;
-    color: white;
-    background-color: var(--bgcolor);
+    margin-left: 2vw;
+    width: 10vw;
+  }
+  .logo img {
+    width: 100%;
+  }
+  nav button.log {
+    cursor: pointer;
+    float: left;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    color: var(--bgcolor);
     margin: 0;
-    margin-top: 10px;
+    margin-top: 0.6vw;
+    margin-left: 1vw;
     padding: 3px 10px;
     /* width: 100px; */
     height: 25px;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    background-color: transparent;
   }
-  .navigation a.logout{
-    background-color: var(--bgcolor);
-    float: left;
-    padding: 4px;
-    margin-top: 9px;
-    margin-left: 10px;
-    height: 18px;
-    width: 40px;
-    border-radius: 5px;
-    font-size: 13px;
+  nav button.userbtn{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5vw;
+    padding-top: 0.7vw;
+    margin-left: 2vw;
+    width: auto;
+    color: var(--bgcolor);
   }
-  .navigation button:hover {
-    background-color: var(--bghover);
-  }
-
-  .navigation .search {
-    float: left;
-    height: 45px;
-    margin: 0;
-    padding: 0;
-  }
-  .navigation .search form{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .navigation input[type=text] {
-    /* padding: 1.5% 5px; */
-    margin-top: 12px;
+  .dropdown{
+    position: fixed;
+    top: 4vw;
+    left: 20%;
     width: 200px;
-    height: 45%;
-    /* font-size: 14px; */
-    border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    font-family: 'bnazanin';
-    color: #3a3a3a;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    padding: 0;
+    text-align: center;
+    direction: rtl;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    display: none;
   }
-
-  .navigation .search button {
-    float: right;
-    padding: 4px 10px;
-    height: 50%;
-    margin-top: 12px;
-    margin-right: 16px;
-    margin-bottom: auto;
-    background: var(--bgcolor);
-    font-size: 13.5px;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  .dropdown a.dropdown-link{
+      display: block;
+      padding: 10px 20px;
+      font-family: 'bnazanin';
+      font-size: 17px;
+      text-decoration: none;
+      width: 160px;
+      text-align: right;
+      color: var(--textcolor);
   }
-
-  .navigation .search button:hover {
-    background: var(--bghover);
+  .dropdown a.dropdown-link:hover{
+      background-color: rgb(224, 224, 224);
+  }
+  .dropdown .acount-link{
+      position: relative;
+      margin: 0;
+      height: 70px;
+  }
+  .dropdown .acount-link .picture-pad{
+      background-color: rgb(206, 206, 206);
+      position: absolute;
+      top: 15px;
+      right: 8px;
+      margin: 0;
+      color: white;
+      font-size: 30px;
+      padding: 3px 8px 1px 8px;
+      border-radius: 50%;
+  }
+  .dropdown .acount-link h1.uname{
+      color: rgb(48, 48, 48);
+      font-family: 'bnazanin';
+      font-size: 17px;
+      text-decoration: none;
+      border: none;
+      position: absolute;
+      top: 10px;
+      right: 60px;
+  }
+  .dropdown .acount-link h1.enter-panel{
+      color: var(--textcolor);
+      font-family: 'iransans';
+      color: blue;
+      font-size: 10px;
+      text-decoration: none;
+      border: none;
+      position: absolute;
+      top: 35px;
+      left: 40px;
+  }
+  .enter-icon{
+    color: blue;
+    margin-right: 10px;
+  }
+  .dropdown .acount-link:hover{
+      background-color: rgb(224, 224, 224);
+  }
+  .dropdown .link-border{
+      background-color: rgb(216, 215, 215);
+      width: 70%;
+      height: 1px;
+      margin-right: 30px;
+  }
+  a.dropdown-link.logoutbtn{
+      color: rgb(252, 21, 21);
+  }
+  .dropdown .icon{
+      margin-left: 7px;
+      font-size: 14px;
+  }
+  .uname-btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2vw;
+    padding-right: 5px;
+    display: inline-flex;
   }
 
   .modal {
@@ -198,78 +271,102 @@
     width: 100%;
     height: 10000px;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.692);
     padding-top: 0;
     margin-top: 0;
   }
-  .modal form.login {
-    background-color: #fefefe;
-    position: absolute;
-    margin-right: 200px; 
-    border: 1px solid #888;
-    width: 60%;
-    height: auto;
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;
-  }
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
+  .modal .login-register-panel{
+    background-color: rgba(255, 255, 255, 0.884);
     position: relative;
+    width: 80%;
+    left: 10%;
+    top: 10vw;
+    text-align: right;
+    direction: rtl;
   }
-  .imgcontainer span.close{
+  .modal span.close{
     position: absolute;
-    right: 25px;
     top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-
-  .imgcontainer span.close:hover, span.close:focus {
-    color: red;
+    right: 10px;
+    z-index: 10;
+    color: black;
+    font-size: 3vw;
     cursor: pointer;
   }
-  .imgcontainer img.avatar {
-    width: 30%;
-    border-radius: 50%;
+  .modal span.close:hover{
+    color: red;
   }
-
-  .logincontainer {
-    padding: 16px;
-    line-height: 30px;
+  .modal .login-pad, .modal .register-pad{
+    /* background-color: lightcoral; */
+    display: inline-flex;
+    width: 40%;
     direction: rtl;
     text-align: right;
-  }
+    padding: 1% 5%;
 
-  .logincontainer input[type=text], .logincontainer input[type=password] {
+  }
+  .modal form{
     width: 100%;
-    padding: 12px 20px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    font-family: 'iransans';
   }
-
-  .logincontainer button {
-    background-color: var(--bgcolor);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+  .modal h1.modal-title{
+    /* background-color: lightcyan; */
+    display: block;
+    font-family: 'iransans';
+    font-size: 1.8vw;
+    width: 100%;
+    border-bottom: lightgray 2px solid;
+    color: var(--textcolor);
+  }
+  .modal .icon{
+    font-size: 1.7vw;
+    padding-left: 1vw;
+  }
+  .modal label{
+    /* background-color: lightblue; */
+    font-size: 1vw;
+    color: var(--textcolor);
+  }
+  .modal .input-text{
+    width: 78%;
+    font-size: 1.1vw;
+    padding: 0.7vw 5%;
     border: none;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    
+    border-bottom: rgb(168, 168, 168) 1px solid;
+    border-left: rgb(168, 168, 168) 1px solid;
+    border-top: rgb(168, 168, 168) 1px solid;
+    
+    background-color: white;
+  }
+  .modal select.input-text{
+    width: 85%;
+    padding: 0.6vw 5%;
+  }
+  .modal .input-icon{
+    display: inline-flex;
+    background-color: white;
+    border-bottom: rgb(168, 168, 168) 1px solid;
+    border-right: rgb(168, 168, 168) 1px solid;
+    border-top: rgb(168, 168, 168) 1px solid;
+    font-size: 1.3vw;
+    width: 4%;
+    padding: 0.55vw 2% 0.75vw 2%;
+  }
+  .modal input.submit{
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: var(--bgcolor);
+    padding: 6px 10px;
+    width: 96%;
+    color: white;
     cursor: pointer;
-    width: 100%;
+    font-family: 'iransans';
+    font-size: 1.2vw;
   }
-
-  .logincontainer button:hover {
-    opacity: 0.8;
-  }
-
-  .logincontainer b {
-    color: rgb(58, 58, 58);
-  }
-
   @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)} 
     to {-webkit-transform: scale(1)}
@@ -278,6 +375,49 @@
   @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+  }
+  .navbar-dropdown{
+    display: none;
+    position: sticky;
+    top: 3.8vw;
+    overflow: hidden;
+    z-index: 15;
+    width: 88%;
+    margin: 0 1%;
+    padding: 0.5vw 5%;
+    text-align: right;
+    direction: rtl;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: lightgray 2px solid;
+  }
+  .navbar-dropdown:hover{
+    background-color: rgba(255, 255, 255, 1);
+  }
+  h1.navbar-dropdown-title{
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    margin: 0;
+    margin-bottom: 0.9vw;
+    padding-top: 0.5vw;
+    color: var(--textcolor);
+    border-bottom: rgb(190, 190, 190) 1px solid;
+  }
+  a.nav-dropdown-link{
+    margin: 0;
+    color: black;
+    font-family: 'iransans';
+    text-decoration: none;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    display: block;
+  }
+  a.nav-dropdown-link:hover{
+    color: blue;
+  }
+  .dropdown-part{
+    float: right;
+    width: 30%;
+    margin-left: 3%;
   }
 
   .container {
@@ -294,87 +434,6 @@
     margin-bottom: 0;
   }
 
-  .login{
-    position: absolute;
-    top: 330px;
-    right: 80px;
-    width: 350px;
-    height: 150px;
-    padding: 20px;
-    font-family: 'bnazanin', Tahoma, Verdana, sans-serif;
-    line-height: 5px;
-    color: white;
-    text-align: left;
-    background-color: var(--loginbg);
-    border-radius: 20px;
-  }
-  .login:hover {
-    background-color: var(--loginhv); 
-  }
-
-  .login p {
-    text-align: right;
-    direction: rtl;
-    font-size: 15px;
-    color: white;
-  }
-
-  .login a{
-    text-decoration: none;
-    color: white;
-  }
-
-  .login a:hover{
-    text-decoration: underline;
-  }
-
-  .login input{
-    padding: 4px;
-    width: 100%;
-    font-size: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .login a.bt {
-    margin-top: 10px;
-    margin-left: 10px;
-    float: right;
-    background-color: #00406b;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    width: 60px;
-  }
-
-  .login a.bt:hover {
-    background-color: #09273b;
-  }
-  .login button.bt {
-    margin-top: 10px;
-    margin-left: 10px;
-    float: right;
-    background-color: #00406b;
-    color: white;
-    padding: 6px 10px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    width: 80px;
-    font-family: 'bnazanin';
-  }
-
-  .login button.bt:hover {
-    background-color: #09273b;
-  }
-  .login a.forgot {
-    float: left;
-    margin-top: 15px;
-  }
   .topimg-logo{
     position: absolute;
     top: 170px;
@@ -409,7 +468,7 @@
   img.slide{
     /*border-radius: 5px;*/
     width:100%;     
-    opacity: 0.5;
+    opacity: 0.8;
     margin-bottom: 0;
   }
 
@@ -629,7 +688,7 @@
     width: 100%;
   }
 
-  .dropdown {
+  /* .dropdown {
     font-family: 'bnazanin';
     float: right;
     overflow: hidden;
@@ -682,7 +741,7 @@
 
   .dropdown:hover .dropdown-content {
     display: block;
-  }
+  } */
   .error{
     padding: 100px;
   }
@@ -865,7 +924,7 @@
     width: 25px;
   }
 
-  .navigation {
+  nav {
     margin: 0;
     padding-right: 1px  0px;
     padding-left: 2px;
@@ -875,11 +934,11 @@
     z-index: 1;
     position: sticky;
   }
-  .navigation:hover {
+  nav:hover {
     background-color: rgba(0, 0, 0, 0.9);
   }
 
-  .navigation a {
+  nav a {
     float: right;
     color: #f2f2f2;
     text-align: center;
@@ -890,22 +949,22 @@
     margin: 0;
     font-size: 10px;
   }
-  .navigation a:hover {
+  nav a:hover {
     background-color: var(--bgcolor);
   }
-  .navigation a.active {
+  nav a.active {
     background-color: var(--bgcolor);
     color: white;
   }
-  .navigation a.active i{
+  nav a.active i{
     font-size: 7px;
   }
 
-  .navigation a.active:hover {
+  nav a.active:hover {
     background-color: var(--bghover);
     color: white;
   }
-  .navigation button {
+  nav button {
     font-family: 'bnazanin';
     font-size: 7px;
     color: white;
@@ -916,7 +975,7 @@
     border: 1px outset var(--bgcolor);
     border-radius: 5px;
   }
-  .navigation button.log {
+  nav button.log {
     font-family: 'bnazanin';
     font-size: 8px;
     color: white;
@@ -929,7 +988,7 @@
     border: 1px outset var(--bgcolor);
     border-radius: 4px;
   }
-  .navigation a.logout{
+  nav a.logout{
     background-color: var(--bgcolor);
     float: left;
     padding: 4px 3px;
@@ -940,16 +999,16 @@
     border-radius: 5px;
     font-size: 10px;
   }
-  .navigation button:hover {
+  nav button:hover {
     background-color: var(--bghover);
   }
 
-  .navigation .search {
+  nav .search {
     float: left;
     display: none;
   }
 
-  .navigation input[type=text] {
+  nav input[type=text] {
     padding: 5px;
     margin-top: 12px;
     width: 200px;
@@ -961,7 +1020,7 @@
     color: #3a3a3a;
   }
 
-  .navigation .search button {
+  nav .search button {
     float: right;
     padding: 4px 10px;
     margin-top: 12px;
@@ -977,7 +1036,7 @@
     border-bottom-left-radius: 0;
   }
 
-  .navigation .search button:hover {
+  nav .search button:hover {
     background: var(--bghover);
   }
 
@@ -1609,7 +1668,7 @@
     width: 25px;
   }
 
-  .navigation {
+  nav {
     margin: 0;
     padding-right: 1px  0px;
     padding-left: 2px;
@@ -1619,11 +1678,11 @@
     z-index: 1;
     position: sticky;
   }
-  .navigation:hover {
+  nav:hover {
     background-color: rgba(0, 0, 0, 0.9);
   }
 
-  .navigation a {
+  nav a {
     float: right;
     color: #f2f2f2;
     text-align: center;
@@ -1634,22 +1693,22 @@
     margin: 0;
     font-size: 10px;
   }
-  .navigation a:hover {
+  nav a:hover {
     background-color: var(--bgcolor);
   }
-  .navigation a.active {
+  nav a.active {
     background-color: var(--bgcolor);
     color: white;
   }
-  .navigation a.active i{
+  nav a.active i{
     font-size: 7px;
   }
 
-  .navigation a.active:hover {
+  nav a.active:hover {
     background-color: var(--bghover);
     color: white;
   }
-  .navigation button {
+  nav button {
     font-family: 'bnazanin';
     font-size: 7px;
     color: white;
@@ -1660,7 +1719,7 @@
     border: 1px outset var(--bgcolor);
     border-radius: 5px;
   }
-  .navigation button.log {
+  nav button.log {
     font-family: 'bnazanin';
     font-size: 8px;
     color: white;
@@ -1673,7 +1732,7 @@
     border: 1px outset var(--bgcolor);
     border-radius: 4px;
   }
-  .navigation a.logout{
+  nav a.logout{
     background-color: var(--bgcolor);
     float: left;
     padding: 4px 3px;
@@ -1684,16 +1743,16 @@
     border-radius: 5px;
     font-size: 10px;
   }
-  .navigation button:hover {
+  nav button:hover {
     background-color: var(--bghover);
   }
 
-  .navigation .search {
+  nav .search {
     float: left;
     display: none;
   }
 
-  .navigation input[type=text] {
+  nav input[type=text] {
     padding: 5px;
     margin-top: 12px;
     width: 200px;
@@ -1705,7 +1764,7 @@
     color: #3a3a3a;
   }
 
-  .navigation .search button {
+  nav .search button {
     float: right;
     padding: 4px 10px;
     margin-top: 12px;
@@ -1721,7 +1780,7 @@
     border-bottom-left-radius: 0;
   }
 
-  .navigation .search button:hover {
+  nav .search button:hover {
     background: var(--bghover);
   }
 
