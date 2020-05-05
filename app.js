@@ -23,6 +23,7 @@ var juniorcup2020 = require('./routes/juniorcup2020');
 var booklets = require('./routes/booklets');
 var education = require('./routes/education');
 var uploadHandler = require('./routes/upload');
+var payment = require('./routes/payment');
 
 
 const passport = require('passport'); 
@@ -115,6 +116,7 @@ app.use('/teachers', teachers);
 app.use('/booklets', booklets);
 app.use('/education', education);
 app.use('/juniorcup2020', juniorcup2020);
+app.use('/payment', payment);
 
 
 // catch 404 and forward to error handler
@@ -132,10 +134,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   console.log(err);
   if(!req.user) res.render('error',{
-    uname: false
+    uname: false,
+    user: false
   });
   else res.render('error', {
-    uname: req.user.uname
+    uname: req.user.uname,
+    user: req.user
   });
 });
 

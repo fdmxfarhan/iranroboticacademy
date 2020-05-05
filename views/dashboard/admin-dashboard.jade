@@ -13,10 +13,10 @@ block content
                         tr
                             th 
                                 .title نام و نام خانوادگی:
-                                .text= fullname
+                                .text= user.fullname
                             th 
                                 .title پست الکترونیکی:
-                                .text= user.username
+                                .text= user.email
                         tr
                             td 
                                 .title شماره تماس:
@@ -28,10 +28,10 @@ block content
                         .edit-link-pad
                             i.fa.fa-edit.link-icon
                             | ویرایش اطلاعات شخصی
-                .last-translations
+                .last-classs
                     h1.acount-header آخرین سفارش ها
-                    .translations-pad
-                        h1.no-translation هنوز سفارشی ثبت نشده
+                    .classs-pad
+                        h1.no-class هنوز سفارشی ثبت نشده
                     a.edit-link(href="#")
                         .edit-link-pad
                             i.fa.fa-edit.link-icon
@@ -41,6 +41,7 @@ block content
                 table.users
                     tr
                         th نام و نام خانوادگی
+                        th نام کاربری
                         th پست الکترونیکی
                         th تلفن
                         th نقش
@@ -48,10 +49,11 @@ block content
                     - users.forEach(oneUser => {
                     tr
                         td= oneUser.fullname
-                        td= oneUser.username
+                        td= oneUser.uname
+                        td= oneUser.email
                         td= oneUser.phone
                         td= oneUser.role
                         td
-                            a.change-role-link(href='/user/upgrade?uname=#{oneUser.username}') ارتقا
+                            a.change-role-link(href=`/upgrade?uname=${oneUser.uname}`) تغییر
                     - });
                     

@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/User');
 var Class = require('../models/Class');
+const { ensureAuthenticated } = require('../config/auth');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -57,6 +58,10 @@ router.get('/computer', function(req, res, next) {
   }
 });
 
+router.get('/programming', function(req, res, next) {
+  res.redirect('/classes/computer');
+});
+
 router.get('/electronic', function(req, res, next) {
   var electronic = false;
   if(!req.user) res.render('./classes/electronic', {
@@ -79,88 +84,50 @@ router.get('/electronic', function(req, res, next) {
   }
 });
 
-router.post('/robotic', function(req, res){
-  const {uname, email, day, hour} = req.body;
-  const fullname = req.user.fullname;
-  const cls = 'robotic';
-  let errors = [];
-  User.findOne({ uname: uname})
-      .then(user =>{
-        if(user && user.uname === req.user.uname){
-          const newClass = new Class({fullname, uname, email, day, hour, cls});
-          newClass.save()
-              .then(user => {
-                req.flash('success_msg', 'ثبت نام با موفقیت انجام شد.');
-                res.redirect('/classes/robotic');
-              })
-              .catch(err => console.log(err));
-        }
-        else{
-          errors.push({msg: 'نام کاربری یافت نشد!'});
-          res.render('./classes/robotic', { errors, uname, email, day, hour});
-        }
-      });
+router.post('/register', ensureAuthenticated, function(req, res){
+  Class.findOne({ uname: req.user.uname, className: req.body.className})
+    .then(cls =>{
+      if(cls){
+        res.render('./classes/fail-register', {
+          uname: req.user.uname,
+          user: req.user,
+          cls: cls
+        });
+      }
+      else{
+        var classNameFa;
+        if(req.body.className == 'robotic') classNameFa = 'رباتیک';
+        else if(req.body.className == 'programming') classNameFa = 'برنامه نویسی';
+        else if(req.body.className == 'electronic') classNameFa = 'الکترونیک';
+        const newClass = new Class({
+          fullname: req.body.fullname,
+          uname: req.user.uname,
+          email: req.user.email,
+          term: req.body.term,
+          className: req.body.className,
+          className2: classNameFa,
+          price: 190000,
+          state: 'در انتظار شروع'
+        });
+        newClass.save()
+          .then(() => {
+            res.render('./classes/success-register', {
+              uname: req.user.uname,
+              user: req.user,
+              fullname: newClass.fullname, 
+              className: newClass.className, 
+              term: newClass.term, 
+              price: newClass.price
+            });
+          })
+          .catch(err => console.log(err));
+      }
+    });
 });
 
 router.post('/robotic/remove', function(req,res){
   Class.deleteOne({ uname: req.user.uname, cls: 'robotic'}, err => console.log(err));
   res.redirect('/classes/robotic');
-});
-
-router.post('/computer', function(req, res){
-  const {uname, email, day, hour} = req.body;
-  const fullname = req.user.fullname;
-  const cls = 'computer';
-  let errors = [];
-  User.findOne({ uname: uname})
-      .then(user =>{
-        if(user && user.uname === req.user.uname){
-          const newClass = new Class({fullname, uname, email, day, hour, cls});
-          newClass.save()
-              .then(user => {
-                req.flash('success_msg', 'ثبت نام با موفقیت انجام شد.');
-                res.redirect('/classes/computer');
-              })
-              .catch(err => console.log(err));
-        }
-        else{
-          errors.push({msg: 'نام کاربری یافت نشد!'});
-          res.render('./classes/computer', { errors, uname, email, day, hour});
-        }
-      });
-});
-
-router.post('/computer/remove', function(req,res){
-  Class.deleteOne({ uname: req.user.uname, cls: 'computer'}, err => console.log(err));
-  res.redirect('/classes/computer');
-});
-
-router.post('/electronic', function(req, res){
-  const {uname, email, day, hour} = req.body;
-  const fullname = req.user.fullname;
-  const cls = 'electronic';
-  let errors = [];
-  User.findOne({ uname: uname})
-      .then(user =>{
-        if(user && user.uname === req.user.uname){
-          const newClass = new Class({fullname, uname, email, day, hour, cls});
-          newClass.save()
-              .then(user => {
-                req.flash('success_msg', 'ثبت نام با موفقیت انجام شد.');
-                res.redirect('/classes/electronic');
-              })
-              .catch(err => console.log(err));
-        }
-        else{
-          errors.push({msg: 'نام کاربری یافت نشد!'});
-          res.render('./classes/electronic', { errors, uname, email, day, hour});
-        }
-      });
-});
-
-router.post('/electronic/remove', function(req,res){
-  Class.deleteOne({ uname: req.user.uname, cls: 'electronic'}, err => console.log(err));
-  res.redirect('/classes/electronic');
 });
 
 

@@ -1,0 +1,18 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+
+block content
+    .dashboard
+        include user-layout
+        .dashboard-cont
+            .container
+                h1.acount-header تغیر نقش کاربری #{upgradeUser.uname}
+                .item نام و نام خانوادگی: #{upgradeUser.fullname}
+                .item ایمیل: #{upgradeUser.email}
+                .item تلفن: #{upgradeUser.phone}
+                .item نقش فعلی کاربر: #{upgradeUser.role}
+                h1.changeto تغییر به:
+                a.upgrade(href="/upgradetoadmin?uname=#{upgradeUser.uname}") Admin 
+                a.upgrade(href="/upgradetoteacher?uname=#{upgradeUser.uname}") teacher
+                a.upgrade(href="/upgradetostudent?uname=#{upgradeUser.uname}") student

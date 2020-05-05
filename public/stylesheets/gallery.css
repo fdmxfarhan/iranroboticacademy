@@ -3,7 +3,7 @@
     font-family:'bnazanin';
     src:url('b_nazanin.ttf');
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
 
     .imgpad h1 {
         float: left;
@@ -44,9 +44,10 @@
 
     .imgpad {
         padding: 50px;
+        text-align: center;
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .imgpad h1 {
         font-size: 20;
         font-family: 'bnazanin';
@@ -84,5 +85,6 @@
 
     .imgpad {
         padding: 20px;
+        text-align: center;
     }
 }

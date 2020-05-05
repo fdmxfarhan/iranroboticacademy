@@ -21,7 +21,7 @@
 .sign-in-modal#sign-in-modal
     .sign-in
         span.close#signinclose &times;
-        form(action="/classes/robotic" method="POST")
+        form(action="/classes/register" method="POST")
             h1.modal-title ثبت نام کلاس
             label(for="fullname")
                 b نام و نام خانوادگی:
@@ -43,7 +43,7 @@
             select.input-text(name="className")
                 option(value="robotic") رباتیک
                 option(value="programming") برنامه نویسی
-                option(value="programming2") کدنویسی کودکان
+                option(value="programming") کدنویسی کودکان
                 option(value="electronic") الکترونیک
             br
             input.submit(type="submit" value="ثبت نام")

@@ -23,9 +23,19 @@ var ClassSchema = new mongoose.Schema({
       enum: ['robotic', 'programming', 'electronic'],
       required: true
     },
+    className2: {
+      type: String,
+      enum: ['رباتیک', 'برنامه نویسی', 'الکترونیک'],
+      required: true
+    },
     price: {
       type: String,
       default: 200000,
+      required: true
+    },
+    state: {
+      type: String,
+      enum: ['در حال برگزاری', 'در انتظار شروع', 'پایان یافته'],
       required: true
     },
     dateOfBegin: Date,

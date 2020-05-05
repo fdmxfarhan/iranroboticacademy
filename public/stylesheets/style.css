@@ -101,6 +101,9 @@
   button.navbar-toggler{
     display: none;
   }
+  .collapse{
+    display: block;
+  }
   nav {
     border-bottom: lightgray 2px solid;
     color: black;
@@ -134,9 +137,6 @@
   }
   nav a.active {
     border-bottom: var(--bgcolor) 3px solid;
-  }
-  nav a.active i{
-    font-size: 15px;
   }
   .logo{
     float: left;
@@ -688,60 +688,6 @@
     width: 100%;
   }
 
-  /* .dropdown {
-    font-family: 'bnazanin';
-    float: right;
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
-  }
-
-  .dropdown button.bt {
-    background-color: inherit;
-    border: 0;
-    outline: 0;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px 16px;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    height: 100%;
-    margin: 0;
-    font-size: 20px;
-    border-radius: 0;
-  }
-
-  .dropdown button.bt:hover {
-    background-color: #ffffffaf;
-    color: black;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: fixed;
-    background-color: rgba(8, 8, 8, 0.726);
-    color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  } */
   .error{
     padding: 100px;
   }
@@ -765,22 +711,13 @@
 
 
 
-
-
-
-
-
-
-
-
-
   footer {
     overflow: hidden;
     direction: rtl;
     text-align: right;
-    height: 220px;
+    height: 25vw;
     margin: 0;
-    background-color: #1b1818;
+    background-color: #14003a;
     border-top: 1px dotted #ccc;
     padding-top: 20px;
     padding-right: 50px;
@@ -790,474 +727,524 @@
     position: relative;
     font-family: 'bnazanin', Tahoma;
   }
-  footer h4.tutorials{
-    position: absolute;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-  }
-  footer h4.classes{
-    position: absolute;
-    right: 450px;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  footer ul{
-    float: right;
-    width: 300px; 
-    font-size: 16px;
-    margin: 20px;
-    line-height: 25px;
-    direction: rtl;
-  }
-
-  footer ul a{
-    text-decoration: none;
-    color: white;
-    
-  }
-  footer ul a:hover{
-    text-decoration: underline;
-  }
-
   footer p.down{
     position: absolute;
     bottom: 0;
     right: 45%;
     font-size: 14px;
   }
-  footer .address{
-    font-size: 16px;
-    margin: 20px;
-    line-height: 25px;
+  .footer-block{
+    float: right;
+    width: 23%;
+    margin: 0 1%;
+  }
+  .footer-block h1.title{
+    font-family: 'iransans';
+    color: white;
+    font-size: 1.3vw;
+    padding-bottom: 0.8vw;
+    margin-bottom: 1vw;
+    
+    border-bottom: white 1px solid;
+  }
+  .footer-block a.link{
+    color: white;
+    display: block;
+    font-family: 'iransans';
+    font-size: 1vw;
+    text-decoration: none;
+    margin-bottom: 0.5vw;
+  }
+  .footer-block a.link:hover{
+    text-decoration: underline;
+  }
+  .footer-block .address{
+    width: 90%;
+    text-align: justify;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    margin-top: 3vw;
+  }
+  .footer-block .phone{
+    text-align: justify;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+  }
+  footer .footer-social-media{
+    /* background-color: yellow; */
+    position: absolute;
+    bottom: 2vw;
+    left: 5vw;
+  }
+  footer .footer-social-media a.icon{
+    color: white;
+    margin-right: 2vw;
+    font-size: 4vw;
+  }
+  footer .footer-social-media a.icon:hover{
+    color: lightblue;
+  }
+  .orange{
+    color: rgb(255, 172, 17);
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    display: inline;
+  }
+}
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+/* --------------------------------------------------------------phone display */
+
+@media only screen and (max-width: 800px) {
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: white;
+  }
+  header {
+    position: relative;
+    font-family: 'iransans';
+    margin: 0;
+    padding: 1px;
+    color: #2e2e2e;
+    font-size: 1.3vw;
+    background-color: hsl(0, 0%, 13%);
+    position: relative;
     direction: rtl;
   }
-  footer .address p{
+  header .top-title{
+    display: none;
+  }
+  header .top-contact{
+    /* background-color: lightblue; */
+    padding: 0;
+    color: rgb(199, 199, 199);
+    display: inline-flex;
+    width: 70%;
+    margin: 0 1%;
+    font-size: 3vw;
+  }
+  .social-medias{
+    /* background-color: lightcoral; */
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    display: inline-flex;
+    width: 20%;
+    text-align: left;
+    direction: ltr;
+    font-size: 1.1vw;
+  }
+  header .top-contact .contact-us{
+    padding: 0 2px;
+    margin: 0;
+    display: none;
+  }
+  header .icon{
+    font-size: 3vw;
+    padding: 0 5px;
+    padding-top: 0;
+  }
+  header .top-contact .phone, header .top-contact .email{
+    color: orange;
+    font-size: 2vw;
+  }
+  .social-medias a{
+    display: inline-flex;
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    margin-right: 3vw;
+  }
+  .language{
     position: absolute;
     top: 20px;
-    right: 750px;
-    font-size: 18px;
-    margin: 20px;
-    line-height: 25px;
+    right: 20px;
+  }
+  .language img {
+    width: 30px;
+  }
+  button.navbar-toggler{
+    float: right;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1vw;
+    font-size: 3vw;
+  }
+  .collapse{
+    display: none;
+    /* background-color: turquoise; */
+  }
+  nav {
+    border-bottom: lightgray 2px solid;
+    color: black;
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-right: 8%;
+    padding-left: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    z-index: 1;
+    position: sticky;
+  }
+  nav:hover {
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+  nav a.nav-link {
+    /* float: right; */
+    display: block;
+    width: 100%;
+    margin: auto;
+    color: black;
+    text-align: center;
+    padding: 0.7vw 1.5%;
+    text-decoration: none;
+    font-family: 'iransans';
+    margin: 0;
+    font-size: 3vw;
+    border-bottom: lightgray 1px solid;
+  }
+  nav a.nav-link:hover {
+    color: var(--bgcolor);
+  }
+  nav a.active {
+    color: var(--bgcolor);
+  }
+  .logo{
+    float: left;
+    margin-left: 2vw;
+    width: 15vw;
+  }
+  .logo img {
+    width: 100%;
+  }
+  nav button.log {
+    cursor: pointer;
+    float: left;
+    font-family: 'iransans';
+    font-size: 2vw;
+    color: var(--bgcolor);
+    margin: 0;
+    /* margin-top: 0.6vw; */
+    margin-left: 1vw;
+    padding: 3px 10px;
+    /* width: 100px; */
+    /* height: 25px; */
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+  }
+  nav button.userbtn{
+    background-color: transparent;
+    border: none;
+    font-size: 2.5vw;
+    padding-top: 0.7vw;
+    margin-left: 2vw;
+    width: auto;
+    color: var(--bgcolor);
+  }
+  .dropdown{
+    position: fixed;
+    top: 4vw;
+    left: 20%;
+    width: 200px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    padding: 0;
+    text-align: center;
     direction: rtl;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    display: none;
   }
-  .contacts {
+  .dropdown a.dropdown-link{
+      display: block;
+      padding: 10px 20px;
+      font-family: 'bnazanin';
+      font-size: 17px;
+      text-decoration: none;
+      width: 160px;
+      text-align: right;
+      color: var(--textcolor);
+  }
+  .dropdown a.dropdown-link:hover{
+      background-color: rgb(224, 224, 224);
+  }
+  .dropdown .acount-link{
+      position: relative;
+      margin: 0;
+      height: 70px;
+  }
+  .dropdown .acount-link .picture-pad{
+      background-color: rgb(206, 206, 206);
+      position: absolute;
+      top: 15px;
+      right: 8px;
+      margin: 0;
+      color: white;
+      font-size: 30px;
+      padding: 3px 8px 1px 8px;
+      border-radius: 50%;
+  }
+  .dropdown .acount-link h1.uname{
+      color: rgb(48, 48, 48);
+      font-family: 'bnazanin';
+      font-size: 17px;
+      text-decoration: none;
+      border: none;
+      position: absolute;
+      top: 10px;
+      right: 60px;
+  }
+  .dropdown .acount-link h1.enter-panel{
+      color: var(--textcolor);
+      font-family: 'iransans';
+      color: blue;
+      font-size: 10px;
+      text-decoration: none;
+      border: none;
+      position: absolute;
+      top: 35px;
+      left: 40px;
+  }
+  .enter-icon{
+    color: blue;
+    margin-right: 10px;
+  }
+  .dropdown .acount-link:hover{
+      background-color: rgb(224, 224, 224);
+  }
+  .dropdown .link-border{
+      background-color: rgb(216, 215, 215);
+      width: 70%;
+      height: 1px;
+      margin-right: 30px;
+  }
+  a.dropdown-link.logoutbtn{
+      color: rgb(252, 21, 21);
+  }
+  .dropdown .icon{
+      margin-left: 7px;
+      font-size: 14px;
+  }
+  .uname-btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5vw;
+    padding-right: 5px;
+    display: inline-flex;
+  }
+
+  .modal {
+    display: none;
     position: absolute;
-    bottom: 50px;
-    left: 100px;
+    z-index: 5; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10000px;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.692);
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .modal .login-register-panel{
+    background-color: rgba(255, 255, 255, 0.884);
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: 10vw;
+    text-align: right;
+    direction: rtl;
+    font-size: 1.5vw;
+  }
+  .modal span.close{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 10;
+    color: black;
+    font-size: 4vw;
+    cursor: pointer;
+  }
+  .modal span.close:hover{
+    color: red;
+  }
+  .modal .login-pad, .modal .register-pad{
+    /* background-color: lightcoral; */
+    display: inline-flex;
+    width: 40%;
+    direction: rtl;
+    text-align: right;
+    padding: 5vw 5%;
+
+  }
+  .modal form{
+    width: 100%;
+    font-family: 'iransans';
+  }
+  .modal h1.modal-title{
+    /* background-color: lightcyan; */
+    display: block;
+    font-family: 'iransans';
+    font-size: 2vw;
+    width: 100%;
+    border-bottom: lightgray 2px solid;
+    color: var(--textcolor);
+    margin: 0;
+  }
+  .modal .icon{
+    font-size: 2.2vw;
+    padding-left: 1vw;
+    margin: 0;
+  }
+  .modal label{
+    /* background-color: lightblue; */
+    font-size: 2.2vw;
+    color: var(--textcolor);
+    margin: 0;
+  }
+  .modal .input-text{
+    width: 78%;
+    font-size: 2.2vw;
+    padding: 0.7vw 5%;
+    border: none;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    
+    border-bottom: rgb(168, 168, 168) 1px solid;
+    border-left: rgb(168, 168, 168) 1px solid;
+    border-top: rgb(168, 168, 168) 1px solid;
+    
+    background-color: white;
+    margin: 0;
+  }
+  .modal select.input-text{
+    width: 85%;
+    padding: 0.6vw 5%;
+  }
+  .modal .input-icon{
+    display: inline-flex;
+    background-color: white;
+    border-bottom: rgb(168, 168, 168) 1px solid;
+    border-right: rgb(168, 168, 168) 1px solid;
+    border-top: rgb(168, 168, 168) 1px solid;
+    font-size: 2.7vw;
+    width: 4%;
+    padding: 0.55vw 2% 0.75vw 2%;
+  }
+  .modal input.submit{
+    border: none;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+    background-color: var(--bgcolor);
+    padding: 1vw 10px;
+    width: 96%;
+    color: white;
+    cursor: pointer;
+    font-family: 'iransans';
+    font-size: 2.3vw;
+  }
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  .navbar-dropdown{
+    display: none;
+    position: sticky;
+    top: 15vw;
+    overflow: hidden;
+    z-index: 15;
+    width: 88%;
+    margin: 0 1%;
+    padding: 0.5vw 5%;
+    text-align: right;
+    direction: rtl;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: lightgray 2px solid;
+  }
+  .navbar-dropdown:hover{
+    background-color: rgba(255, 255, 255, 1);
+  }
+  h1.navbar-dropdown-title{
+    font-family: 'iransans';
+    font-size: 3vw;
+    margin: 0;
+    margin-bottom: 0.9vw;
+    padding-top: 0.5vw;
+    color: var(--textcolor);
+    border-bottom: rgb(190, 190, 190) 1px solid;
+  }
+  a.nav-dropdown-link{
+    margin: 0;
+    color: black;
+    font-family: 'iransans';
+    text-decoration: none;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    display: block;
+  }
+  a.nav-dropdown-link:hover{
+    color: blue;
+  }
+  .dropdown-part{
+    float: right;
+    width: 45%;
+    margin-left: 3%;
   }
 
-  .contacts img {
-    width: 70px;
-    bottom: 50px;
-    margin: 0 5px;
-
+  .container {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
   }
-  .contacts a{
+  .topimg {
+    width: 100%;
+    margin-top: 0;
+    background-color: black;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .topimg-logo{
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    opacity: 0.9;
+  }
+  .topimg-logo img{
+    width: 500px;
+  }
+
+  .wellcome{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+  }
+  .wellcome h1{
     color: white;
     font-size: 50px;
-    margin-right: 20px;
-  }
-  .contacts a:hover{
-    color: rgb(134, 134, 134);
-  }
-}
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-
-@media only screen and (max-width: 600px) {
-
-  body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: white;
-  }
-
-  header {
-    font-family: 'bnazanin', 'tahoma';
-    line-height: 15px;
-    margin: 0;
-    padding: 1px;
-    color: #1f1f1f;
-    font-size: 25px;
-    text-align: center;
-    background-color: #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
-    text-shadow: 0px -1px 0px #f3f3f3;
-    position: relative;
-  }
-  header h1.en{
-    font-size: 15px;
-    font-family:'tahoma';
-  }
-  header h1.ps{
-    font-size: 10px;
-    font-family:'bnazanin';
-  }
-  .logo{
-    position: absolute;
-    top: 13px;
-    left: 10px;
-  }
-  .logo img {
-    width: 100px;
-  }
-
-  .language{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .language img {
-    width: 25px;
-  }
-
-  nav {
-    margin: 0;
-    padding-right: 1px  0px;
-    padding-left: 2px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.85);
-    top: 0;
-    z-index: 1;
-    position: sticky;
-  }
-  nav:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-
-  nav a {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 5px;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    height: 100%;
-    margin: 0;
-    font-size: 10px;
-  }
-  nav a:hover {
-    background-color: var(--bgcolor);
-  }
-  nav a.active {
-    background-color: var(--bgcolor);
-    color: white;
-  }
-  nav a.active i{
-    font-size: 7px;
-  }
-
-  nav a.active:hover {
-    background-color: var(--bghover);
-    color: white;
-  }
-  nav button {
-    font-family: 'bnazanin';
-    font-size: 7px;
-    color: white;
-    background-color: var(--bgcolor);
-    margin: 12px 0;
-    padding: 3px;
-    font-weight: bold;
-    border: 1px outset var(--bgcolor);
-    border-radius: 5px;
-  }
-  nav button.log {
-    font-family: 'bnazanin';
-    font-size: 8px;
-    color: white;
-    background-color: var(--bgcolor);
-    margin: 7px 0;
-    padding: 5px;
-    /* width: 100px; */
-    height: 20px;
-    font-weight: bold;
-    border: 1px outset var(--bgcolor);
-    border-radius: 4px;
-  }
-  nav a.logout{
-    background-color: var(--bgcolor);
-    float: left;
-    padding: 4px 3px;
-    margin-top: 7px;
-    margin-right: 2px;
-    height: 10px;
-    width: 30px;
-    border-radius: 5px;
-    font-size: 10px;
-  }
-  nav button:hover {
-    background-color: var(--bghover);
-  }
-
-  nav .search {
-    float: left;
-    display: none;
-  }
-
-  nav input[type=text] {
-    padding: 5px;
-    margin-top: 12px;
-    width: 200px;
-    font-size: 14px;
-    border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    font-family: 'bnazanin';
-    color: #3a3a3a;
-  }
-
-  nav .search button {
-    float: right;
-    padding: 4px 10px;
-    margin-top: 12px;
-    margin-right: 16px;
-    margin-bottom: auto;
-    background: var(--bgcolor);
-    font-size: 13.5px;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  nav .search button:hover {
-    background: var(--bghover);
-  }
-
-  .modal {
-    display: none;
-    position: absolute;
-    z-index: 5; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 800px;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-  }
-  .modal form.login {
-    margin-top: 0;
-    background-color: #fefefe;
-    position: absolute;
-    top: 100px;
-    margin-right: 10px; 
-    border: 1px solid #888;
-    width: 75%;
-    height: auto;
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;
-  }
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
-  .imgcontainer span.close{
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-
-  .imgcontainer span.close:hover,
-  span.close:focus {
-    color: red;
-    cursor: pointer;
-  }
-  .imgcontainer img.avatar {
-    width: 30%;
-    border-radius: 50%;
-  }
-
-  .logincontainer {
-    padding: 16px;
-    line-height: 30px;
-    direction: rtl;
-    text-align: right;
-  }
-
-  .logincontainer input[type=text], .logincontainer input[type=password] {
-    width: 100%;
-    padding: 5px 5px;
-    margin: 2px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-
-  .logincontainer button {
-    font-family: 'bnazanin';
-    background-color: var(--bgcolor);
-    color: white;
-    padding: 5px 8px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .logincontainer button:hover {
-    opacity: 0.8;
-  }
-
-  .logincontainer b {
-    color: rgb(58, 58, 58);
-  }
-
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-
-  .container {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-  }
-  .topimg {
-    width: 100%;
-    margin-top: 0;
-    background-color: black;
-    position: relative;
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .login{
-    position: absolute;
-    top: 48%;
-    right: 30px;
-    width: 30%;
-    height: 70px;
-    padding: 5px;
-    font-family: 'bnazanin', Tahoma, Verdana, sans-serif;
-    line-height: 5px;
-    color: white;
-    text-align: left;
-    background-color: var(--loginbg);
-    border-radius: 5px;
-  }
-  .login:hover {
-    background-color: var(--loginhv);
-  }
-
-  .login p {
-    margin: 4px;
-    text-align: right;
-    direction: rtl;
-    font-size: 8px;
-    color: white;
-  }
-
-  .login a{
-    text-decoration: none;
-    color: white;
-    font-size: 7px;
-    margin-top: 2px;
-    padding: 0;
-  }
-
-  .login a:hover{
-    text-decoration: underline;
-  }
-
-  .login input{
-    padding: 2px;
-    width: 100%;
-    font-size: 8px;
-    border: none;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .login a.bt {
-    margin-top: 8px;
-    margin-left: 5px;
-    float: right;
-    background-color: #00406b;
-    color: white;
-    padding: 3px;
-    font-size: 8px;
-    border-radius: 2px;
-    text-decoration: none;
-    text-align: center;
-    width: 40px;
-  }
-
-  .login a.bt:hover {
-    background-color: #09273b;
-  }
-  .login button.bt {
-    margin-top: 8px;
-    margin-left: 5px;
-    float: right;
-    background-color: #00406b;
-    color: white;
-    padding: 1px 15px;
-    font-size: 8px;
-    border: none;
-    border-radius: 2px;
-    text-decoration: none;
-    text-align: center;
-    width: 40px;
-    font-family: 'bnazanin';
-  }
-
-  .login button.bt:hover {
-    background-color: #09273b;
-  }
-  .login a.forgot {
-    float: left;
-    margin-top: 15px;
-  }
-  .topimg-logo{
-    position: absolute;
-    top: 40%;
-    left: 12%;
-  }
-  .topimg-logo img{
-    width: 150px;
-  }
-
-  .wellcome{
-    position: absolute;
-    top: 23%;
-    left: 10%;
-  }
-  .wellcome h1{
-    color: white;
-    font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .wellcome img{
-    width: 100px;
+    width: 300px;
   }
 
 
@@ -1270,7 +1257,7 @@
   img.slide{
     /*border-radius: 5px;*/
     width:100%;     
-    opacity: 0.5;
+    opacity: 0.8;
     margin-bottom: 0;
   }
 
@@ -1283,7 +1270,7 @@
     margin-top: -22px;
     color: white;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 25px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -1306,11 +1293,12 @@
     bottom: 5px;
     right: 50%;
     text-align: center;
+    display: none;
   }
   .dot {
     cursor: pointer;
-    height: 5px;
-    width: 5px;
+    height: 15px;
+    width: 15px;
     margin: 0 4px;
     background-color: rgb(233, 233, 233);
     border-radius: 50%;
@@ -1322,27 +1310,26 @@
   }
 
   .cont{
-    width: 100%;
-    height: 370px;
-    margin: 0;
-    padding: 0px 20px;
-    border-bottom: 1px solid rgb(190, 190, 190);
     position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0px 70px;
+    border-bottom: 1px solid rgb(190, 190, 190);
   }
   .cont a{
     position: absolute;
-    right: 5%;
-    top: 50%;
-    float: left;
+    right: 200px;
+    top: 180px;
     margin: 50px;
     background-color: var(--bgcolor);
-    padding: 5px 10px;
+    padding: 10px 25px;
     color: white;
     direction: rtl;
     text-decoration: none;
     font-family: 'bnazanin';
-    font-size: 15px;
-    border-radius: 3px;
+    font-size: 20px;
+    border-radius: 7px;
   }
   .cont a:hover{
     background-color: var(--bghover);
@@ -1353,13 +1340,13 @@
 
   .cont img{
     position: absolute;
-    top: 47%;
-    left: 5%;
-    margin-top: 10px;
+    left: 100px;
+    float: right;
+    margin-top: 50px;
     margin-right: 100px;
     margin-bottom: 50px;
-    width: 200px;
-    height: 160px;
+    width: 300px;
+    height: 250px;
     
     /*border: 5px outset rgb(182, 182, 182);*/
     border: none;
@@ -1368,30 +1355,30 @@
 
   .cont .text {
     float: right;
-    margin-top: 10px;
-    padding-right: 40px;
-    padding-left: 0;
-    margin-left: 0;
+    margin-top: 60px;
+    padding-right: 150px;
     text-align: right;
   }
   .cont .text h2 {
     font-family: 'bnazanin';
-    font-size: 18px;
+    font-size: 23px;
+    font-weight: bold;
     color: var(--bgcolor);
   }
   .cont .text p{
     direction: rtl;
     font-family: 'bnazanin';
-    font-size: 15px;
+    font-size: 20px;
     color: #1f1f1f;
-    text-indent: 10px;
+    text-indent: 1px;
     text-align: justify;
-    width: 100%;
+    width: 700px;
     line-height: 25px;
-    margin-left: 0;
-    padding-left: 0;
   }
   .cont .text .date{
+    position: absolute;
+    top: 250px;
+    right: 52%;
     direction: rtl;
     font-family: 'bnazanin';
     font-size: 17px;
@@ -1401,21 +1388,24 @@
     text-align: right;
     background-color: rgb(223, 223, 223);
     height: auto;
-    padding: 20px 20px;
+    padding: 50px 100px;
   }
   .videocont video{
     border: none;
     border-radius: 7px;
     position: relative;
-    width: 100%;
+    width: 700px;
   } 
   .videocont .videotext{
+    float: left;
+    left: 10px;
+    top: 10px;
     width: 300px;
     font-family: 'bnazanin';
     font-size: 18px;
     direction: rtl;
     text-align: center;
-    padding: 15px 30px;
+    padding: 100px 0;
   }
   .videocont .videotext h1{
     font-family: 'bnazanin';
@@ -1439,10 +1429,9 @@
   }
 
   .slider{
-    width: 100%; 
-    height: 250px; 
+    width: 100%;  
     overflow: hidden;
-    padding: 30px 300px;
+    padding: 150px 300px;
     background-image: url("/images/slider-background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1451,16 +1440,16 @@
   .slider .slides{
     display: block;
     width: 1000000000px;
-    height: 200px;
+    height: 400px;
     margin: 0;
     padding: 0;
   }
   .slider .slide{
     float: left;
     list-style-type: none;
-    width: 300px;
-    height: 250px;
-    padding: 0 20px;
+    width: 600px;
+    height: 400px;
+    padding: 0 100px;
   }
   .slider img{
     width: 100%;
@@ -1468,16 +1457,9 @@
     border-radius: 10px;
   }
 
-  .location{
-    padding: 10px;
-    background-color: rgb(231, 231, 231);
-  }
-  .location iframe{
-    align-content: center;
-    width: 98%;
-    height: 450px; 
-    border-radius: 3px;
-  }
+
+
+
 
   .about {
     direction: rtl;
@@ -1486,7 +1468,7 @@
     color: #1f1f1f;
     font-family: 'bnazanin';
     font-size: 18px;
-    padding: 50px 20px;
+    padding: 50px 200px;
     text-align: justify;
     line-height: 25px;
     text-indent: 20px;
@@ -1496,720 +1478,13 @@
     width: 100%;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  footer {
-    overflow: hidden;
-    direction: rtl;
-    text-align: right;
-    height: 220px;
-    margin: 0;
-    background-color: #1b1818;
-    border-top: 1px dotted #ccc;
-    padding-top: 20px;
-    padding-right: 50px;
-    font-size: 20px;
-    color: #f2f2f2;
-    border: 0;
-    position: relative;
-    font-family: 'bnazanin', Tahoma;
+  .error{
+    padding: 100px;
   }
-  footer h4.tutorials{
-    position: absolute;
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
-  }
-  footer h4.classes{
-    position: absolute;
-    right: 240px;
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  footer ul{
-    float: right;
-    width: 30%; 
-    font-size: 10px;
-    margin: 20px;
-    padding-right: 10px;
-    line-height: 15px;
-    direction: rtl;
-  }
-
-  footer ul a{
-    text-decoration: none;
-    color: white;
-    
-  }
-  footer ul a:hover{
-    text-decoration: underline;
-  }
-
-  footer p.down{
-    position: absolute;
-    bottom: 0;
-    right: 40%;
-    font-size: 14px;
-  }
-  footer .address{
-    font-size: 16px;
-    margin: 20px;
-    line-height: 25px;
-    direction: rtl;
-  }
-  footer .address p{
-    position: absolute;
-    top: 100px;
-    right: 40px;
-    font-size: 10px;
-    margin: 20px;
-    line-height: 25px;
-    direction: rtl;
-  }
-  .contacts {
-    position: absolute;
-    bottom: 50px;
-    left: 30px;
-  }
-
-  .contacts img {
-    width: 70px;
-    bottom: 50px;
-    margin: 0 5px;
-
-  }
-  .contacts a{
-    color: white;
-    font-size: 30px;
-    margin-right: 10px;
-  }
-  .contacts a:hover{
-    color: rgb(134, 134, 134);
-  }
-}
-
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-/* --------------------------------------------------------------phone display */
-
-@media only screen and (max-width: 800px) and (min-width: 600px) {
-
-  body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: white;
-  }
-
-  header {
-    font-family: 'bnazanin', 'tahoma';
-    line-height: 15px;
-    margin: 0;
-    padding: 1px;
-    color: #1f1f1f;
-    font-size: 25px;
-    text-align: center;
-    background-color: #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
-    text-shadow: 0px -1px 0px #f3f3f3;
-    position: relative;
-  }
-  header h1.en{
-    font-size: 15px;
-    font-family:'tahoma';
-  }
-  header h1.ps{
-    font-size: 10px;
-    font-family:'bnazanin';
-  }
-  .logo{
-    position: absolute;
-    top: 13px;
-    left: 10px;
-  }
-  .logo img {
-    width: 100px;
-  }
-
-  .language{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .language img {
-    width: 25px;
-  }
-
-  nav {
-    margin: 0;
-    padding-right: 1px  0px;
-    padding-left: 2px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.85);
-    top: 0;
-    z-index: 1;
-    position: sticky;
-  }
-  nav:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-
-  nav a {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 5px;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    height: 100%;
-    margin: 0;
-    font-size: 10px;
-  }
-  nav a:hover {
-    background-color: var(--bgcolor);
-  }
-  nav a.active {
-    background-color: var(--bgcolor);
-    color: white;
-  }
-  nav a.active i{
-    font-size: 7px;
-  }
-
-  nav a.active:hover {
-    background-color: var(--bghover);
-    color: white;
-  }
-  nav button {
-    font-family: 'bnazanin';
-    font-size: 7px;
-    color: white;
-    background-color: var(--bgcolor);
-    margin: 12px 0;
-    padding: 3px;
-    font-weight: bold;
-    border: 1px outset var(--bgcolor);
-    border-radius: 5px;
-  }
-  nav button.log {
-    font-family: 'bnazanin';
-    font-size: 8px;
-    color: white;
-    background-color: var(--bgcolor);
-    margin: 7px 0;
-    padding: 5px;
-    /* width: 100px; */
-    height: 20px;
-    font-weight: bold;
-    border: 1px outset var(--bgcolor);
-    border-radius: 4px;
-  }
-  nav a.logout{
-    background-color: var(--bgcolor);
-    float: left;
-    padding: 4px 3px;
-    margin-top: 7px;
-    margin-right: 2px;
-    height: 10px;
-    width: 30px;
-    border-radius: 5px;
-    font-size: 10px;
-  }
-  nav button:hover {
-    background-color: var(--bghover);
-  }
-
-  nav .search {
-    float: left;
-    display: none;
-  }
-
-  nav input[type=text] {
-    padding: 5px;
-    margin-top: 12px;
-    width: 200px;
-    font-size: 14px;
-    border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    font-family: 'bnazanin';
-    color: #3a3a3a;
-  }
-
-  nav .search button {
-    float: right;
-    padding: 4px 10px;
-    margin-top: 12px;
-    margin-right: 16px;
-    margin-bottom: auto;
-    background: var(--bgcolor);
-    font-size: 13.5px;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  nav .search button:hover {
-    background: var(--bghover);
-  }
-
-  .modal {
-    display: none;
-    position: absolute;
-    z-index: 5; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 800px;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-  }
-  .modal form.login {
-    margin-top: 0;
-    background-color: #fefefe;
-    position: absolute;
-    top: 100px;
-    margin-right: 10px; 
-    border: 1px solid #888;
-    width: 75%;
-    height: auto;
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;
-  }
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
-  .imgcontainer span.close{
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-
-  .imgcontainer span.close:hover,
-  span.close:focus {
-    color: red;
-    cursor: pointer;
-  }
-  .imgcontainer img.avatar {
-    width: 30%;
-    border-radius: 50%;
-  }
-
-  .logincontainer {
-    padding: 16px;
-    line-height: 30px;
-    direction: rtl;
-    text-align: right;
-  }
-
-  .logincontainer input[type=text], .logincontainer input[type=password] {
-    width: 100%;
-    padding: 5px 5px;
-    margin: 2px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-
-  .logincontainer button {
-    font-family: 'bnazanin';
-    background-color: var(--bgcolor);
-    color: white;
-    padding: 5px 8px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .logincontainer button:hover {
-    opacity: 0.8;
-  }
-
-  .logincontainer b {
-    color: rgb(58, 58, 58);
-  }
-
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-
-  .container {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-  }
-  .topimg {
-    width: 100%;
-    margin-top: 0;
-    background-color: black;
-    position: relative;
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .login{
-    position: absolute;
-    top: 48%;
-    right: 40px;
-    width: 30%;
-    height: 70px;
-    padding: 5px;
-    font-family: 'bnazanin', Tahoma, Verdana, sans-serif;
-    line-height: 5px;
-    color: white;
-    text-align: left;
-    background-color: var(--loginbg);
-    border-radius: 5px;
-  }
-  .login:hover {
-    background-color: var(--loginhv);
-  }
-
-  .login p {
-    margin: 4px;
-    text-align: right;
-    direction: rtl;
-    font-size: 8px;
-    color: white;
-  }
-
-  .login a{
-    text-decoration: none;
-    color: white;
-    font-size: 7px;
-    margin-top: 2px;
-    padding: 0;
-  }
-
-  .login a:hover{
-    text-decoration: underline;
-  }
-
-  .login input{
-    padding: 2px;
-    width: 100%;
-    font-size: 8px;
-    border: none;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .login a.bt {
-    margin-top: 8px;
-    margin-left: 5px;
-    float: right;
-    background-color: #00406b;
-    color: white;
-    padding: 3px;
-    font-size: 8px;
-    border-radius: 2px;
-    text-decoration: none;
-    text-align: center;
-    width: 40px;
-  }
-
-  .login a.bt:hover {
-    background-color: #09273b;
-  }
-  .login button.bt {
-    margin-top: 8px;
-    margin-left: 5px;
-    float: right;
-    background-color: #00406b;
-    color: white;
-    padding: 1px 15px;
-    font-size: 8px;
-    border: none;
-    border-radius: 2px;
-    text-decoration: none;
-    text-align: center;
-    width: 40px;
-    font-family: 'bnazanin';
-  }
-
-  .login button.bt:hover {
-    background-color: #09273b;
-  }
-  .login a.forgot {
-    float: left;
-    margin-top: 15px;
-  }
-  .topimg-logo{
-    position: absolute;
-    top: 40%;
-    left: 12%;
-  }
-  .topimg-logo img{
-    width: 150px;
-  }
-
-  .wellcome{
-    position: absolute;
-    top: 23%;
-    left: 10%;
-  }
-  .wellcome h1{
-    color: white;
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .wellcome img{
-    width: 100px;
-  }
-
-
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 20px 12px;
-    position: absolute;
-  }
-  img.slide{
-    /*border-radius: 5px;*/
-    width:100%;     
-    opacity: 0.5;
-    margin-bottom: 0;
-  }
-
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 10px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  .dots {
-    position: absolute;
-    bottom: 5px;
-    right: 50%;
-    text-align: center;
-  }
-  .dot {
-    cursor: pointer;
-    height: 5px;
-    width: 5px;
-    margin: 0 4px;
-    background-color: rgb(233, 233, 233);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  .dot:hover {
-    background-color: #1f1f1f;
-  }
-
-  .cont{
-    width: 100%;
-    height: 370px;
-    margin: 0;
-    padding: 0px 20px;
-    border-bottom: 1px solid rgb(190, 190, 190);
-    position: relative;
-  }
-  .cont a{
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    float: left;
-    margin: 50px;
-    background-color: var(--bgcolor);
-    padding: 5px 10px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 15px;
-    border-radius: 3px;
-  }
-  .cont a:hover{
-    background-color: var(--bghover);
-  }
-  .cont:nth-child(even){
-    background-color: rgb(245, 245, 245);
-  } 
-
-  .cont img{
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    margin-top: 10px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    width: 200px;
-    height: 160px;
-    
-    /*border: 5px outset rgb(182, 182, 182);*/
-    border: none;
-    border-radius: 5px;
-  }
-
-  .cont .text {
-    float: right;
-    margin-top: 10px;
-    padding-right: 40px;
-    padding-left: 0;
-    margin-left: 0;
-    text-align: right;
-  }
-  .cont .text h2 {
-    font-family: 'bnazanin';
-    font-size: 18px;
+  .error h1{
     color: var(--bgcolor);
-  }
-  .cont .text p{
-    direction: rtl;
-    font-family: 'bnazanin';
-    font-size: 15px;
-    color: #1f1f1f;
-    text-indent: 10px;
-    text-align: justify;
-    width: 100%;
-    line-height: 25px;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .cont .text .date{
-    direction: rtl;
-    font-family: 'bnazanin';
-    font-size: 17px;
-    color: #494949;
-  }
-  .videocont{
     text-align: right;
-    background-color: rgb(223, 223, 223);
-    height: auto;
-    padding: 20px 20px;
-  }
-  .videocont video{
-    border: none;
-    border-radius: 7px;
-    position: relative;
-    width: 100%;
-  } 
-  .videocont .videotext{
-    width: 300px;
-    font-family: 'bnazanin';
-    font-size: 18px;
     direction: rtl;
-    text-align: center;
-    padding: 15px 30px;
-  }
-  .videocont .videotext h1{
-    font-family: 'bnazanin';
-    font-size: 30px;
-    direction: rtl;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.74);
-  }
-  .videocont .videotext a{
-    background-color: var(--bgcolor);
-    padding: 20px 30px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 25px;
-    border-radius: 7px;
-  }
-  .videocont .videotext a:hover{
-    background-color: var(--bghover);
-  }
-
-  .slider{
-    width: 100%; 
-    height: 250px; 
-    overflow: hidden;
-    padding: 30px 300px;
-    background-image: url("/images/slider-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*opacity: 0.9;*/
-  }
-  .slider .slides{
-    display: block;
-    width: 1000000000px;
-    height: 200px;
-    margin: 0;
-    padding: 0;
-  }
-  .slider .slide{
-    float: left;
-    list-style-type: none;
-    width: 300px;
-    height: 250px;
-    padding: 0 20px;
-  }
-  .slider img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
   }
 
   .location{
@@ -2223,40 +1498,6 @@
     border-radius: 3px;
   }
 
-  .about {
-    direction: rtl;
-    position: relative;
-    background-color: rgb(247, 251, 255);
-    color: #1f1f1f;
-    font-family: 'bnazanin';
-    font-size: 18px;
-    padding: 50px 20px;
-    text-align: justify;
-    line-height: 25px;
-    text-indent: 20px;
-  }
-
-  .about img{
-    width: 100%;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2264,9 +1505,9 @@
     overflow: hidden;
     direction: rtl;
     text-align: right;
-    height: 220px;
+    height: 25vw;
     margin: 0;
-    background-color: #1b1818;
+    background-color: #14003a;
     border-top: 1px dotted #ccc;
     padding-top: 20px;
     padding-right: 50px;
@@ -2276,79 +1517,67 @@
     position: relative;
     font-family: 'bnazanin', Tahoma;
   }
-  footer h4.tutorials{
-    position: absolute;
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
-  }
-  footer h4.classes{
-    position: absolute;
-    right: 240px;
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  footer ul{
-    float: right;
-    width: 30%; 
-    font-size: 10px;
-    margin: 20px;
-    padding-right: 10px;
-    line-height: 15px;
-    direction: rtl;
-  }
-
-  footer ul a{
-    text-decoration: none;
-    color: white;
-    
-  }
-  footer ul a:hover{
-    text-decoration: underline;
-  }
-
   footer p.down{
     position: absolute;
     bottom: 0;
-    right: 40%;
-    font-size: 14px;
+    right: 45%;
+    font-size: 2vw;
   }
-  footer .address{
-    font-size: 16px;
-    margin: 20px;
-    line-height: 25px;
-    direction: rtl;
+  .footer-block{
+    float: right;
+    width: 23%;
+    margin: 0 1%;
   }
-  footer .address p{
-    position: absolute;
-    top: 100px;
-    right: 40px;
-    font-size: 10px;
-    margin: 20px;
-    line-height: 25px;
-    direction: rtl;
-  }
-  .contacts {
-    position: absolute;
-    bottom: 50px;
-    left: 30px;
-  }
-
-  .contacts img {
-    width: 70px;
-    bottom: 50px;
-    margin: 0 5px;
-
-  }
-  .contacts a{
+  .footer-block h1.title{
+    font-family: 'iransans';
     color: white;
-    font-size: 30px;
-    margin-right: 10px;
+    font-size: 1.5vw;
+    padding-bottom: 0.8vw;
+    margin-bottom: 1vw;
+    
+    border-bottom: white 1px solid;
   }
-  .contacts a:hover{
-    color: rgb(134, 134, 134);
+  .footer-block a.link{
+    color: white;
+    display: block;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    text-decoration: none;
+    margin-bottom: 0.5vw;
+  }
+  .footer-block a.link:hover{
+    text-decoration: underline;
+  }
+  .footer-block .address{
+    width: 90%;
+    text-align: justify;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    margin-top: 3vw;
+  }
+  .footer-block .phone{
+    text-align: justify;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+  }
+  footer .footer-social-media{
+    /* background-color: yellow; */
+    position: absolute;
+    bottom: 2vw;
+    left: 5vw;
+  }
+  footer .footer-social-media a.icon{
+    color: white;
+    margin-right: 2vw;
+    font-size: 4vw;
+  }
+  footer .footer-social-media a.icon:hover{
+    color: lightblue;
+  }
+  .orange{
+    color: rgb(255, 172, 17);
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    display: inline;
   }
 }

@@ -1,0 +1,16 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/message.css")
+block content
+    .massage
+        h1.title.success  
+            i.fa.fa-check-circle.icon   
+            | ثبت نام کلاس با موفقیت انجام شد  
+        .item نام و نام خانوادگی: #{fullname}
+        .item عنوان کلاس: #{className}
+        .item ترم: #{term}
+        .item هزینه ثبت نام: #{price}
+        p.text از اعتماد شما سپاس گزاریم. درخواست ثبت نام شما ارسال شده و پس از تایید فرایند, صورت حساب هزینه کلاس برای شما صادر خواهد شد و می توانید نسبت به پرداخت آن اقدام نمایید.
+        a.link(href="/dashboard") 
+            i.fa.fa-chevron-left.icon
+            | رفتن به پنل کاربری   

@@ -28,13 +28,28 @@ block content
                         .edit-link-pad
                             i.fa.fa-edit.link-icon
                             | ویرایش اطلاعات شخصی
-                .last-translations
+                .last-classs
                     h1.acount-header کلاس های من
-                    .translations-pad
-                        h1.no-translation هنوز کلاسی ثبت نشده
+                    .classs-pad
+                        - if(classes.length < 1){
+                            h1.no-class هنوز کلاسی ثبت نشده
+                        - }else{
+                            - for(var i=0; i<classes.length ; i++){
+                                 a(href="/classes/#{classes[i].className}")
+                                    .class
+                                        .imgpad
+                                            img(src="/images/class.png")
+                                        .textpad
+                                            .className کلاس #{classes[i].className2}
+                                            .term ترم #{classes[i].term}
+                                        .state= classes[i].state
+                            - }
+                        - }
+                        
                     a.edit-link(href="#")
                         .edit-link-pad
-                            i.fa.fa-edit.link-icon
-                            | مشاهده آخرین سفارش ها
+                            i.fa.fa-plus.link-icon
+                            | ثبت نام کلاس جدید
             .bottom-cont
                 h1.acount-header آخرین اخبار
+    

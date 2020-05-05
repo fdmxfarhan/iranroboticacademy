@@ -98,7 +98,7 @@ html
         i.fa.fa-phone.icon
         .phone 09197228658
         i.fa.fa-envelope.icon
-        .email fdmxfarhan@yahoo.com
+        .email info@iranroboticacademy.com
       .social-medias
         a(href="#")
           i.fa.fa-telegram
@@ -110,17 +110,17 @@ html
         i.fa.fa-list-ul
       #navbarSupportedContent.collapse
         a.nav-link#nav-link1.active(href='/') صفحه اصلی  
-          i.fa.fa-home.icon
+          i.fa.fa-home.nav-icon
         a.nav-link#nav-link2.navbar-dropdown-link  آموزش  
-          i.fa.fa-book.icon
+          i.fa.fa-book.nav-icon
         a.nav-link#nav-link3(href='/') آموزش مجازی  
-          i.fa.fa-tv.icon
+          i.fa.fa-tv.nav-icon
         a.nav-link#nav-link4(href='/') مسابقات  
           //- i.fa.fa-android  
+        a.nav-link#nav-link6(href='/gallery') گالری
+          //- i.fa.fa-phone  
         a.nav-link#nav-link5(href='/about') درباره ما  
           //- i.fa.fa-info  
-        a.nav-link#nav-link6(href='/contact') تماس با ما   
-          //- i.fa.fa-phone  
       a(href="/")
         .logo
           img(src="/images/logo.jpg")
@@ -196,41 +196,57 @@ html
       block content
 
     footer
-      h4.tutorials دوره های آموزشی
-      ul
-        li
-          a(href="/tutorials/avr") دوره آموزشی میکروکنترلر های AVR
-        li
-          a(href="/tutorials/arm") دوره آموزشی میکروکنترلر های ARM
-        li
-          a(href="/tutorials/arduino") دوره آموزشی بورد های Arduino
-        li
-          a(href="/tutorials/cpp") دوره آموزشی برنامه نویسی ++C
-        li
-          a(href="/tutorials/python") دوره آموزشی برنامه نویسی Python
-      h4.classes کلاس ها
-      ul
-        li
-          a(href="/classes/robotic") کلاس رباتیک
-        li
-          a(href="/classes/computer") کلاس برنامه نویسی
-        li
-          a(href="/classes/electronic") کلاس آموزش الکترونیک
-      
-      .address
-        p
-          i(class="fa fa-map-marker")  
-          |  نشانی: تهران, ستارخان, خیابان شادمهر, خیابان نیک روش فرد, کلبه آفرینش فکر, پلاک ۱۵  
-          br
-          i(class="fa fa-phone")  
-          |  تلفن: 09223028958  
-      .contacts
-        a(href="http://t.me/iranroboticacademy", target="_blank")
-          i(class="fa fa-telegram")
-          //img(src="/images/telegram.png", alt="telegram")
-        a(href="http://instagram.com/iranroboticacademy", target="_blank")
-          i(class="fa fa-instagram")
-          //img(src="/images/instagram.png", alt="instagram")
+      .footer-block
+        h1.title کلاس های آموزشی
+        a.link(href="/classes/robotic")
+          i.fa.fa-chevron-left.icon
+          | رباتیک
+        a.link(href="/classes/computer")
+          i.fa.fa-chevron-left.icon
+          | برنامه نویسی
+        a.link(href="/classes/computer")
+          i.fa.fa-chevron-left.icon
+          | کدنویسی کودکان
+        a.link(href="/classes/electronic")
+          i.fa.fa-chevron-left.icon
+          | الکترونیک
+      .footer-block
+        h1.title دوره های آموزشی
+        a.link(href="#")
+          i.fa.fa-chevron-left.icon
+          | دوره آموزشی AVR
+        a.link(href="#")
+          i.fa.fa-chevron-left.icon
+          | دوره آموزشی ARM
+        a.link(href="#")
+          i.fa.fa-chevron-left.icon
+          | دوره آموزشی Arduino
+      .footer-block
+        h1.title مسابقات
+        a.link(href="#")
+          i.fa.fa-chevron-left.icon
+          | juniorcupt 2020
+        a.link(href="#")
+          i.fa.fa-chevron-left.icon
+          | juniorcupt 2019
+        a.link(href="#")
+          i.fa.fa-chevron-left.icon
+          | juniorcupt 2018220px
+      .footer-block
+        .address 
+          i.fa.fa-map-marker.icon
+          | نشانی: 
+          .orange تهران, ستارخان, خیابان شادمهر, خیابان نیک روش فرد, کلبه آفرینش فکر, پلاک ۱۵
+        .phone
+          i.fa.fa-phone.icon
+          | تلفن: 
+          .orange 09223028958
+      .footer-social-media
+        a.icon(href="http://instagram.com/iranroboticacademy")
+          i.fa.fa-instagram.s-icon
+        a.icon(href="http://t.me/iranroboticacademy")
+          i.fa.fa-telegram.s-icon
+        
       
       p.down Iran Robotic Academy
     
