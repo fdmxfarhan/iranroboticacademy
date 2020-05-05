@@ -38,8 +38,8 @@
         right: 8px;
         margin: 0;
         color: white;
-        font-size: 40px;
-        padding: 3px 10px 1px 10px;
+        font-size: 3.5vw;
+        padding: 0.3vw 1.5vw 0 1.5vw;
         border-radius: 50%;
     }
     h1.card-uname{
@@ -55,7 +55,7 @@
     h1.card-phone{
         color: var(--textcolor);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
+        font-size: 1vw;
         text-decoration: none;
         border: none;
         position: absolute;
@@ -72,8 +72,8 @@
     a.card-link{
         display: block;
         padding: 15px 20px;
-        font-family: 'bnazanin';
-        font-size: 17px;
+        font-family: 'iransans';
+        font-size: 1.1vw;
         text-decoration: none;
         width: 85%;
         text-align: right;
@@ -87,7 +87,7 @@
     }
     .card-icon{
         margin-left: 7px;
-        font-size: 14px;
+        /* font-size: 1vw; */
     }
     .wallet-pad{
         position: relative;
@@ -95,42 +95,6 @@
     }
     .wallet-pad:hover{
         background-color: rgb(235, 235, 235);
-    }
-    .wallet{
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        display: block;
-        font-family: 'bnazanin';
-        font-size: 24px;
-        text-decoration: none;
-        width: 100%;
-        text-align: right;
-        color: black;
-    }
-    .increase{
-        position: absolute;
-        top: 35px;
-        right: 20px;
-        display: block;
-        font-family: 'bnazanin';
-        font-size: 17px;
-        text-decoration: none;
-        width: 100%;
-        text-align: right;
-        color: blue;
-    }
-    .toranj{
-        position: absolute;
-        top: 18px;
-        right: 64%;
-        display: block;
-        font-family: 'bnazanin';
-        font-size: 25px;
-        text-decoration: none;
-        width: 100%;
-        text-align: right;
-        color: var(--textcolor);
     }
     .dashboard .sidebar .acount{
         background-color: white;
@@ -141,8 +105,8 @@
     }
     h1.acount-header{
         color: rgb(0, 0, 102);
-        font-family: 'bnazanin';
-        font-size: 25px;
+        font-family: 'iransans';
+        font-size: 1.3vw;
         margin: 0;
         padding: 10px 20px;
         border-bottom: lightblue 2px solid;
@@ -150,8 +114,8 @@
     a.acount-link{
         display: block;
         padding: 15px 20px;
-        font-family: 'bnazanin';
-        font-size: 19px;
+        font-family: 'iransans';
+        font-size: 1.1vw;
         text-decoration: none;
         width: 85%;
         text-align: right;
@@ -201,19 +165,19 @@
     .personal-info table th, .personal-info table td{
         border: rgb(216, 216, 216) 1px solid;
         margin: 0;
-        padding: 15px;
+        padding: 1vw;
         width: 50%;
     }
     .personal-info table .title{
-        font-family: 'bnazanin';
-        font-size: 18px;
+        font-family: 'iransans';
+        font-size: 1.1vw;
         color: var(--textcolor);
         font-weight: bold;
         margin-bottom: 5px;
     }
     .personal-info table .text{
-        font-family: 'bnazanin';
-        font-size: 18px;
+        font-family: 'iransans';
+        font-size: 1.1vw;
         color: black;
         font-weight: normal;
         margin-bottom: 10px;
@@ -223,17 +187,17 @@
     }
     .edit-link-pad{
         text-align: center;
-        padding: 10px 0;
+        padding: 0.5vw 0;
         color: rgb(0, 111, 148);
-        font-family: 'bnazanin';
-        font-size: 18px;
+        font-family: 'iransans';
+        font-size: 1.1vw;
         border-top: lightgray 1px solid;
     }
     .edit-link-pad:hover{
         background-color: rgb(241, 241, 241);
     }
     .classs-pad{
-        height: 170px;
+        height: 14vw;
         position: relative;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -244,8 +208,8 @@
         padding: 50px 0;
         text-align: center;
         color: lightgray;
-        font-family: 'bnazanin';
-        font-size: 20px;
+        font-family: 'iransans';
+        font-size: 1.5vw;
     }
     .dashboard-cont .container{
         float: right;
@@ -261,8 +225,9 @@
     }
     table.users th, table.users td{
         text-align: center;
-        padding: 13px;
-
+        padding: 1vw;
+        font-family: 'iransans';
+        font-size: 4vw;
         border-bottom: lightgray 1px solid;
     }
     table.users tr:hover{
@@ -447,46 +412,51 @@
         text-align: right;
         direction: rtl;
         font-family: 'iransans';
+        position: relative;
+        /* background-color: lightpink; */
     }
     .dashboard .sidebar{
-        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
         /* background-color: lightgreen; */
-        width: 20%;
-        padding: 50px 3% 0 0;
+        width: 90%;
+        padding: 0;
+        z-index: 10;
+        display: none;
     }
     .dashboard .dashboard-cont{
-        width: 70%;
+        width: 94%;
         padding: 10px 3%;
-        float: right;
     }
     .dashboard .sidebar .card{
-        background-color: white;
+        background-color: rgb(44, 44, 44);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
         border: lightgrey 1px solid;
         padding: 0;
-        margin-bottom: 50px;
+        /* margin-bottom: 5px; */
     }
     .acount-link{
         position: relative;
         margin: 0;
         padding: 0;
-        height: 100px;
+        height: 27vw;
     }
     .picture-pad{
         background-color: rgb(206, 206, 206);
         position: absolute;
-        top: 10px;
+        top: 15px;
         right: 8px;
         margin: 0;
         color: white;
-        font-size: 40px;
-        padding: 3px 10px 1px 10px;
+        font-size: 9vw;
+        padding: 1vw 4vw 0 4vw;
         border-radius: 50%;
     }
     h1.card-uname{
-        color: black;
+        color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 1.5vw;
+        font-size: 5vw;
         text-decoration: none;
         border: none;
         position: absolute;
@@ -494,9 +464,9 @@
         left: 30px;
     }
     h1.card-phone{
-        color: var(--textcolor);
+        color: rgb(233, 233, 233);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
+        font-size: 3.5vw;
         text-decoration: none;
         border: none;
         position: absolute;
@@ -506,29 +476,29 @@
     
     .link-border{
         background-color: rgb(216, 215, 215);
-        width: 80%;
+        width: 70%;
         height: 1px;
-        margin-right: 25px;
+        margin: auto;
     }
     a.card-link{
         display: block;
-        padding: 15px 20px;
-        font-family: 'bnazanin';
-        font-size: 17px;
+        padding: 3vw 8%;
+        font-family: 'iransans';
+        font-size: 3.8vw;
         text-decoration: none;
         width: 85%;
         text-align: right;
-        color: var(--textcolor);
+        color: white;
     }
     a.card-link:hover{
-        background-color: rgb(235, 235, 235);
+        background-color: rgb(77, 77, 77);
     }
     a.card-link.logoutbtn{
-        color: rgb(252, 21, 21);
+        color: rgb(241, 113, 113);
     }
     .card-icon{
-        margin-left: 7px;
-        font-size: 14px;
+        margin-left: 3vw;
+        /* font-size: 1vw; */
     }
     .wallet-pad{
         position: relative;
@@ -537,97 +507,61 @@
     .wallet-pad:hover{
         background-color: rgb(235, 235, 235);
     }
-    .wallet{
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        display: block;
-        font-family: 'bnazanin';
-        font-size: 24px;
-        text-decoration: none;
-        width: 100%;
-        text-align: right;
-        color: black;
-    }
-    .increase{
-        position: absolute;
-        top: 35px;
-        right: 20px;
-        display: block;
-        font-family: 'bnazanin';
-        font-size: 17px;
-        text-decoration: none;
-        width: 100%;
-        text-align: right;
-        color: blue;
-    }
-    .toranj{
-        position: absolute;
-        top: 18px;
-        right: 64%;
-        display: block;
-        font-family: 'bnazanin';
-        font-size: 25px;
-        text-decoration: none;
-        width: 100%;
-        text-align: right;
-        color: var(--textcolor);
-    }
     .dashboard .sidebar .acount{
-        background-color: white;
+        background-color: rgb(44, 44, 44);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
         border: lightgrey 1px solid;
         padding: 0;
         margin-bottom: 50px;
     }
     h1.acount-header{
-        color: rgb(0, 0, 102);
-        font-family: 'bnazanin';
-        font-size: 25px;
+        color: rgb(171, 171, 230);
+        text-align: center;
+        font-family: 'iransans';
+        font-size: 5vw;
         margin: 0;
         padding: 10px 20px;
         border-bottom: lightblue 2px solid;
     }
     a.acount-link{
         display: block;
-        padding: 15px 20px;
-        font-family: 'bnazanin';
-        font-size: 19px;
+        padding: 3vw 20px;
+        font-family: 'iransans';
+        font-size: 4vw;
         text-decoration: none;
         width: 85%;
         text-align: right;
-        color: var(--textcolor);
+        color: white;
         height: auto;
     }
     a.acount-link:hover{
-        background-color: rgb(235, 235, 235);
+        background-color: rgb(70, 70, 70);
     }
     .link-icon{
         margin-left: 10px;
     }
     .dashboard .dashboard-cont .top-cont{
+        /* background-color: lightgreen; */
+        width: 100%;
         position: relative;
-        margin-top: 50px;
+        margin-top: 5px;
+        text-align: center;
     }
     .dashboard .dashboard-cont .top-cont .personal-info{
-        float: right;
         background-color: white;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
         padding: 0;
-        margin-bottom: 50px;
-        width: 47%;
+        margin-bottom: 5px;
+        width: 100%;
     }
     .dashboard .dashboard-cont .top-cont .last-classs{
-        float: right;
         background-color: white;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
         padding: 0;
-        margin-bottom: 50px;
-        width: 47%;
-        margin-right: 20px;
+        margin: 10vw 0;
+        width: 100%;
     }
     .dashboard .dashboard-cont .bottom-cont{
-        float: right;
         background-color: white;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
         padding: 0;
@@ -642,19 +576,19 @@
     .personal-info table th, .personal-info table td{
         border: rgb(216, 216, 216) 1px solid;
         margin: 0;
-        padding: 15px;
+        padding: 1vw;
         width: 50%;
     }
     .personal-info table .title{
-        font-family: 'bnazanin';
-        font-size: 18px;
+        font-family: 'iransans';
+        font-size: 4vw;
         color: var(--textcolor);
         font-weight: bold;
         margin-bottom: 5px;
     }
     .personal-info table .text{
-        font-family: 'bnazanin';
-        font-size: 18px;
+        font-family: 'iransans';
+        font-size: 3vw;
         color: black;
         font-weight: normal;
         margin-bottom: 10px;
@@ -664,17 +598,17 @@
     }
     .edit-link-pad{
         text-align: center;
-        padding: 10px 0;
+        padding: 2vw 0;
         color: rgb(0, 111, 148);
-        font-family: 'bnazanin';
-        font-size: 18px;
+        font-family: 'iransans';
+        font-size: 4vw;
         border-top: lightgray 1px solid;
     }
     .edit-link-pad:hover{
         background-color: rgb(241, 241, 241);
     }
     .classs-pad{
-        height: 170px;
+        height: 30vw;
         position: relative;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -685,8 +619,8 @@
         padding: 50px 0;
         text-align: center;
         color: lightgray;
-        font-family: 'bnazanin';
-        font-size: 20px;
+        font-family: 'iransans';
+        font-size: 4vw;
     }
     .dashboard-cont .container{
         float: right;
@@ -702,8 +636,9 @@
     }
     table.users th, table.users td{
         text-align: center;
-        padding: 13px;
-
+        padding: 1vw;
+        font-family: 'iransans';
+        font-size: 1.1vw;
         border-bottom: lightgray 1px solid;
     }
     table.users tr:hover{
