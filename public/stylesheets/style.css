@@ -519,158 +519,6 @@
     background-color: #1f1f1f;
   }
 
-  .cont{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin: 0;
-    padding: 0px 70px;
-    border-bottom: 1px solid rgb(190, 190, 190);
-  }
-  .cont a{
-    position: absolute;
-    right: 200px;
-    top: 180px;
-    margin: 50px;
-    background-color: var(--bgcolor);
-    padding: 10px 25px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 20px;
-    border-radius: 7px;
-  }
-  .cont a:hover{
-    background-color: var(--bghover);
-  }
-  .cont:nth-child(even){
-    background-color: rgb(245, 245, 245);
-  } 
-
-  .cont img{
-    position: absolute;
-    left: 100px;
-    float: right;
-    margin-top: 50px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    width: 300px;
-    height: 250px;
-    
-    /*border: 5px outset rgb(182, 182, 182);*/
-    border: none;
-    border-radius: 5px;
-  }
-
-  .cont .text {
-    float: right;
-    margin-top: 60px;
-    padding-right: 150px;
-    text-align: right;
-  }
-  .cont .text h2 {
-    font-family: 'bnazanin';
-    font-size: 23px;
-    font-weight: bold;
-    color: var(--bgcolor);
-  }
-  .cont .text p{
-    direction: rtl;
-    font-family: 'bnazanin';
-    font-size: 20px;
-    color: #1f1f1f;
-    text-indent: 1px;
-    text-align: justify;
-    width: 700px;
-    line-height: 25px;
-  }
-  .cont .text .date{
-    position: absolute;
-    top: 250px;
-    right: 52%;
-    direction: rtl;
-    font-family: 'bnazanin';
-    font-size: 17px;
-    color: #494949;
-  }
-  .videocont{
-    text-align: right;
-    background-color: rgb(223, 223, 223);
-    height: auto;
-    padding: 50px 100px;
-  }
-  .videocont video{
-    border: none;
-    border-radius: 7px;
-    position: relative;
-    width: 700px;
-  } 
-  .videocont .videotext{
-    float: left;
-    left: 10px;
-    top: 10px;
-    width: 300px;
-    font-family: 'bnazanin';
-    font-size: 18px;
-    direction: rtl;
-    text-align: center;
-    padding: 100px 0;
-  }
-  .videocont .videotext h1{
-    font-family: 'bnazanin';
-    font-size: 30px;
-    direction: rtl;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.74);
-  }
-  .videocont .videotext a{
-    background-color: var(--bgcolor);
-    padding: 20px 30px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 25px;
-    border-radius: 7px;
-  }
-  .videocont .videotext a:hover{
-    background-color: var(--bghover);
-  }
-
-  .slider{
-    width: 100%;  
-    overflow: hidden;
-    padding: 150px 300px;
-    background-image: url("/images/slider-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*opacity: 0.9;*/
-  }
-  .slider .slides{
-    display: block;
-    width: 1000000000px;
-    height: 400px;
-    margin: 0;
-    padding: 0;
-  }
-  .slider .slide{
-    float: left;
-    list-style-type: none;
-    width: 600px;
-    height: 400px;
-    padding: 0 100px;
-  }
-  .slider img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-
-
-
-
-
   .about {
     direction: rtl;
     position: relative;
@@ -816,7 +664,7 @@
     padding: 1px;
     color: #2e2e2e;
     font-size: 1.3vw;
-    background-color: hsl(0, 0%, 13%);
+    background-color: rgb(51, 51, 51);
     position: relative;
     direction: rtl;
   }
@@ -860,10 +708,9 @@
   .social-medias a{
     display: inline-flex;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     padding: 0;
-    margin: 0;
-    margin-right: 3vw;
+    margin: 0 3vw 3vw 0;
   }
   .language{
     position: absolute;
@@ -879,7 +726,7 @@
     background-color: transparent;
     cursor: pointer;
     padding: 1vw;
-    font-size: 3vw;
+    font-size: 5vw;
   }
   .collapse{
     display: none;
@@ -925,7 +772,7 @@
   .logo{
     float: left;
     margin-left: 2vw;
-    width: 15vw;
+    width: 20vw;
   }
   .logo img {
     width: 100%;
@@ -934,7 +781,7 @@
     cursor: pointer;
     float: left;
     font-family: 'iransans';
-    font-size: 2vw;
+    font-size: 3vw;
     color: var(--bgcolor);
     margin: 0;
     /* margin-top: 0.6vw; */
@@ -947,11 +794,12 @@
     background-color: transparent;
   }
   nav button.userbtn{
+    float: right;
     background-color: transparent;
     border: none;
-    font-size: 2.5vw;
-    padding-top: 0.7vw;
-    margin-left: 2vw;
+    font-size: 4vw;
+    padding-top: 1.2vw;
+    margin-right: 3vw;
     width: auto;
     color: var(--bgcolor);
   }
@@ -1041,7 +889,7 @@
   }
   .uname-btn{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.5vw;
+    font-size: 4vw;
     padding-right: 5px;
     display: inline-flex;
   }
@@ -1233,20 +1081,6 @@
     width: 500px;
   }
 
-  .wellcome{
-    position: absolute;
-    top: 100px;
-    left: 150px;
-  }
-  .wellcome h1{
-    color: white;
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .wellcome img{
-    width: 300px;
-  }
-
 
   .numbertext {
     color: #f2f2f2;
@@ -1309,208 +1143,18 @@
     background-color: #1f1f1f;
   }
 
-  .cont{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin: 0;
-    padding: 0px 70px;
-    border-bottom: 1px solid rgb(190, 190, 190);
-  }
-  .cont a{
-    position: absolute;
-    right: 200px;
-    top: 180px;
-    margin: 50px;
-    background-color: var(--bgcolor);
-    padding: 10px 25px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 20px;
-    border-radius: 7px;
-  }
-  .cont a:hover{
-    background-color: var(--bghover);
-  }
-  .cont:nth-child(even){
-    background-color: rgb(245, 245, 245);
-  } 
-
-  .cont img{
-    position: absolute;
-    left: 100px;
-    float: right;
-    margin-top: 50px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    width: 300px;
-    height: 250px;
-    
-    /*border: 5px outset rgb(182, 182, 182);*/
-    border: none;
-    border-radius: 5px;
-  }
-
-  .cont .text {
-    float: right;
-    margin-top: 60px;
-    padding-right: 150px;
-    text-align: right;
-  }
-  .cont .text h2 {
-    font-family: 'bnazanin';
-    font-size: 23px;
-    font-weight: bold;
-    color: var(--bgcolor);
-  }
-  .cont .text p{
-    direction: rtl;
-    font-family: 'bnazanin';
-    font-size: 20px;
-    color: #1f1f1f;
-    text-indent: 1px;
-    text-align: justify;
-    width: 700px;
-    line-height: 25px;
-  }
-  .cont .text .date{
-    position: absolute;
-    top: 250px;
-    right: 52%;
-    direction: rtl;
-    font-family: 'bnazanin';
-    font-size: 17px;
-    color: #494949;
-  }
-  .videocont{
-    text-align: right;
-    background-color: rgb(223, 223, 223);
-    height: auto;
-    padding: 50px 100px;
-  }
-  .videocont video{
-    border: none;
-    border-radius: 7px;
-    position: relative;
-    width: 700px;
-  } 
-  .videocont .videotext{
-    float: left;
-    left: 10px;
-    top: 10px;
-    width: 300px;
-    font-family: 'bnazanin';
-    font-size: 18px;
-    direction: rtl;
-    text-align: center;
-    padding: 100px 0;
-  }
-  .videocont .videotext h1{
-    font-family: 'bnazanin';
-    font-size: 30px;
-    direction: rtl;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.74);
-  }
-  .videocont .videotext a{
-    background-color: var(--bgcolor);
-    padding: 20px 30px;
-    color: white;
-    direction: rtl;
-    text-decoration: none;
-    font-family: 'bnazanin';
-    font-size: 25px;
-    border-radius: 7px;
-  }
-  .videocont .videotext a:hover{
-    background-color: var(--bghover);
-  }
-
-  .slider{
-    width: 100%;  
-    overflow: hidden;
-    padding: 150px 300px;
-    background-image: url("/images/slider-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*opacity: 0.9;*/
-  }
-  .slider .slides{
-    display: block;
-    width: 1000000000px;
-    height: 400px;
-    margin: 0;
-    padding: 0;
-  }
-  .slider .slide{
-    float: left;
-    list-style-type: none;
-    width: 600px;
-    height: 400px;
-    padding: 0 100px;
-  }
-  .slider img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-
-
-
-
-
-  .about {
-    direction: rtl;
-    position: relative;
-    background-color: rgb(247, 251, 255);
-    color: #1f1f1f;
-    font-family: 'bnazanin';
-    font-size: 18px;
-    padding: 50px 200px;
-    text-align: justify;
-    line-height: 25px;
-    text-indent: 20px;
-  }
-
-  .about img{
-    width: 100%;
-  }
-
-  .error{
-    padding: 100px;
-  }
-  .error h1{
-    color: var(--bgcolor);
-    text-align: right;
-    direction: rtl;
-  }
-
-  .location{
-    padding: 10px;
-    background-color: rgb(231, 231, 231);
-  }
-  .location iframe{
-    align-content: center;
-    width: 98%;
-    height: 450px; 
-    border-radius: 3px;
-  }
-
-
 
 
   footer {
     overflow: hidden;
     direction: rtl;
     text-align: right;
-    height: 25vw;
+    height: 50vw;
     margin: 0;
     background-color: #14003a;
     border-top: 1px dotted #ccc;
     padding-top: 20px;
-    padding-right: 50px;
+    padding-right: 5px;
     font-size: 20px;
     color: #f2f2f2;
     border: 0;
@@ -1531,7 +1175,7 @@
   .footer-block h1.title{
     font-family: 'iransans';
     color: white;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     padding-bottom: 0.8vw;
     margin-bottom: 1vw;
     
@@ -1541,7 +1185,7 @@
     color: white;
     display: block;
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 2vw;
     text-decoration: none;
     margin-bottom: 0.5vw;
   }
@@ -1552,32 +1196,36 @@
     width: 90%;
     text-align: justify;
     font-family: 'iransans';
-    font-size: 1.1vw;
+    font-size: 2vw;
     margin-top: 3vw;
   }
   .footer-block .phone{
     text-align: justify;
     font-family: 'iransans';
-    font-size: 1.1vw;
+    font-size: 2vw;
+    margin-top: 1vw;
   }
   footer .footer-social-media{
     /* background-color: yellow; */
     position: absolute;
-    bottom: 2vw;
+    bottom: 10vw;
     left: 5vw;
   }
   footer .footer-social-media a.icon{
     color: white;
-    margin-right: 2vw;
-    font-size: 4vw;
+    margin-right: 4vw;
+    font-size: 7vw;
   }
   footer .footer-social-media a.icon:hover{
     color: lightblue;
   }
+  footer .icon{
+    padding-left: 1vw;
+  }
   .orange{
     color: rgb(255, 172, 17);
     font-family: 'iransans';
-    font-size: 1.2vw;
+    font-size: 2vw;
     display: inline;
   }
 }

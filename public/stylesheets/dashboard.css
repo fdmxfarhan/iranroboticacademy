@@ -1,4 +1,445 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
+    body{
+        background-color: rgb(245, 245, 245);
+    }
+    .dashboard{
+        text-align: right;
+        direction: rtl;
+        font-family: 'iransans';
+    }
+    .dashboard .sidebar{
+        float: right;
+        /* background-color: lightgreen; */
+        width: 20%;
+        padding: 50px 3% 0 0;
+    }
+    .dashboard .dashboard-cont{
+        width: 70%;
+        padding: 10px 3%;
+        float: right;
+    }
+    .dashboard .sidebar .card{
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgrey 1px solid;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .acount-link{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 100px;
+    }
+    .picture-pad{
+        background-color: rgb(206, 206, 206);
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        margin: 0;
+        color: white;
+        font-size: 40px;
+        padding: 3px 10px 1px 10px;
+        border-radius: 50%;
+    }
+    h1.card-uname{
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5vw;
+        text-decoration: none;
+        border: none;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+    h1.card-phone{
+        color: var(--textcolor);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        text-decoration: none;
+        border: none;
+        position: absolute;
+        top: 55px;
+        left: 30px;
+    }
+    
+    .link-border{
+        background-color: rgb(216, 215, 215);
+        width: 80%;
+        height: 1px;
+        margin-right: 25px;
+    }
+    a.card-link{
+        display: block;
+        padding: 15px 20px;
+        font-family: 'bnazanin';
+        font-size: 17px;
+        text-decoration: none;
+        width: 85%;
+        text-align: right;
+        color: var(--textcolor);
+    }
+    a.card-link:hover{
+        background-color: rgb(235, 235, 235);
+    }
+    a.card-link.logoutbtn{
+        color: rgb(252, 21, 21);
+    }
+    .card-icon{
+        margin-left: 7px;
+        font-size: 14px;
+    }
+    .wallet-pad{
+        position: relative;
+        height: 70px;
+    }
+    .wallet-pad:hover{
+        background-color: rgb(235, 235, 235);
+    }
+    .wallet{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        display: block;
+        font-family: 'bnazanin';
+        font-size: 24px;
+        text-decoration: none;
+        width: 100%;
+        text-align: right;
+        color: black;
+    }
+    .increase{
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        display: block;
+        font-family: 'bnazanin';
+        font-size: 17px;
+        text-decoration: none;
+        width: 100%;
+        text-align: right;
+        color: blue;
+    }
+    .toranj{
+        position: absolute;
+        top: 18px;
+        right: 64%;
+        display: block;
+        font-family: 'bnazanin';
+        font-size: 25px;
+        text-decoration: none;
+        width: 100%;
+        text-align: right;
+        color: var(--textcolor);
+    }
+    .dashboard .sidebar .acount{
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgrey 1px solid;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    h1.acount-header{
+        color: rgb(0, 0, 102);
+        font-family: 'bnazanin';
+        font-size: 25px;
+        margin: 0;
+        padding: 10px 20px;
+        border-bottom: lightblue 2px solid;
+    }
+    a.acount-link{
+        display: block;
+        padding: 15px 20px;
+        font-family: 'bnazanin';
+        font-size: 19px;
+        text-decoration: none;
+        width: 85%;
+        text-align: right;
+        color: var(--textcolor);
+        height: auto;
+    }
+    a.acount-link:hover{
+        background-color: rgb(235, 235, 235);
+    }
+    .link-icon{
+        margin-left: 10px;
+    }
+    .dashboard .dashboard-cont .top-cont{
+        position: relative;
+        margin-top: 50px;
+    }
+    .dashboard .dashboard-cont .top-cont .personal-info{
+        float: right;
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        padding: 0;
+        margin-bottom: 50px;
+        width: 47%;
+    }
+    .dashboard .dashboard-cont .top-cont .last-classs{
+        float: right;
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        padding: 0;
+        margin-bottom: 50px;
+        width: 47%;
+        margin-right: 20px;
+    }
+    .dashboard .dashboard-cont .bottom-cont{
+        float: right;
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        padding: 0;
+        margin-bottom: 50px;
+        width: 96.5%;
+    }
+    .personal-info table{
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+    .personal-info table th, .personal-info table td{
+        border: rgb(216, 216, 216) 1px solid;
+        margin: 0;
+        padding: 15px;
+        width: 50%;
+    }
+    .personal-info table .title{
+        font-family: 'bnazanin';
+        font-size: 18px;
+        color: var(--textcolor);
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .personal-info table .text{
+        font-family: 'bnazanin';
+        font-size: 18px;
+        color: black;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    a.edit-link{
+        text-decoration: none;
+    }
+    .edit-link-pad{
+        text-align: center;
+        padding: 10px 0;
+        color: rgb(0, 111, 148);
+        font-family: 'bnazanin';
+        font-size: 18px;
+        border-top: lightgray 1px solid;
+    }
+    .edit-link-pad:hover{
+        background-color: rgb(241, 241, 241);
+    }
+    .classs-pad{
+        height: 170px;
+        position: relative;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .classs-pad h1.no-class{
+        float: top;
+        margin: 0;
+        padding: 50px 0;
+        text-align: center;
+        color: lightgray;
+        font-family: 'bnazanin';
+        font-size: 20px;
+    }
+    .dashboard-cont .container{
+        float: right;
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        padding: 0;
+        margin-top: 60px;
+        width: 96.5%;
+    }
+    table.users{
+        width: 100%;
+        margin-top: 10px;
+    }
+    table.users th, table.users td{
+        text-align: center;
+        padding: 13px;
+
+        border-bottom: lightgray 1px solid;
+    }
+    table.users tr:hover{
+        background-color: rgb(240, 253, 255);
+    }
+    table.users th{
+        background-color: rgb(173, 200, 230);
+    }
+    table.users a.change-role-link{
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+    table.users a.change-role-link:hover{
+        background-color: lightblue;
+    }
+    .classs-pad .class{
+        display: block;
+        /* background-color: lightblue; */
+        border-bottom: lightgray 1px solid;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+        width: 100%;
+        height: auto;
+    }
+    .classs-pad .class:hover{
+        background-color: rgb(236, 244, 255);
+    }
+    .classs-pad .class .imgpad{
+        display: inline-block;
+        height: auto;
+        width: 20%;
+    }
+    .classs-pad .class .imgpad img{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0;
+        height: auto;
+    }
+    .classs-pad .class .textpad{
+        display: inline-block;
+        /* background-color: lightsteelblue; */
+        width: 45%;
+        font-family: 'iransans';
+        font-size: 1vw;
+        padding-right: 5%;
+        color: var(--textcolor);
+    }
+    .classs-pad .class .textpad .className{
+        font-size: 1.2vw;
+        font-weight: bold;
+    }
+    .classs-pad .class .state{
+        display: inline-block;
+        font-family: 'iransans';
+        font-size: 1vw;
+        color: green;
+        padding: 2vw 0;
+        /* background-color: lightcoral; */
+    }
+    .dashboard-cont .container .item{
+        padding: 0.3vw 1vw;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+    }
+    .dashboard-cont .container h1.changeto{
+        margin: 1vw;
+        font-family: 'iransan';
+        font-size: 1.8vw;
+        /* background-color: aquamarine; */
+    }
+    .dashboard-cont .container a.upgrade{
+        display: inline-block;
+        background-color: var(--bgcolor);
+        margin-right: 1vw;
+        color: white;
+        text-decoration: none;
+        padding: 0.4vw 2vw;
+        font-size: 1.2vw;
+        margin-bottom: 5vw;
+        width: 20%;
+        text-align: center;
+    }
+    .dashboard-cont .container a.upgrade:hover{
+        background-color: var(--bghover);
+    }
+    .dashboard-cont .container a.add-payment{
+        display: block;
+        text-align: center;
+        padding: 0.7vw 0;
+        background-color: rgb(245, 229, 186);
+        width: 100%;
+        cursor: pointer;
+    }
+    .dashboard-cont .container a.add-payment:hover{
+        background-color: rgb(241, 212, 157);
+    }
+    .add-payment-modal{
+        display: none;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.671);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 100;
+    }
+    .add-payment-panel{
+        position: relative;
+        background-color: white;
+        width: 60%;
+        margin: 10vw auto;
+        text-align: right;
+        padding: 2vw 4vw;
+        direction: rtl;
+    }
+    .add-payment-panel span.close{
+        position: absolute;
+        top: 0.1vw;
+        left: 1vw;
+        font-size: 3vw;
+        cursor: pointer;
+    }
+    .add-payment-panel span.close:hover{
+        color: red;
+    }
+    .add-payment-panel h1.title{
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        margin: 2vw 0;
+        display: block;
+        border-bottom: lightgray 1px solid;
+    }
+    .add-payment-panel form .block{
+        display: block;
+    }
+    .add-payment-panel form label{
+        padding: 0.2vw;
+        font-family: 'iransans';
+        font-size: 1.1vw;
+    }
+    .add-payment-panel form .input{
+        width: 70%;
+        border: lightblue 2px solid;
+        background-color: rgb(246, 252, 255);
+        padding: 0.4vw 1vw;
+    }
+    .add-payment-panel form textarea{
+        width: 70%;
+        padding: 0.3vw 1vw;
+        height: 5vw;
+        font-family: 'iransans';
+        font-size: 1vw;
+    }
+    .add-payment-panel form .submit{
+        cursor: pointer;
+        background-color: var(--bgcolor);
+        color: white;
+        font-family: 'iransans';
+        font-size: 1.1vw;
+        padding: 0.4vw 3vw;
+        margin: 2vw 0;
+        border: none;
+    }
+    .add-payment-panel form .submit:hover{
+        background-color: var(--bghover);
+    }
+    .red{
+        color: red;
+    }
+    .green{
+        color: green;
+    }
+}
+@media only screen and (max-width: 800px) {
     body{
         background-color: rgb(245, 245, 245);
     }

@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('#sign-in-modal').hide();
+    $('#sign-in').click(function(){
+        $('#sign-in-modal').fadeIn(500);
+    });
+    $('#signinclose').click(()=>{
+        $('#sign-in-modal').fadeOut(500);
+    });
+});

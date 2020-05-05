@@ -34,7 +34,7 @@ block content
                             td 
                                 - if(user.role == 'admin'){
                                     a.change-role-link(href=`/payment/remove?id=${payments[i]._id}`) حذف
-                                - } else{
+                                - } else if(!payments[i].payed){
                                     a.change-role-link(href=`/payment/pay?id=${payments[i]._id}`) پرداخت
                                 - }
                     - } 

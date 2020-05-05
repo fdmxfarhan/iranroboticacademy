@@ -1,106 +1,112 @@
 extends layout
-
+block styles
+  link(rel="stylesheet", href="/stylesheets/index.css")
 block content 
   .topimg
     img.slide(id="slide1", src="/images/slideshow-02.jpg")
     img.slide(id="slide2", src="/images/slideshow-01.jpg")
     img.slide(id="slide3", src="/images/slideshow-03.jpg")
-    
     a.prev(id="prev") &#10094
     a.next(id="next") &#10095
     .dots
       span(class = "dot", id="dot1" , onclick="currentSlides(1)")
       span(class = "dot", id="dot2" , onclick="currentSlides(2)")
       span(class = "dot", id="dot3" , onclick="currentSlides(3)")
-  
-    //- -if(!uname){
-    //-   .login
-    //-     form(action="/users/login", id="login",method="post")
-    //-       p نام کاربری:
-    //-       input(type="text" name="uname")
-    //-       p رمز عبور: 
-    //-       input(type="password" name="psw")
-    //-       button.bt(type="submit" name="action" value="login") ورود
-    //-       a.bt(href="/users/register") ثبت نام
-    //-       //a.forgot(href="/") رمز عبور را فراموش کردم
-    //- -}
-    //- .wellcome(id="wellcome")
-    //-   h1 Welcome to 
-    //-   h1 Iran Robotic Academy
-    //-   img(src="/images/logo1.jpg", alt="img")
-    //- .topimg-logo(id="toplogo")
-    //-   img(src="/images/logo.jpg", alt="img")
-  
-  .cont
-    img(src="/images/juniorcup2018/09.jpg", alt="cont1")
-    .text
-      h2 سیزدهمین دوره مسابقات ربوکاپ دانش آموزی جونیورکاپ ۲۰۲۰
-      p
-        | سیزدهمین دوره مسابقات ربوکاپ دانش آموزی، جونیورکاپ ۲۰۲۰ در اسفند ماه سال ۱۳۹۸ توسط آکادمی رباتیک ایران در شهر تهران برگزار خواهد شد. 
-        | این مسابقه که برگرفته از بخش دانش آموزی مسابقات ربوکاپ جهانی می باشد با هدف یادگیری هرچه تمام تر دانش آموزان و به رقابت پرداختن آن ها برگزار می شود.
-      .date ۳۰ دی ماه سال ۱۳۹۸، ۲۳:۳۰
-    a(href="http://juniorcup2020.com") ادامه مطلب...     
-  .cont
-    img(src="/images/gallery/img-33.jpg", alt="cont1")
-    .text
-      h2 حضور تیم رباتیک در مسابقات ربوکاپ آسیایی ۲۰۱۹
-      p
-        | حضور مقتدرانه تیم رباتیک فوتبال سبک وزن آکادمی رباتیک ایران در سومین دوره مسابقات ربوکاپ آسیایی ۲۰۱۹ و قرار گرفتن در بین تیم های برتر مسابقات.
-        | این مسابقات در آذرماه ۱۳۹۸ کشور روسیه و در دانشگاه مسکو در دو سطح دانشجویی و دانش آموزی برگزار گردید. 
-      .date ۱۴ دی ماه سال ۱۳۹۸، ۲۳:۳۰
-    a(href="/") ادامه مطلب...
-  .cont
-    img(src="/images/gallery/img-19.png", alt="cont1")
-    .text
-      h2 شروع ترم جدید کلاس های رباتیک و برنامه نویسی
-      p
-        | در این کلاس ها دانش آموزان با دانشی که در ترم اول در زمینه رباتیک کسب کرده اند شروع به ساخت ربات های خود خواهند کرد.
-        | دانش آموزان پس از اتمام مراحل ساخت و آموزش آمادگی لازم برای ورود به مسابقات بین المللی و جهانی را کسب می کنند.
-      .date ۱۴ دی ماه سال ۱۳۹۸، ۲۳:۳۰
-    a(href="/") ادامه مطلب...
-  .cont
-    img(src="/images/gallery/img-34.jpg", alt="cont1")
-    .text
-      h2 کلاس آمادگی آزمون تیزهوشان پایه ششم
-      p
-        | جمعی از با تجربه ترین مدرسان و فارغ التحصیل مدارس تیزهوشان (علامه حلی و فرزانگان) کلاس های آمادگی آزمون تیزهوشان را برگزار می نمایند. در این کلاس آزمون های استعداد تحصیلی 
-        | و هوش تحلیلی به صورت هفتگی برگزار می گردد. شبیه سازی آزمون تیزهوشان، تحلیل آزمون، افزایش سرعت عمل و مهارت حل مسئله از جمله اهداف برگزاری این کلاس می باشد.
-      .date ۱۴ دی ماه سال ۱۳۹۸، ۲۳:۳۰
-    a(href="/") ادامه مطلب...
-  
-  .slider(id="slider")
-    a(href="/gallery")
-      ul(class="slides")
-        li(class="slide")
-          img(src="/images/gallery/img-39.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-24.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-23.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-25.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-46.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-42.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-41.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-34.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-04.png", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-17.png", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-51.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-48.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-52.jpg", alt="img")
-        li(class="slide")
-          img(src="/images/gallery/img-59.jpg", alt="img")
-      
+
+  .content
+    .triple-content
+      .content-part
+        i.fa.fa-graduation-cap.icon
+        h1.title کلاس های آموزشی
+        .text 
+          | آکادمی رباتیک ایران با هدف توسعه علم رباتیک و برنامه نویسی در کشور عزیزمان کلاس های آموزشی خود را برگزار می کند. در صورت تمایل برای شرکت در کلاس ها به قسمت آموزش مراجعه کنید.
+      .content-part
+        i.fa.fa-trophy.icon
+        h1.title مسابقات رباتیک و برنامه نویسی
+        .text 
+          | مسابقات جونیورکاپ هر سال توسط آکادمی رباتیک ایران در دو بخش رباتیک و برنامه نویسی برگزار میگردد. این مسابقات دارای هشت لیگ مختلف ربات های فوتبالیست سبک وزن, ربات های فوتبالیست سنگین وزن, ربات های مسیریاب (ساده و پیشرفته) و امداد فضای مشترک (مقدماتی و پیشرفته) می باشد.
+      .content-part
+        i.fa.fa-globe.icon
+        h1.title برگزاری کارسوق های پژوهشی
+        .text 
+          | ورکشاپ ها و کارسوق های مرتبط با موضوع های رباتیک و برنامه نویسی توسط آکادمی رباتیک ایران در مدارس و دبیرستان های دوره اول و دوم برگزار میگردد. در صورت تمایل برای برگزاری کارسوق تماس بگیرید.
+    .end-dash.space
+  .content
+    .right-content
+      .text-pad
+        h1.title آشنایی با آکادمی
+        h1.under-title اطلاعات و سوابق
+        .text
+          | آکادمی رباتیک ایران از سال ۱۳۹۸ توسط دبیران و اساتید پژوهشی مدارس سمپاد تاسیس شد. 
+          | هدف از تاسیس این مجموعه هدایت دانش آموزان در مسیری متفاوت از آموزش عادی مدارس است تا بتوانند آینده خود را درخشان تر کنند.
+          | از فعالیت های این مجموعه می توان به برگزاری کلاس های آموزشی, برگزاری کارسوق های پژوهشی در مدارس, تولید و گسترش محتوای علمی در زمینه رباتیک و برنامه نویسی و همچنین برگزاری مسابقات علمی و پژوهشی اشاره نمود.
+      .img-pad
+        img(src="/images/elecomp.jpg")
+    .end.space
+  .content
+    .image-content
+      .imgpad
+        img(src="/images/img-04.png")
+        .text
+          h1.title فعالیت های آکادمی رباتیک ایران
+          .item
+            i.fa.fa-chevron-left.icon
+            | برگزاری کلاس های آموزشی
+          .item 
+            i.fa.fa-chevron-left.icon
+            | برگزاری مسابقات علمی و پژوهشی 
+          .item 
+            i.fa.fa-chevron-left.icon
+            | برگزاری کارسوق های علمی و پژوهشی
+          .item 
+            i.fa.fa-chevron-left.icon
+            | تولید محتوای الکترونیکی در زمینه رباتیک و برنامه نویسی
+  .class-container
+    .paragraph-right
+        .paragraph-text
+            h1.title ثبت نام در آکادمی
+            h1.under-title ثبت نام در کلاس های آکادمی
+            p.text
+                | برای ثبت نام در کلاس های آکادمی میتوانید هم به صورت حضوری و هم به صورت غیر حضوری اقدام نمایید. 
+                | در صورت تمایل برای شرکت در کلاس ها کافیست وارد حساب کاربری خود شده و در بخش کلاس مورد نطر بر روی گزینه ثبت نام کلیک کنید.
+            - if(user){
+            a.sign-in#sign-in ثبت نام
+            - } else{
+            a.login-first(href="/users/login") لطفا ابتدا وارد حساب کاربری خود شوید.
+            - }
+        .imgpad
+            img(src="/images/caricator-01.png")
+  .sign-in-modal#sign-in-modal
+      .sign-in
+          span.close#signinclose &times;
+          form(action="/classes/register" method="POST")
+              h1.modal-title ثبت نام کلاس
+              label(for="fullname")
+                  b نام و نام خانوادگی:
+              br
+              input.input-text(type="text" placeholder="Full name" name="fullname" value="#{user.fullname}" required )
+              br
+              label(for="term")
+                  b ترم:
+              br
+              select.input-text(name="term")
+                  option(value="بهار") بهار
+                  option(value="تابستان") تابستان
+                  option(value="پاییز") پاییز
+                  option(value="زمستان") زمستان
+              br
+              label(for="className")
+                  b نام کلاس:
+              br
+              select.input-text(name="className")
+                  option(value="robotic") رباتیک
+                  option(value="programming") برنامه نویسی
+                  option(value="programming") کدنویسی کودکان
+                  option(value="electronic") الکترونیک
+              br
+              input.submit(type="submit" value="ثبت نام")
+          .imgpad
+              img(src="/images/walle.png")
   .location 
     iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8727320541175!2d51.36119835022258!3d35.70474933619308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e01d79e7dc0d5%3A0xe953b07a7cbf5b1c!2zSXJhbiBSb2JvdGljIEFjYWRlbXkg2KLaqdin2K_ZhduMINix2KjYp9iq24zaqSDYp9uM2LHYp9mG!5e0!3m2!1sen!2sfr!4v1578070903097!5m2!1sen!2sfr" frameborder="0" allowfullscreen="")
-      
-      
+  script(src="/javascripts/index.js")

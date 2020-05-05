@@ -9,7 +9,8 @@ var PaymentSchema = new mongoose.Schema({
     description: String,
     date: Date,
     payDate: Date,
-    payed: Boolean
+    payed: Boolean,
+    track_id: String
   });
 
 var Payment = mongoose.model('Payment', PaymentSchema);
