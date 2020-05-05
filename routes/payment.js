@@ -39,29 +39,30 @@ router.get('/remove', ensureAuthenticated, (req, res, nex)=> {
 });
 
 router.post('/pay', function(req,res, next){
-  var options2 = {
-    method: 'POST',
-    url: 'https://api.idpay.ir/v1.1/payment/verify',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
-      'X-SANDBOX': 1,
-    },
-    body: {
-      'id': 'd2e353189823079e1e4181772cff5292',
-      'order_id': '101',
-    },
-    json: true,
-  };
-  
-  options2.body.id = req.body.id;
-  options2.body.order_id = req.body.order_id;
-  request(options2, function (error, response, body) {
-    if (error) throw new Error(error);
-    console.log(body);
+  Payment.findOne({_id: req.body.order_id}, (err, payment)=>{
+    if(payment){
+      var options2 = {
+        method: 'POST',
+        url: 'https://api.idpay.ir/v1.1/payment/verify',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
+          // 'X-SANDBOX': 1,
+        },
+        body: {
+          'id': req.body.id,
+          'order_id': payment.order_id,
+        },
+        json: true,
+      };
+      request(options2, function (error, response, body) {
+        if (error) throw new Error(error);
+        console.log(body);
+      });
+      res.send("Done !!");
+    }
+    else res.send('Error!!!!!!!!!!!');
   });
-  console.log(req.body);
-  res.send("Done !!");
 });
 
 router.get('/pay', function(req, res, next){
@@ -72,14 +73,13 @@ router.get('/pay', function(req, res, next){
       headers: {
         'Content-Type': 'application/json',
         'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
-        'X-SANDBOX': 1,
+        // 'X-SANDBOX': 1,
       },
       body: {
-        'order_id': '101',
+        'order_id': payment._id,
         'amount': payment.amount,
         'name': payment.fullname,
         'uname': payment.uname,
-        'id': payment._id,
         'phone': payment.phone,
         'mail': payment.email,
         'desc': payment.description,
