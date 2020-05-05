@@ -51,7 +51,7 @@ router.post('/pay', function(req,res, next){
         },
         body: {
           'id': req.body.id,
-          'order_id': payment.order_id,
+          'order_id': req.body.order_id,
         },
         json: true,
       };
