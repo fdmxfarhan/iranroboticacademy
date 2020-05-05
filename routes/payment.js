@@ -6,20 +6,6 @@ const { ensureAuthenticated } = require('../config/auth');
 const Payment = require('../models/Payment');
 const User = require('../models/User');
 
-var options2 = {
-  method: 'POST',
-  url: 'https://api.idpay.ir/v1.1/payment/verify',
-  headers: {
-    'Content-Type': 'application/json',
-    'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
-  },
-  body: {
-    'id': 'd2e353189823079e1e4181772cff5292',
-    'order_id': '101',
-  },
-  json: true,
-};
-
 router.post('/add', ensureAuthenticated, (req, res, nex)=> {
     const {uname, amount, description} = req.body;
     if(req.user.role == 'admin'){
@@ -53,6 +39,21 @@ router.get('/remove', ensureAuthenticated, (req, res, nex)=> {
 });
 
 router.post('/pay', function(req,res, next){
+  var options2 = {
+    method: 'POST',
+    url: 'https://api.idpay.ir/v1.1/payment/verify',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-KEY': '233d166c-7bf4-416f-8c16-228e7b1e9a1d',
+      'X-SANDBOX': 1,
+    },
+    body: {
+      'id': 'd2e353189823079e1e4181772cff5292',
+      'order_id': '101',
+    },
+    json: true,
+  };
+  
   options2.body.id = req.body.id;
   options2.body.order_id = req.body.order_id;
   request(options2, function (error, response, body) {
