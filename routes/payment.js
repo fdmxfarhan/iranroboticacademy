@@ -57,9 +57,25 @@ router.post('/pay', function(req,res, next){
       };
       request(options2, function (error, response, body) {
         if (error) throw new Error(error);
-        console.log(body);
+        if(body.status == 100){
+          Payment.updateMany({_id: payment._id}, { $set: { payed: true } }, function(err){
+            if(err) console.log(err);
+            res.render('./dashboard/success-pay', {
+              uname: req.user.uname,
+              user: req.user,
+              payment: payment,
+              payed: body
+            });
+          });
+        }
+        else{
+          res.render('./dashboard/fail-pay', {
+            uname: req.user.uname,
+            user: req.user,
+            payment: payment
+          });
+        }
       });
-      res.send("Done !!");
     }
     else res.send('Error!!!!!!!!!!!');
   });
