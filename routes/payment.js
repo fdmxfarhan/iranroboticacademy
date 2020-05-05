@@ -61,8 +61,6 @@ router.post('/pay', function(req,res, next){
           Payment.updateMany({_id: payment._id}, { $set: { payed: true } }, function(err){
             if(err) console.log(err);
             res.render('./dashboard/success-pay', {
-              uname: req.user.uname,
-              user: req.user,
               payment: payment,
               payed: body
             });
@@ -70,8 +68,6 @@ router.post('/pay', function(req,res, next){
         }
         else{
           res.render('./dashboard/fail-pay', {
-            uname: req.user.uname,
-            user: req.user,
             payment: payment
           });
         }
