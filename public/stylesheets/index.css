@@ -432,7 +432,10 @@
     }
     .location{
         width: 98%;
-        margin: auto;
+        margin: 1vw auto;
+    }
+    .location iframe{
+        width: 100%;
     }
     .sign-in-modal .sign-in{
         background-color: white;
