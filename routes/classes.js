@@ -125,6 +125,34 @@ router.post('/register', ensureAuthenticated, function(req, res){
     });
 });
 
+router.get('/success', (req, res, next)=>{
+  res.render('./classes/success-register', {
+    uname: req.user.uname,
+    user: req.user,
+    fullname: 'newClass.fullname', 
+    className: 'newClass.className', 
+    term: 'newClass.term', 
+    price: 'newClass.price'
+  });
+});
+router.get('/fail', (req, res, next)=>{
+  cls = {
+    fullname: 'fullname',
+    className: 'className',
+    term: 'term',
+    price: 'price'
+  };
+  res.render('./classes/fail-register', {
+    uname: req.user.uname,
+    user: req.user,
+    fullname: 'newClass.fullname', 
+    className: 'newClass.className', 
+    term: 'newClass.term', 
+    price: 'newClass.price',
+    cls: cls
+  });
+});
+
 router.post('/robotic/remove', function(req,res){
   Class.deleteOne({ uname: req.user.uname, cls: 'robotic'}, err => console.log(err));
   res.redirect('/classes/robotic');
