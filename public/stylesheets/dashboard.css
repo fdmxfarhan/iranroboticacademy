@@ -423,8 +423,9 @@
         position: absolute;
         top: 0;
         right: 0;
-        /* background-color: lightgreen; */
-        width: 90%;
+        background-color: rgb(44, 44, 44);
+        height: 200%;
+        width: 80%;
         padding: 0;
         z-index: 100;
         display: none;
@@ -519,12 +520,12 @@
         margin-bottom: 50px;
     }
     h1.acount-header{
-        color: rgb(171, 171, 230);
+        color: var(--bgcolor);
         text-align: center;
         font-family: 'iransans';
         font-size: 5vw;
         margin: 0;
-        padding: 10px 20px;
+        padding: 1vw 0;
         border-bottom: lightblue 2px solid;
     }
     a.acount-link{
@@ -825,7 +826,7 @@
         position: fixed;
         bottom: 1vw;
         right: 1vw;
-        z-index: 100;
+        z-index: 90;
     }
     .slide-toggle button.slide-toggler{
         background-color: lightsalmon;
