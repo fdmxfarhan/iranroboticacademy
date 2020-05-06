@@ -519,23 +519,6 @@
     background-color: #1f1f1f;
   }
 
-  .about {
-    direction: rtl;
-    position: relative;
-    background-color: rgb(247, 251, 255);
-    color: #1f1f1f;
-    font-family: 'bnazanin';
-    font-size: 18px;
-    padding: 50px 200px;
-    text-align: justify;
-    line-height: 25px;
-    text-indent: 20px;
-  }
-
-  .about img{
-    width: 100%;
-  }
-
   .error{
     padding: 100px;
   }

@@ -270,6 +270,10 @@
     filter: brightness(0.7);
     width: 100%;
 }
+.content .image-content .imgpad .icon{
+    font-size: 1.5vw;
+    padding-left: 2vw;
+}
 .class-container .paragraph-right{
     /* background-color: aquamarine; */
     text-align: center;
@@ -328,12 +332,13 @@
         display: inline-block;
         width: 100%;
         text-align: right;
+        margin: 5vw 0;
     }
     .content .right-content .img-pad{
         display: inline-block;
         width: 100%;
-        margin-top: 2vw;
-        margin-bottom: 2vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
     }
     .content .right-content .img-pad img{
         width: 100%;
@@ -409,6 +414,7 @@
         padding: 10px 0 5px 0;
         text-align: justify;
         direction: rtl;
+        margin: 4vw 0;
     }
     .class-container a.sign-in{
         background-color: var(--bgcolor);
@@ -416,6 +422,7 @@
         padding: 0.6vw 5vw;
         font-weight: bold;
         cursor: pointer;
+        margin: 4vw 0;
     }
     .class-container a.sign-in:hover{
         background-color: var(--bghover);
