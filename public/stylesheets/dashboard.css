@@ -432,8 +432,8 @@
     }
     .dashboard .sidebar .card{
         background-color: rgb(44, 44, 44);
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
-        border: lightgrey 1px solid;
+        /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19); */
+        /* border: lightgrey 1px solid; */
         padding: 0;
         /* margin-bottom: 5px; */
     }
@@ -510,8 +510,8 @@
     }
     .dashboard .sidebar .acount{
         background-color: rgb(44, 44, 44);
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
-        border: lightgrey 1px solid;
+        /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgrey 1px solid; */
         padding: 0;
         margin-bottom: 50px;
     }
