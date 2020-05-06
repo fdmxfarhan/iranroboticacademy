@@ -412,7 +412,7 @@
         text-align: right;
         direction: rtl;
         font-family: 'iransans';
-        position: relative;
+        /* position: relative; */
         /* background-color: lightpink; */
         min-height: 150vw;
     }
