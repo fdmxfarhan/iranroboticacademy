@@ -10,85 +10,128 @@
 @media only screen and (min-width: 600px) {
     .mainbody{
         width: 100%;
-        font-family: 'bnazanin';
+        font-family: 'iransans';
         direction: rtl;
         text-align: right;
         padding: 50px 0;
     }
     .mainbody .sidebar{
         float: right;
-        background-color: rgb(238, 238, 238);
+        background-color: white;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgray 1px solid;
         width: 25%;
-        border-top-left-radius: 5px;
+        margin-right: 3%;
+        /* border-top-left-radius: 5px; */
     }
     .mainbody .contentbar{
         position: relative;
         float: right;
-        background-color: rgb(238, 238, 238);
+        background-color: white;
         width: 60%;
         margin: 0 50px 100px 30px;
-        border-top-right-radius: 20px;
+        /* border-top-right-radius: 20px; */
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgray 1px solid;
         padding-bottom: 50px;
     }
     h1.sideheader{
-        border-top-left-radius: 20px;
-        background-color: var(--bgcolor);
+        /* border-top-left-radius: 20px; */
+        /* background-color: var(--bgcolor); */
+        border-bottom: darkblue 2px solid;
         font-family: 'btitr';
-        font-size: 16px;
-        color: white;
-        padding: 15px 10px;
+        font-size: 1.5vw;
+        color: darkblue;
+        padding: 1vw;
         margin-top: 0;
         margin-bottom: 0;
+    }
+    .icon{
+        padding-left: 0.6vw;
+    }
+    .icon-bold{
+        padding-left: 0.6vw;
+        font-weight: bold;
     }
     a.sidelink{
         width: 90%;
         display: inline-block;
-        padding: 15px;
+        padding: 0.6vw 1.2vw;
         border-bottom: rgb(219, 219, 219) 1px solid;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 1.1vw;
         color: black;
     }
     a.sideaddlink{
-        width: 90%;
+        width: 100%;
         display: inline-block;
-        padding: 15px;
         text-decoration: none;
-        font-size: 17px;
         color: black;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        padding: 0.3vw 0;
     }
     a.sidelink:hover{
-        background-color: var(--bghover);
-        color: white;
+        background-color: rgb(224, 224, 224);
     }
     a.sideaddlink:hover{
         background-color: rgb(211, 147, 63);
         color: white;
     }
-    a.active{
+    /* a.active{
         border-right: gray 4px solid;
-    }
+    } */
     .information{
         display: block;
     }
+    .information .education-info{
+        background-color: rgb(235, 241, 245);
+        width: 32%;
+        padding: 1vw;
+        box-shadow: 0 5px 5px 0 rgba(232, 226, 240, 0.3), 0 1px 5px 0 rgba(232, 226, 240, 0.19);
+        margin: 2vw 3%;
+        padding-bottom: 4vw;
+        border-radius: 7px;
+        border: blue 2px dashed;
+        color: var(--textcolor);
+    }
     .information h1.contentheader{
         color: var(--bgcolor);
-        padding: 15px 30px;
-        margin: 0 0 200px 0;
-        border-bottom: var(--bgcolor) 3px solid;
+        padding: 1vw;
+        margin: 0 0 2vw 0;
+        border-bottom: var(--bgcolor) 2px solid;
+        font-size: 1.4vw;
     }
     .information .infotext{
         color: black;
-        font-family: 'bnazanin';
-        font-size: 19px;
+        font-family: 'iransans';
+        font-size: 1.2vw;
         text-align: right;
         direction: rtl;
-        padding: 10px 60px;
+        padding: 0.7vw 0;
     }
-    .information .infotext p{
+    .information .description{
+        /* background-color: burlywood; */
+        color: black;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        text-align: right;
+        direction: rtl;
+        padding: 0.7vw;
+        width: 85%;
+        margin: auto;
+        margin-top: 5vw;
+        border-top: blue 1px solid;
+    }
+    .information .description h1{
+        color: darkblue;
+        font-size: 1.5vw;
+        margin: 0.3vw;
+    }
+    .information .description p{
         color: rgb(53, 53, 53);
-        font-family: 'bnazanin';
-        font-size: 19px;
+        font-family: 'iransans';
+        font-size: 1.2vw;
         text-align: justify;
         direction: rtl;
         padding: 5px 20px;
@@ -97,12 +140,13 @@
     }
     .photo{
         position: absolute;
-        top: 90px;
-        left: 60px;
+        top: 6.5vw;
+        left: 4vw;
         width: 50%;
     }
     .photo img{
         width: 100%;
+        height: 19vw;
     }
     .video{
         text-align: center;
@@ -111,30 +155,15 @@
         width: 85%;
     }
     .links{
-        padding: 10%;
+        padding: 1vw;
     }
     .links h2{
         padding: 0;
         color: var(--bgcolor);
-        font-family: 'bnazanin';
-        font-size: 25px;
+        font-family: 'iransans';
+        font-size: 1.5vw;
         text-align: right;
         direction: rtl;
-    }
-    .links a.filelink{
-        color: white;
-        text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 25px;
-        text-align: right;
-        direction: rtl;
-        padding: 10px 30px;
-        display: block;
-        background-color: var(--bgcolor);
-        border-bottom: white 1px solid;
-    }
-    .links a.filelink:hover{
-        background-color: var(--bghover);
     }
     .centeralign{
         text-align: center;
@@ -144,8 +173,10 @@
         width: 100%;
     }
     .add h1.contentheader{
+        font-family: 'iransans';
+        font-size: 1.5vw;
         color: var(--bgcolor);
-        padding: 15px 30px;
+        padding: 1vw;
         margin: 0 0 50px 0;
         border-bottom: var(--bgcolor) 3px solid;
     }
@@ -154,8 +185,8 @@
         display: inline-block;
         color: black;
         text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 20px;
+        font-family: 'iransans';
+        font-size: 1.2vw;
         text-align: right;
         direction: rtl;
         padding: 10px 30px;
@@ -165,20 +196,24 @@
         width: 50%;
         color: black;
         text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 15px;
+        font-family: 'iransans';
+        font-size: 1vw;
         text-align: right;
         direction: rtl;
-        padding: 10px 10px;
+        padding: 0.3vw;
         margin-bottom: 10px;
+        border: blue 1px solid;
+        border-radius: 0.3vw;
     }
     .add form textarea{
+        border: blue 1px solid;
+        border-radius: 0.3vw;
         width: 87%;
         height: 200px;
         color: black;
         text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 15px;
+        font-family: 'iransans';
+        font-size: 1vw;
         text-align: right;
         direction: rtl;
         padding: 10px 10px;
@@ -186,12 +221,12 @@
     }
     .add form button.btn{
         background-color: var(--bgcolor);
-        padding: 10px 50px;
+        padding: 0.6vw 4vw;
         color: white;
         direction: rtl;
         text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 20px;
+        font-family: 'iransans';
+        font-size: 1.2vw;
         border: none;
         margin-right: 50px;
         margin-top: 20px;
@@ -257,7 +292,17 @@
 
     }
     .add form input.custom-file-input{
-        margin-right: 30%;
+        margin: auto;
+        border: rgba(0, 0, 139, 0.445) 1px dashed;
+        background-color: rgba(229, 236, 241, 0.87);
+        border-radius: 1vw;
+        display: block;
+        text-align: center;
+        width: 80%;
+    }
+    .add form input.custom-file-input:hover{
+        border: rgb(0, 0, 139) 2px dashed;
+        background-color: rgb(229, 236, 241);
     }
     .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
@@ -267,23 +312,71 @@
         margin: 0;
         content: 'انتخاب فایل';
         display: inline-block;
-        background: var(--bgcolor);
-        color: white;
-        font-family: 'bnazanin';
-        font-size: 20px;
-        border: 1px solid #999;
-        border-radius: 3px;
-        padding: 30px 100px;
+        background: rgb(229, 236, 241);
+        color: rgba(0, 0, 139, 0.74);
+        font-family: 'iransans';
+        font-size: 1.6vw;
+        text-align: left;
+        padding: 2vw 20vw 2vw 20vw;
         outline: none;
         white-space: nowrap;
         -webkit-user-select: none;
         cursor: pointer;
     }
     .custom-file-input:hover::before {
-        background-color: var(--bghover);
+        color: rgb(0, 0, 139);
     }
     .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    .noDisplay{
+        display: none;
+    }
+    .add-video-panel{
+        background-color: rgb(243, 243, 193);
+        width: 80%;
+        margin: auto;
+        padding: 3%;
+        box-shadow: 0 5px 5px 0 rgba(232, 226, 240, 0.3), 0 1px 5px 0 rgba(232, 226, 240, 0.19);
+    }
+    .add-video-panel h1.title{
+        margin: 0;
+        font-family: 'iransans';
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+    .add-video-panel label{
+        font-family: 'iransans';
+        font-size: 1.1vw;
+        padding: 0.3vw;
+    }
+    .add-video-panel input.textinput{
+        font-family: 'iransans';
+        font-size: 0.9vw;
+        padding: 0.1vw 0.5vw;
+        width: 13vw;
+        margin-left: 1vw;
+    }
+    .add-video-panel input.submit{
+        background-color: var(--bgcolor);
+        color: white;
+        cursor: pointer;
+        font-family: 'iransans';
+        font-size: 1vw;
+        padding: 0.2vw 0.5vw;
+        border: none;
+    }
+    .session{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    } 
+    .session h1{
+        font-family: 'iransans';
+        font-size: 1.5vw;
+    }
+    .session video{
+        width: 100%;
     }
 }  
 @media only screen and (max-width: 600px) {

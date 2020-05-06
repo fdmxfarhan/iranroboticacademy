@@ -10,6 +10,9 @@
         margin: auto;
         text-align: center;
     }
+    .content .about h1.title{
+        font-size: 1.9vw;
+    }
     .break-dot{
         width: 40%;
         height: 1px;

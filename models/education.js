@@ -1,14 +1,28 @@
 var mongoose = require('mongoose');
 
 var educationSchema = new mongoose.Schema({
-  number: Number,
-  name: String,
+  title: String,
+  name: {
+    type: String,
+    required: true
+  },
+  picture: String,
   producer: String,
   date: String,
-  sesion: String,
-  time: String,
-  files: Number,
-  description: String
+  session: Number,
+  description: String,
+  PDF: [String],
+  videoURL: [Object],
+  active: {
+    type: Boolean,
+    default: true
+  },
+  colection: {
+    type: String,
+    enum: ['robotic', 'programming', 'electronic'],
+    default: 'robotic'
+  },
+
 });
 
 var education = mongoose.model('Education', educationSchema);

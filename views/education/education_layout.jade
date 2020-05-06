@@ -4,6 +4,16 @@ block content
     link(rel='stylesheet', href='/stylesheets/education.css')
     script(src="/javascripts/education.js")
     .mainbody
+        .sidebar
+            h1.sideheader
+                i.fa.fa-tv.icon-bold
+                | آموزش مجازی
+            - for(var i = 0; i < educations.length ; i++){
+                a.sidelink(id="link2" href=`/education?name=${educations[i].name}`) #{educations[i].title}
+            - }
+            - if(user && user.role != 'student'){
+                a.sideaddlink.centeralign(id="link2" href=`/education/add`) افزودن آموزش +
+            - }
         .contentbar
             .add
                 block add
@@ -15,14 +25,4 @@ block content
                 block video
             .links
                 block links
-        .sidebar
-            h1.sideheader آموزش های مجازی
-            - for(var i = 0; i < names.length ; i++){
-                a.sidelink(id="link2" href=`/education/${i}`) #{names[i]}
-            - }
-            - if(user && user.role != 'student'){
-                a.sideaddlink.centeralign(id="link2" href=`/education/add`) افزودن آموزش +
-            - }
-            
-            
-        
+                

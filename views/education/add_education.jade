@@ -6,8 +6,12 @@ block add
     br
     form(action="/education/add" method="POST")
         .label
-            label(for="name") عنوان:
-        input(type="text" placeholder="عنوان" name="name")
+            label(for="title") عنوان:
+        input(type="text" placeholder="عنوان" name="title")
+        br
+        .label
+            label(for="name") نام (English):
+        input(type="text" placeholder="مدرس" name="name")
         br
         .label
             label(for="producer") مدرس:
@@ -18,22 +22,13 @@ block add
         input(type="text" placeholder="تاریخ" name="date")
         br
         .label
-            label(for="sesion") تعداد جلسات:
-        input(type="number" placeholder="تعداد جلسات" name="sesion")
+            label(for="session") تعداد جلسات:
+        input(type="number" placeholder="تعداد جلسات" name="session")
         br
         .label
-            label(for="time") زمان (ساعت):
-        input(type="number" placeholder="زمان" name="time")
-        br
-        .label
-            label(for="files") تعداد فایل های ضمیمه:
-        input(type="number" placeholder="تعداد فایل های ضمیمه" name="files")
-        br
-        .label
-            label(for="description") توضیحات:
+          label(for="description") توضیحات:
         br
         textarea(type="text" cols="30" rows="10" placeholder="توضیحات" name="description")
         br
-        
         button.btn(type="submit") ثبت
         br

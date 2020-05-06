@@ -2,42 +2,40 @@ extends education_layout
 
 block info
     h1.contentheader= education.name
-    .infotext مدرس: #{education.producer}
-    .infotext تاریخ انتشار: #{education.date}
-    .infotext تعداد جلسات: #{education.sesion}
-    .infotext زمان: #{education.time} ساعت
-    .infotext توضیحات:
-        br
-        p #{education.description}
+    .education-info
+        .infotext مدرس: #{education.producer}
+        .infotext تاریخ انتشار: #{education.date}
+        .infotext تعداد جلسات: #{education.session}
+        //- .infotext زمان: #{education.time} ساعت
+    .description
+        h1.title توضیحات:
+        p.text #{education.description}
 
 block photo
     - if(user && user.role != 'student'){
-        a#imguploadlink.imguploadlink(href=`/education/upload/${number}-pic`)
-            img.imgupload(src=`/education/${number}.jpg`)
+        a#imguploadlink.imguploadlink(href=`/education/upload-image?name=${education.name}`)
+            img.imgupload(src=`/education/${education.picture}`)
             #imguploadtext.imguploadtext 
                 | Upload  
                 i(class="fa fa-upload")
-                    
     - }
     - else 
-        img(src=`/education/${number}.jpg`)
-
-block video
-    video(src=`/education/${number}.mp4` controls)
+        img(src=`/education/${education.picture}`)
 
 block links
-    - var alphaNum = ['اول','دوم','سوم' ,'چهارم','پنجم','ششم','هفتم','هشتم','نهم','دهم'];
-    h2 دانلود فایل جلسات:
-    - for(var i = 0; i < education.files ; i++){
-        - if(user && user.role != 'student'){
-            .linkpad
-                a.filelink(href=`/education/${number}_${i+1}.rar` download) جلسه #{alphaNum[i]}
-                    a#uploadfile.uploadfilelink(href=`/education/upload/${number}_${i+1}`)
-                        #fileuploadtext.fileuploadtext 
-                            | Upload  
-                            i(class="fa fa-upload") 
-        - } else {
-            a.filelink(href=`/education/${number}_${i+1}.rar` download) جلسه #{alphaNum[i]}
-        - }
+    - for(var i=0; i<education.videoURL.length; i++){
+        .session
+            h1.title= education.videoURL[i].title
+            video(src=`${education.videoURL[i].link}` controls)
     - }
-    
+    - if(user.role == 'admin'){
+        .add-video-panel
+            h1.title افزودن جلسه
+            form.add-video(action=`/education/add-video` method="POST")
+                input.noDisplay(type="text" name="name" value=`${education.name}`)
+                label(for="title") عنوان
+                input.textinput(type="text" name="title" placeholder="Title" required)
+                label(for="link") لینک
+                input.textinput(type="text" name="link" placeholder="Title" required)
+                input.submit(type="submit" value="افزودن جلسه جدید")
+    - }
