@@ -1,0 +1,18 @@
+extends education_layout
+
+block educations
+    h1.title آخرین مطالب آموزشی
+    - for(var i=0; i<educations.length; i++){
+        a(href=`/education?name=${educations[i].name}`)
+            .education-panel
+                .text-pad
+                    h1.education-title= educations[i].title
+                    .item مدرس:‌ #{educations[i].producer}
+                    .item تاریخ انتشار:‌ #{educations[i].date}
+                    .item تعداد جلسات:‌ #{educations[i].session}
+                    .end
+                img(src=`/education/${educations[i].picture}`)
+
+    - }
+    
+        

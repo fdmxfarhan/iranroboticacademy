@@ -9,24 +9,42 @@ var Education = require('../models/education');
 
 router.get('/', function(req, res, next) {
   Education.find({}, function(err, educations){
-    Education.findOne({name: req.query.name}, (err, doc)=>{
+    if(req.query.name){
+      Education.findOne({name: req.query.name}, (err, doc)=>{
+        if(!req.user) {
+          res.render('./education/educations', {
+            uname: false,
+            user: false,
+            educations: educations,
+            education: doc
+          });
+        }
+        else {
+          res.render('./education/educations', {
+            uname: req.user.uname,
+            user: req.user,
+            educations: educations,
+            education: doc
+          });
+        }
+      });
+    }
+    else{
       if(!req.user) {
-        res.render('./education/educations', {
+        res.render('./education/index', {
           uname: false,
           user: false,
-          educations: educations,
-          education: doc
+          educations: educations
         });
       }
       else {
-        res.render('./education/educations', {
+        res.render('./education/index', {
           uname: req.user.uname,
           user: req.user,
-          educations: educations,
-          education: doc
+          educations: educations
         });
       }
-    });
+    }
   });
 });
 

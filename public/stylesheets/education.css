@@ -378,6 +378,53 @@
     .session video{
         width: 100%;
     }
+    .educations h1.title{
+        color: darkblue;
+        border-bottom: darkblue 2px solid;
+        margin: 0;
+        padding: 0;
+        font-family: 'iransans';
+        font-size: 1.5vw;
+    }
+    .educations .education-panel{
+        border: rgb(198, 220, 228) 2px solid;
+        width: 80%;
+        margin: auto;
+        padding: 2%;
+        margin-top: 1vw;
+        border-radius: 5px;
+        height: 14vw;
+    }
+    .educations .education-panel:hover{
+        background-color: rgb(237, 243, 245);
+    }
+    .educations .education-panel .text-pad{
+        /* background-color: lightblue; */
+        padding-right: 2vw;
+        font-family: 'iransans';
+        width: 53%;
+        /* display: inline-block; */
+        float: right;
+        /* height: 20vw; */
+    }
+    .educations .education-panel img{
+        /* display: inline-block; */
+        float: right;
+        width: 40%;
+    }
+    .educations .education-panel .text-pad .education-title{
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        margin-bottom: 3vw;
+        color: var(--bgcolor);
+        border-bottom: var(--bgcolor) 1px solid;
+        width: 85%;
+    }
+    .educations .education-panel .text-pad .item{
+        font-family: 'iransans';
+        font-size: 1vw;
+        color: var(--textcolor);
+    }
 }  
 @media only screen and (max-width: 600px) {
     
