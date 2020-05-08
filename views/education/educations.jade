@@ -1,7 +1,7 @@
 extends education_layout
 
 block info
-    h1.contentheader= education.name
+    h1.contentheader= education.title
     .education-info
         .infotext مدرس: #{education.producer}
         .infotext تاریخ انتشار: #{education.date}
@@ -27,6 +27,8 @@ block links
         .session
             h1.title= education.videoURL[i].title
             video(src=`${education.videoURL[i].link}` controls)
+            //- div(id="64746959596")
+            //-     script(type="text/JavaScript" src="#{education.videoURL[i].link}?data[rnddiv]=64746959596&data[responsive]=yes")
     - }
     - if(user.role == 'admin'){
         .add-video-panel

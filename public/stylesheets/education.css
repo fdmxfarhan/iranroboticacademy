@@ -385,6 +385,8 @@
         padding: 0;
         font-family: 'iransans';
         font-size: 1.5vw;
+        padding-right: 1vw;
+        margin-bottom: 3vw;
     }
     .educations .education-panel{
         border: rgb(198, 220, 228) 2px solid;
@@ -411,6 +413,7 @@
         /* display: inline-block; */
         float: right;
         width: 40%;
+        height: 13.5vw;
     }
     .educations .education-panel .text-pad .education-title{
         font-family: 'iransans';
