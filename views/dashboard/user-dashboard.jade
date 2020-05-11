@@ -3,8 +3,9 @@ block styles
     link(rel="stylesheet", href="/stylesheets/dashboard.css")
 
 block content
+    include dashboard-messages
     .dashboard
-        include user-layout                
+        include dashboard-layout                
         .dashboard-cont
             .top-cont
                 .personal-info
@@ -45,11 +46,11 @@ block content
                                         .state= classes[i].state
                             - }
                         - }
-                        
-                    a.edit-link(href="#")
+                    a.edit-link#sign-in
                         .edit-link-pad
                             i.fa.fa-plus.link-icon
                             | ثبت نام کلاس جدید
             .bottom-cont
                 h1.acount-header آخرین اخبار
+    include sign-in-class
     script(src="/javascripts/dashboard.js")

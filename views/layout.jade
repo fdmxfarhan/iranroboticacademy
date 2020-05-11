@@ -164,26 +164,30 @@ html
           | دوره آموزشی Arduino
 
     -if(uname){
-    .dropdown#dropdownuser
-      a(href="/dashboard")
-        .acount-link
-          .picture-pad
-            i.fa.fa-user.acound-icon
-          h1.uname= user.fullname
-          h1.enter-panel ورود به پنل کاربری
-            i.fa.fa-angle-left.enter-icon
-      .link-border
-      a.dropdown-link(href="#")
-        i.fa.fa-book.icon
-        | کلاس های من
-      .link-border
-      a.dropdown-link(href="#")
-        i.fa.fa-cog.icon
-        | تنظیمات حساب
-      .link-border
-      a.dropdown-link.logoutbtn(href="/users/logout")
-        i.fa.fa-sign-out.icon
-        | خروج
+      .dropdown#dropdownuser
+        a(href="/dashboard")
+          .acount-link
+            .picture-pad
+              i.fa.fa-user.acound-icon
+            h1.uname= user.fullname
+            h1.enter-panel ورود به پنل کاربری
+              i.fa.fa-angle-left.enter-icon
+        .link-border
+        a.dropdown-link(href="/dashboard")
+          i.fa.fa-book.icon
+          | کلاس های من
+        .link-border
+        a.dropdown-link(href="/payments")
+          i.fa.fa-credit-card.icon
+          | صورت حساب ها
+        .link-border
+        a.dropdown-link(href="/dashboard/setting")
+          i.fa.fa-cog.icon
+          | تنظیمات حساب
+        .link-border
+        a.dropdown-link.logoutbtn(href="/users/logout")
+          i.fa.fa-sign-out.icon
+          | خروج
     -}
       //- .search
       //-   form(action="/")

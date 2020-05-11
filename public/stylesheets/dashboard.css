@@ -184,6 +184,7 @@
     }
     a.edit-link{
         text-decoration: none;
+        cursor: pointer;
     }
     .edit-link-pad{
         text-align: center;
@@ -227,7 +228,7 @@
         text-align: center;
         padding: 1vw;
         font-family: 'iransans';
-        font-size: 1.1vw;
+        font-size: 1vw;
         border-bottom: lightgray 1px solid;
     }
     table.users tr:hover{
@@ -280,8 +281,9 @@
         color: var(--textcolor);
     }
     .classs-pad .class .textpad .className{
-        font-size: 1.2vw;
+        font-size: 1.1vw;
         font-weight: bold;
+        color: rgb(61, 61, 61);
     }
     .classs-pad .class .state{
         display: inline-block;
@@ -406,6 +408,138 @@
     .slide-toggle{
         display: none;
     }
+    .messages{
+        margin: 0;
+    }
+    .messages .message-content{
+        background-color: rgb(173, 255, 173);
+        padding: 1vw 3vw;
+        width: 80%;
+        margin: 1.5vw auto;
+        margin-bottom: 0;
+        border-radius: 5px;
+        text-align: right;
+        font-family: 'iransans';
+        direction: rtl;
+        border: rgb(47, 255, 47) 1px solid;
+        position: relative;
+    }
+    .messages .message-content span{
+        position: absolute;
+        top: 0vw;
+        left: 1vw;
+        font-size: 2vw;
+        cursor: pointer;
+        color: rgb(43, 43, 43);
+    }
+    .messages .message-content span:hover{
+        color: rgb(85, 0, 0);
+    }
+    /* flag |||||||||||||||||||||||||||||||||||||| */
+    .sign-in-modal{
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.719);
+        width: 100%;
+        height: 100%;
+    }
+    .sign-in-modal .sign-in{
+        background-color: white;
+        width: 60%;
+        margin: 5% auto;
+        padding: 1vw;
+        position: relative;
+        text-align: right;
+        direction: rtl;
+    }
+    .sign-in-modal .sign-in span.close{
+        font-size: 2.5vw;
+        position: absolute;
+        top: 0.5vw;
+        left: 2vw;
+        cursor: pointer;
+    }
+    .sign-in-modal .sign-in span.close:hover{
+        color: red;
+    }
+    .sign-in-modal .sign-in form{
+        display: inline-block;
+        /* background-color: lightblue; */
+        width: 50%;
+    }
+    .sign-in-modal .sign-in form label{
+        font-family: 'iransans';
+        font-size: 1.2vw;
+    }
+    .sign-in-modal .sign-in form input, .sign-in-modal .sign-in form select{
+        font-family: 'iransans';
+        font-size: 1vw;
+        width: 90%;
+        padding: 0.6vw 5%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-color: rgb(213, 221, 247);
+        border: lightblue 1px solid;
+        border-radius: 3px;
+    }
+    .sign-in-modal .sign-in form input[type=text]{
+        width: 80%;
+    }
+    .sign-in-modal .sign-in form input.submit{
+        background-color: var(--bgcolor);
+        cursor: pointer;
+        color: white;
+        margin-top: 2vw;
+    }
+    .sign-in-modal .sign-in form input.submit:hover{
+        background-color: var(--bghover);
+    }
+    .sign-in-modal .sign-in h1.modal-title{
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        border-bottom: lightgray 1px solid;
+        margin-bottom: 2vw;
+    }
+    .sign-in-modal .sign-in .imgpad{
+        display: inline-block;
+        width: 25%;
+        margin: 0 10% 10% 0;
+    }
+    .sign-in-modal .sign-in .imgpad img{
+        width: 100%;
+    }
+    .dashboard-cont .container h1.class-name{
+        color: rgb(0, 0, 82);
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    table.class-table{
+        width: 90%;
+        margin: auto;
+        border: rgb(223, 223, 223) 1px solid;
+        text-align: center;
+        margin-bottom: 4vw;
+    }
+    table.class-table th{
+        background-color: rgb(190, 212, 219);
+        padding: 0.5vw 0;
+        font-size: 1vw;
+    }
+    table.class-table td{
+        padding: 0.5vw 0;
+        border-top: rgb(220, 220, 255) 1px solid;
+        font-size: 1vw;
+    }
+    table.class-table a.link{
+        text-decoration: none;
+        font-size: 1vw;
+    }
+    table.class-table a.link:hover{
+        color: red;
+    }
 }
 @media only screen and (max-width: 800px) {
     body{
@@ -423,7 +557,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-color: rgb(44, 44, 44);
+        background-color: rgb(20,20,20);
         height: 200%;
         width: 80%;
         padding: 0;
@@ -435,7 +569,7 @@
         padding: 10px 3%;
     }
     .dashboard .sidebar .card{
-        background-color: rgb(44, 44, 44);
+        background-color: rgb(20,20,20);
         /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19); */
         /* border: lightgrey 1px solid; */
         padding: 0;
@@ -513,7 +647,7 @@
         background-color: rgb(235, 235, 235);
     }
     .dashboard .sidebar .acount{
-        background-color: rgb(44, 44, 44);
+        background-color: rgb(20,20,20);
         /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
         border: lightgrey 1px solid; */
         padding: 0;
@@ -600,6 +734,7 @@
     }
     a.edit-link{
         text-decoration: none;
+        cursor: pointer;
     }
     .edit-link-pad{
         text-align: center;
@@ -698,6 +833,7 @@
     .classs-pad .class .textpad .className{
         font-size: 3vw;
         font-weight: bold;
+        color: rgb(61, 61, 61);
     }
     .classs-pad .class .state{
         display: inline-block;
@@ -846,5 +982,32 @@
         z-index: 99;
         top: 0;
         display: none;
+    }
+    .messages{
+        margin: 0;
+    }
+    .messages .message-content{
+        background-color: rgb(173, 255, 173);
+        padding: 1vw 3vw;
+        width: 80%;
+        margin: 1.5vw auto;
+        margin-bottom: 0;
+        border-radius: 5px;
+        text-align: right;
+        font-family: 'iransans';
+        direction: rtl;
+        border: rgb(47, 255, 47) 1px solid;
+        position: relative;
+    }
+    .messages .message-content span{
+        position: absolute;
+        top: 0vw;
+        left: 1vw;
+        font-size: 2vw;
+        cursor: pointer;
+        color: rgb(43, 43, 43);
+    }
+    .messages .message-content span:hover{
+        color: rgb(85, 0, 0);
     }
 }

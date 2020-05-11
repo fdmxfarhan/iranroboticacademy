@@ -1,0 +1,33 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+
+block content
+    .dashboard
+        include dashboard-layout
+        .dashboard-cont
+            .container
+                h1.acount-header کلاس ها
+                -var classnames = ['رباتیک', 'برنامه نویسی', 'الکترونیک'];
+                -for(var i=0 ; i<classnames.length; i++){
+                    h1.class-name= classnames[i]
+                    table.class-table
+                        tr
+                            th نام و نام خانوادگی
+                            th نام کاربری
+                            th ایمیل
+                            th وضعیت پرداخت
+                            th عملیات
+                        -for(var j=0; j<classes.length; j++){
+                            -if(classes[j].className2 == classnames[i]){
+                            tr
+                                td= classes[j].fullname
+                                td= classes[j].uname
+                                td= classes[j].email
+                                td
+                                    .red پرداخت نشده
+                                td
+                                    a.link(href="/dashboard/removeclass?uname=#{classes[j].uname}") حذف
+                            -}
+                        -}
+                -}

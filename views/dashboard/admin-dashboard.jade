@@ -3,8 +3,9 @@ block styles
     link(rel="stylesheet", href="/stylesheets/dashboard.css")
 
 block content
+    include dashboard-messages
     .dashboard
-        include user-layout                
+        include dashboard-layout                
         .dashboard-cont
             .top-cont
                 .personal-info

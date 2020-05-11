@@ -35,31 +35,64 @@ router.get('/notfound', function(req, res, next) {
 });
 
 router.get('/dashboard', ensureAuthenticated, function(req, res, next){
+  var messages = [];
   if(!req.user) res.render('dashboard', {
     uname: false,
     user: false
   });
   else if(req.user.role === 'student'){
     Class.find({uname: req.user.uname}, function(err, docs){
-      res.render('./dashboard/user-dashboard', {
-        uname: req.user.uname,
-        user: req.user,
-        classes: docs
+      Payment.find({uname: req.user.uname}, function(err, payments){
+        if(req.query.login) messages.push({msg: 'به پنل کاربری خود خوش آمدید.'});
+        var cnt = 0;
+        for(var i=0 ; i<payments.length ; i++){
+          if(payments[i].payed) cnt++;
+        }
+        if(cnt > 0) messages.push({msg: `شما ${cnt} صورت حساب پرداخت نشده دارید.`});
+        console.log(messages);
+        res.render('./dashboard/user-dashboard', {
+          uname: req.user.uname,
+          user: req.user,
+          classes: docs,
+          messages: messages
+        });
       });
     });
   }
   else if(req.user.role == 'admin'){
     User.find({}, function(err, users){
       Class.find({}, function(err, classes){
-        res.render('./dashboard/admin-dashboard', {
-          uname: req.user.uname,
-          user: req.user,
-          users: users,
-          classes: classes
+        Payment.find({uname: req.user.uname}, function(err, payments){
+          if(req.query.login) messages.push({msg: 'به پنل کاربری خود خوش آمدید.'});
+          var cnt = 0;
+          for(var i=0 ; i<payments.length ; i++){
+            if(payments[i].payed) cnt++;
+          }
+          if(cnt > 0) messages.push({msg: `شما ${cnt} صورت حساب پرداخت نشده دارید.`});  
+          res.render('./dashboard/admin-dashboard', {
+            uname: req.user.uname,
+            user: req.user,
+            users: users,
+            classes: classes,
+            messages: messages
+          });
         });
       });
     });
   }
+});
+
+router.get('/dashboard/classes', ensureAuthenticated, function(req, res, next){
+  if(req.user.role == 'admin'){
+    Class.find({}, function(err, classes){
+      res.render('./dashboard/classes',{
+        uname: req.user.uname,
+        user: req.user,
+        classes: classes
+      });
+    });
+  }
+  else res.send('Access denied!!');
 });
 
 router.get('/upgrade', ensureAuthenticated, function(req, res, next){

@@ -15,4 +15,15 @@ $(document).ready(function(){
         $('#slide-modal').hide();
         $('#sidebar').hide();
     });
+    $('#message-close').click(function(){
+        $('.message-content').fadeOut(500);
+    });
+    
+    $('#sign-in-modal').hide();
+    $('#sign-in').click(function(){
+        $('#sign-in-modal').fadeIn(500);
+    });
+    $('#signinclose').click(()=>{
+        $('#sign-in-modal').fadeOut(500);
+    });
 });

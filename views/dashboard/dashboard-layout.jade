@@ -20,19 +20,26 @@
             i.fa.fa-user.link-icon
             | پروفایل من
         .link-border
-        a.acount-link(href="/")
-            i.fa.fa-plus.link-icon
-            | ثبت نام
+        -if(user.role == 'student'){
+            a.acount-link(href="#")
+                i.fa.fa-plus.link-icon
+                | ثبت نام
+        -}
+        -else if(user.role == 'admin'){
+            a.acount-link(href="/dashboard/classes")
+                i.fa.fa-book.link-icon
+                | لیست کلاس ها
+        -}
         .link-border
-        a.acount-link(href="/")
+        a.acount-link(href="#")
             i.fa.fa-sticky-note.link-icon
             | برنامه هفتگی
         .link-border
-        a.acount-link(href="/")
+        a.acount-link(href="#")
             i.fa.fa-bell.link-icon
             | گزارش ها
         .link-border
-        a.acount-link(href="/")
+        a.acount-link(href="#")
             i.fa.fa-comments.link-icon
             | نظرات و پیشنهادات
         .link-border
