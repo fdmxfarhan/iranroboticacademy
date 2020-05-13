@@ -13,21 +13,21 @@
         font-family: 'bnazanin';
         text-align: right;
     }
-    object.document{
+    .booklet object.document{
         width: 90%;
         margin: 5%;
         height: 700px;
     }
-    a.link{
+    .booklet a.link{
         background-color: var(--bgcolor);
-        padding: 15px 50px;
+        padding: 0.5vw 3vw;
         color: white;
         direction: rtl;
         text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 20px;
+        font-family: 'iransans';
+        font-size: 1.5vw;
     }
-    .margin{
+    .booklet .margin{
         margin-top: 20px;
         margin-right: 100px;
     }
@@ -51,28 +51,31 @@
     .booklet{
         margin: 0;
         padding: 0;
-        padding-top: 50px;
+        padding-top: 5px;
         color: white;
         direction: rtl;
         text-decoration: none;
         font-family: 'bnazanin';
         text-align: right;
     }
-    object.document{
-        width: 90%;
+    .booklet object.document{
+        width: 87%;
         margin: 5%;
         height: 500px;
     }
-    a.link{
+    .booklet a.link{
+        display: block;
         background-color: var(--bgcolor);
-        padding: 15px 50px;
+        padding: 2vw 3vw;
+        width: 80%;
+        text-align: center;
         color: white;
         direction: rtl;
         text-decoration: none;
-        font-family: 'bnazanin';
-        font-size: 20px;
+        font-family: 'iransans';
+        font-size: 3vw;
     }
-    .margin{
+    .booklet .margin{
         margin-top: 20px;
         margin-right: 30px;
     }

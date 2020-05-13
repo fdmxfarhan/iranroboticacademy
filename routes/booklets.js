@@ -16,28 +16,45 @@ var Juniorcup = require('../models/juniorcup');
 
 router.get('/arm', function(req, res, next) {
     if(!req.user) res.render('./booklets/arm', {
-        uname: false
+        uname: false,
+        user: false
     });
     else res.render('./booklets/arm', {
-        uname: req.user.uname
+        uname: req.user.uname,
+        user: req.user
     });
 });
 
 router.get('/pixy', function(req, res, next) {
     if(!req.user) res.render('./booklets/pixy', {
-        uname: false
+        uname: false,
+        user: false
     });
     else res.render('./booklets/pixy', {
-        uname: req.user.uname
+        uname: req.user.uname,
+        user: req.user
     });
 });
 
 router.get('/gy25', function(req, res, next) {
     if(!req.user) res.render('./booklets/gy25', {
-        uname: false
+        uname: false,
+        user: false
     });
     else res.render('./booklets/gy25', {
-        uname: req.user.uname
+        uname: req.user.uname,
+        user: req.user
+    });
+});
+
+router.get('/ultrasonic', function(req, res, next) {
+    if(!req.user) res.render('./booklets/ultrasonic', {
+        uname: false,
+        user: false
+    });
+    else res.render('./booklets/ultrasonic', {
+        uname: req.user.uname,
+        user: req.user
     });
 });
 

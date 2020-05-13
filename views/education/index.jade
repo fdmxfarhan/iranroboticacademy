@@ -1,7 +1,7 @@
 extends education_layout
 
 block educations
-    h1.title آخرین مطالب آموزشی
+    h1.title فیلم های آموزشی
     - for(var i=0; i<educations.length; i++){
         a(href=`/education?name=${educations[i].name}`)
             .education-panel
@@ -14,5 +14,22 @@ block educations
                 img(src=`/education/${educations[i].picture}`)
 
     - }
+    h1.title.space جزوه های آموزشی
+    a(href="/booklets/arm")
+        .booklet
+            img(src="/images/tutorials/arm.jpg")
+            h1 میکروکنترلر های ARM
+    a(href="/booklets/gy25")
+        .booklet
+            img(src="/images/gy25.jpeg")
+            h1 ماژول GY25
+    a(href="/booklets/pixy")
+        .booklet
+            img(src="/images/pixy.jpg")
+            h1 دوربین pixy
+    a(href="/booklets/ultrasonic")
+        .booklet
+            img(src="/images/ultrasonic.jpg")
+            h1 سنسورهای Ultrasonic
     
-        
+    

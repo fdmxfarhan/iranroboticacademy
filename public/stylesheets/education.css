@@ -1,12 +1,3 @@
-@font-face {
-    font-family:'bnazanin';
-    src:url('b_nazanin.ttf');
-}
-@font-face {
-    font-family:'btitr';
-    src:url('b_titr.ttf');
-}
-
 @media only screen and (min-width: 600px) {
     .mainbody{
         width: 100%;
@@ -428,7 +419,494 @@
         font-size: 1vw;
         color: var(--textcolor);
     }
+    h1.title.space{
+        padding-top: 7vw;
+    }
+    .booklet{
+        float: right;
+        margin-right: 2%;
+        /* background-color: rgb(0, 0, 0); */
+        border: lightblue 1px solid;
+        width: 30%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-top: 2vw;
+    }
+    .booklet:hover{
+        background-color: rgb(245, 248, 255); 
+    }
+    .booklet img{
+        width: 100%;
+        height: 15vw;
+        filter: brightness(0.9);
+    }
+    .booklet img:hover{
+        filter: brightness(1);
+    }
+    .booklet h1{
+        margin-top: 0;
+        text-align: center;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        color: rgb(24, 24, 24);
+    }
 }  
 @media only screen and (max-width: 600px) {
-    
+    .mainbody{
+        width: 100%;
+        font-family: 'iransans';
+        direction: rtl;
+        text-align: right;
+        padding: 3vw 0;
+        overflow: hidden;
+    }
+    .mainbody .sidebar{
+        display: none;
+        float: bottom;
+        background-color: white;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgray 1px solid;
+        width: 80%;
+        margin-right: 3%;
+        /* border-top-left-radius: 5px; */
+    }
+    .mainbody .contentbar{
+        position: relative;
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        /* border-top-right-radius: 20px; */
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+        border: lightgray 1px solid;
+        padding-bottom: 50px;
+        overflow: hidden;
+    }
+    h1.sideheader{
+        /* border-top-left-radius: 20px; */
+        /* background-color: var(--bgcolor); */
+        border-bottom: darkblue 2px solid;
+        font-family: 'btitr';
+        font-size: 1.5vw;
+        color: darkblue;
+        padding: 1vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .icon{
+        padding-left: 0.6vw;
+    }
+    .icon-bold{
+        padding-left: 0.6vw;
+        font-weight: bold;
+    }
+    a.sidelink{
+        width: 90%;
+        display: inline-block;
+        padding: 0.6vw 1.2vw;
+        border-bottom: rgb(219, 219, 219) 1px solid;
+        text-decoration: none;
+        font-size: 1.1vw;
+        color: black;
+    }
+    a.sideaddlink{
+        width: 100%;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        padding: 0.3vw 0;
+    }
+    a.sidelink:hover{
+        background-color: rgb(224, 224, 224);
+    }
+    a.sideaddlink:hover{
+        background-color: rgb(211, 147, 63);
+        color: white;
+    }
+    /* a.active{
+        border-right: gray 4px solid;
+    } */
+    .information{
+        display: block;
+    }
+    .information .education-info{
+        background-color: rgb(235, 241, 245);
+        width: 40%;
+        padding: 1vw;
+        box-shadow: 0 5px 5px 0 rgba(232, 226, 240, 0.3), 0 1px 5px 0 rgba(232, 226, 240, 0.19);
+        margin: 2vw 3%;
+        padding-bottom: 4vw;
+        border-radius: 7px;
+        border: blue 2px dashed;
+        color: var(--textcolor);
+    }
+    .information h1.contentheader{
+        color: var(--bgcolor);
+        padding: 1vw;
+        margin: 0 0 2vw 0;
+        border-bottom: var(--bgcolor) 2px solid;
+        font-size: 3vw;
+    }
+    .information .infotext{
+        color: black;
+        font-family: 'iransans';
+        font-size: 2vw;
+        text-align: right;
+        direction: rtl;
+        padding: 0.7vw 0;
+    }
+    .information .description{
+        /* background-color: burlywood; */
+        color: black;
+        font-family: 'iransans';
+        font-size: 2.5vw;
+        text-align: right;
+        direction: rtl;
+        padding: 0.7vw;
+        width: 85%;
+        margin: auto;
+        margin-top: 5vw;
+        border-top: blue 1px solid;
+    }
+    .information .description h1{
+        color: darkblue;
+        font-size: 3vw;
+        margin: 0.3vw;
+    }
+    .information .description p{
+        color: rgb(53, 53, 53);
+        font-family: 'iransans';
+        font-size: 2vw;
+        text-align: justify;
+        direction: rtl;
+        padding: 5px 20px;
+        margin-top: 0;
+        width: 95%;
+    }
+    .photo{
+        position: absolute;
+        top: 9vw;
+        left: 4vw;
+        width: 43%;
+    }
+    .photo img{
+        width: 100%;
+        height: 19vw;
+    }
+    .video{
+        text-align: center;
+    }
+    .video video{
+        width: 85%;
+    }
+    .links{
+        padding: 1vw;
+    }
+    .links h2{
+        padding: 0;
+        color: var(--bgcolor);
+        font-family: 'iransans';
+        font-size: 3vw;
+        text-align: right;
+        direction: rtl;
+    }
+    .centeralign{
+        text-align: center;
+        background-color: burlywood;
+    }
+    .add form{
+        width: 100%;
+    }
+    .add h1.contentheader{
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        color: var(--bgcolor);
+        padding: 1vw;
+        margin: 0 0 50px 0;
+        border-bottom: var(--bgcolor) 3px solid;
+    }
+    .add form .label{
+        width: 100px;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 30px;
+        margin-bottom: 10px;
+    }
+    .add form input{
+        width: 50%;
+        color: black;
+        text-decoration: none;
+        font-family: 'iransans';
+        font-size: 1vw;
+        text-align: right;
+        direction: rtl;
+        padding: 0.3vw;
+        margin-bottom: 10px;
+        border: blue 1px solid;
+        border-radius: 0.3vw;
+    }
+    .add form textarea{
+        border: blue 1px solid;
+        border-radius: 0.3vw;
+        width: 87%;
+        height: 200px;
+        color: black;
+        text-decoration: none;
+        font-family: 'iransans';
+        font-size: 1vw;
+        text-align: right;
+        direction: rtl;
+        padding: 10px 10px;
+        margin: 0 30px;
+    }
+    .add form button.btn{
+        background-color: var(--bgcolor);
+        padding: 0.6vw 4vw;
+        color: white;
+        direction: rtl;
+        text-decoration: none;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        border: none;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+    .dismiss{
+        margin: 0 0px;
+        width: 530px;
+    }
+    .dismiss h1.error{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        background-color: rgb(255, 237, 137);
+        padding: 10px;
+        margin: 5px;
+        color: rgb(53, 53, 53);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
+    .dismiss h1.success{
+        text-align: right;
+        direction: rtl;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        color: rgba(53, 53, 53, 0.651);
+        background-color: rgb(164, 255, 137);
+        font-family: 'bnazanin';
+        font-size: 16px;
+    }
+    img.imgupload:hover{
+        filter: brightness(0.6);
+    }
+    img.imguploadtext{
+        position: relative;
+    }
+    .imguploadtext{
+        padding: 15px 25px;
+        background-color: rgba(0, 0, 0, 0.616);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .linkpad{
+        position: relative;
+    }
+    a.uploadfilelink{
+        padding: 7px 25px;
+        background-color: rgb(238, 102, 49);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 17px;
+        text-decoration: none;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    a.uploadfilelink:hover{
+        background-color: rgb(199, 73, 23);
+
+    }
+    .add form input.custom-file-input{
+        margin: auto;
+        border: rgba(0, 0, 139, 0.445) 1px dashed;
+        background-color: rgba(229, 236, 241, 0.87);
+        border-radius: 1vw;
+        display: block;
+        text-align: center;
+        width: 80%;
+    }
+    .add form input.custom-file-input:hover{
+        border: rgb(0, 0, 139) 2px dashed;
+        background-color: rgb(229, 236, 241);
+    }
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+        
+    }
+    .custom-file-input::before {
+        margin: 0;
+        content: 'انتخاب فایل';
+        display: inline-block;
+        background: rgb(229, 236, 241);
+        color: rgba(0, 0, 139, 0.74);
+        font-family: 'iransans';
+        font-size: 1.6vw;
+        text-align: left;
+        padding: 2vw 20vw 2vw 20vw;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+    }
+    .custom-file-input:hover::before {
+        color: rgb(0, 0, 139);
+    }
+    .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    .noDisplay{
+        display: none;
+    }
+    .add-video-panel{
+        background-color: rgb(243, 243, 193);
+        width: 80%;
+        margin: auto;
+        padding: 3%;
+        box-shadow: 0 5px 5px 0 rgba(232, 226, 240, 0.3), 0 1px 5px 0 rgba(232, 226, 240, 0.19);
+    }
+    .add-video-panel h1.title{
+        margin: 0;
+        font-family: 'iransans';
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+    .add-video-panel label{
+        font-family: 'iransans';
+        font-size: 1.1vw;
+        padding: 0.3vw;
+    }
+    .add-video-panel input.textinput{
+        font-family: 'iransans';
+        font-size: 0.9vw;
+        padding: 0.1vw 0.5vw;
+        width: 13vw;
+        margin-left: 1vw;
+    }
+    .add-video-panel input.submit{
+        background-color: var(--bgcolor);
+        color: white;
+        cursor: pointer;
+        font-family: 'iransans';
+        font-size: 1vw;
+        padding: 0.2vw 0.5vw;
+        border: none;
+    }
+    .session{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    } 
+    .session h1{
+        font-family: 'iransans';
+        font-size: 2.5vw;
+    }
+    .session video{
+        width: 100%;
+    }
+    .educations h1.title{
+        color: darkblue;
+        border-bottom: darkblue 2px solid;
+        margin: 0;
+        padding: 0;
+        font-family: 'iransans';
+        font-size: 3vw;
+        padding-right: 1vw;
+        margin-bottom: 3vw;
+    }
+    .educations .education-panel{
+        border: rgb(198, 220, 228) 2px solid;
+        width: 80%;
+        margin: auto;
+        padding: 2%;
+        margin-top: 1vw;
+        border-radius: 5px;
+        height: 14vw;
+        margin-bottom: 2vw;
+    }
+    .educations .education-panel:hover{
+        background-color: rgb(237, 243, 245);
+    }
+    .educations .education-panel .text-pad{
+        /* background-color: lightblue; */
+        padding-right: 2vw;
+        font-family: 'iransans';
+        width: 53%;
+        /* display: inline-block; */
+        float: right;
+        /* height: 20vw; */
+    }
+    .educations .education-panel img{
+        /* display: inline-block; */
+        float: right;
+        width: 36%;
+        height: 13.5vw;
+    }
+    .educations .education-panel .text-pad .education-title{
+        font-family: 'iransans';
+        font-size: 2.2vw;
+        margin-bottom: 1vw;
+        color: var(--bgcolor);
+        border-bottom: var(--bgcolor) 1px solid;
+        width: 85%;
+        margin-top: 0;
+    }
+    .educations .education-panel .text-pad .item{
+        font-family: 'iransans';
+        font-size: 1.8vw;
+        color: var(--textcolor);
+    }
+    h1.title.space{
+        padding-top: 3vw;
+        margin-bottom: 5vw;
+    }
+    .booklet{
+        float: right;
+        margin-right: 2%;
+        /* background-color: rgb(0, 0, 0); */
+        border: lightblue 1px solid;
+        width: 30%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-top: 3vw;
+    }
+    .booklet:hover{
+        background-color: rgb(245, 248, 255); 
+
+    }
+    .booklet img{
+        width: 100%;
+        height: 20vw;
+        filter: brightness(0.9);
+    }
+    .booklet img:hover{
+        filter: brightness(1);
+    }
+    .booklet h1{
+        margin-top: 0;
+        text-align: center;
+        font-family: 'iransans';
+        font-size: 2vw;
+        color: rgb(24, 24, 24);
+    }
 }  
