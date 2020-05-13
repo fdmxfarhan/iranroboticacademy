@@ -540,6 +540,9 @@
     table.class-table a.link:hover{
         color: red;
     }
+    img.plan{
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 800px) {
     body{
@@ -1009,5 +1012,8 @@
     }
     .messages .message-content span:hover{
         color: rgb(85, 0, 0);
+    }
+    img.plan{
+        width: 100%;
     }
 }

@@ -16,7 +16,7 @@
             | خروج از حساب کاربری
     .acount
         h1.acount-header حساب کاربری
-        a.acount-link(href="/dashboard/acount")
+        a.acount-link(href="/dashboard")
             i.fa.fa-user.link-icon
             | پروفایل من
         .link-border
@@ -31,7 +31,11 @@
                 | لیست کلاس ها
         -}
         .link-border
-        a.acount-link(href="#")
+        a.acount-link(href="/payments")
+            i.fa.fa-credit-card.link-icon
+            | صورت حساب ها
+        .link-border
+        a.acount-link(href="/dashboard/plan")
             i.fa.fa-sticky-note.link-icon
             | برنامه هفتگی
         .link-border
@@ -43,10 +47,7 @@
             i.fa.fa-comments.link-icon
             | نظرات و پیشنهادات
         .link-border
-        a.acount-link(href="/payments")
-            i.fa.fa-credit-card.link-icon
-            | صورت حساب ها
-        .link-border
+        
 .slide-modal#slide-modal
 .slide-toggle#slide-toggle
     button.slide-toggler#slide-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')

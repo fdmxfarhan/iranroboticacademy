@@ -1,0 +1,12 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+
+block content
+    .dashboard
+        include dashboard-layout
+        .dashboard-cont
+            .container
+                h1.acount-header برنامه هفتگی
+                img.plan(src="/images/plan.png")
+    script(src="/javascripts/dashboard.js")

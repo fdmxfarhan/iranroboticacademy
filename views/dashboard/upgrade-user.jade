@@ -4,7 +4,7 @@ block styles
 
 block content
     .dashboard
-        include user-layout
+        include dashboard-layout
         .dashboard-cont
             .container
                 h1.acount-header تغیر نقش کاربری #{upgradeUser.uname}
@@ -16,3 +16,4 @@ block content
                 a.upgrade(href="/upgradetoadmin?uname=#{upgradeUser.uname}") Admin 
                 a.upgrade(href="/upgradetoteacher?uname=#{upgradeUser.uname}") teacher
                 a.upgrade(href="/upgradetostudent?uname=#{upgradeUser.uname}") student
+    script(src="/javascripts/dashboard.js")

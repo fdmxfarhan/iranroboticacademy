@@ -177,4 +177,11 @@ router.get('/payments', ensureAuthenticated, function(req, res, next){
   }
 });
 
+router.get('/dashboard/plan', ensureAuthenticated, function(req, res, next){
+  res.render('./dashboard/plan',{
+    uname: req.user.uname,
+    user: req.user
+  });
+});
+
 module.exports = router;
