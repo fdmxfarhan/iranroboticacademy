@@ -11,7 +11,7 @@
             i.fa.fa-book.card-icon
             | کلاس های من
         .link-border
-        a.card-link.logoutbtn(href="/user/logout")
+        a.card-link.logoutbtn(href="/users/logout")
             i.fa.fa-sign-out.card-icon
             | خروج از حساب کاربری
     .acount
@@ -21,7 +21,7 @@
             | پروفایل من
         .link-border
         -if(user.role == 'student'){
-            a.acount-link(href="#")
+            a.acount-link#sign-in-sidebar(href="#")
                 i.fa.fa-plus.link-icon
                 | ثبت نام
         -}
@@ -34,6 +34,8 @@
         a.acount-link(href="/payments")
             i.fa.fa-credit-card.link-icon
             | صورت حساب ها
+            -if(active.payment)
+                .active
         .link-border
         a.acount-link(href="/dashboard/plan")
             i.fa.fa-sticky-note.link-icon
@@ -42,10 +44,14 @@
         a.acount-link(href="#")
             i.fa.fa-bell.link-icon
             | گزارش ها
+            -if(active.reports)
+                .active
         .link-border
         a.acount-link(href="#")
             i.fa.fa-comments.link-icon
             | نظرات و پیشنهادات
+            -if(active.comments)
+                .active
         .link-border
         
 .slide-modal#slide-modal

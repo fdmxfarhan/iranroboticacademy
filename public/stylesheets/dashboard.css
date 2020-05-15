@@ -112,6 +112,7 @@
         border-bottom: lightblue 2px solid;
     }
     a.acount-link{
+        position: relative;
         display: block;
         padding: 15px 20px;
         font-family: 'iransans';
@@ -124,6 +125,15 @@
     }
     a.acount-link:hover{
         background-color: rgb(235, 235, 235);
+    }
+    a.acount-link .active{
+        background-color: rgba(255, 61, 61, 0.788);
+        width: 0.8vw;
+        height: 0.8vw;
+        border-radius: 50%;
+        position: absolute;
+        left: 3vw;
+        top: 1.7vw;
     }
     .link-icon{
         margin-left: 10px;
@@ -1015,5 +1025,44 @@
     }
     img.plan{
         width: 100%;
+    }
+    .dashboard-cont .container h1.class-name{
+        color: rgb(0, 0, 82);
+        font-family: 'iransans';
+        font-size: 3vw;
+        text-align: center;
+    }
+    table.class-table{
+        width: 90%;
+        margin: auto;
+        border: rgb(223, 223, 223) 1px solid;
+        text-align: center;
+        margin-bottom: 4vw;
+    }
+    table.class-table th{
+        background-color: rgb(190, 212, 219);
+        padding: 0.5vw 0;
+        font-size: 2vw;
+    }
+    table.class-table td{
+        padding: 0.5vw 0;
+        border-top: rgb(220, 220, 255) 1px solid;
+        font-size: 2vw;
+    }
+    table.class-table a.link{
+        text-decoration: none;
+        font-size: 2vw;
+    }
+    table.class-table a.link:hover{
+        color: red;
+    }
+    a.acount-link .active{
+        background-color: rgb(255, 61, 61);
+        width: 2vw;
+        height: 2vw;
+        border-radius: 50%;
+        position: absolute;
+        left: 10vw;
+        top: 5vw;
     }
 }

@@ -16,18 +16,17 @@ block content
                             th نام و نام خانوادگی
                             th نام کاربری
                             th ایمیل
-                            th وضعیت پرداخت
+                            th ترم
                             th عملیات
                         -for(var j=0; j<classes.length; j++){
                             -if(classes[j].className2 == classnames[i]){
-                            tr
-                                td= classes[j].fullname
-                                td= classes[j].uname
-                                td= classes[j].email
-                                td
-                                    .red پرداخت نشده
-                                td
-                                    a.link(href="/dashboard/removeclass?uname=#{classes[j].uname}") حذف
+                                tr
+                                    td= classes[j].fullname
+                                    td= classes[j].uname
+                                    td= classes[j].email
+                                    td= classes[i].term
+                                    td
+                                        a.link(href="/dashboard/removeclass?id=#{classes[j]._id}") حذف
                             -}
                         -}
                 -}

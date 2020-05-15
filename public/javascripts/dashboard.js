@@ -26,4 +26,7 @@ $(document).ready(function(){
     $('#signinclose').click(()=>{
         $('#sign-in-modal').fadeOut(500);
     });
+    $('#sign-in-sidebar').click(function(){
+        $('#sign-in-modal').fadeIn(500);
+    });
 });
