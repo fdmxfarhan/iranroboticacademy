@@ -106,7 +106,7 @@ router.post('/register', ensureAuthenticated, function(req, res){
           term: req.body.term,
           className: req.body.className,
           className2: classNameFa,
-          price: 190000,
+          price: 150000,
           state: 'در انتظار شروع'
         });
         newClass.save()
