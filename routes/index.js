@@ -107,10 +107,12 @@ router.get('/upgrade', ensureAuthenticated, function(req, res, next){
   if(req.user.role === 'admin'){
     User.findOne({uname: req.query.uname}, function(err, doc){
       if(doc){
+        var active = { payment: false, reports: false, comments: false};
         res.render('dashboard/upgrade-user', {
           uname: req.user.uname,
           upgradeUser: doc,
-          user: req.user
+          user: req.user,
+          active: active
         });
       }
     });
