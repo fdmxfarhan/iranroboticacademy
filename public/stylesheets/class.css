@@ -181,13 +181,13 @@
     }
     .sign-in-modal .sign-in form label{
         font-family: 'iransans';
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
     .sign-in-modal .sign-in form input, .sign-in-modal .sign-in form select{
         font-family: 'iransans';
         font-size: 1vw;
         width: 90%;
-        padding: 0.6vw 5%;
+        padding: 0.4vw 5%;
         margin-top: 5px;
         margin-bottom: 10px;
         background-color: rgb(213, 221, 247);
@@ -373,7 +373,7 @@
     .class-container a.sign-in{
         background-color: var(--bgcolor);
         color: white;
-        padding: 0.6vw 5vw;
+        padding: 1vw 7vw;
         font-weight: bold;
         cursor: pointer;
     }
@@ -430,13 +430,13 @@
     }
     .sign-in-modal .sign-in form label{
         font-family: 'iransans';
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
     .sign-in-modal .sign-in form input, .sign-in-modal .sign-in form select{
         font-family: 'iransans';
         font-size: 3vw;
         width: 90%;
-        padding: 1vw 5%;
+        padding: 0.8vw 5%;
         margin-top: 5px;
         margin-bottom: 10px;
         background-color: rgb(213, 221, 247);

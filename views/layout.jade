@@ -111,7 +111,7 @@ html
       #navbarSupportedContent.collapse
         a.nav-link#nav-link1.active(href='/') صفحه اصلی  
           i.fa.fa-home.nav-icon
-        a.nav-link#nav-link2.navbar-dropdown-link  آموزش  
+        a.nav-link#nav-link2.navbar-dropdown-link  کلاس ها  
           i.fa.fa-book.nav-icon
         a.nav-link#nav-link3(href='/education') آموزش مجازی  
           i.fa.fa-tv.nav-icon
@@ -136,33 +136,49 @@ html
       .dropdown-part
         h1.navbar-dropdown-title
           i.fa.fa-book.icon
-          | کلاس های آموزشی
-        a.nav-dropdown-link(href="/classes/robotic")
-          i.fa.fa-chevron-left.icon  
-          | کلاس رباتیک   
+          | کلاس های برنامه نویسی
         a.nav-dropdown-link(href="/classes/computer")
           i.fa.fa-chevron-left.icon  
-          | کلاس برنامه نویسی
+          | برنامه نویسی مقدماتی Scratch
         a.nav-dropdown-link(href="/classes/computer")
           i.fa.fa-chevron-left.icon  
-          | کلاس کدنویسی کودکان
-        a.nav-dropdown-link(href="/classes/electronic")
+          | برنامه نویسی Python
+        a.nav-dropdown-link(href="/classes/computer")
           i.fa.fa-chevron-left.icon  
-          | کلاس الکترونیک
+          | برنامه نویسی C++
+        a.nav-dropdown-link(href="/classes/computer")
+          i.fa.fa-chevron-left.icon  
+          | طراحی وب
       .dropdown-part
         h1.navbar-dropdown-title
           i.fa.fa-book.icon
-          | دوره های آموزشی
-        a.nav-dropdown-link(href="")
+          | کلاس های رباتیک
+        a.nav-dropdown-link(href="/classes/robotic")
           i.fa.fa-chevron-left.icon  
-          | دوره آموزشی AVR
-        a.nav-dropdown-link(href="")
+          | رباتیک مقدماتی (Arduino)
+        a.nav-dropdown-link(href="/classes/robotic")
           i.fa.fa-chevron-left.icon  
-          | دوره آموزشی ARM
-        a.nav-dropdown-link(href="")
+          | رباتیک مسیریاب
+        a.nav-dropdown-link(href="/classes/robotic")
           i.fa.fa-chevron-left.icon  
-          | دوره آموزشی Arduino
-
+          | رباتیک فوتبالیست سبک وزن
+        a.nav-dropdown-link(href="/classes/robotic")
+          i.fa.fa-chevron-left.icon  
+          | رباتیک فوتبالیست وزن آزاد
+        a.nav-dropdown-link(href="/classes/robotic")
+          i.fa.fa-chevron-left.icon  
+          | ربات های صنعتی @Work
+      .dropdown-part
+        h1.navbar-dropdown-title
+          i.fa.fa-book.icon
+          | کلاس های تیزهوشان
+        a.nav-dropdown-link(href="/classes/tizhooshan")
+          i.fa.fa-chevron-left.icon  
+          | تیزهوشان پایه ششم
+        a.nav-dropdown-link(href="/classes/tizhooshan")
+          i.fa.fa-chevron-left.icon  
+          | تیزهوشان پایه نهم
+      
     -if(uname){
       .dropdown#dropdownuser
         a(href="/dashboard")

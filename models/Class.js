@@ -20,12 +20,11 @@ var ClassSchema = new mongoose.Schema({
     },
     className: {
       type: String,
-      enum: ['robotic', 'programming', 'electronic'],
+      enum: ['scratch', 'c++', 'python', 'web', 'robotic', 'pathfinder', 'soccorLW', 'soccorOW', '@work', 'tizhooshan1', 'tizhooshan2'],
       required: true
     },
     className2: {
       type: String,
-      enum: ['رباتیک', 'برنامه نویسی', 'الکترونیک'],
       required: true
     },
     price: {
@@ -36,6 +35,11 @@ var ClassSchema = new mongoose.Schema({
     state: {
       type: String,
       enum: ['در حال برگزاری', 'در انتظار شروع', 'پایان یافته'],
+      required: true
+    },
+    attend: {
+      type: String,
+      enum: ['real', 'virtual'],
       required: true
     },
     dateOfBegin: Date,

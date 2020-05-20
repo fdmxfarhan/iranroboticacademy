@@ -4,7 +4,7 @@ $(document).ready(function(){
     var $slidercont = $slider.find('.slides');
     var $slides = $slidercont.find('.slide');
     var slide = 1;
-    $('#wellcome').hide().fadeIn(4000).delay(2000).fadeOut(4000);
+    // $('#wellcome').hide().fadeIn(4000).delay(2000).fadeOut(4000);
     $('#toplogo').hide().delay(8000).fadeIn(5000);
     $('#slide2').hide();
     $('#slide3').hide();
@@ -87,7 +87,7 @@ $(document).ready(function(){
     setInterval(() => {
         if(slide === 1)
             {
-                $('#slide1').fadeIn(500);
+                $('#slide1').show();
                 $('#slide2').hide();
                 $('#slide3').hide();
                 slide = 2;
@@ -95,7 +95,7 @@ $(document).ready(function(){
         else if(slide === 2)
             {
                 $('#slide1').hide();
-                $('#slide2').fadeIn(500);
+                $('#slide2').show();
                 $('#slide3').hide();
                 slide = 3
             }
@@ -103,7 +103,7 @@ $(document).ready(function(){
             {
                 $('#slide1').hide();
                 $('#slide2').hide();
-                $('#slide3').fadeIn(500);
+                $('#slide3').show();
                 slide = 1;
             }
     }, 5000);

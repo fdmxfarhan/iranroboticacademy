@@ -4,6 +4,19 @@ var User = require('../models/User');
 var Class = require('../models/Class');
 const { ensureAuthenticated } = require('../config/auth');
 
+// const nodemailer = require("nodemailer");
+
+// var transporter = nodemailer.createTransport({
+//   service: 'yahoo',
+//   auth: {
+//     user: 'fdmxfarhan@yahoo.com',
+//     pass: '2240fdmx'
+//   }
+// });
+
+var classNamesEn = ['scratch', 'c++', 'python', 'web', 'robotic', 'pathfinder', 'soccorLW', 'soccorOW', '@work', 'tizhooshan1', 'tizhooshan2'];
+var classNamesFa = ['برنامه نویسی مقدماتی Scratch', 'برنامه نویسی C++', 'برنامه نویسی python', 'برنامه نویسی web', 'رباتیک مقدماتی', 'رباتیک مسیریاب', 'رباتیک فوتبالیست سبک وزن', 'رباتیک فوتبالیست وزن آزاد', 'ربات های صنعتی @Work', 'تیزهوشان پایه ششم', 'تیزهوشان پایه نهم'];
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   if(!req.user) res.render('classes', {
@@ -95,10 +108,7 @@ router.post('/register', ensureAuthenticated, function(req, res){
         });
       }
       else{
-        var classNameFa;
-        if(req.body.className == 'robotic') classNameFa = 'رباتیک';
-        else if(req.body.className == 'programming') classNameFa = 'برنامه نویسی';
-        else if(req.body.className == 'electronic') classNameFa = 'الکترونیک';
+        var classNameFa = classNamesFa[classNamesEn.indexOf(req.body.className)];
         const newClass = new Class({
           fullname: req.body.fullname,
           uname: req.user.uname,
@@ -106,11 +116,25 @@ router.post('/register', ensureAuthenticated, function(req, res){
           term: req.body.term,
           className: req.body.className,
           className2: classNameFa,
-          price: 150000,
-          state: 'در انتظار شروع'
+          price: 250000,
+          state: 'در انتظار شروع',
+          attend: req.body.attend
         });
         newClass.save()
           .then(() => {
+            // var mailOptions = {
+            //   from: 'fdmxfarhan@yahoo.com',
+            //   to: 'fdmxfarhan@yahoo.com',
+            //   subject: 'ثبت نام کلاس جدید',
+            //   text: `نام: ${req.body.fullname} \nنام کاربری: ${req.user.uname} \n کلاس: ${classNameFa}`
+            // };
+            // transporter.sendMail(mailOptions, function(error, info){
+            //   if (error) {
+            //     console.log(error);
+            //   } else {
+            //     console.log('Email sent: ' + info.response);
+            //   }
+            // });
             res.render('./classes/success-register', {
               uname: req.user.uname,
               user: req.user,
