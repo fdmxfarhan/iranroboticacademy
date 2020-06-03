@@ -1,0 +1,174 @@
+extends layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/quiz.css")
+
+block content
+    .quiz
+        -var qNumber = 0;
+        h1.title 
+            i.fa.fa-newspaper-o
+            | آزمون تعیین سطح
+        .right-area
+            form(action="/quiz-resault" method="POST")
+                .part#part1
+                    h1.question سوال ۱: چقدر به رباتیک علاقه مند هستید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans1" id="q1a1" value="زیاد")
+                            label(for="q1a1") زیاد
+                        .radio-check
+                            input(type="radio" name="ans1" id="q1a2" value="متوسط")
+                            label(for="q1a2") متوسط
+                        .radio-check
+                            input(type="radio" name="ans1" id="q1a3" value="کم")
+                            label(for="q1a3") کم
+                        .radio-check
+                            input(type="radio" name="ans1" id="q1a4" value="خیلی کم")
+                            label(for="q1a4") خیلی کم
+                 .part#part2
+                    h1.question سوال ۲: چقدر به برنامه نویسی علاقه مند هستید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans2" id="q2a1" value="زیاد")
+                            label(for="q2a1") زیاد
+                        .radio-check
+                            input(type="radio" name="ans2" id="q2a2" value="متوسط")
+                            label(for="q2a2") متوسط
+                        .radio-check
+                            input(type="radio" name="ans2" id="q2a3" value="کم")
+                            label(for="q2a3") کم
+                        .radio-check
+                            input(type="radio" name="ans2" id="q2a4" value="خیلی کم")
+                            label(for="q2a4") خیلی کم
+                .part#part3
+                    h1.question سوال ۳: به چند زبان برنامه نویسی مسلط هستید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans3" id="q3a1" value="یک یا دو")
+                            label(for="q3a1") یک یا دو
+                        .radio-check
+                            input(type="radio" name="ans3" id="q3a2" value="سه یا چهار")
+                            label(for="q3a2") سه یا چهار
+                        .radio-check
+                            input(type="radio" name="ans3" id="q3a3" value="بیش از چهار زبان")
+                            label(for="q3a3") بیش از چهار زبان
+                        .radio-check
+                            input(type="radio" name="ans3" id="q3a4" value="با هیچ زبانی آشنایی ندارم")
+                            label(for="q3a4") با هیچ زبانی آشنایی ندارم
+                .part#part4
+                    h1.question سوال ۴: با کدام یک از قطعات زیر آشنایی دارید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans4" id="q4a1" value="AVR")
+                            label(for="q4a1") میکروکنترلر های AVR و بورد های Arduino
+                        .radio-check
+                            input(type="radio" name="ans4" id="q4a2" value="Modules")
+                            label(for="q4a2") ماژول های بلوتوث، WiFi، NRF و ...
+                        .radio-check
+                            input(type="radio" name="ans4" id="q4a3" value="ARM")
+                            label(for="q4a3") میکروکنترلرهای ARM و PIC
+                        .radio-check
+                            input(type="radio" name="ans4" id="q4a4" value="همه موارد")
+                            label(for="q4a4") همه موارد
+                        .radio-check
+                            input(type="radio" name="ans4" id="q4a5" value="با هیچ کدام آشنایی ندارم")
+                            label(for="q4a5") با هیچ کدام آشنایی ندارم
+                .part#part5
+                    h1.question سوال ۵: به کدامیک از شاخه های برنامه نویسی علاقه مند هستید و دوست دارید در راستای آن فعالیت کنید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans5" id="q5a1" value="برنامه نویسی ربات ها")
+                            label(for="q5a1") برنامه نویسی ربات ها
+                        .radio-check
+                            input(type="radio" name="ans5" id="q5a2" value="طراحی وب سایت")
+                            label(for="q5a2") طراحی وب سایت
+                        .radio-check
+                            input(type="radio" name="ans5" id="q5a3" value="طراحی اپلیکیشن اندروید")
+                            label(for="q5a3") طراحی اپلیکیشن اندروید
+                        .radio-check
+                            input(type="radio" name="ans5" id="q5a4" value="طراحی نرم افزارهای ویندوز")
+                            label(for="q5a4") طراحی نرم افزارهای ویندوز
+                .part#part6
+                    h1.question سوال ۶: چقدر به زبان انگلیسی مسلط هستید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans6" id="q6a1" value="زیاد")
+                            label(for="q6a1") زیاد
+                        .radio-check
+                            input(type="radio" name="ans6" id="q6a2" value="متوسط")
+                            label(for="q6a2") متوسط
+                        .radio-check
+                            input(type="radio" name="ans6" id="q6a3" value="کم")
+                            label(for="q6a3") کم
+                        .radio-check
+                            input(type="radio" name="ans6" id="q6a4" value="خیلی کم")
+                            label(for="q6a4") خیلی کم
+                .part#part7
+                    h1.question سوال ۷: با کدام یک از نرم افزارهای زیر آشنایی دارید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans7" id="q7a1" value="Mechanic")
+                            label(for="q7a1") نرم افزار های طراحی مکانیک (SolidWorks، Catia، CorelDraw، AutoCad، ...)
+                        .radio-check
+                            input(type="radio" name="ans7" id="q7a2" value="Hardware")
+                            label(for="q7a2") نرم افزارهای طراحی مدار (Altium Designer، Protel، Proteus، ...)
+                        .radio-check
+                            input(type="radio" name="ans7" id="q7a3" value="هر دو مورد")
+                            label(for="q7a3") هر دو مورد
+                        .radio-check
+                            input(type="radio" name="ans7" id="q7a4" value="هیچ کدام")
+                            label(for="q7a4") هیچ کدام
+                .part#part8
+                    h1.question سوال ۸: تا چه حد با برنامه نویسی آشنایی دارید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans8" id="q8a1" value="Algorythm")
+                            label(for="q8a1") با مفاهیم اولیه و الگوریتم ها آشنایی دارم
+                        .radio-check
+                            input(type="radio" name="ans8" id="q8a2" value="Basic")
+                            label(for="q8a2") با برنامه نویسی آشنایی دارم و پروژه های کمی انجام داده ام
+                        .radio-check
+                            input(type="radio" name="ans8" id="q8a3" value="High")
+                            label(for="q8a3") مفاهیم برنامه نویسی را کامل می دانم و پروژه های زیادی انجام داده ام
+                        .radio-check
+                            input(type="radio" name="ans8" id="q8a4" value="با برنامه نویسی آشنایی ندارم")
+                            label(for="q8a4") با برنامه نویسی آشنایی ندارم
+                .part#part9
+                    h1.question سوال ۹: با کدام یک از سیستم عامل های زیر می توانید کار کنید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans9" id="q9a1" value="ویندوز")
+                            label(for="q9a1") ویندوز
+                        .radio-check
+                            input(type="radio" name="ans9" id="q9a2" value="ویندوز و مک")
+                            label(for="q9a2") ویندوز و مک
+                        .radio-check
+                            input(type="radio" name="ans9" id="q9a3" value="ویندوز و لینوکس")
+                            label(for="q9a3") ویندوز و لینوکس
+                        .radio-check
+                            input(type="radio" name="ans9" id="q9a4" value="هیچ کدام")
+                            label(for="q9a4") هیچ کدام
+                .part#part10
+                    h1.question سوال ۱۰: آیا قبلا در کلاس های آکادمی یا دیگر آموزشگاه ها شرکت کرده اید؟
+                    .answers
+                        .radio-check
+                            input(type="radio" name="ans10" id="q10a1" value="کلاس های بیرون")
+                            label(for="q10a1") در کلاس های رباتیک یا برنامه نویسی غیر از آکادمی شرکت می کردم
+                        .radio-check
+                            input(type="radio" name="ans10" id="q10a2" value="کلاس های آکادمی")
+                            label(for="q10a2") قبلا در کلاس های آکادمی شرکت کرده ام
+                        .radio-check
+                            input(type="radio" name="ans10" id="q10a3" value="شرکت می کنم")
+                            label(for="q10a3") قصد دارم در آینده شرکت کنم
+                        .radio-check
+                            input(type="radio" name="ans10" id="q10a4" value="تمایلی به شرکت در کلاس ها ندارم")
+                            label(for="q10a4") تمایلی به شرکت در کلاس ها ندارم
+                
+                input.submit(type="submit" value="اتمام آزمون")
+        .info-area
+            h1.info= user.fullname
+            h1.info تعداد سوالات: ۱۰
+            //- h1.info پاسخ داده شده: #{qNumber}
+            .br-line
+            p با انجام این آزمون می توانید سطح خود را ارزیابی کنید و کلاس آموزشی متناسب با سطح و علاقه خود را بیابید.
+

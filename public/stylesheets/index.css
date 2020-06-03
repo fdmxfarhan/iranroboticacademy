@@ -239,6 +239,27 @@
     .sign-in-modal .sign-in .imgpad img{
         width: 100%;
     }
+    .topimg a.begin{
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        background-color: rgba(255, 123, 0, 0.836);
+        padding: 0.5vw 2vw;
+        border-radius: 1vw;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        position: absolute;
+        top: 65%;
+        /* z-index: 1000; */
+        right: 10%;
+        direction: rtl;
+    }
+    .topimg a.begin:hover{
+        background-color: green;
+    }
+    .topimg a.begin i{
+        padding-left: 1vw;
+    }
 }
 .content .end-dash{
     width: 40%;

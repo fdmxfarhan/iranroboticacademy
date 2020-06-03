@@ -1,0 +1,236 @@
+.quiz, .register-panel{
+    background-color: white;
+    width: 80%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    margin: 3vw auto;
+    padding: 1vw;
+    border: lightgray 1px solid;
+    direction: rtl;
+    text-align: right;
+    font-family: 'iransans';
+    overflow: hidden;
+    position: relative;
+}
+.register-panel .part{
+    /* background-color: lightgreen; */
+    width: 40%;
+    margin: 4vw 5%;
+    float: right;
+}
+.register-panel .inputarea{
+    position: relative;
+    width: 100%;
+}
+.register-panel .textinput{
+    background-color: white;
+    display: block;
+    width: 82%;
+    padding: 0.6vw 9%;
+    border: rgb(173, 196, 230) 1px solid;
+    border-radius: 1vw;
+    font-size: 1vw;
+    margin-bottom: 3vw;
+    font-family: 'iransans';
+    box-shadow: 0 2px 2px 0 rgba(173, 196, 230, 0.5), 0 1px 2px 0 rgba(173, 196, 230, 0.3);
+    
+}
+.register-panel select.textinput{
+    width: 100%;
+}
+.register-panel .textinput:focus{
+    outline: none;
+    border: blue 1px solid;
+}
+.register-panel .inputarea i{
+    position: absolute;
+    top: 0.8vw;
+    right: 1vw;
+    color: rgb(77, 128, 224);
+    font-size: 1.2vw;
+}
+.register-panel .submit{
+    font-family: 'iransans';
+    border: none;
+    background-color: var(--bgcolor);
+    padding: 0.3vw 2vw;
+    color: white;
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2vw;
+    left: 5vw;
+}
+.register-panel .submit:focus{
+    outline: none;
+}
+.register-panel .submit:hover{
+    background-color: chocolate;
+}
+.register-panel a.registered{
+    position: absolute;
+    bottom: 3vw;
+    right: 5vw;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: blue;
+}
+.register-panel a.registered:hover{
+    color: chocolate;
+}
+.register-panel h1.title, .quiz h1.title{
+    font-family: 'iransans';
+    font-size: 1.5vw;
+    margin: 0;
+    padding-right: 3vw;
+    margin-top: 1vw;
+    color: var(--bgcolor);
+}
+.register-panel h1.title i, .quiz h1.title i{
+    padding-left: 0.8vw;
+}
+
+.dismiss{
+    margin: 0 0px;
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5vw;
+}
+.dismiss h1.error{
+    text-align: right;
+    direction: rtl;
+    border-radius: 5px;
+    background-color: rgb(255, 237, 137);
+    padding: 1vw;
+    margin: 5px;
+    color: rgb(53, 53, 53);
+    font-family: 'bnazanin';
+    font-size: 16px;
+}
+.dismiss h1.success{
+    text-align: right;
+    direction: rtl;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    color: rgba(53, 53, 53, 0.651);
+    background-color: rgb(164, 255, 137);
+    font-family: 'bnazanin';
+    font-size: 16px;
+}
+.quiz .right-area{
+    /* background-color: lightblue; */
+    border-top: lightgray 1px solid;
+    float: right;
+    width: 65%;
+    margin: 2vw 2.5%;
+    overflow: hidden;
+}
+.quiz .info-area{
+    background-color: rgb(255, 237, 138);
+    float: right;
+    width: 25%;
+    padding: 1vw;
+}
+.quiz .info-area h1.info{
+    color: rgb(56, 0, 56);
+    font-family: 'iransans';
+    font-size: 1.5vw;
+
+}
+.quiz .info-area .br-line{
+    background-color: white;
+    width: 100%;
+    height: 3px;
+    margin-top: 3vw;
+}
+.quiz .info-area p{
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    text-align: justify;
+    padding: 1vw;
+    color: rgb(22, 22, 22);
+}
+.quiz .right-area h1.question{
+    font-family: 'iransans';
+    font-size: 1.5vw;
+    color: rgb(15, 15, 95);
+}
+.quiz .right-area .answers{
+    margin-bottom: 3vw;
+}
+.quiz .right-area .answers .radio-check{
+    background-color: rgb(245, 255, 255);
+    width: 90%;
+    margin: 0.5vw auto;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+}
+.quiz .right-area .submit{
+    background-color: var(--bgcolor);
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    color: white;
+    padding: 0.3vw 2vw;
+    border-radius: 1vw;
+    border: none;
+    cursor: pointer;
+}
+.quiz .right-area .submit:hover{
+    background-color: chocolate;
+}
+.quiz .right-area .submit:focus{
+    outline: none;
+}
+.quiz .right-area h1.number{
+    color: green;
+    font-family: 'iransans';
+    font-size: 1.5vw;
+}
+.quiz .right-area h1.intrest{
+    color: var(--bgcolor);
+    font-family: 'iransans';
+    font-size: 1.4vw;
+}
+.quiz .right-area h1.intrest i{
+    padding-left: 0.8vw;
+}
+.quiz .right-area h1.text-title{
+    font-family: 'iransans';
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+.quiz .right-area p{
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    text-align: justify;
+}
+.quiz .right-area table{
+    width: 100%;
+    font-family: 'iransans';
+    font-size: 1.1vw;
+    text-align: center;
+}
+.quiz .right-area table th{
+    background-color: var(--bgcolor);
+    color: white;
+    padding: 0.3vw;
+}
+.quiz .right-area table td{
+    padding: 0.5vw;
+    border-bottom: lightblue 1px solid;
+}
+.quiz .right-area table td a{
+    text-decoration: none;
+    font-family: 'iransans';
+    font-size: 1.2vw;
+    color: var(--bgcolor);
+    font-weight: bold;
+}
+.quiz .right-area table td a:hover{
+    color: chocolate;
+}
+.quiz .right-area table td a i{
+    padding-left: 1vw;
+}

@@ -94,4 +94,5 @@ router.get('/logout', function(req, res, next){
   req.flash('success_msg', 'شما با موفقیت خارج شدید');
   res.redirect('/users/login');
 });
+
 module.exports = router;

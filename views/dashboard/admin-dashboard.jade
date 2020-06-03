@@ -45,6 +45,7 @@ block content
                         th نام کاربری
                         th پست الکترونیکی
                         th تلفن
+                        th مقطع تحصیلی
                         th نقش
                         th ارتقا
                     - users.forEach(oneUser => {
@@ -53,6 +54,7 @@ block content
                         td= oneUser.uname
                         td= oneUser.email
                         td= oneUser.phone
+                        td= oneUser.education
                         td= oneUser.role
                         td
                             a.change-role-link(href=`/upgrade?uname=${oneUser.uname}`) تغییر

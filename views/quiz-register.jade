@@ -1,0 +1,40 @@
+extends layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/quiz.css")
+
+block content
+    .register-panel
+        h1.title 
+            i.fa.fa-user-plus
+            | اطلاعات فردی
+        a.registered(href="/users/login") قبلا ثبت نام کرده اید؟
+        include ./partials/messages
+        form(action="/quiz" method="POST")
+            .part
+                .inputarea
+                    i.fa.fa-user
+                    input.textinput(type="text" name="uname" placeholder="نام کاربری" value= "#{ typeof uname != 'undefined' ? uname: '' }")
+                .inputarea
+                    i.fa.fa-pencil
+                    input.textinput(type="text" name="fullname" placeholder="نام و نام خانوادگی" value= "#{ typeof fullname != 'undefined' ? fullname: '' }")
+                .inputarea
+                    i.fa.fa-envelope
+                    input.textinput(type="email" name="email" placeholder="ایمیل" value= "#{ typeof email != 'undefined' ? email: '' }")
+            .part
+                .inputarea
+                    i.fa.fa-phone
+                    input.textinput(type="text" name="phone" placeholder="شماره تلفن" value= "#{ typeof phone != 'undefined' ? phone: '' }")
+                .inputarea
+                    i.fa.fa-book
+                    select.textinput(name="education")
+                        option(value="null") -- مقطع تحصیلی --
+                        option(value="basic") ابتدایی
+                        option(value="junior1") دبیرستان دوره اول
+                        option(value="junior2") دبیرستان دوره دوم
+                        option(value="major1") دانشجو کارشناسی
+                        option(value="major2") دانشجو کارشناسی ارشد
+                .inputarea
+                    i.fa.fa-key
+                    input.textinput(type="password" name="psw" placeholder="رمز عبور")
+                
+            input.submit(type="submit" value="مرحله بعدی")

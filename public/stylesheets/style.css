@@ -418,8 +418,24 @@
     float: right;
     width: 30%;
     margin-left: 3%;
+    position: relative;
   }
-
+  .dropdown-part a.quiz{
+    position: absolute;
+    bottom: -4vw;
+    left: 2vw;
+    font-family: 'iransans';
+    font-size: 1vw;
+    background-color: var(--bgcolor);
+    color: white;
+    padding: 0.3vw 2vw;
+    border-radius: 1vw;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .dropdown-part a.quiz:hover{
+    background-color: chocolate;
+  }
   .container {
     width: 100%;
     margin: 0;

@@ -1,0 +1,46 @@
+extends layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/quiz.css")
+
+block content
+    .quiz
+        -var qNumber = 0;
+        h1.title 
+            i.fa.fa-newspaper-o
+            | نتیجه آزمون تعیین سطح
+        .right-area
+            h1.number شما به #{cnt} سوال از ۱۰ سوال پاسخ داده اید.
+            h1.intrest 
+                i.fa.fa-caret-left
+                | میزان علاقه مندی شما به رباتیک: #{robotic}
+            h1.intrest 
+                i.fa.fa-caret-left
+                | میزان علاقه مندی شما به برنامه نویسی: #{programming}
+            h1.text-title سطح علمی شما:
+            p.text= text
+            table
+                tr
+                    th نام کلاس
+                    th ظرفیت کلاس
+                    th نام دبیر
+                    th تاریخ شروع
+                    th ثبت نام
+                -for(var i=0; i<myClasses.length; i++){
+                    tr
+                        td= myClasses[i].name
+                        td= myClasses[i].maxStudent
+                        td= myClasses[i].teacher
+                        td= myClasses[i].begin
+                        td
+                            a(href=`${myClasses[i].url}`) 
+                                i.fa.fa-plus
+                                | ثبت نام
+                -}
+                    
+        .info-area
+            h1.info= user.fullname
+            h1.info تعداد سوالات: ۱۰
+            //- h1.info پاسخ داده شده: #{qNumber}
+            .br-line
+            p با انجام این آزمون می توانید سطح خود را ارزیابی کنید و کلاس آموزشی متناسب با سطح و علاقه خود را بیابید.
+
