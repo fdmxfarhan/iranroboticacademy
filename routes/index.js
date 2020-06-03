@@ -217,7 +217,6 @@ router.get('/quiz', function(req, res,next){
     });
   } else{
     res.render('quiz-register', {
-      uname: false,
       user: false
     });
   }
