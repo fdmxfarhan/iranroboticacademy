@@ -348,7 +348,7 @@ router.post('/quiz-resault', ensureAuthenticated, function(req,res,next){
   if(ans10 == 'تمایلی به شرکت در کلاس ها ندارم') text+='شرکت در کلاس های آکادمی می تواند به پیشرفت شما در زمینه دلخواهتان کمک کند.';
   
   const classes = {
-    programming1: {name: 'برنامه نویسی مقدماتی Scratch', teacher: 'مهندس مینا یجیوی', maxStudent: '۱۰ نفر', begin: '۱۴ تیر', end: '۱۷ مرداد', price: '250,000 تومان', url:'/classes/computer'},
+    programming1: {name: 'برنامه نویسی مقدماتی Scratch', teacher: 'مینا یجیوی', maxStudent: '۱۰ نفر', begin: '۱۴ تیر', end: '۱۷ مرداد', price: '250,000 تومان', url:'/classes/computer'},
     programming2: {name: 'برنامه نویسی C++', teacher: 'شیدا تارانی', maxStudent: '۱۰ نفر', begin: '۱۴ تیر', end: '۱۷ مرداد', price: '250,000 تومان', url:'/classes/computer'},
     programming3: {name: 'برنامه نویسی Pthon', teacher: 'فرحان دائمی', maxStudent: '۱۰ نفر', begin: '۱۴ تیر', end: '۱۷ مرداد', price: '250,000 تومان', url:'/classes/computer'},
     programming4: {name: 'طراحی وب', teacher: 'شیدا تارانی', maxStudent: '۱۰ نفر', begin: '۱۴ تیر', end: '۱۷ مرداد', price: '250,000 تومان', url:'/classes/computer'},

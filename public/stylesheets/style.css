@@ -420,7 +420,7 @@
     margin-left: 3%;
     position: relative;
   }
-  .dropdown-part a.quiz{
+  .dropdown-part a.nav-quiz{
     position: absolute;
     bottom: -4vw;
     left: 2vw;
@@ -433,7 +433,7 @@
     text-decoration: none;
     font-weight: bold;
   }
-  .dropdown-part a.quiz:hover{
+  .dropdown-part a.nav-quiz:hover{
     background-color: chocolate;
   }
   .container {
@@ -1054,6 +1054,7 @@
     float: right;
     width: 45%;
     margin-left: 3%;
+    position: relative;
   }
 
   .container {
@@ -1226,5 +1227,18 @@
     font-family: 'iransans';
     font-size: 2vw;
     display: inline;
+  }
+  .dropdown-part a.nav-quiz{
+    font-family: 'iransans';
+    font-size: 3vw;
+    background-color: var(--bgcolor);
+    color: white;
+    padding: 0.3vw 6vw;
+    border-radius: 3vw;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .dropdown-part a.nav-quiz:hover{
+    background-color: chocolate;
   }
 }
