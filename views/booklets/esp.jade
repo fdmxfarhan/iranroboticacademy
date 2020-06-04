@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/booklets.css')
+    .buy-panel
+        .information
+            h1.title آموزش کامل ماژول های WiFi
+            h1.under-title راه اندازی ماژول های ESP8266 و node MCU
+            h1.info
+                i.fa.fa-caret-left
+                | نویسنده: فرحان دائمی
+            h1.info 
+                i.fa.fa-caret-left
+                | نوع فایل: فایل فشرده شامل نمونه برنامه ها و pdf آموزشی
+            h1.info 
+                i.fa.fa-caret-left
+                | حجم فایل: 14.3 MB
+            p.text امروزه یکی از راه های ایجاد یک شبکه local network توسط چند سیستم استفاده از تکنولوژی WLAN یا Wireless Local Area Network (شبکه محلی بی‌سیم) است. این تکنولوژی که بسیار معروف است WiFi نام دارد که مخفف Wireless fidelity (وفاداری بی‌سیم) است. دسترسی به اینترنت با استفاده از این تکنولوژی توسط یک مودم یا روتر امکان پذیر است که در زندگی روزمره از آن بسیار استفاده می‌کنیم. در سال 1999 شخصی به نام کوین اشتون قصد داشت کاری کند که تمام اشیاء بی جان اطراف ما برای خود هویت دیجیتال داشته باشند و به کامپیوتر ها اجازه دهند آن ها را سازماندهی و مدیریت کنند. اینترنت در حال حاظر همه مردم را به هم متصل می‌کند اما او مفهوم دیگری به نام اینترنت اشیاء یا IOT (Internet of things) را خلق کرد تا اشیاء را به یکدیگر متصل کند. برای مثال ساعت دیواری خودش را از طریق اینترنت به روز رسانی کند و نیازی به تنظیم نداشته باشد و یا چراغ های خانه به صورت خودکار خاموش و روشن شوند یا صندلی ها به طور خودکار مرتب شوند. 
+            h1.price 
+                i.fa.fa-tag
+                | 25,000 تومان
+            form(action="/payment/pay-booklet" method="POST")
+                input.hidden(type="number" name="price" value=250000)
+                input.hidden(type="text" name="url" value="/booklets/esp")
+                input.hidden(type="text" name="name" value="esp")
+                input.text-area(type="text" name="code" placeholder="کد تخفیف")
+                br
+                input.submit(type="submit" value="پرداخت و دانلود")
+            
+        .img-pad
+            img(src="/images/esp.jpg")
+        

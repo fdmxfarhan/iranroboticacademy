@@ -57,6 +57,16 @@ router.get('/ultrasonic', function(req, res, next) {
         user: req.user
     });
 });
+router.get('/esp', function(req, res, next) {
+    if(!req.user) res.render('./booklets/esp', {
+        uname: false,
+        user: false
+    });
+    else res.render('./booklets/esp', {
+        uname: req.user.uname,
+        user: req.user
+    });
+});
 
 // router.get('/bootstrap', function(req, res, next) {
 //     if(!req.user) res.render('./booklets/bootstrap', {
