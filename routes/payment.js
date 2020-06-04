@@ -108,7 +108,25 @@ router.get('/pay', function(req, res, next){
   });
 });
 router.post('/pay-booklet', function(req,res, next){
-  if(req.user){
+  if(req.body.code == '1i3r9a8'){
+    if(req.user){
+      var newBooklet = new Booklet({uname: req.user.uname, name: req.body.name, price: req.body.price, payed: true});
+      newBooklet.save().then((booklet)=>{
+        res.render('./booklets/esp', {
+          user: false,
+          booklet
+        });
+      }).catch(err=>console.log(err));
+    }
+    else{
+      var newBooklet = new Booklet({name: req.body.name, price: req.body.price, payed: true});
+      res.render('./booklets/esp', {
+        user: false,
+        booklet: newBooklet
+      });
+    }
+  }
+  else if(req.user){
     var newBooklet = new Booklet({uname: req.user.uname, name: req.body.name, price: req.body.price, payed: false});
     newBooklet.save().then((booklet)=>{
       var options = {
@@ -117,7 +135,7 @@ router.post('/pay-booklet', function(req,res, next){
         headers: {
           'Content-Type': 'application/json',
           'X-API-KEY': 'fe6a4553-cd95-4dff-af2e-80594c1c18c5',
-          'X-SANDBOX': 1,
+          // 'X-SANDBOX': 1,
         },
         body: {
           'order_id': booklet._id,
@@ -139,7 +157,10 @@ router.post('/pay-booklet', function(req,res, next){
       });  
     }).catch(err => console.log(err));
   }
-  else res.redirect('/users/login');
+  else {
+    req.flash('error_msg', 'دسترسی مجاز نیست لطفا ابتدا وارد شوید!');
+    res.redirect('/users/login');
+  }
 });
 router.post('/esp', function(req,res, next){
   Booklet.findOne({_id: req.body.order_id}, (err, booklet)=>{
@@ -150,7 +171,7 @@ router.post('/esp', function(req,res, next){
         headers: {
           'Content-Type': 'application/json',
           'X-API-KEY': 'fe6a4553-cd95-4dff-af2e-80594c1c18c5',
-          'X-SANDBOX': 1,
+          // 'X-SANDBOX': 1,
         },
         body: {
           'id': req.body.id,

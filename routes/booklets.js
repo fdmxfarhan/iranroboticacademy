@@ -12,6 +12,7 @@ var User = require('../models/User');
 var Class = require('../models/Class');
 var Tutorial = require('../models/Tutorial');
 var Juniorcup = require('../models/juniorcup');
+var Booklet = require('../models/Booklet');
 
 
 router.get('/arm', function(req, res, next) {
@@ -57,15 +58,21 @@ router.get('/ultrasonic', function(req, res, next) {
         user: req.user
     });
 });
+
 router.get('/esp', function(req, res, next) {
     if(!req.user) res.render('./booklets/esp', {
         uname: false,
         user: false
     });
-    else res.render('./booklets/esp', {
-        uname: req.user.uname,
-        user: req.user
-    });
+    else {
+        Booklet.findOne({uname: req.user.uname, name: 'esp'}, function(err, booklet){
+            res.render('./booklets/esp', {
+                uname: req.user.uname,
+                user: req.user,
+                booklet
+            });
+        });
+    }
 });
 
 // router.get('/bootstrap', function(req, res, next) {

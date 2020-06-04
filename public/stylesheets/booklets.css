@@ -135,7 +135,20 @@
     .buy-panel .information .submit:hover{
         background-color: chocolate;
     }
-    
+    .buy-panel .information a.download{
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        text-decoration: none;
+        color: rgb(12, 70, 156);
+        font-weight: bold;
+    }
+    .buy-panel .information a.download:hover{
+        color: chocolate;
+    }
+    .buy-panel .information a.download i{
+        padding-left: 1vw;
+        font-size: 2vw;
+    }
 }
 @media only screen and (max-width: 600px) {
     .booklet{
@@ -183,5 +196,108 @@
         font-size: 16px;
         color: var(--bgcolor);
         margin: 20px 30px;
+    }
+    .buy-panel{
+        direction: rtl;
+        text-align: right;
+        width: 90%;
+        padding: 1vw 2%;
+        margin: 4vw auto;
+        border: lightgray 1px solid;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
+        overflow: hidden;
+    }
+    .buy-panel .information{
+        /* background-color: lightgreen; */
+        float: right;
+        width: 70%;
+    }
+    .buy-panel .img-pad{
+        /* background-color: lightblue; */
+        float: right;
+        width: 30%;
+    }
+    .buy-panel .img-pad img{
+        width: 100%;
+    }
+    .hidden{
+        display: none;
+    }
+    .buy-panel .information h1.title{
+        font-family: 'iransans';
+        font-size: 3vw;
+        color: var(--bgcolor);
+        margin: 0;
+        margin-top: 4vw;
+    }
+    .buy-panel .information h1.under-title{
+        font-family: 'iransans';
+        font-size: 2vw;
+        margin: 0;
+        margin-bottom: 2vw;
+        border-bottom: darkblue 1px solid;
+        padding-bottom: 0.5vw;
+        color: rgb(178, 140, 214);
+    }
+    .buy-panel .information h1.info{
+        font-family: 'iransans';
+        font-size: 2.4vw;
+        margin: 0.5vw 0;
+        color: rgb(21, 21, 70);
+    }
+    .buy-panel .information h1.info i{
+        padding-left: 0.8vw;
+    }
+    .buy-panel .information p.text{
+        font-family: 'iransans';
+        font-size: 2vw;
+        color: rgb(44, 44, 90);
+        text-align: justify;
+    }
+    .buy-panel .information h1.price{
+        font-family: 'iransans';
+        font-size: 4.5vw;
+        color: orangered;
+    }
+    .buy-panel .information h1.price i{
+        padding-left: 1vw;
+    }
+    .buy-panel .information .text-area{
+        display: block;
+        font-family: 'iransans';
+        font-size: 3vw;
+        padding: 0.3vw 1vw;
+        border-radius: 0.5vw;
+        border: lightblue 2px solid;
+        width: 90%;
+    }
+    .buy-panel .information .submit{
+        display: block;
+        font-family: 'iransans';
+        font-size: 3.2vw;
+        padding: 0.5vw 4vw;
+        border-radius: 0.5vw;
+        color: white;
+        border: none;
+        background-color: var(--bgcolor);
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .buy-panel .information .submit:hover{
+        background-color: chocolate;
+    }
+    .buy-panel .information a.download{
+        font-family: 'iransans';
+        font-size: 4vw;
+        text-decoration: none;
+        color: rgb(12, 70, 156);
+        font-weight: bold;
+    }
+    .buy-panel .information a.download:hover{
+        color: chocolate;
+    }
+    .buy-panel .information a.download i{
+        padding-left: 1vw;
+        font-size: 5vw;
     }
 }
