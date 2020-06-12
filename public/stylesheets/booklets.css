@@ -276,7 +276,7 @@
         font-family: 'iransans';
         font-size: 3.2vw;
         padding: 0.5vw 4vw;
-        border-radius: 0.5vw;
+        border-radius: 2vw;
         color: white;
         border: none;
         background-color: var(--bgcolor);

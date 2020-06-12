@@ -17,6 +17,7 @@ block content
                             th نام کاربری
                             th ایمیل
                             th ترم
+                            th حضور
                             th عملیات
                         -for(var j=0; j<classes.length; j++){
                             -if(classes[j].className2 == classnames[i]){
@@ -24,7 +25,8 @@ block content
                                     td= classes[j].fullname
                                     td= classes[j].uname
                                     td= classes[j].email
-                                    td= classes[i].term
+                                    td= classes[j].term
+                                    td= classes[j].attend
                                     td
                                         a.link(href="/dashboard/removeclass?id=#{classes[j]._id}") حذف
                             -}

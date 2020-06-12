@@ -32,7 +32,7 @@ $(document).ready(function(){
         $('#dropdown1').slideDown(500);
     });
     $('#dropdown1').mouseleave(function(){
-        $('#dropdown1').hide();
+        $('#dropdown1').slideUp(500);
     });
     $('button.navbar-toggler').click(function(){
         $('#navbarSupportedContent.collapse').slideToggle(500);
