@@ -1,0 +1,420 @@
+@media only screen and (min-width: 600px) {
+    .two-col-cont{
+        /* background-color: lightblue; */
+        overflow: hidden;
+        width: 80%;
+        padding: 5%;
+        margin: auto;
+    }
+    .two-col-cont .text{
+        float: right;
+        width: 67%;
+        margin-left: 3%;
+    }
+    .two-col-cont img{
+        float: right;
+        width: 30%;
+    }
+    .two-col-cont .text h1{
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        text-align: right;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .two-col-cont .text p{
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        text-align: justify;
+        direction: rtl;
+        
+    }
+    .dash-break{
+        width: 50%;
+        margin: auto;
+        border-bottom: var(--bgcolor) 0.2vw dashed;
+    }
+    .three-col-cont{
+        /* background-color: lightblue; */
+        overflow: hidden;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5vw;
+    }
+    .three-col-cont h1.title{
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        text-align: center;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .three-col-cont h1.col-1{
+        float: right;
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        text-align: center;
+        direction: rtl;
+        background-color: rgb(228, 78, 78);
+        color: white;
+        margin-left: 4%;
+        padding: 4vw 6%;
+        cursor: pointer;
+    }
+    .three-col-cont h1.col-1:hover{
+        background-color: rgb(219, 150, 150);
+    }
+    .three-col-cont h1.col-2{
+        float: right;
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        text-align: center;
+        direction: rtl;
+        background-color: rgb(80, 219, 80);
+        color: white;
+        margin-left: 3vw;
+        padding: 4vw 6%;
+        cursor: pointer;
+    }
+    .three-col-cont h1.col-2:hover{
+        background-color: rgb(147, 212, 147);
+    }
+    .three-col-cont h1.col-3{
+        float: right;
+        font-family: 'iransans';
+        font-size: 1.7vw;
+        text-align: center;
+        direction: rtl;
+        background-color: rgb(87, 184, 216);
+        color: white;
+        padding: 4vw 6%;
+        cursor: pointer;
+    }
+    .three-col-cont h1.col-3:hover{
+        background-color: rgb(157, 210, 228);
+    }
+    .modal-1{
+        display: none;    
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.521);
+        z-index: 100;
+        transition-duration: 2s;
+    }
+    .popup{
+        display: none;        
+        background-color: rgb(244, 244, 252);
+        position: fixed;
+        top: 7%;
+        left: 14%;
+        z-index: 101;
+        width: 60%;
+        padding: 5%;
+        border-radius: 1vw;
+        overflow: hidden;
+    }
+    .popup span{
+        position: absolute;
+        left: 1.5vw;
+        top: 1.5vw;
+        font-size: 2vw;
+        cursor: pointer;
+    }
+    .popup span:hover{
+        color: coral;
+    }
+    .popup form{
+        float: right;
+        width: 45%;
+        margin-left: 10%;
+        direction: rtl;
+    }
+    .popup .round-dash{
+        float: right;
+        width: 38%;
+        padding: 2%;
+        border-radius: 1vw;
+        border: blue 0.1vw dashed;
+        direction: rtl;
+    }
+    .popup form .input-text{
+        display: block;
+        width: 100%;
+        margin-bottom: 2vw;
+        position: relative;
+    }
+    .popup form .input-text input{
+        font-family: 'iransans';
+        font-size: 1vw;
+        width: 80%;
+        padding: 0.5vw 4vw 0.5vw 1vw;
+        border-radius: 1vw;
+        border: none;
+        box-shadow: 0.1vw 0.1vw 1vw rgba(0, 0, 139, 0.5);
+    }
+    .popup form input:focus{
+        outline: none;
+    }
+    .popup form .input-text i{
+        position: absolute;
+        color: var(--bgcolor);
+        font-size: 1.2vw;
+        top: 0.8vw;
+        right: 1vw;
+    }
+    .popup form input[type=submit]{
+        font-family: 'iransans';
+        font-size: 1vw;
+        background-color: white;
+        border-radius: 1vw;
+        border: none;
+        box-shadow: 0.1vw 0.1vw 1vw rgba(0, 0, 139, 0.5);
+        width: 50%;
+        padding: 0.5vw 0;
+        cursor: pointer;
+        margin-top: 2vw;
+    }
+    .popup form input[type=submit]:hover{
+        transition-duration: 0.5s;
+        background-color: var(--bgcolor);
+        color: white;
+    }
+    .popup .round-dash h1{
+        color: var(--bgcolor);
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        margin: 1vw 0;
+    }
+    .popup .round-dash .item{
+        color: green;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        margin-bottom: 0.1vw;
+    }
+    .popup .round-dash .price{
+        color: chocolate;
+        font-family: 'iransans';
+        font-size: 1.5vw;
+        margin-top: 2vw;
+    }
+    .popup .round-dash .price i{
+        padding-left: 1vw;
+        font-size: 2vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .two-col-cont{
+        /* background-color: lightblue; */
+        overflow: hidden;
+        width: 90%;
+        padding: 5%;
+        margin: auto;
+    }
+    .two-col-cont .text{
+        float: right;
+        width: 100%;
+        margin-left: 3%;
+    }
+    .two-col-cont img{
+        float: right;
+        width: 100%;
+    }
+    .two-col-cont .text h1{
+        font-family: 'iransans';
+        font-size: 3.5vw;
+        text-align: right;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .two-col-cont .text p{
+        font-family: 'iransans';
+        font-size: 3vw;
+        text-align: justify;
+        direction: rtl;
+        
+    }
+    .dash-break{
+        width: 50%;
+        margin: auto;
+        border-bottom: var(--bgcolor) 0.2vw dashed;
+    }
+    .three-col-cont{
+        /* background-color: lightblue; */
+        overflow: hidden;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5vw;
+    }
+    .three-col-cont h1.title{
+        font-family: 'iransans';
+        font-size: 3.5vw;
+        text-align: center;
+        direction: rtl;
+        color: var(--bgcolor);
+    }
+    .three-col-cont h1.col-1{
+        float: right;
+        font-family: 'iransans';
+        font-size: 3vw;
+        text-align: center;
+        direction: rtl;
+        background-color: rgb(228, 78, 78);
+        color: white;
+        margin-left: 4%;
+        padding: 4vw 0;
+        width: 100%;
+        cursor: pointer;
+    }
+    .three-col-cont h1.col-1:hover{
+        background-color: rgb(219, 150, 150);
+    }
+    .three-col-cont h1.col-2{
+        float: right;
+        font-family: 'iransans';
+        font-size: 3vw;
+        text-align: center;
+        direction: rtl;
+        background-color: rgb(80, 219, 80);
+        color: white;
+        margin-left: 3vw;
+        padding: 4vw 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    .three-col-cont h1.col-2:hover{
+        background-color: rgb(147, 212, 147);
+    }
+    .three-col-cont h1.col-3{
+        float: right;
+        font-family: 'iransans';
+        font-size: 3vw;
+        text-align: center;
+        direction: rtl;
+        background-color: rgb(87, 184, 216);
+        color: white;
+        padding: 4vw 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    .three-col-cont h1.col-3:hover{
+        background-color: rgb(157, 210, 228);
+    }
+    .modal-1{
+        display: none;    
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.521);
+        z-index: 100;
+        transition-duration: 2s;
+    }
+    .popup{
+        display: none;        
+        background-color: rgb(244, 244, 252);
+        position: fixed;
+        top: 2%;
+        left: 4%;
+        z-index: 101;
+        width: 80%;
+        padding: 5%;
+        border-radius: 1vw;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 80%;
+    }
+    .popup span{
+        position: absolute;
+        left: 2vw;
+        top: 1.5vw;
+        font-size: 4vw;
+        cursor: pointer;
+    }
+    .popup span:hover{
+        color: coral;
+    }
+    .popup form{
+        float: right;
+        width: 100%;
+        margin-right: 5%;
+        direction: rtl;
+    }
+    .popup .round-dash{
+        float: right;
+        width: 85%;
+        padding: 2%;
+        border-radius: 2vw;
+        border: blue 0.3vw dashed;
+        direction: rtl;
+        margin-top: 4vw;
+        margin-right: 5%;
+    }
+    .popup form .input-text{
+        display: block;
+        width: 100%;
+        margin-bottom: 2vw;
+        position: relative;
+    }
+    .popup form .input-text input{
+        font-family: 'iransans';
+        font-size: 2.5vw;
+        width: 80%;
+        padding: 1vw 6vw 1vw 1vw;
+        border-radius: 2vw;
+        border: none;
+        box-shadow: 0.1vw 0.1vw 1vw rgba(0, 0, 139, 0.5);
+    }
+    .popup form input:focus{
+        outline: none;
+    }
+    .popup form .input-text i{
+        position: absolute;
+        color: var(--bgcolor);
+        font-size: 2.5vw;
+        top: 1.6vw;
+        right: 1.5vw;
+    }
+    .popup form input[type=submit]{
+        font-family: 'iransans';
+        font-size: 3vw;
+        background-color: white;
+        border-radius: 2vw;
+        border: none;
+        box-shadow: 0.1vw 0.1vw 1vw rgba(0, 0, 139, 0.5);
+        width: 50%;
+        padding: 0.5vw 0;
+        cursor: pointer;
+        margin-top: 2vw;
+    }
+    .popup form input[type=submit]:hover{
+        transition-duration: 0.5s;
+        background-color: var(--bgcolor);
+        color: white;
+    }
+    .popup .round-dash h1{
+        color: var(--bgcolor);
+        font-family: 'iransans';
+        font-size: 3vw;
+        margin: 1vw 0;
+    }
+    .popup .round-dash .item{
+        color: green;
+        font-family: 'iransans';
+        font-size: 2.5vw;
+        margin-bottom: 0.1vw;
+    }
+    .popup .round-dash .price{
+        color: chocolate;
+        font-family: 'iransans';
+        font-size: 3vw;
+        margin-top: 2vw;
+    }
+    .popup .round-dash .price i{
+        padding-left: 1vw;
+        font-size: 3.5vw;
+    }
+}
+
+
+

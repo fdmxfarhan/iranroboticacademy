@@ -1,0 +1,111 @@
+extends ../layout
+
+block styles
+    link(rel="stylesheet", href="/stylesheets/exam.css")
+
+block content
+    .two-col-cont
+        .text
+            h1 آزمون های آمادگی تیزهوشان
+            p به دانش آموزان پایه ششم که قصد دارند در آزمون تیزهوشان و نمونه دولتی شرکت کنند، توصیه می شود برای آمادگی بیشتر در این آزمونها و یا کلاس های تست شرکت کنند. ۱۰ آزمون آنلاین که کارنامه آن بلافاصله پس از آزمون صادر می شود، برای کسانی می باشد که امکان شرکت در آزمون های حضوری و یا کلاس را ندارند. که البته بهتر است هر ۱۰ آزمون را تا قبل از آزمون اصلی شرکت نمایند.
+            p ۴ آزمون حضوری که با هدف شبیه سازی آزمون اصلی فراهم شده است به دانش آموزان کمک می کند تا در شرایط آزمون اصلی آمادگی بیشتری داشته باشند. کلاس های تست برای دانش آموزانی که تا کنون برای آزمون اصلی اقدام نکرده اند توصیه می شود تا از فرصت باقی مانده روش های حل مسئله و تست زنی را در ۱۰ جلسه فشرده بیاموزند.
+        img(src="/images/exam.jpg")
+    .dash-break
+    .three-col-cont
+        h1.title ثبت نام در آزمون ها و کلاس تست
+        h1.col-1 آزمون های حضوری
+        h1.col-2 آزمون های غیر حضوری
+        h1.col-3 کلاس های تست زنی
+    .modal-1
+    .popup#popup-1
+        span.close#closebtn &times;
+        form(action="/exam/real" method="POST")
+            .input-text
+                input(type="text" name="fullName" placeholder="نام و نام خانوادگی")
+                i.fa.fa-user
+            .input-text
+                input(type="text" name="fatherName" placeholder="نام پدر")
+                i.fa.fa-pencil
+            .input-text
+                input(type="text" name="schoolName" placeholder="نام مدرسه")
+                i.fa.fa-book
+            .input-text
+                input(type="text" name="phone1" placeholder="شماره تماس ۱ (دانش آموز)")
+                i.fa.fa-phone
+            .input-text
+                input(type="text" name="phone2" placeholder="شماره تماس ۲ (اولیا)")
+                i.fa.fa-phone
+            input(type="submit" value="ثبت نام")
+        .round-dash
+            h1 آزمون های حضوری
+            .item آزمون۱: 99/4/5
+            .item آزمون۲: 99/4/12
+            .item آزمون۳: 99/4/19
+            .item آزمون۴: 99/4/22
+            .price 
+                i.fa.fa-tag
+                | 120,000 تومان
+    .popup#popup-2
+        span.close#closebtn &times;
+        form(action="/exam/virtual" method="POST")
+            .input-text
+                input(type="text" name="fullName" placeholder="نام و نام خانوادگی")
+                i.fa.fa-user
+            .input-text
+                input(type="text" name="fatherName" placeholder="نام پدر")
+                i.fa.fa-pencil
+            .input-text
+                input(type="text" name="schoolName" placeholder="نام مدرسه")
+                i.fa.fa-book
+            .input-text
+                input(type="text" name="phone1" placeholder="شماره تماس ۱ (دانش آموز)")
+                i.fa.fa-phone
+            .input-text
+                input(type="text" name="phone2" placeholder="شماره تماس ۲ (اولیا)")
+                i.fa.fa-phone
+            input(type="submit" value="ثبت نام")
+        .round-dash
+            h1 آزمون های غیر حضوری
+            .item آزمون ۱: 99/4/6
+            .item آزمون ۲: 99/4/8
+            .item آزمون ۳: 99/4/10
+            .item آزمون ۴: 99/4/12
+            .item آزمون ۵: 99/4/14
+            .item آزمون ۶: 99/4/16
+            .item آزمون ۷: 99/4/18
+            .item آزمون ۸: 99/4/20
+            .item آزمون ۹: 99/4/22
+            .item آزمون ۱۰: 99/4/24
+            .price 
+                i.fa.fa-tag
+                | 300,000 تومان
+    .popup#popup-3
+        span.close#closebtn &times;
+        form(action="/exam/class" method="POST")
+            .input-text
+                input(type="text" name="fullName" placeholder="نام و نام خانوادگی")
+                i.fa.fa-user
+            .input-text
+                input(type="text" name="fatherName" placeholder="نام پدر")
+                i.fa.fa-pencil
+            .input-text
+                input(type="text" name="schoolName" placeholder="نام مدرسه")
+                i.fa.fa-book
+            .input-text
+                input(type="text" name="phone1" placeholder="شماره تماس ۱ (دانش آموز)")
+                i.fa.fa-phone
+            .input-text
+                input(type="text" name="phone2" placeholder="شماره تماس ۲ (اولیا)")
+                i.fa.fa-phone
+            input(type="submit" value="ثبت نام")
+        .round-dash
+            h1 کلاس های تست زنی
+            .item شروع کلاسها: 99/4/10
+            .item پایان کلاسها: 99/4/25
+            .price 
+                i.fa.fa-tag
+                | 300,000 تومان
+    
+            
+    script(src="/javascripts/exam.js")
+    

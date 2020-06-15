@@ -12,6 +12,7 @@ var Class = require('../models/Class');
 var Tutorial = require('../models/Tutorial');
 var Juniorcup = require('../models/juniorcup');
 var Payment = require('../models/Payment');
+var Exam = require('../models/Exam');
 
 router.get('/', function(req, res, next) {
   if(!req.user) res.render('index', {
@@ -400,5 +401,63 @@ router.post('/quiz-resault', ensureAuthenticated, function(req,res,next){
     text,
     myClasses
   });
-})
+});
+
+router.get('/exam', function(req, res, next){
+  if(req.user){
+    res.render('./exam/index',{
+      user: req.user
+    });
+  }
+  else{
+    res.render('./exam/index', {
+      user: false
+    });
+  }
+});
+
+router.post('/exam/real', function(req, res, next){
+  const {fullName, fatherName, schoolName, phone1, phone2} = req.body;
+  const examName = 'آزمون های حضوری';
+  if(!fullName || !fatherName || !schoolName || !phone1 || !phone2){
+    res.send('لطفا موارد مشخص شده را تکمیل فرمایید');
+  }
+  else{
+    const newExam = new Exam({examName, fullName, fatherName, schoolName, phone1, phone2});
+    newExam.save().then((exam)=>{
+      res.redirect('/exam');
+    }).catch(err => console.log(err));
+  }
+});
+
+router.post('/exam/virtual', function(req, res, next){
+  const {fullName, fatherName, schoolName, phone1, phone2} = req.body;
+  const examName = 'آزمون های غیر حضوری';
+  if(!fullName || !fatherName || !schoolName || !phone1 || !phone2){
+    res.send('لطفا موارد مشخص شده را تکمیل فرمایید');
+  }
+  else{
+    const newExam = new Exam({examName, fullName, fatherName, schoolName, phone1, phone2});
+    newExam.save().then((exam)=>{
+      res.redirect('/exam');
+    }).catch(err => console.log(err));
+  }
+});
+
+router.post('/exam/class', function(req, res, next){
+  const {fullName, fatherName, schoolName, phone1, phone2} = req.body;
+  const examName = 'کلاس های تست';
+  if(!fullName || !fatherName || !schoolName || !phone1 || !phone2){
+    res.send('لطفا موارد مشخص شده را تکمیل فرمایید');
+  }
+  else{
+    const newExam = new Exam({examName, fullName, fatherName, schoolName, phone1, phone2});
+    newExam.save().then((exam)=>{
+      res.redirect('/exam');
+    }).catch(err => console.log(err));
+  }
+});
+
+
+
 module.exports = router;
