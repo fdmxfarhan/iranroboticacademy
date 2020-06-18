@@ -1,0 +1,31 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+
+block content
+    .dashboard
+        include dashboard-layout
+        .dashboard-cont
+            .container
+                h1.acount-header کلاس ها
+                h1.class-name آزمون تیزهوشان
+                table.class-table
+                    tr
+                        th عنوان
+                        th نام و نام خانوادگی
+                        th نام پدر
+                        th نام مدرسه
+                        th تلفن ۱
+                        th تلفن ۲ (اولیا)
+                    -if(exams.length > 0){
+                        -for(var j=0; j<exams.length; j++){
+                            tr
+                                td= exams[j].examName
+                                td= exams[j].fullName
+                                td= exams[j].fatherName
+                                td= exams[j].schoolName
+                                td= exams[j].phone1
+                                td= exams[j].phone2
+                        -}
+                    -}
+    script(src="/javascripts/dashboard.js")

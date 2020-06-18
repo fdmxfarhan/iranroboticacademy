@@ -53,7 +53,14 @@
             -if(active.comments)
                 .active
         .link-border
-        
+        -if(user.role == 'admin'){
+            a.acount-link(href="/dashboard/exam")
+                i.fa.fa-sticky-note.link-icon
+                | آزمون ها
+                -if(active.comments)
+                    .active
+            .link-border
+        -}
 .slide-modal#slide-modal
 .slide-toggle#slide-toggle
     button.slide-toggler#slide-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')

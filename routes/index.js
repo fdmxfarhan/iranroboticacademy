@@ -458,6 +458,18 @@ router.post('/exam/class', function(req, res, next){
   }
 });
 
-
+router.get('/dashboard/exam', ensureAuthenticated, (req, res, next)=>{
+  if(req.user.role == 'admin'){
+    var active = { payment: false, reports: false, comments: false};
+    Exam.find({}, (err, exams)=>{
+      res.render('./dashboard/exam', {
+        user: req.user,
+        exams,
+        active
+      });
+    });
+  }
+  else res.send('دسترسی مجاز نیست!!')
+});
 
 module.exports = router;
