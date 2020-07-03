@@ -473,7 +473,7 @@ router.get('/dashboard/exam', ensureAuthenticated, (req, res, next)=>{
 });
 
 router.get('/test', (req, res, next)=>{
-  res.send('hello bitch');
+  res.send('hello bitch' + req.query.fuckme);
 });
 
 
