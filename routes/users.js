@@ -3,6 +3,20 @@ var router = express.Router();
 var User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+var nodemailer = require('nodemailer');
+var fs = require('fs');
+
+var wellcomeEmail = '<div style="width: 100%; padding: 3vw 0; background-color: rgb(198, 245, 198); margin: 0; overflow: hidden; min-height: 100vw;"><img style="display:block; width: 70%; margin: auto;" src="http://iranroboticacademy.com/images/logo.jpg" alt=""><h1 style="color: rgb(75, 7, 75); font-size: 5vw; text-align: center;">به آکادمی رباتیک ایران خوش آمدید</h1><p style="color: rgb(29, 29, 29); font-size: 3vw; width: 90%; margin: auto; text-align: justify; direction: rtl;">    برای ثبت نام در کلاس ها می توانید به بخش کلاس ها رفته و کلاس مورد نظر خود را انتخاب کنید. در بخش آموزش مجازی می توانید از فایل های ویدئویی و PDFهای آموزشی استفاده نماید.</p><a style="text-decoration: none; text-align: center; color: white; background-color: rgb(62, 12, 85); display: block; margin: 3vw auto; width: 70%; padding: 2vw 4vw; border-radius: 3vw;" href="http://iranroboticacademy.com">رفتن به سایت</a></div>';
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'fdmxfarhan@gmail.com',
+    pass: 'llolqibvcnwvzhjp'
+    // user: 'eroboshop@gmail.com',
+    // pass: 'asjvadthyaokzgce'
+  }
+});
 
 
 router.get('/login', function(req, res, next) {
@@ -60,6 +74,20 @@ router.post('/register',function(req, res){
               .then(user => {
                 req.flash('success_msg', 'ثبت نام با موفقیت انجام شد. اکنون میتوانید وارد شوید.');
                 res.redirect('/users/login');
+                var mailOptions = {
+                  from: 'eroboshop@gmail.com',
+                  to: user.email,
+                  subject: 'خوش آمدید',
+                  html: wellcomeEmail
+                };
+                
+                transporter.sendMail(mailOptions, function(error, info){
+                  if (error) {
+                    console.log(error);
+                  } else {
+                    console.log('Email sent: ' + info.response);
+                  }
+                });                
               })
               .catch(err => console.log(err));
           }));

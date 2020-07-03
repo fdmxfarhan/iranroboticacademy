@@ -472,4 +472,9 @@ router.get('/dashboard/exam', ensureAuthenticated, (req, res, next)=>{
   else res.send('دسترسی مجاز نیست!!')
 });
 
+router.get('/test', (req, res, next)=>{
+  res.send('hello bitch');
+});
+
+
 module.exports = router;

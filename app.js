@@ -8,7 +8,6 @@ var multer = require('multer');
 const flash = require('connect-flash');
 const session = require('express-session');
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var about = require('./routes/about');
@@ -24,6 +23,7 @@ var booklets = require('./routes/booklets');
 var education = require('./routes/education');
 var uploadHandler = require('./routes/upload');
 var payment = require('./routes/payment');
+var challenge = require('./routes/challenge');
 
 
 const passport = require('passport'); 
@@ -117,6 +117,7 @@ app.use('/booklets', booklets);
 app.use('/education', education);
 app.use('/juniorcup2020', juniorcup2020);
 app.use('/payment', payment);
+app.use('/challenge', challenge);
 
 
 // catch 404 and forward to error handler
