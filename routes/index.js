@@ -13,6 +13,19 @@ var Tutorial = require('../models/Tutorial');
 var Juniorcup = require('../models/juniorcup');
 var Payment = require('../models/Payment');
 var Exam = require('../models/Exam');
+var GBask = require('../models/GBask');
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'fdmxfarhan@gmail.com',
+    pass: 'llolqibvcnwvzhjp'
+    // user: 'eroboshop@gmail.com',
+    // pass: 'asjvadthyaokzgce'
+  }
+});
+
 
 router.get('/', function(req, res, next) {
   if(!req.user) res.render('index', {
@@ -486,6 +499,33 @@ router.get('/gb', (req, res, next)=>{
       user: false
     });
   }
+});
+
+router.post('/gb-ask', (req, res, next) => {
+  var {fullName, email, text} = req.body;
+  var uname;
+  if(req.user) uname = req.user.uname;
+  else         uname = 'Guest';
+  const newGBask = new GBask({uname, fullName, email, text});
+  newGBask.save().then(gb => {
+    res.redirect('/gb');
+    console.log('GBask question saved!!');
+    
+    var mailOptions = {
+      from: 'fdmxfarhan@gmail.com',
+      to: 'fdmxfarhan@yahoo.com',
+      subject: 'GB board question',
+      text: `${fullName}\n${email}\n\n${text}\n\n${uname}`
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+  });
 });
 
 module.exports = router;
