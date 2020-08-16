@@ -476,5 +476,16 @@ router.post('/test', (req, res, next)=>{
   res.send('hello bitch' + req.body.fuckme);
 });
 
+router.get('/gb', (req, res, next)=>{
+  if(req.user){
+    res.render('./GBboard/info', {
+      user: req.user
+    });
+  }else {
+    res.render('./GBboard/info', {
+      user: false
+    });
+  }
+});
 
 module.exports = router;

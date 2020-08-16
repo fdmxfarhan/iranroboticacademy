@@ -1,0 +1,90 @@
+@media only screen and (min-width: 600px) {
+    .content-area{
+        background-color: white;
+        border: lightblue 1px solid;
+        border-radius: 2vw;
+        box-shadow: 0 0 1vw 0.6vw rgba(61, 0, 131, 0.2);
+        width: 83%;
+        margin: 5vw auto;
+        overflow: hidden;
+    }
+    .sidebar{
+        float: right;
+        /* background-color: lightblue; */
+        width: 23%;
+        padding: 1vw;
+    }
+    .vertical-break{
+        display: block;
+        float: right;
+        background-color: rgba(0, 0, 139, 0.664);
+        width: 0.3vw;
+        height: 40vw;
+        margin: 1vw;
+    }
+    .content-tab{
+        float: right;
+        width: 70%;
+        margin-top: 2vw;
+        /* background-color: lightcoral; */
+        direction: rtl;
+    }
+    .sidebar .link{
+        direction: rtl;
+        font-family: 'iransans';
+        font-size: 1.2vw;
+        padding: 0.5vw 1vw;
+        margin: 0.3vw 0;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        border-radius: 1vw;
+    }
+    .sidebar .link:hover{
+        background-color: var(--bghover);
+    }
+    .sidebar .link.active{
+        background-color: var(--bgcolor);
+        color: white;
+    }
+    .sidebar .link i{
+        font-size: 1.3vw;
+        padding-left: 1vw;
+    }
+    .slideshow{
+        /* background-color: chocolate; */
+        text-align: center;
+        position: relative;
+    }
+    .slideshow img{
+        width: 70%;
+        margin: auto;
+    }
+    .slideshow .next-btn{
+        font-size: 3vw;
+        padding: 3vw 0.8vw;
+        color: white;
+        background-color: rgb(220, 220, 220);
+        position: absolute;
+        top: 25vw;
+        right: 2vw;
+        cursor: pointer;
+    }
+    .slideshow .next-btn:hover{
+        background-color: rgba(0, 0, 0, 0.404);
+    }
+    .slideshow .prev-btn{
+        font-size: 3vw;
+        padding: 3vw 0.8vw;
+        color: white;
+        background-color: rgb(220, 220, 220);
+        position: absolute;
+        top: 25vw;
+        left: 2vw;
+        cursor: pointer;
+    }
+    .slideshow .prev-btn:hover{
+        background-color: rgba(0, 0, 0, 0.404);
+    }
+    
+}

@@ -1,0 +1,45 @@
+extends ../layout
+block styles
+    link(rel="stylesheet", href="/stylesheets/gb.css")
+
+block content
+    .content-area
+        .sidebar
+            .link#link1.active
+                i.fa.fa-info  
+                | دفترچه راهنما  
+            .link#link2
+                i.fa.fa-code  
+                | نمونه برنامه ها  
+            .link#link3
+                i.fa.fa-support  
+                | پشتیبانی  
+            .link#link4
+                i.fa.fa-dollar  
+                | خرید آنلاین  
+            .link#link5
+                i.fa.fa-comment  
+                | نظرات و پیشنهادات  
+        .vertical-break
+        .content-tab#tab1
+            .slideshow
+                i.fa.fa-chevron-right.next-btn
+                i.fa.fa-chevron-left.prev-btn
+                img#img1(src="/GBboard/GB board1.jpg")
+                img#img2(src="/GBboard/GB board2.jpg")
+                img#img3(src="/GBboard/GB board3.jpg")
+                img#img4(src="/GBboard/GB board4.jpg")
+                img#img5(src="/GBboard/GB board5.jpg")
+                img#img6(src="/GBboard/GB board6.jpg")
+                img#img7(src="/GBboard/GB board7.jpg")
+                img#img8(src="/GBboard/GB board8.jpg")
+        .content-tab#tab2
+            h1 tab2
+        .content-tab#tab3
+            h1 tab3
+        .content-tab#tab4
+            h1 tab4
+        .content-tab#tab5
+            h1 tab5
+    script(src="/javascripts/gb.js")
+        
