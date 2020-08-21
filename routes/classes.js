@@ -14,8 +14,8 @@ const { ensureAuthenticated } = require('../config/auth');
 //   }
 // });
 
-var classNamesEn = ['scratch', 'c++', 'python', 'web', 'robotic', 'pathfinder', 'soccorLW', 'soccorOW', '@work', 'tizhooshan1', 'tizhooshan2'];
-var classNamesFa = ['برنامه نویسی مقدماتی Scratch', 'برنامه نویسی C++', 'برنامه نویسی python', 'برنامه نویسی web', 'رباتیک مقدماتی', 'رباتیک مسیریاب', 'رباتیک فوتبالیست سبک وزن', 'رباتیک فوتبالیست وزن آزاد', 'ربات های صنعتی @Work', 'تیزهوشان پایه ششم', 'تیزهوشان پایه نهم'];
+var classNamesEn = ['scratch', 'c++', 'python', 'web', 'robotic', 'photoshop'];
+var classNamesFa = ['برنامه نویسی مقدماتی Scratch', 'برنامه نویسی C++', 'برنامه نویسی python', 'برنامه نویسی web', 'رباتیک', 'طراحی گرافیک Photoshop'];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
