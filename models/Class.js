@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+var classNamesEn = ['scratch', 'c++', 'python', 'web', 'robotic', 'photoshop'];
+var classNamesFa = ['برنامه نویسی مقدماتی Scratch', 'برنامه نویسی C++', 'برنامه نویسی python', 'برنامه نویسی web', 'رباتیک', 'طراحی گرافیک Photoshop'];
 
 var ClassSchema = new mongoose.Schema({
     fullname: {
@@ -20,7 +22,7 @@ var ClassSchema = new mongoose.Schema({
     },
     className: {
       type: String,
-      enum: ['scratch', 'c++', 'python', 'web', 'robotic', 'pathfinder', 'soccorLW', 'soccorOW', '@work', 'tizhooshan1', 'tizhooshan2'],
+      enum: classNamesEn,
       required: true
     },
     className2: {
